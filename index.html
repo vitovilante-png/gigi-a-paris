@@ -693,7 +693,7 @@ function Test(l, body){
 
 /* ================= RIEPILOGO ================= */
 function recapBlock(l, compact){
-  const r = (typeof RECAPS !== "undefined" && RECAPS[l.id]) || null;
+  const r = (typeof RECAPS !== "undefined" && RECAPS[l.id]) || l.recap || null;
   const box = h("section",{class:"recap"});
   if(compact) box.append(h("div",{class:"recap-head"}, plaque(l.module.arr, l.street, "sm"), h("h3",{}, l.title)));
   if(r){

@@ -997,9 +997,993 @@ const COURSE = {
         }
       ]
     },
-    { n: 4, arr: "4e", name: "En ville", it: "In città", level: "A1", soon: "I luoghi · Chiedere la strada · Aller e venir · Preposizioni" },
-    { n: 5, arr: "5e", name: "Le temps", it: "Il tempo", level: "A1", soon: "L'ora · Giorni e mesi · La routine · Il meteo" },
-    { n: 6, arr: "6e", name: "Voyager", it: "Viaggiare", level: "A2", soon: "Stazione e biglietti · Hotel · Futuro prossimo · Imprevisti" },
+    {
+      n: 4, arr: "4e", name: "En ville", it: "In città", level: "A1",
+      lessons: [
+        /* ---------------- LEZIONE 4-1 ---------------- */
+        {
+          id: "4-1", street: "Rue des Lieux", title: "I luoghi della città",
+          goal: "Nominare i luoghi principali di una città e chiedere dove si trovano con «où est» e «il y a».",
+          episode: {
+            title: "La mappa di Zizì",
+            intro: "Il caffè è chiuso per il giorno di riposo. Sul bancone Gigi, Léa e Françoise aprono la piantina disegnata da Zizì. La croce rossa è accanto a un fiume, tra una grande chiesa e un ponte. Croissant si sdraia proprio sopra la mappa, «per aiutare».",
+            lines: [
+              { who: "Léa", fr: "Regardez : ici, il y a un fleuve, et là, il y a un grand pont.", it: "Guardate: qui c'è un fiume, e là c'è un grande ponte." },
+              { who: "Gigi", fr: "Le fleuve, c'est la Seine, bien sûr. Mais où est la croix exactement ?", it: "Il fiume è la Senna, certo. Ma dov'è esattamente la croce?" },
+              { who: "Mme Lefèvre", fr: "Près d'une grande église avec deux tours. C'est sûrement Notre-Dame !", it: "Vicino a una grande chiesa con due torri. È sicuramente Notre-Dame!" },
+              { who: "Gigi", fr: "Et ce petit dessin, à côté du pont, c'est une banque ou un musée ?", it: "E questo disegnino, accanto al ponte, è una banca o un museo?" },
+              { who: "Léa", fr: "Ni l'un ni l'autre : on dirait une boîte verte, au bord de l'eau.", it: "Né l'una né l'altro: sembra una scatola verde, in riva all'acqua." },
+              { who: "Croissant", fr: "Une boîte verte au bord de la Seine… Il y a des centaines de boîtes vertes !", it: "Una scatola verde in riva alla Senna… Ci sono centinaia di scatole verdi!" },
+              { who: "Mme Lefèvre", fr: "Ce sont les boîtes des bouquinistes, les vendeurs de vieux livres sur les quais.", it: "Sono le cassette dei bouquinistes, i venditori di libri vecchi lungo i lungosenna." },
+              { who: "Gigi", fr: "Alors demain matin, on va dans le quatrième arrondissement, à côté de Notre-Dame !", it: "Allora domattina andiamo nel quarto arrondissement, vicino a Notre-Dame!" }
+            ],
+            outro: "Gigi segna sul telefono: la stazione del metrò, la farmacia per i cerotti (non si sa mai), la panetteria per la colazione. Françoise sorride: «Zizì amava i libri. Se ha nascosto qualcosa, l'ha nascosto tra le pagine.»",
+            you: "«{nome}, in città le parole più utili sono «Où est… ?» e «Il y a… ?». Con quelle due trovi la stazione, la farmacia e, soprattutto, la panetteria.»",
+            mine: { fr: "Je m'appelle {nome}, et dans ma ville il y a une grande place, une église et un marché.", it: "Mi chiamo {nome}, e nella mia città c'è una grande piazza, una chiesa e un mercato." }
+          },
+          words: [
+            { fr: "la gare", it: "la stazione (dei treni)", say: "la gar", hook: "LA GARE: alla stazione i treni fanno a GARA a chi parte prima. Per il metrò si dice «la station».",
+              ex: { fr: "La gare de Lyon est très grande, et il y a toujours beaucoup de monde.", it: "La stazione di Lione è molto grande, e c'è sempre tanta gente." } },
+            { fr: "l'église", it: "la chiesa", say: "leglìz", hook: "ÉGLISE somiglia a «ecclesia»: la É iniziale ha mangiato una S. Notre-Dame è la regina delle églises.",
+              ex: { fr: "L'église du quartier est petite, mais elle a de très belles fenêtres colorées.", it: "La chiesa del quartiere è piccola, ma ha delle vetrate colorate bellissime." } },
+            { fr: "le pont", it: "il ponte", say: "lə põ", hook: "PONT è «ponte» detto col naso chiuso: põ. A Parigi ce ne sono 37, e il più vecchio si chiama Pont-Neuf, cioè «ponte nuovo»!",
+              ex: { fr: "Nous traversons le pont à pied pour regarder les bateaux sur la Seine.", it: "Attraversiamo il ponte a piedi per guardare i battelli sulla Senna." } },
+            { fr: "la pharmacie", it: "la farmacia", say: "la farmasì", hook: "Cerca la croce verde luminosa: PHARMACIE, con PH che si legge F, come in «philosophie».",
+              ex: { fr: "Excusez-moi, il y a une pharmacie ouverte près d'ici le dimanche ?", it: "Mi scusi, c'è una farmacia aperta qui vicino la domenica?" } },
+            { fr: "la boulangerie", it: "la panetteria", say: "la bulãjrì", hook: "BOULANGERIE: il BOULANGER fa le palle (boules) di pasta che diventano pane. Il luogo più importante di ogni quartiere francese.",
+              ex: { fr: "Tous les matins, j'achète une baguette chaude à la boulangerie du coin.", it: "Ogni mattina compro una baguette calda alla panetteria all'angolo." } },
+            { fr: "le musée", it: "il museo", say: "lə müzé", hook: "MUSÉE è maschile anche se finisce in -ée, come un museo travestito. Il Louvre è le musée più visitato del mondo.",
+              ex: { fr: "Le premier dimanche du mois, beaucoup de musées sont gratuits à Paris.", it: "La prima domenica del mese molti musei sono gratuiti a Parigi." } },
+            { fr: "la place", it: "la piazza", say: "la plas", hook: "LA PLACE è la piazza: place de la Concorde, place des Vosges. Attenzione: «une place» vuol dire anche «un posto» (a sedere, al parcheggio). Il contesto ti salva!",
+              ex: { fr: "Il y a un petit marché sur la place tous les mercredis matin.", it: "C'è un piccolo mercato in piazza ogni mercoledì mattina." } },
+            { fr: "le quartier", it: "il quartiere", say: "lə kartjé", hook: "QUARTIER = quartiere, con la QU che si legge K. Ogni arrondissement di Parigi ha quattro quartiers.",
+              ex: { fr: "J'adore mon quartier : il est calme, mais il y a beaucoup de cafés.", it: "Adoro il mio quartiere: è tranquillo, ma ci sono tanti caffè." } },
+            { fr: "Où est… ?", it: "Dov'è…?", say: "u è", hook: "OÙ con l'accento è «dove»; OU senza accento è «o». L'accento è la freccia che indica il posto!",
+              ex: { fr: "Pardon, madame, où est la station de métro la plus proche ?", it: "Scusi, signora, dov'è la stazione del metrò più vicina?" } },
+            { fr: "la Seine", it: "la Senna", say: "la sèn", hook: "LA SEINE si dice «sèn», come la scena (scène) di un film: e infatti è il palcoscenico di Parigi.",
+              ex: { fr: "Le soir, les Parisiens se promènent au bord de la Seine.", it: "La sera i parigini passeggiano lungo la Senna." } }
+          ],
+          tip: {
+            title: "Il y a, où est, c'est: tre chiavi per la città",
+            body: "<div class='tbl'><table><thead><tr><th>Vuoi…</th><th>Francese</th><th>Esempio</th></tr></thead><tbody><tr><td>sapere se esiste</td><td>Il y a… ?</td><td>Il y a une pharmacie ici ?</td></tr><tr><td>sapere dove si trova</td><td>Où est… ?</td><td>Où est la gare ?</td></tr><tr><td>più cose</td><td>Où sont… ?</td><td>Où sont les toilettes ?</td></tr><tr><td>identificare</td><td>C'est…</td><td>C'est le musée d'Orsay.</td></tr></tbody></table></div><ul><li><b>Il y a</b> + un / une / des (cosa nuova): il y a <b>une</b> boulangerie.</li><li><b>Où est</b> + le / la (cosa precisa): où est <b>la</b> boulangerie ?</li><li><b>Où</b> (dove) ha l'accento; <b>ou</b> (oppure) no.</li><li>Arrondissement: «le 4e» si legge «le quatrième». Il 1er è «le premier».</li></ul>",
+            examples: [
+              { fr: "Il y a une boulangerie dans votre rue ?", it: "C'è una panetteria nella vostra strada?" },
+              { fr: "Où est le musée du Louvre, s'il vous plaît ?", it: "Dov'è il museo del Louvre, per favore?" },
+              { fr: "Où sont les toilettes ? — Au fond, à droite.", it: "Dov'è il bagno? — In fondo, a destra." },
+              { fr: "C'est la plus vieille église de Paris.", it: "È la chiesa più antica di Parigi." },
+              { fr: "Dans mon quartier, il y a deux pharmacies et une gare.", it: "Nel mio quartiere ci sono due farmacie e una stazione." }
+            ]
+          },
+          practice: [
+            { t: "mcq", q: "Dove compri la baguette?", opts: ["à la boulangerie", "à la pharmacie", "à la gare", "au musée"], a: 0, why: "Boulangerie = panetteria." },
+            { t: "mcq", q: "«Où» con l'accento significa…", opts: ["dove", "o / oppure", "quando", "chi"], a: 0, why: "Où = dove; ou = oppure." },
+            { t: "listen", say: "Excusez-moi, il y a une pharmacie ouverte près d'ici le dimanche ?", q: "Cosa chiede la persona?", opts: ["Se c'è una farmacia aperta qui vicino la domenica.", "Dov'è la stazione la domenica.", "Se la farmacia chiude la domenica.", "Quanto costa una medicina."], a: 0, why: "Il y a… ? = c'è…?" },
+            { t: "match", q: "Abbina", pairs: [["la gare", "la stazione"], ["le pont", "il ponte"], ["l'église", "la chiesa"], ["la place", "la piazza"]] },
+            { t: "order", q: "Riordina: «Dov'è la stazione del metrò, per favore?»", words: ["Où", "est", "la", "station", "de", "métro,", "s'il", "vous", "plaît", "?"], why: "Où est + la cosa che cerchi." }
+          ],
+          test: [
+            { t: "mcq", q: "Completa: «___ une pharmacie près d'ici ?»", opts: ["Il y a", "Où est", "C'est", "Il est"], a: 0, why: "Per chiedere se una cosa esiste: il y a." },
+            { t: "mcq", q: "Completa: «___ la gare de Lyon ?»", opts: ["Où est", "Il y a", "Où sont", "Ou est"], a: 0, why: "Dov'è + cosa precisa: où est (con l'accento!)." },
+            { t: "mcq", q: "«La place de la Concorde» è…", opts: ["una piazza", "un posto a sedere", "un palazzo", "una chiesa"], a: 0, why: "La place = la piazza." },
+            { t: "mcq", q: "Come si legge «le 4e arrondissement»?", opts: ["le quatrième arrondissement", "le quatre arrondissement", "le quatrè arrondissement", "le quart arrondissement"], a: 0, why: "4e = quatrième." },
+            { t: "listen", say: "Nous traversons le pont à pied pour regarder les bateaux sur la Seine.", q: "Cosa hai sentito?", opts: ["Attraversiamo il ponte a piedi per guardare i battelli sulla Senna.", "Prendiamo il battello per andare al ponte.", "Camminiamo lungo la Senna fino alla stazione.", "Guardiamo il ponte dalla finestra del museo."], a: 0, why: "Le pont = il ponte; à pied = a piedi." },
+            { t: "listen", say: "Tous les matins, j'achète une baguette chaude à la boulangerie du coin.", q: "Cosa fa ogni mattina?", opts: ["Compra una baguette calda alla panetteria all'angolo.", "Beve un caffè al bar all'angolo.", "Va in farmacia a comprare medicine.", "Prende il metrò per andare al lavoro."], a: 0, why: "Boulangerie = panetteria; du coin = all'angolo." },
+            { t: "type", q: "Completa: «Le soir, nous marchons au bord de la ___.» (Senna)", a: ["Seine"], why: "La Seine, si legge «sèn»." },
+            { t: "type", q: "Completa: «Le Louvre est le ___ le plus visité du monde.» (museo)", a: ["musée", "musee"], why: "Le musée: maschile anche se finisce in -ée." },
+            { t: "type", say: "J'adore mon quartier : il est calme, mais il y a beaucoup de cafés.", q: "Ascolta e completa: «J'adore mon ___ : il est calme.»", a: ["quartier"], why: "Quartier = quartiere." },
+            { t: "order", q: "Riordina: «Nella mia città c'è una grande piazza.»", words: ["Dans", "ma", "ville,", "il", "y", "a", "une", "grande", "place."], why: "Il y a = c'è / ci sono." },
+            { t: "match", q: "Abbina", pairs: [["la boulangerie", "la panetteria"], ["la pharmacie", "la farmacia"], ["le musée", "il museo"], ["le quartier", "il quartiere"]] },
+            { t: "mcq", q: "Che cosa sono le «boîtes vertes» lungo la Senna?", opts: ["le cassette dei venditori di libri vecchi", "le cabine telefoniche", "i cestini dei rifiuti", "le biglietterie dei battelli"], a: 0, why: "Sono le cassette dei bouquinistes." }
+          ],
+          recap: {
+            can: ["Nominare i luoghi della città: gare, église, pont, pharmacie, musée…", "Chiedere se un luogo esiste con «Il y a… ?»", "Chiedere dove si trova con «Où est… ?» e «Où sont… ?»", "Leggere i numeri degli arrondissement"],
+            phrases: [{ fr: "Il y a une pharmacie près d'ici ?", it: "C'è una farmacia qui vicino?" }, { fr: "Où est la station de métro, s'il vous plaît ?", it: "Dov'è la stazione del metrò, per favore?" }, { fr: "Dans mon quartier, il y a une boulangerie et une église.", it: "Nel mio quartiere ci sono una panetteria e una chiesa." }],
+            trap: "OÙ con l'accento = dove; OU senza accento = oppure. «Où est la gare ou la station ?» = Dov'è la stazione o la fermata?"
+          }
+        },
+        /* ---------------- LEZIONE 4-2 ---------------- */
+        {
+          id: "4-2", street: "Rue du Chemin", title: "Chiedere e dare indicazioni",
+          goal: "Chiedere la strada in modo gentile e capire indicazioni come «tout droit», «à gauche», «la deuxième rue à droite».",
+          episode: {
+            title: "Perduti sull'Île de la Cité",
+            intro: "Usciti dal metrò, Gigi gira la piantina in tutte le direzioni. Léa guarda il telefono, che naturalmente è scarico. Croissant, nella sua borsa, sospira. Per fortuna all'angolo c'è una vigilessa con un sorriso paziente.",
+            lines: [
+              { who: "Gigi", fr: "Excusez-moi, madame, pour aller aux quais de la Seine, s'il vous plaît ?", it: "Mi scusi, signora, per andare ai lungosenna, per favore?" },
+              { who: "Mme Martin", fr: "C'est facile. Allez tout droit jusqu'au feu, puis tournez à gauche.", it: "È facile. Andate dritto fino al semaforo, poi girate a sinistra." },
+              { who: "Léa", fr: "Tout droit, puis à gauche. Et après, c'est loin d'ici ?", it: "Dritto, poi a sinistra. E dopo, è lontano da qui?" },
+              { who: "Mme Martin", fr: "Non, c'est tout près : à cinq minutes à pied. Traversez le petit pont.", it: "No, è vicinissimo: a cinque minuti a piedi. Attraversate il ponticello." },
+              { who: "Gigi", fr: "Et les bouquinistes ? Ils sont à droite ou à gauche du pont ?", it: "E i bouquinistes? Sono a destra o a sinistra del ponte?" },
+              { who: "Mme Martin", fr: "Prenez la première rue à droite : les boîtes vertes sont en face de Notre-Dame.", it: "Prendete la prima strada a destra: le cassette verdi sono di fronte a Notre-Dame." },
+              { who: "Croissant", fr: "Gauche, droite, tout droit… Moi, je propose de suivre l'odeur des croissants.", it: "Sinistra, destra, dritto… Io propongo di seguire l'odore dei croissant." },
+              { who: "Léa", fr: "Merci beaucoup, madame, vous êtes très gentille. Bonne journée !", it: "Grazie mille, signora, è molto gentile. Buona giornata!" }
+            ],
+            outro: "Cinque minuti dopo sono davanti a una fila di cassette verdi, piene di libri ingialliti e vecchie cartoline. Ce ne sono tantissime. Ma su una sola, la numero diciassette, qualcuno ha dipinto un piccolo nastro blu.",
+            you: "«{nome}, per chiedere la strada inizia sempre con «Excusez-moi» e finisci con «merci beaucoup». In mezzo basta «pour aller à… ?». I francesi ti aiuteranno volentieri, quasi tutti.»",
+            mine: { fr: "Excusez-moi, je m'appelle {nome} et je cherche la gare. C'est loin d'ici ?", it: "Mi scusi, mi chiamo {nome} e cerco la stazione. È lontana da qui?" }
+          },
+          words: [
+            { fr: "tout droit", it: "sempre dritto", say: "tu drwa", hook: "TOUT DROIT: «tutto diritto», come una freccia. Non confonderlo con «à droite» (a destra): la differenza è tutta in quella T finale che non si sente!",
+              ex: { fr: "Allez tout droit pendant deux cents mètres, la gare est au bout de la rue.", it: "Andate dritto per duecento metri, la stazione è in fondo alla strada." } },
+            { fr: "à gauche", it: "a sinistra", say: "a gòsh", hook: "GAUCHE suona come «goscia»: una goccia cade sempre a sinistra, dal lato del cuore. È anche «maldestro»: i mancini una volta erano «gauches»!",
+              ex: { fr: "Au deuxième feu, tournez à gauche et continuez jusqu'à la place.", it: "Al secondo semaforo girate a sinistra e continuate fino alla piazza." } },
+            { fr: "à droite", it: "a destra", say: "a drwat", hook: "DROITE: la mano «diritta», quella che molti usano per scrivere. Qui la T si sente: drwat.",
+              ex: { fr: "La pharmacie est à droite, juste après la boulangerie.", it: "La farmacia è a destra, subito dopo la panetteria." } },
+            { fr: "tourner", it: "girare, svoltare", say: "turné", hook: "TOURNER = girare, come un tornio che gira. Tournez à gauche = girate a sinistra (forma con vous).",
+              ex: { fr: "Tournez à droite dans la rue de Rivoli, puis demandez encore.", it: "Girate a destra in rue de Rivoli, poi chiedete di nuovo." } },
+            { fr: "traverser", it: "attraversare", say: "travèrsé", hook: "TRAVERSER = attraversare: hai una TRAVERSA da superare. Traversez sur le passage piéton (sulle strisce)!",
+              ex: { fr: "Traversez la rue au feu rouge pour les voitures, c'est plus prudent.", it: "Attraversate la strada col rosso per le auto, è più prudente." } },
+            { fr: "près de / loin de", it: "vicino a / lontano da", say: "prè də / lwẽ də", hook: "PRÈS: «presso», vicino. LOIN: lontano, con la nasale che si allontana: lwẽẽẽ.",
+              ex: { fr: "Mon hôtel est près de la gare, mais loin du centre-ville.", it: "Il mio albergo è vicino alla stazione, ma lontano dal centro." } },
+            { fr: "en face de", it: "di fronte a", say: "ã fas də", hook: "EN FACE: davanti alla tua FACCIA. La boulangerie est en face de l'église: la vedi appena esci dalla chiesa.",
+              ex: { fr: "Le café de Gigi est juste en face de la boulangerie de Françoise.", it: "Il caffè di Gigi è proprio di fronte alla panetteria di Françoise." } },
+            { fr: "le feu", it: "il semaforo", say: "lə fö", hook: "LE FEU è il fuoco, ma in strada è il semaforo: tre fuochi colorati che si accendono. Au feu rouge = al semaforo rosso.",
+              ex: { fr: "Au premier feu, continuez tout droit, et au deuxième, tournez à gauche.", it: "Al primo semaforo continuate dritto, e al secondo girate a sinistra." } },
+            { fr: "Pour aller à… ?", it: "Per andare a…?", say: "pur alé a", hook: "La formula magica di chi si è perso: «Pour aller à la gare ?». Non serve nemmeno un verbo: basta il tono della domanda.",
+              ex: { fr: "Bonjour monsieur, pour aller au musée d'Orsay, c'est par où ?", it: "Buongiorno signore, per andare al museo d'Orsay, da che parte è?" } },
+            { fr: "à pied", it: "a piedi", say: "a pjé", hook: "À PIED: con i piedi, a piedi. Ma in bici e in macchina si dice «à vélo» e «en voiture».",
+              ex: { fr: "C'est à dix minutes à pied ou à deux arrêts de bus.", it: "È a dieci minuti a piedi o a due fermate di autobus." } }
+          ],
+          tip: {
+            title: "La bussola di Croissant: chiedere e capire la strada",
+            body: "<div class='tbl'><table><thead><tr><th>Indicazione</th><th>Significa</th></tr></thead><tbody><tr><td>Allez tout droit.</td><td>Andate dritto.</td></tr><tr><td>Tournez à gauche / à droite.</td><td>Girate a sinistra / a destra.</td></tr><tr><td>Prenez la première / deuxième rue.</td><td>Prendete la prima / seconda strada.</td></tr><tr><td>Traversez le pont / la place.</td><td>Attraversate il ponte / la piazza.</td></tr><tr><td>Continuez jusqu'à…</td><td>Continuate fino a…</td></tr><tr><td>C'est à cinq minutes à pied.</td><td>È a cinque minuti a piedi.</td></tr></tbody></table></div><ul><li><b>Tout droit</b> (dritto) ≠ <b>à droite</b> (a destra): ascolta bene la fine!</li><li>Le indicazioni usano l'imperativo con vous: <b>allez, tournez, prenez, traversez</b>. È la forma «vous» senza il pronome.</li><li><b>De + le = du</b>: près <b>du</b> pont, en face <b>du</b> musée. <b>De + la</b> resta: près <b>de la</b> gare.</li><li>Per chiedere: «Excusez-moi, <b>pour aller à</b>… ?» oppure «<b>C'est loin</b> ?».</li></ul>",
+            examples: [
+              { fr: "Excusez-moi, pour aller à la gare du Nord, s'il vous plaît ?", it: "Mi scusi, per andare alla Gare du Nord, per favore?" },
+              { fr: "Prenez la deuxième rue à gauche, puis allez tout droit.", it: "Prendete la seconda strada a sinistra, poi andate dritto." },
+              { fr: "Le musée est en face du jardin, à côté de la poste.", it: "Il museo è di fronte al giardino, accanto all'ufficio postale." },
+              { fr: "C'est loin ? — Non, c'est tout près, à trois minutes.", it: "È lontano? — No, è vicinissimo, a tre minuti." },
+              { fr: "Traversez la place et continuez jusqu'au pont.", it: "Attraversate la piazza e continuate fino al ponte." }
+            ]
+          },
+          practice: [
+            { t: "mcq", q: "«Tout droit» significa…", opts: ["sempre dritto", "a destra", "tutti a destra", "torna indietro"], a: 0, why: "Tout droit = dritto. A destra = à droite." },
+            { t: "mcq", q: "Come chiedi la strada per la stazione?", opts: ["Pour aller à la gare, s'il vous plaît ?", "Où va la gare ?", "Je vais la gare ?", "La gare est quoi ?"], a: 0, why: "Pour aller à… ? = per andare a…?" },
+            { t: "listen", say: "Au deuxième feu, tournez à gauche et continuez jusqu'à la place.", q: "Cosa devi fare?", opts: ["Al secondo semaforo girare a sinistra e continuare fino alla piazza.", "Al primo semaforo girare a destra.", "Al secondo semaforo andare dritto fino alla stazione.", "Attraversare la piazza e girare a sinistra."], a: 0, why: "Deuxième = secondo; à gauche = a sinistra." },
+            { t: "match", q: "Abbina", pairs: [["à gauche", "a sinistra"], ["à droite", "a destra"], ["en face de", "di fronte a"], ["le feu", "il semaforo"]] },
+            { t: "order", q: "Riordina: «Prendete la prima strada a destra.»", words: ["Prenez", "la", "première", "rue", "à", "droite."], why: "Prenez = prendete (imperativo con vous)." }
+          ],
+          test: [
+            { t: "mcq", q: "Quale indicazione significa «girate a destra»?", opts: ["Tournez à droite.", "Allez tout droit.", "Tournez à gauche.", "Traversez la rue."], a: 0, why: "À droite = a destra." },
+            { t: "mcq", q: "Completa: «La boulangerie est en face ___ musée.»", opts: ["du", "de le", "de la", "des"], a: 0, why: "De + le = du." },
+            { t: "mcq", q: "«C'est à cinq minutes à pied» significa…", opts: ["È a cinque minuti a piedi.", "Ci vogliono cinque minuti in macchina.", "Ci sono cinque fermate.", "È a cinque chilometri."], a: 0, why: "À pied = a piedi." },
+            { t: "mcq", q: "Nel traffico, «le feu» è…", opts: ["il semaforo", "il fuoco", "l'incrocio", "il marciapiede"], a: 0, why: "Le feu rouge = il semaforo rosso." },
+            { t: "listen", say: "Allez tout droit pendant deux cents mètres, la gare est au bout de la rue.", q: "Dov'è la stazione?", opts: ["In fondo alla strada, dopo duecento metri dritto.", "A destra dopo duecento metri.", "Dietro la chiesa, a sinistra.", "Lontano, bisogna prendere l'autobus."], a: 0, why: "Tout droit = dritto; au bout = in fondo." },
+            { t: "listen", say: "Mon hôtel est près de la gare, mais loin du centre-ville.", q: "Dov'è l'albergo?", opts: ["Vicino alla stazione, ma lontano dal centro.", "Lontano dalla stazione, ma vicino al centro.", "In centro, di fronte alla stazione.", "Vicino al centro e alla stazione."], a: 0, why: "Près de = vicino a; loin de = lontano da." },
+            { t: "type", q: "Completa: «Allez tout ___, puis tournez à gauche.» (dritto)", a: ["droit"], why: "Tout droit: la T finale non si sente." },
+            { t: "type", q: "Completa: «___ la rue au passage piéton.» (attraversate)", a: ["Traversez"], why: "Traversez = attraversate (vous)." },
+            { t: "type", say: "Le café de Gigi est juste en face de la boulangerie.", q: "Ascolta e completa: «Le café de Gigi est juste en ___ de la boulangerie.»", a: ["face"], why: "En face de = di fronte a." },
+            { t: "order", q: "Riordina: «Mi scusi, per andare alla stazione, per favore?»", words: ["Excusez-moi,", "pour", "aller", "à", "la", "gare,", "s'il", "vous", "plaît", "?"], why: "Excusez-moi + pour aller à… ?" },
+            { t: "match", q: "Abbina", pairs: [["tourner", "girare"], ["traverser", "attraversare"], ["près de", "vicino a"], ["loin de", "lontano da"]] },
+            { t: "mcq", q: "Qual è la differenza tra «tout droit» e «à droite»?", opts: ["Tout droit = dritto; à droite = a destra.", "Sono sinonimi.", "Tout droit = a destra; à droite = dritto.", "Tout droit = tutti a destra."], a: 0, why: "Attenzione: la confusione più comune per strada!" }
+          ],
+          recap: {
+            can: ["Chiedere la strada con «Excusez-moi, pour aller à… ?»", "Capire tout droit, à gauche, à droite, la première rue…", "Dire se un posto è vicino, lontano o di fronte", "Usare du (de + le) con i luoghi"],
+            phrases: [{ fr: "Excusez-moi, pour aller à la gare, s'il vous plaît ?", it: "Mi scusi, per andare alla stazione, per favore?" }, { fr: "Allez tout droit, puis prenez la première rue à gauche.", it: "Andate dritto, poi prendete la prima strada a sinistra." }, { fr: "C'est tout près, en face du musée.", it: "È vicinissimo, di fronte al museo." }],
+            trap: "TOUT DROIT (dritto) e À DROITE (a destra) si somigliano: nel primo la T finale è muta, nel secondo si sente."
+          }
+        },
+        /* ---------------- LEZIONE 4-3 ---------------- */
+        {
+          id: "4-3", street: "Rue du Mouvement", title: "Aller e venir: andare e venire",
+          goal: "Coniugare «aller» e «venir» al presente e dire dove vai e da dove vieni con au, à la, aux, du, de la, des.",
+          episode: {
+            title: "La cassetta numero diciassette",
+            intro: "Davanti alla cassetta col nastro blu c'è un bouquiniste con la barba bianca e una sciarpa rossa. Quando vede la chiave di Zizì, chiude il giornale di colpo. Accanto a lui, seduto su una sedia pieghevole, c'è… il signore col cappello grigio.",
+            lines: [
+              { who: "Gigi", fr: "Monsieur ! Vous êtes le client mystérieux du café ! Vous venez souvent ici ?", it: "Signore! Lei è il cliente misterioso del caffè! Viene spesso qui?" },
+              { who: "M. Bernard", fr: "Je viens ici tous les jeudis. Et vous, vous venez de Montmartre ?", it: "Vengo qui tutti i giovedì. E voi, venite da Montmartre?" },
+              { who: "Léa", fr: "Oui, nous venons du café en métro. Mais vous, où allez-vous après ?", it: "Sì, veniamo dal caffè in metrò. Ma lei, dove va dopo?" },
+              { who: "M. Bernard", fr: "Je vais au marché aux fleurs, puis je vais à la bibliothèque.", it: "Vado al mercato dei fiori, poi vado in biblioteca." },
+              { who: "Le bouquiniste", fr: "Tu vas leur dire la vérité, Henri ? Ils viennent de loin pour ça.", it: "Gli dici la verità, Henri? Vengono da lontano per questo." },
+              { who: "M. Bernard", fr: "Oui, Paul. Gigi, ta grand-tante et moi, nous allions danser aux bals du samedi.", it: "Sì, Paul. Gigi, tua prozia e io andavamo a ballare ai balli del sabato." },
+              { who: "Croissant", fr: "Je vais m'asseoir. Les histoires d'amour, ça me donne toujours faim.", it: "Vado a sedermi. Le storie d'amore mi fanno sempre venire fame." },
+              { who: "M. Bernard", fr: "Ouvrez la boîte avec votre clé. Ce que Zizì a laissé, c'est pour vous.", it: "Aprite la cassetta con la vostra chiave. Quello che Zizì ha lasciato è per voi." }
+            ],
+            outro: "La piccola chiave entra perfettamente nel lucchetto della cassetta numero diciassette. Dentro, tra vecchi romanzi, c'è una scatola di latta con un nastro blu. M. Bernard si toglie il cappello: le mani gli tremano un po'.",
+            you: "«{nome}, «aller» e «venir» sono irregolari, ma li userai ogni giorno: je vais au café, je viens de Rome. Imparali come una canzoncina e non li dimenticherai più.»",
+            mine: { fr: "Je m'appelle {nome}, je viens d'Italie et cet été je vais à Paris avec mes amis.", it: "Mi chiamo {nome}, vengo dall'Italia e quest'estate vado a Parigi con i miei amici." }
+          },
+          words: [
+            { fr: "je vais", it: "vado", say: "jə vè", hook: "JE VAIS sembra «io vado» col naso francese: vè. Je vais au cinéma, je vais bien (sto bene): aller serve anche per la salute!",
+              ex: { fr: "Le samedi matin, je vais au marché avec ma voisine et son chien.", it: "Il sabato mattina vado al mercato con la mia vicina e il suo cane." } },
+            { fr: "tu vas / il va", it: "vai / va", say: "tü va / il va", hook: "TU VAS e IL VA: come in italiano, «va»! Ça va? = come va? Lo conosci già.",
+              ex: { fr: "Tu vas à la fête de Léa samedi soir ou tu restes à la maison ?", it: "Vai alla festa di Léa sabato sera o resti a casa?" } },
+            { fr: "nous allons / vous allez / ils vont", it: "andiamo / andate / vanno", say: "nu zalõ / vu zalé / il võ", hook: "NOUS ALLONS e VOUS ALLEZ vengono da «aller» (cfr. «allez!», forza!). ILS VONT è il rimbalzo: vanno → vont.",
+              ex: { fr: "Nous allons à la plage en août, et nos amis vont à la montagne.", it: "Andiamo al mare ad agosto, e i nostri amici vanno in montagna." } },
+            { fr: "venir", it: "venire", say: "vənìr", hook: "VENIR = venire, con la R finale che si sente. Je viens, tu viens, il vient: sembra «vieni», ma col naso.",
+              ex: { fr: "Tu viens au cinéma avec nous ce soir ? Le film commence à neuf heures.", it: "Vieni al cinema con noi stasera? Il film comincia alle nove." } },
+            { fr: "je viens de…", it: "vengo da…", say: "jə vjẽ də", hook: "JE VIENS DE: il «de» indica la provenienza. Je viens de Naples, je viens d'Italie, je viens du Japon.",
+              ex: { fr: "Je viens de Naples, mais j'habite à Paris depuis trois semaines.", it: "Vengo da Napoli, ma abito a Parigi da tre settimane." } },
+            { fr: "nous venons / vous venez / ils viennent", it: "veniamo / venite / vengono", say: "nu vənõ / vu vəné / il vjèn", hook: "ILS VIENNENT: con la doppia N la nasale si «apre»: vjèn. Come una porta che si spalanca per farli entrare!",
+              ex: { fr: "Mes parents viennent à Paris en décembre pour voir le café.", it: "I miei genitori vengono a Parigi a dicembre per vedere il caffè." } },
+            { fr: "au / à la / aux", it: "al / alla / ai, alle", say: "ò / a la / ò", hook: "À + LE = AU, À + LES = AUX: due fusioni obbligatorie. Je vais AU cinéma, À LA plage, AUX toilettes.",
+              ex: { fr: "Après le travail, je vais au supermarché, puis à la pharmacie.", it: "Dopo il lavoro vado al supermercato, poi in farmacia." } },
+            { fr: "du / de la / des", it: "dal / dalla / dai, dalle", say: "dü / də la / dé", hook: "DE + LE = DU, DE + LES = DES: le stesse fusioni, ma per la provenienza. Je viens DU marché, DE LA gare.",
+              ex: { fr: "Elle revient du marché avec des fleurs et des fruits pour la semaine.", it: "Torna dal mercato con fiori e frutta per la settimana." } },
+            { fr: "en métro / en bus", it: "in metrò / in autobus", say: "ã métrò / ã büs", hook: "Con i mezzi in cui entri si usa EN: en métro, en bus, en train, en voiture. Ma À pied e À vélo, perché ci stai sopra!",
+              ex: { fr: "Je vais au travail en métro, mais le dimanche je préfère marcher.", it: "Vado al lavoro in metrò, ma la domenica preferisco camminare." } },
+            { fr: "tous les jours", it: "tutti i giorni", say: "tu lé jur", hook: "TOUS LES JOURS: «tutti i giorni». Con il giorno della settimana: tous les jeudis = ogni giovedì.",
+              ex: { fr: "Monsieur Bernard vient au café tous les jours à huit heures précises.", it: "Il signor Bernard viene al caffè tutti i giorni alle otto in punto." } }
+          ],
+          tip: {
+            title: "Aller e venir: la canzoncina dei verbi in movimento",
+            body: "<div class='tbl'><table><thead><tr><th></th><th>aller (andare)</th><th>venir (venire)</th></tr></thead><tbody><tr><td>je</td><td>vais</td><td>viens</td></tr><tr><td>tu</td><td>vas</td><td>viens</td></tr><tr><td>il / elle</td><td>va</td><td>vient</td></tr><tr><td>nous</td><td>allons</td><td>venons</td></tr><tr><td>vous</td><td>allez</td><td>venez</td></tr><tr><td>ils / elles</td><td>vont</td><td>viennent</td></tr></tbody></table></div><ul><li><b>Aller + à</b> (destinazione): à + le = <b>au</b>, à + les = <b>aux</b>, à la e à l' restano.</li><li><b>Venir + de</b> (provenienza): de + le = <b>du</b>, de + les = <b>des</b>, de la e de l' restano.</li><li>Paesi: je vais <b>en</b> France / <b>au</b> Japon, ma je viens <b>de</b> France / <b>du</b> Japon.</li><li>Mezzi: <b>en</b> métro, en train, en voiture; <b>à</b> pied, à vélo.</li></ul>",
+            examples: [
+              { fr: "Je vais au café, et toi, tu vas où ?", it: "Io vado al caffè, e tu, dove vai?" },
+              { fr: "Nous allons aux Galeries Lafayette en métro.", it: "Andiamo alle Galeries Lafayette in metrò." },
+              { fr: "Vous venez d'Italie ? — Oui, nous venons de Rome.", it: "Venite dall'Italia? — Sì, veniamo da Roma." },
+              { fr: "Ils viennent du marché aux fleurs, près de Notre-Dame.", it: "Vengono dal mercato dei fiori, vicino a Notre-Dame." },
+              { fr: "Elle va à la gare à pied, parce qu'il fait beau.", it: "Va alla stazione a piedi, perché fa bel tempo." }
+            ]
+          },
+          practice: [
+            { t: "mcq", q: "Completa: «Nous ___ au marché.» (andare)", opts: ["allons", "vont", "allez", "vais"], a: 0, why: "Nous allons." },
+            { t: "mcq", q: "Completa: «Je vais ___ cinéma.»", opts: ["au", "à le", "à la", "aux"], a: 0, why: "À + le = au." },
+            { t: "listen", say: "Je viens de Naples, mais j'habite à Paris depuis trois semaines.", q: "Cosa hai sentito?", opts: ["Vengo da Napoli, ma abito a Parigi da tre settimane.", "Vado a Napoli tra tre settimane.", "Abito a Napoli da tre settimane.", "Vengo da Parigi e vado a Napoli."], a: 0, why: "Je viens de = vengo da." },
+            { t: "match", q: "Abbina", pairs: [["je vais", "vado"], ["ils vont", "vanno"], ["je viens", "vengo"], ["ils viennent", "vengono"]] },
+            { t: "order", q: "Riordina: «Vado al lavoro in metrò.»", words: ["Je", "vais", "au", "travail", "en", "métro."], why: "Au travail; en métro." }
+          ],
+          test: [
+            { t: "mcq", q: "Completa: «Ils ___ à la plage en août.» (andare)", opts: ["vont", "allent", "vas", "allons"], a: 0, why: "Ils vont: irregolare!" },
+            { t: "mcq", q: "Completa: «Elle revient ___ marché.»", opts: ["du", "de le", "au", "des"], a: 0, why: "De + le = du." },
+            { t: "mcq", q: "Completa: «Mes parents ___ à Paris en décembre.» (venire)", opts: ["viennent", "venont", "vient", "venez"], a: 0, why: "Ils viennent, con la doppia N." },
+            { t: "mcq", q: "Come si dice «vado al lavoro a piedi»?", opts: ["Je vais au travail à pied.", "Je vais au travail en pied.", "Je vais à le travail à pied.", "Je viens au travail en pied."], a: 0, why: "Au travail; à pied." },
+            { t: "listen", say: "Tu viens au cinéma avec nous ce soir ? Le film commence à neuf heures.", q: "Cosa ti chiedono?", opts: ["Se vai al cinema con loro stasera alle nove.", "Se vieni a cena stasera alle nove.", "Se hai visto il film di stasera.", "Se il cinema apre alle nove."], a: 0, why: "Tu viens = vieni." },
+            { t: "listen", say: "Nous allons à la plage en août, et nos amis vont à la montagne.", q: "Dove vanno gli amici?", opts: ["In montagna.", "Al mare.", "In città.", "Al lago."], a: 0, why: "Ils vont à la montagne." },
+            { t: "type", q: "Completa: «Vous ___ d'Italie ?» (venite)", a: ["venez"], why: "Vous venez." },
+            { t: "type", q: "Completa: «Je vais ___ toilettes.» (alle)", a: ["aux"], why: "À + les = aux." },
+            { t: "type", say: "Je vais au travail en métro.", q: "Ascolta e completa: «Je vais au travail ___ métro.»", a: ["en"], why: "En métro, en bus, en train." },
+            { t: "order", q: "Riordina: «Vengo da Napoli e vado a Parigi.»", words: ["Je", "viens", "de", "Naples", "et", "je", "vais", "à", "Paris."], why: "Venir de, aller à." },
+            { t: "match", q: "Abbina", pairs: [["à + le", "au"], ["à + les", "aux"], ["de + le", "du"], ["de + les", "des"]] },
+            { t: "mcq", q: "Chi è davvero M. Bernard?", opts: ["Un vecchio amico (e cavaliere) di Zizì", "Il fratello di Gigi", "Il padrone del caffè", "Un poliziotto in borghese"], a: 0, why: "Andava a ballare con Zizì: si chiama Henri." }
+          ],
+          recap: {
+            can: ["Coniugare aller e venir al presente", "Dire dove vai con au, à la, aux", "Dire da dove vieni con du, de la, des", "Dire con quale mezzo: en métro, à pied…"],
+            phrases: [{ fr: "Je vais au café en métro.", it: "Vado al caffè in metrò." }, { fr: "Nous venons du marché aux fleurs.", it: "Veniamo dal mercato dei fiori." }, { fr: "Ils viennent à Paris tous les étés.", it: "Vengono a Parigi tutte le estati." }],
+            trap: "À + LE = AU, À + LES = AUX, DE + LE = DU, DE + LES = DES: mai «à le» o «de le»!"
+          }
+        },
+        /* ---------------- LEZIONE 4-4 ---------------- */
+        {
+          id: "4-4", street: "Rue des Prépositions", title: "Dove sono le cose: sur, sous, dans, devant…",
+          goal: "Descrivere dove si trovano persone e oggetti con le preposizioni di luogo, in frasi lunghe e precise.",
+          episode: {
+            title: "La scatola di latta",
+            intro: "Seduti su una panchina davanti a Notre-Dame, aprono la scatola di latta. Dentro c'è un piccolo mondo: lettere, fotografie, un biglietto del cinema del 1965 e un bottone dorato. M. Bernard guarda tutto in silenzio.",
+            lines: [
+              { who: "Léa", fr: "Sur la photo, il y a Zizì devant un café, avec un jeune homme très élégant.", it: "Nella foto c'è Zizì davanti a un caffè, con un giovanotto molto elegante." },
+              { who: "M. Bernard", fr: "Le jeune homme, c'est moi. Derrière nous, c'est le café de Montmartre.", it: "Il giovanotto sono io. Dietro di noi c'è il caffè di Montmartre." },
+              { who: "Gigi", fr: "Et dans l'enveloppe, sous les photos, il y a une lettre pour vous !", it: "E nella busta, sotto le foto, c'è una lettera per lei!" },
+              { who: "M. Bernard", fr: "Pour moi ? Après tant d'années… Lis-la, Gigi, mes yeux sont fatigués.", it: "Per me? Dopo tanti anni… Leggila tu, Gigi, i miei occhi sono stanchi." },
+              { who: "Gigi", fr: "« Henri, je suis partie, mais mon cœur est resté entre le café et la Seine. »", it: "«Henri, sono partita, ma il mio cuore è rimasto tra il caffè e la Senna.»" },
+              { who: "Croissant", fr: "Je suis à côté de vous, sous le banc. Personne ne pleure, d'accord ?", it: "Sono accanto a voi, sotto la panchina. Nessuno piange, d'accordo?" },
+              { who: "Mme Lefèvre", fr: "Au fond de la boîte, entre deux cartes postales, il y a encore quelque chose.", it: "In fondo alla scatola, tra due cartoline, c'è ancora qualcosa." },
+              { who: "Léa", fr: "Un petit carton avec une date et une heure : « Samedi, dix heures, au jardin du Luxembourg ».", it: "Un cartoncino con una data e un'ora: «Sabato, ore dieci, al giardino del Luxembourg»." }
+            ],
+            outro: "M. Bernard sorride per la prima volta: «Era il nostro appuntamento di ogni sabato. Zizì vuole che ci andiate voi.» Ma chi li aspetterà al Luxembourg, dopo tutti questi anni? Lo scoprirai nel 5° arrondissement, quando imparerai a dire l'ora.",
+            you: "«{nome}, con sur, sous, dans, devant, derrière e entre puoi descrivere qualsiasi foto. Prova con la stanza dove sei adesso: dov'è il telefono? Sur la table? Dans ta main?»",
+            mine: { fr: "Je m'appelle {nome} : mon téléphone est sur la table, et mon chat dort sous le lit.", it: "Mi chiamo {nome}: il mio telefono è sul tavolo, e il mio gatto dorme sotto il letto." }
+          },
+          words: [
+            { fr: "sur", it: "su, sopra", say: "sür", hook: "SUR = su, con la U alla francese (labbra a bacio). Il gatto è SUR la table: sopra, da padrone.",
+              ex: { fr: "Les clés sont sur la table de la cuisine, à côté du pain.", it: "Le chiavi sono sul tavolo della cucina, accanto al pane." } },
+            { fr: "sous", it: "sotto", say: "su", hook: "SOUS = sotto, con OU che si legge «u»: su… ma vuol dire sotto! Trappola perfetta: SUR sopra, SOUS sotto.",
+              ex: { fr: "Croissant dort sous le comptoir, là où il fait chaud et calme.", it: "Croissant dorme sotto il bancone, dove fa caldo ed è tranquillo." } },
+            { fr: "dans", it: "dentro, in", say: "dã", hook: "DANS = dentro: suona come «danza», e in una scatola le cose danzano quando la scuoti!",
+              ex: { fr: "Dans la boîte, il y a des lettres, des photos et un bouton doré.", it: "Nella scatola ci sono lettere, foto e un bottone dorato." } },
+            { fr: "devant", it: "davanti a", say: "dəvã", hook: "DEVANT = davanti: le due parole iniziano uguali, de-va. Rendez-vous devant la gare!",
+              ex: { fr: "On se retrouve devant l'entrée du musée à dix heures, d'accord ?", it: "Ci troviamo davanti all'ingresso del museo alle dieci, d'accordo?" } },
+            { fr: "derrière", it: "dietro a", say: "dèrjèr", hook: "DERRIÈRE = dietro… e anche il sedere! «Le derrière» è quello che sta dietro di te.",
+              ex: { fr: "Derrière l'église, il y a un petit jardin avec des bancs.", it: "Dietro la chiesa c'è un giardinetto con delle panchine." } },
+            { fr: "entre", it: "tra, fra", say: "ãtr", hook: "ENTRE = tra. Somiglia a «entrare»: per stare TRA due cose devi ENTRARE in mezzo.",
+              ex: { fr: "La pharmacie est entre la banque et la boulangerie.", it: "La farmacia è tra la banca e la panetteria." } },
+            { fr: "à côté de", it: "accanto a", say: "a kòté də", hook: "À CÔTÉ: «a costato», al tuo fianco. La S scomparsa di «costa» è diventata il cappellino sulla Ô.",
+              ex: { fr: "Je m'assieds à côté de la fenêtre pour regarder les passants.", it: "Mi siedo accanto alla finestra per guardare i passanti." } },
+            { fr: "au fond de", it: "in fondo a", say: "ò fõ də", hook: "AU FOND = in fondo, sul fondo. Au fond de la boîte, au fond du couloir (in fondo al corridoio).",
+              ex: { fr: "Les toilettes sont au fond du couloir, à gauche.", it: "Il bagno è in fondo al corridoio, a sinistra." } },
+            { fr: "la boîte", it: "la scatola", say: "la bwat", hook: "BOÎTE: il cappellino sulla Î ricorda la S di «bossolo». E «la boîte» è anche la discoteca!",
+              ex: { fr: "Zizì garde ses souvenirs dans une vieille boîte en métal.", it: "Zizì conserva i suoi ricordi in una vecchia scatola di metallo." } },
+            { fr: "le banc", it: "la panchina", say: "lə bã", hook: "BANC = panca: pensa a un banco di scuola, ma all'aperto, nel parco. La C finale è muta.",
+              ex: { fr: "Ils s'assoient sur un banc devant Notre-Dame pour ouvrir la boîte.", it: "Si siedono su una panchina davanti a Notre-Dame per aprire la scatola." } }
+          ],
+          tip: {
+            title: "Le preposizioni di luogo: la scatola di Croissant",
+            body: "<div class='tbl'><table><thead><tr><th>Preposizione</th><th>Significa</th><th>Esempio</th></tr></thead><tbody><tr><td>sur</td><td>su</td><td>sur la table</td></tr><tr><td>sous</td><td>sotto</td><td>sous le lit</td></tr><tr><td>dans</td><td>dentro</td><td>dans la boîte</td></tr><tr><td>devant</td><td>davanti a</td><td>devant la gare</td></tr><tr><td>derrière</td><td>dietro a</td><td>derrière l'église</td></tr><tr><td>entre</td><td>tra</td><td>entre le café et la Seine</td></tr><tr><td>à côté de</td><td>accanto a</td><td>à côté du pont</td></tr><tr><td>en face de</td><td>di fronte a</td><td>en face de la banque</td></tr><tr><td>au fond de</td><td>in fondo a</td><td>au fond du couloir</td></tr></tbody></table></div><ul><li><b>Sur</b> (sopra) e <b>sous</b> (sotto) si confondono facilmente: SUR ha la U delle labbra a bacio, SOUS il suono «u».</li><li>Sur, sous, dans, devant, derrière, entre vogliono l'articolo <b>direttamente</b>: devant la gare (non «devant de»).</li><li>À côté <b>de</b>, en face <b>de</b>, au fond <b>de</b>, près <b>de</b> vogliono DE: à côté <b>du</b> pont.</li></ul>",
+            examples: [
+              { fr: "Le chat est sur le canapé, et le chien est sous la table.", it: "Il gatto è sul divano, e il cane è sotto il tavolo." },
+              { fr: "Mon téléphone est dans mon sac, à côté de mes clés.", it: "Il mio telefono è nella borsa, accanto alle chiavi." },
+              { fr: "Rendez-vous devant la fontaine, entre le café et la poste.", it: "Appuntamento davanti alla fontana, tra il caffè e la posta." },
+              { fr: "Derrière le musée, il y a un parc très tranquille.", it: "Dietro il museo c'è un parco molto tranquillo." },
+              { fr: "La lettre est au fond de la boîte, sous les photos.", it: "La lettera è in fondo alla scatola, sotto le foto." }
+            ]
+          },
+          practice: [
+            { t: "mcq", q: "«Sous le lit» significa…", opts: ["sotto il letto", "sopra il letto", "accanto al letto", "dentro il letto"], a: 0, why: "Sous = sotto; sur = sopra." },
+            { t: "mcq", q: "Completa: «La pharmacie est à côté ___ pont.»", opts: ["du", "de le", "le", "au"], a: 0, why: "À côté de + le = à côté du." },
+            { t: "listen", say: "La pharmacie est entre la banque et la boulangerie.", q: "Dov'è la farmacia?", opts: ["Tra la banca e la panetteria.", "Dietro la banca.", "Di fronte alla panetteria.", "Sopra la banca."], a: 0, why: "Entre = tra." },
+            { t: "match", q: "Abbina", pairs: [["sur", "sopra"], ["sous", "sotto"], ["devant", "davanti"], ["derrière", "dietro"]] },
+            { t: "order", q: "Riordina: «Le chiavi sono sul tavolo della cucina.»", words: ["Les", "clés", "sont", "sur", "la", "table", "de", "la", "cuisine."], why: "Sur la table = sul tavolo." }
+          ],
+          test: [
+            { t: "mcq", q: "Completa: «Croissant dort ___ le comptoir.» (sotto)", opts: ["sous", "sur", "dans", "devant"], a: 0, why: "Sous = sotto." },
+            { t: "mcq", q: "Quale frase è corretta?", opts: ["Rendez-vous devant la gare.", "Rendez-vous devant de la gare.", "Rendez-vous devant du gare.", "Rendez-vous à devant la gare."], a: 0, why: "Devant + articolo, senza de." },
+            { t: "mcq", q: "«Au fond du couloir» significa…", opts: ["in fondo al corridoio", "davanti al corridoio", "sopra il corridoio", "fuori dal corridoio"], a: 0, why: "Au fond de = in fondo a." },
+            { t: "mcq", q: "Completa: «Je m'assieds à côté ___ fenêtre.»", opts: ["de la", "du", "à la", "la"], a: 0, why: "À côté de + la fenêtre = de la (femminile non si fonde)." },
+            { t: "listen", say: "Dans la boîte, il y a des lettres, des photos et un bouton doré.", q: "Cosa c'è nella scatola?", opts: ["Lettere, foto e un bottone dorato.", "Soldi, gioielli e una chiave.", "Libri, cartoline e un orologio.", "Solo una vecchia fotografia."], a: 0, why: "Dans = dentro." },
+            { t: "listen", say: "Derrière l'église, il y a un petit jardin avec des bancs.", q: "Cosa c'è dietro la chiesa?", opts: ["Un giardinetto con delle panchine.", "Un grande parcheggio.", "Un caffè con la terrazza.", "Una stazione del metrò."], a: 0, why: "Derrière = dietro; le banc = la panchina." },
+            { t: "type", q: "Completa: «Le chat est ___ le canapé.» (sopra)", a: ["sur"], why: "Sur = sopra." },
+            { t: "type", q: "Completa: «La poste est ___ le café et la banque.» (tra)", a: ["entre"], why: "Entre = tra." },
+            { t: "type", say: "On se retrouve devant l'entrée du musée à dix heures.", q: "Ascolta e completa: «On se retrouve ___ l'entrée du musée.»", a: ["devant"], why: "Devant = davanti a." },
+            { t: "order", q: "Riordina: «La lettera è in fondo alla scatola, sotto le foto.»", words: ["La", "lettre", "est", "au", "fond", "de", "la", "boîte,", "sous", "les", "photos."], why: "Au fond de la boîte; sous les photos." },
+            { t: "match", q: "Abbina", pairs: [["dans", "dentro"], ["entre", "tra"], ["à côté de", "accanto a"], ["la boîte", "la scatola"]] },
+            { t: "mcq", q: "Cosa trovano in fondo alla scatola?", opts: ["Un cartoncino con un appuntamento al Luxembourg", "Una seconda chiave", "Un assegno", "La ricetta di un dolce"], a: 0, why: "«Samedi, dix heures, au jardin du Luxembourg»." }
+          ],
+          recap: {
+            can: ["Dire dove si trova un oggetto: sur, sous, dans…", "Descrivere una foto o una stanza in modo preciso", "Dare appuntamenti: devant la gare, à côté du café", "Distinguere le preposizioni con e senza «de»"],
+            phrases: [{ fr: "Mon téléphone est sur la table, à côté de mes clés.", it: "Il mio telefono è sul tavolo, accanto alle chiavi." }, { fr: "Rendez-vous devant la gare à dix heures.", it: "Appuntamento davanti alla stazione alle dieci." }, { fr: "La lettre est au fond de la boîte, sous les photos.", it: "La lettera è in fondo alla scatola, sotto le foto." }],
+            trap: "SUR = sopra, SOUS = sotto: sembrano al contrario per un italiano! E devant / derrière non vogliono «de»."
+          }
+        }
+      ]
+    },
+    {
+      n: 5, arr: "5e", name: "Le temps", it: "Il tempo", level: "A1",
+      lessons: [
+        /* ---------------- LEZIONE 5-1 ---------------- */
+        {
+          id: "5-1", street: "Rue de l'Heure", title: "Che ore sono? L'ora in francese",
+          goal: "Chiedere e dire l'ora, anche con «et quart», «et demie» e «moins le quart», e fissare un appuntamento.",
+          episode: {
+            title: "Appuntamento al Luxembourg",
+            intro: "Sabato mattina. L'appuntamento è alle dieci al giardino del Luxembourg, nel 5° e 6° arrondissement. Gigi ha messo tre sveglie, ma ha dimenticato di cambiare l'ora del telefono. Léa lo aspetta davanti al cancello, guardando l'orologio ogni dieci secondi.",
+            lines: [
+              { who: "Léa", fr: "Gigi, enfin ! Tu sais quelle heure il est ? Il est dix heures et quart !", it: "Gigi, finalmente! Sai che ore sono? Sono le dieci e un quarto!" },
+              { who: "Gigi", fr: "Pardon ! Mon réveil a sonné à huit heures, mais je me suis rendormi.", it: "Scusa! La sveglia è suonata alle otto, ma mi sono riaddormentato." },
+              { who: "Croissant", fr: "Moi, je suis prêt depuis six heures et demie. Comme toujours.", it: "Io sono pronto dalle sei e mezza. Come sempre." },
+              { who: "Léa", fr: "Le rendez-vous était à dix heures pile, devant la fontaine Médicis.", it: "L'appuntamento era alle dieci in punto, davanti alla fontana Medici." },
+              { who: "Mme Lefèvre", fr: "Calmez-vous : je suis arrivée à dix heures moins cinq, et il n'y a personne.", it: "Calmatevi: sono arrivata alle dieci meno cinque, e non c'è nessuno." },
+              { who: "Gigi", fr: "Le parc ferme à quelle heure ? Nous pouvons attendre jusqu'à midi.", it: "A che ora chiude il parco? Possiamo aspettare fino a mezzogiorno." },
+              { who: "Léa", fr: "Regardez, là-bas : une vieille dame avec un chapeau bleu nous fait signe !", it: "Guardate, laggiù: un'anziana signora con un cappello blu ci fa segno!" },
+              { who: "Mme Duval", fr: "Vous êtes en retard, les enfants. J'attends ce moment depuis presque quarante ans.", it: "Siete in ritardo, ragazzi. Aspetto questo momento da quasi quarant'anni." }
+            ],
+            outro: "La signora col cappello blu si chiama Odette Duval ed era la migliore amica di Zizì. Ogni sabato, da quasi quarant'anni, viene alla fontana Medici alle dieci, «perché una promessa è una promessa». Ha in borsa un quaderno pieno di date.",
+            you: "«{nome}, in Francia gli orari ufficiali usano le 24 ore: il treno parte «à dix-sept heures trente». Tra amici invece si dice «cinq heures et demie». E soprattutto: non arrivare in ritardo come Gigi.»",
+            mine: { fr: "Je m'appelle {nome}, et tous les jours je me réveille à sept heures et quart.", it: "Mi chiamo {nome}, e tutti i giorni mi sveglio alle sette e un quarto." }
+          },
+          words: [
+            { fr: "Quelle heure est-il ?", it: "Che ore sono?", say: "kèl ör è til", hook: "In francese l'ora è al singolare: «quale ora è?». Più colloquiale: «Il est quelle heure ?».",
+              ex: { fr: "Excusez-moi, quelle heure est-il ? Mon téléphone n'a plus de batterie.", it: "Mi scusi, che ore sono? Il mio telefono è scarico." } },
+            { fr: "Il est… heures", it: "Sono le…", say: "il è … ör", hook: "IL EST deux heures = sono le due. Si dice sempre HEURES, anche quando in italiano non lo diciamo: il est huit heures.",
+              ex: { fr: "Il est huit heures, et le café est déjà plein de clients pressés.", it: "Sono le otto, e il caffè è già pieno di clienti di fretta." } },
+            { fr: "et quart / et demie", it: "e un quarto / e mezza", say: "e kar / e dəmì", hook: "QUART è un quarto, DEMIE è mezza. Dieci e mezza = dix heures ET DEMIE, con la E finale perché «heure» è femminile.",
+              ex: { fr: "Le film commence à huit heures et demie, on mange avant ?", it: "Il film comincia alle otto e mezza, mangiamo prima?" } },
+            { fr: "moins le quart", it: "meno un quarto", say: "mwẽ lə kar", hook: "MOINS = meno. Il est midi moins le quart = mezzogiorno meno un quarto. Con i minuti: dix heures moins cinq.",
+              ex: { fr: "Le train part à six heures moins le quart, il ne faut pas être en retard.", it: "Il treno parte alle sei meno un quarto, non bisogna essere in ritardo." } },
+            { fr: "midi / minuit", it: "mezzogiorno / mezzanotte", say: "midì / minüì", hook: "MIDI = metà del dì; MINUIT = metà della notte (nuit). Non si dice «douze heures» tra amici.",
+              ex: { fr: "On déjeune à midi et on se couche rarement avant minuit.", it: "Pranziamo a mezzogiorno e raramente andiamo a letto prima di mezzanotte." } },
+            { fr: "à … heures", it: "alle…", say: "a … ör", hook: "«Alle» si dice À: à trois heures. Vers trois heures = verso le tre (circa).",
+              ex: { fr: "Rendez-vous à dix heures devant la fontaine du jardin.", it: "Appuntamento alle dieci davanti alla fontana del giardino." } },
+            { fr: "en retard / à l'heure / en avance", it: "in ritardo / puntuale / in anticipo", say: "ã rətar / a lör / ã navãs", hook: "EN RETARD: il ritardatario è RITARDATO. À L'HEURE: «all'ora giusta». EN AVANCE: sei AVANTI.",
+              ex: { fr: "Le train est à l'heure, mais Gigi, lui, est toujours en retard.", it: "Il treno è puntuale, ma Gigi, lui, è sempre in ritardo." } },
+            { fr: "le matin / l'après-midi / le soir", it: "la mattina / il pomeriggio / la sera", say: "lə matẽ / laprèmidì / lə swar", hook: "MATIN = mattino. APRÈS-MIDI = dopo mezzogiorno. SOIR = sera (pensa alla «soirée», la serata).",
+              ex: { fr: "Le matin je travaille, l'après-midi j'étudie, et le soir je me repose.", it: "La mattina lavoro, il pomeriggio studio, e la sera mi riposo." } },
+            { fr: "une minute / une heure", it: "un minuto / un'ora", say: "ün minüt / ün ör", hook: "Attenzione al genere: UNE minute è femminile in francese! Une heure si lega: ü-nör.",
+              ex: { fr: "Attends une minute, j'arrive dans un quart d'heure.", it: "Aspetta un minuto, arrivo tra un quarto d'ora." } },
+            { fr: "pile", it: "in punto", say: "pil", hook: "À dix heures PILE: preciso come una PILA di monete perfettamente dritta.",
+              ex: { fr: "Monsieur Bernard arrive au café à huit heures pile, tous les jours.", it: "Il signor Bernard arriva al caffè alle otto in punto, tutti i giorni." } }
+          ],
+          tip: {
+            title: "L'orologio di Croissant",
+            body: "<div class='tbl'><table><thead><tr><th>Ora</th><th>Tra amici</th><th>Ufficiale (24 h)</th></tr></thead><tbody><tr><td>8:00</td><td>huit heures</td><td>huit heures</td></tr><tr><td>8:15</td><td>huit heures et quart</td><td>huit heures quinze</td></tr><tr><td>8:30</td><td>huit heures et demie</td><td>huit heures trente</td></tr><tr><td>8:45</td><td>neuf heures moins le quart</td><td>huit heures quarante-cinq</td></tr><tr><td>8:50</td><td>neuf heures moins dix</td><td>huit heures cinquante</td></tr><tr><td>12:00</td><td>midi</td><td>douze heures</td></tr><tr><td>17:30</td><td>cinq heures et demie</td><td>dix-sept heures trente</td></tr><tr><td>0:00</td><td>minuit</td><td>zéro heure</td></tr></tbody></table></div><ul><li>Si dice sempre <b>heure(s)</b>: il est trois <b>heures</b>.</li><li>Dopo la mezz'ora si va «meno»: 8:50 = neuf heures <b>moins</b> dix.</li><li>Domanda: <b>Quelle heure est-il ?</b> / A che ora? <b>À quelle heure ?</b></li><li>Orari di treni, negozi e spettacoli: sempre <b>24 ore</b>.</li></ul>",
+            examples: [
+              { fr: "Quelle heure est-il ? — Il est onze heures et quart.", it: "Che ore sono? — Sono le undici e un quarto." },
+              { fr: "Le musée ouvre à neuf heures et ferme à dix-huit heures.", it: "Il museo apre alle nove e chiude alle diciotto." },
+              { fr: "On se voit à midi et demi devant le restaurant ?", it: "Ci vediamo a mezzogiorno e mezza davanti al ristorante?" },
+              { fr: "Il est sept heures moins vingt, nous sommes en avance.", it: "Sono le sette meno venti, siamo in anticipo." },
+              { fr: "Le dernier métro passe vers minuit et demi.", it: "L'ultimo metrò passa verso mezzanotte e mezza." }
+            ]
+          },
+          practice: [
+            { t: "mcq", q: "Come si dice «sono le otto e mezza»?", opts: ["Il est huit heures et demie.", "Il est huit et demie.", "Sont huit heures et demie.", "Il est huit heures et moitié."], a: 0, why: "Il est + heures + et demie." },
+            { t: "mcq", q: "«Neuf heures moins le quart» è…", opts: ["8:45", "9:15", "9:45", "8:15"], a: 0, why: "Nove meno un quarto = 8:45." },
+            { t: "listen", say: "Le film commence à huit heures et demie, on mange avant ?", q: "A che ora comincia il film?", opts: ["Alle 8:30", "Alle 8:15", "Alle 7:30", "Alle 9:30"], a: 0, why: "Huit heures et demie = 8:30." },
+            { t: "match", q: "Abbina", pairs: [["midi", "mezzogiorno"], ["minuit", "mezzanotte"], ["en retard", "in ritardo"], ["le soir", "la sera"]] },
+            { t: "order", q: "Riordina: «Appuntamento alle dieci davanti alla fontana.»", words: ["Rendez-vous", "à", "dix", "heures", "devant", "la", "fontaine."], why: "À + ora = alle." }
+          ],
+          test: [
+            { t: "mcq", q: "Come chiedi l'ora?", opts: ["Quelle heure est-il ?", "Quelles heures sont ?", "Combien d'heures ?", "Qu'est-ce que l'heure ?"], a: 0, why: "Al singolare: quelle heure est-il?" },
+            { t: "mcq", q: "Le 17:30 nell'orario di un treno si leggono…", opts: ["dix-sept heures trente", "cinq heures et demie du soir", "dix-sept et demie", "sept heures trente"], a: 0, why: "Orari ufficiali: 24 ore." },
+            { t: "mcq", q: "Come si dice «sono le dieci meno cinque»?", opts: ["Il est dix heures moins cinq.", "Il est neuf heures moins cinq.", "Il est cinq moins dix.", "Il est dix heures cinq."], a: 0, why: "Dix heures moins cinq = 9:55." },
+            { t: "mcq", q: "«Le train est à l'heure» significa…", opts: ["Il treno è puntuale.", "Il treno parte tra un'ora.", "Il treno è in ritardo di un'ora.", "Il treno arriva ogni ora."], a: 0, why: "À l'heure = puntuale." },
+            { t: "listen", say: "Il est dix heures et quart !", q: "Che ore sono?", opts: ["10:15", "10:45", "10:30", "9:45"], a: 0, why: "Et quart = e un quarto." },
+            { t: "listen", say: "Le train part à six heures moins le quart, il ne faut pas être en retard.", q: "A che ora parte il treno?", opts: ["5:45", "6:15", "6:45", "5:15"], a: 0, why: "Six heures moins le quart = 5:45." },
+            { t: "listen", say: "On déjeune à midi et on se couche rarement avant minuit.", q: "Cosa hai sentito?", opts: ["Pranziamo a mezzogiorno e raramente andiamo a letto prima di mezzanotte.", "Ceniamo a mezzanotte e ci alziamo a mezzogiorno.", "Pranziamo all'una e andiamo a letto alle undici.", "Non pranziamo mai prima di mezzogiorno."], a: 0, why: "Midi = mezzogiorno; minuit = mezzanotte." },
+            { t: "type", q: "Completa: «Il est trois heures et ___.» (e mezza)", a: ["demie"], why: "Et demie, con la E: heure è femminile." },
+            { t: "type", q: "Completa: «Gigi est toujours en ___.» (ritardo)", a: ["retard"], why: "En retard = in ritardo." },
+            { t: "type", say: "Monsieur Bernard arrive au café à huit heures pile.", q: "Ascolta e completa: «Monsieur Bernard arrive au café à huit heures ___.»", a: ["pile"], why: "Pile = in punto." },
+            { t: "order", q: "Riordina: «Il museo apre alle nove e chiude alle diciotto.»", words: ["Le", "musée", "ouvre", "à", "neuf", "heures", "et", "ferme", "à", "dix-huit", "heures."], why: "Orari ufficiali a 24 ore." },
+            { t: "match", q: "Abbina", pairs: [["8:15", "huit heures et quart"], ["8:30", "huit heures et demie"], ["8:45", "neuf heures moins le quart"], ["12:00", "midi"]] }
+          ],
+          recap: {
+            can: ["Chiedere l'ora con «Quelle heure est-il ?»", "Dire l'ora con et quart, et demie, moins le quart", "Capire gli orari ufficiali a 24 ore", "Fissare un appuntamento e dire se sei in ritardo o puntuale"],
+            phrases: [{ fr: "Quelle heure est-il ? — Il est dix heures et quart.", it: "Che ore sono? — Sono le dieci e un quarto." }, { fr: "Rendez-vous à midi devant la fontaine.", it: "Appuntamento a mezzogiorno davanti alla fontana." }, { fr: "Le train part à dix-sept heures trente.", it: "Il treno parte alle diciassette e trenta." }],
+            trap: "Si dice sempre HEURES (il est huit heures) e dopo la mezz'ora si conta all'indietro: 8:50 = neuf heures moins dix."
+          }
+        },
+        /* ---------------- LEZIONE 5-2 ---------------- */
+        {
+          id: "5-2", street: "Rue du Calendrier", title: "Giorni, mesi, stagioni e date",
+          goal: "Dire i giorni, i mesi e le date (anche gli anni), e parlare di ieri, oggi e domani.",
+          episode: {
+            title: "Il quaderno delle date",
+            intro: "Odette Duval invita tutti su una panchina al sole. Apre un quaderno rosso, consumato dagli anni: su ogni pagina c'è una data, scritta con una calligrafia elegante. «Sono i giorni importanti di Zizì», dice. «Li ho annotati tutti.»",
+            lines: [
+              { who: "Mme Duval", fr: "Le premier mai mille neuf cent soixante-cinq, Zizì arrive à Paris avec sa valise rouge.", it: "Il primo maggio 1965 Zizì arriva a Parigi con la sua valigia rossa." },
+              { who: "Gigi", fr: "En mille neuf cent soixante-cinq ? Elle avait seulement dix-neuf ans !", it: "Nel 1965? Aveva solo diciannove anni!" },
+              { who: "Mme Duval", fr: "Oui. Et le samedi quatorze juillet, au bal du quartier, elle rencontre Henri.", it: "Sì. E sabato 14 luglio, al ballo del quartiere, incontra Henri." },
+              { who: "Léa", fr: "Le quatorze juillet, c'est la fête nationale : il y a des feux d'artifice partout !", it: "Il 14 luglio è la festa nazionale: ci sono fuochi d'artificio dappertutto!" },
+              { who: "Mme Lefèvre", fr: "Et la dernière date du carnet ? Celle de la dernière page ?", it: "E l'ultima data del quaderno? Quella dell'ultima pagina?" },
+              { who: "Mme Duval", fr: "Le mardi trois mars mille neuf cent quatre-vingt-sept. Ce jour-là, en hiver, Zizì part.", it: "Martedì 3 marzo 1987. Quel giorno, in inverno, Zizì parte." },
+              { who: "Croissant", fr: "Mille neuf cent quatre-vingt-sept… Ces dates françaises sont plus longues qu'un dimanche sans croquettes.", it: "Millenovecentoottantasette… Queste date francesi sono più lunghe di una domenica senza crocchette." },
+              { who: "Mme Duval", fr: "Elle part vers le sud, en Provence. Demain, je vous montre ses lettres de là-bas.", it: "Parte verso sud, in Provenza. Domani vi mostro le sue lettere da laggiù." }
+            ],
+            outro: "Françoise si fa scura in volto: il 3 marzo 1987 è anche il giorno in cui lei ha smesso di sorridere. Era una bambina, e la zia Zizì era partita senza salutarla. Ora, forse, capirà perché.",
+            you: "«{nome}, in francese le date si dicono con il numero normale: le quatorze juillet, le trois mars. Solo il primo giorno del mese è speciale: le premier mai. E qual è la data del tuo compleanno?»",
+            mine: { fr: "Je m'appelle {nome}, j'ai {eta} ans, et mon anniversaire est en été, au mois de juillet.", it: "Mi chiamo {nome}, ho {eta} anni, e il mio compleanno è in estate, nel mese di luglio." }
+          },
+          words: [
+            { fr: "lundi, mardi, mercredi", it: "lunedì, martedì, mercoledì", say: "lẽdì, mardì, mèrkrədì", hook: "Uguali all'italiano senza l'accento: LUNdi (Luna), MARdi (Marte), MERCREdi (Mercurio). I giorni non hanno la maiuscola!",
+              ex: { fr: "Le café est fermé le lundi, mais ouvert tous les autres jours.", it: "Il caffè è chiuso il lunedì, ma aperto tutti gli altri giorni." } },
+            { fr: "jeudi, vendredi, samedi, dimanche", it: "giovedì, venerdì, sabato, domenica", say: "jödì, vãdrədì, samdì, dimãsh", hook: "JEUdi (Giove), VENDREdi (Venere), SAMEdi (sabato), DIMANCHE (il giorno del Signore, domenica). «Le samedi» con l'articolo = ogni sabato.",
+              ex: { fr: "Le samedi matin, Odette attend devant la fontaine à dix heures.", it: "Il sabato mattina Odette aspetta davanti alla fontana alle dieci." } },
+            { fr: "janvier, février, mars…", it: "gennaio, febbraio, marzo…", say: "jãvjé, févrijé, mars", hook: "Quasi come in italiano: avril, mai, juin, juillet, août (si dice «ut»!), septembre, octobre, novembre, décembre.",
+              ex: { fr: "En août, beaucoup de Parisiens quittent la ville pour les vacances.", it: "Ad agosto molti parigini lasciano la città per le vacanze." } },
+            { fr: "le premier", it: "il primo (del mese)", say: "lə prəmjé", hook: "Solo il primo giorno usa l'ordinale: LE PREMIER mai. Per gli altri: le deux mai, le trois mai… niente «secondo» o «terzo»!",
+              ex: { fr: "Le premier mai, en France, on offre du muguet aux personnes qu'on aime.", it: "Il primo maggio in Francia si regala il mughetto alle persone care." } },
+            { fr: "aujourd'hui", it: "oggi", say: "ojurdüì", hook: "AUJOURD'HUI: «al giorno di oggi», una parola lunghissima per dire «oggi». Pensa a «hui» come all'«hodie» latino.",
+              ex: { fr: "Aujourd'hui, nous sommes le samedi douze octobre, et il fait beau.", it: "Oggi è sabato 12 ottobre, e fa bel tempo." } },
+            { fr: "hier / demain", it: "ieri / domani", say: "jèr / dəmẽ", hook: "HIER sembra «ieri» detto in fretta. DEMAIN: il giorno DOPO la MANO di oggi… o semplicemente «domani» col naso.",
+              ex: { fr: "Hier, j'étais fatigué, mais demain je commence à sept heures.", it: "Ieri ero stanco, ma domani comincio alle sette." } },
+            { fr: "la semaine / le mois / l'année", it: "la settimana / il mese / l'anno", say: "la səmèn / lə mwa / lané", hook: "SEMAINE = settimana (sette giorni). MOIS = mese. ANNÉE = annata, l'anno intero vissuto.",
+              ex: { fr: "Je vais à la piscine deux fois par semaine, le mardi et le jeudi.", it: "Vado in piscina due volte alla settimana, il martedì e il giovedì." } },
+            { fr: "le printemps / l'été", it: "la primavera / l'estate", say: "lə prẽtã / leté", hook: "PRINTEMPS = «il primo tempo» dell'anno. ÉTÉ = estate: la S scomparsa è diventata É.",
+              ex: { fr: "Au printemps, les jardins de Paris sont pleins de fleurs.", it: "In primavera i giardini di Parigi sono pieni di fiori." } },
+            { fr: "l'automne / l'hiver", it: "l'autunno / l'inverno", say: "lotòn / livèr", hook: "AUTOMNE: la M è muta, «otòn». HIVER = inverno (hibernare!). Si dice «en été, en automne, en hiver», ma «AU printemps».",
+              ex: { fr: "En hiver, il fait froid, mais les marchés de Noël sont magnifiques.", it: "In inverno fa freddo, ma i mercatini di Natale sono magnifici." } },
+            { fr: "mille neuf cent…", it: "millenovecento…", say: "mil nöf sã", hook: "Gli anni si dicono come numeri interi: 1987 = mille neuf cent quatre-vingt-sept. Il 2025 è più facile: deux mille vingt-cinq.",
+              ex: { fr: "Zizì est née en mille neuf cent quarante-six, à Naples.", it: "Zizì è nata nel 1946, a Napoli." } }
+          ],
+          tip: {
+            title: "Il calendario di Odette: come si dice una data",
+            body: "<div class='tbl'><table><thead><tr><th>Italiano</th><th>Francese</th></tr></thead><tbody><tr><td>lunedì 3 marzo</td><td><b>le</b> lundi trois mars</td></tr><tr><td>il 1° maggio</td><td>le <b>premier</b> mai</td></tr><tr><td>il 14 luglio</td><td>le quatorze juillet</td></tr><tr><td>nel 1987</td><td><b>en</b> mille neuf cent quatre-vingt-sept</td></tr><tr><td>a marzo</td><td><b>en</b> mars / au mois de mars</td></tr><tr><td>in estate</td><td><b>en</b> été (ma <b>au</b> printemps)</td></tr><tr><td>il lunedì (ogni)</td><td><b>le</b> lundi</td></tr></tbody></table></div><ul><li>Giorni e mesi <b>senza maiuscola</b>: lundi, mars.</li><li>La data vuole <b>le</b> davanti: le trois mars.</li><li>«Lundi» = questo lunedì; «<b>le</b> lundi» = tutti i lunedì.</li><li>Che giorno è? <b>Nous sommes quel jour ?</b> / <b>On est le combien ?</b></li></ul>",
+            examples: [
+              { fr: "Aujourd'hui, nous sommes le mercredi cinq juin.", it: "Oggi è mercoledì 5 giugno." },
+              { fr: "Mon anniversaire est le premier avril : ce n'est pas une blague !", it: "Il mio compleanno è il primo aprile: non è uno scherzo!" },
+              { fr: "Nous partons en vacances en août, et nous rentrons en septembre.", it: "Partiamo in vacanza ad agosto, e torniamo a settembre." },
+              { fr: "Le dimanche, je dors jusqu'à dix heures.", it: "La domenica dormo fino alle dieci." },
+              { fr: "Au printemps et en automne, Paris est vraiment magnifique.", it: "In primavera e in autunno Parigi è davvero magnifica." }
+            ]
+          },
+          practice: [
+            { t: "mcq", q: "Come si dice «il primo maggio»?", opts: ["le premier mai", "le un mai", "le première mai", "le mai premier"], a: 0, why: "Solo il primo usa l'ordinale: le premier." },
+            { t: "mcq", q: "«Le lundi, le café est fermé» significa…", opts: ["Il lunedì (ogni lunedì) il caffè è chiuso.", "Questo lunedì il caffè è chiuso.", "Il caffè chiude lunedì prossimo.", "Il caffè apre il lunedì."], a: 0, why: "Le + giorno = abitudine." },
+            { t: "listen", say: "En août, beaucoup de Parisiens quittent la ville pour les vacances.", q: "Quando i parigini lasciano la città?", opts: ["Ad agosto", "A ottobre", "A giugno", "A gennaio"], a: 0, why: "Août si pronuncia «ut»." },
+            { t: "match", q: "Abbina", pairs: [["hier", "ieri"], ["demain", "domani"], ["aujourd'hui", "oggi"], ["la semaine", "la settimana"]] },
+            { t: "order", q: "Riordina: «Oggi è sabato 12 ottobre.»", words: ["Aujourd'hui,", "nous", "sommes", "le", "samedi", "douze", "octobre."], why: "Nous sommes le + giorno + numero + mese." }
+          ],
+          test: [
+            { t: "mcq", q: "Come si dice «a marzo»?", opts: ["en mars", "au mars", "à mars", "dans mars"], a: 0, why: "En + mese." },
+            { t: "mcq", q: "Quale stagione vuole «au»?", opts: ["au printemps", "au été", "au hiver", "au automne"], a: 0, why: "Au printemps; en été, en automne, en hiver." },
+            { t: "mcq", q: "Il 1987 si dice…", opts: ["mille neuf cent quatre-vingt-sept", "dix-neuf cent quatre-vingt-sept", "mille neuf cent huitante-sept", "un mille neuf quatre-vingt-sept"], a: 0, why: "Mille + neuf cent + quatre-vingt-sept." },
+            { t: "mcq", q: "Quale frase ha un errore?", opts: ["Aujourd'hui, nous sommes Lundi.", "Le dimanche, je dors tard.", "Mon anniversaire est le deux mai.", "En hiver, il fait froid."], a: 0, why: "I giorni non vogliono la maiuscola: lundi." },
+            { t: "listen", say: "Le premier mai, en France, on offre du muguet aux personnes qu'on aime.", q: "Cosa si regala il primo maggio?", opts: ["Il mughetto", "Le rose", "I cioccolatini", "Le uova"], a: 0, why: "Le muguet = il mughetto." },
+            { t: "listen", say: "Le mardi trois mars mille neuf cent quatre-vingt-sept. Ce jour-là, Zizì part.", q: "Quando parte Zizì?", opts: ["Martedì 3 marzo 1987", "Lunedì 13 marzo 1987", "Martedì 3 maggio 1978", "Mercoledì 3 marzo 1997"], a: 0, why: "Trois mars; quatre-vingt-sept = 87." },
+            { t: "listen", say: "Je vais à la piscine deux fois par semaine, le mardi et le jeudi.", q: "Quando va in piscina?", opts: ["Il martedì e il giovedì", "Il lunedì e il mercoledì", "Il sabato e la domenica", "Il martedì e il venerdì"], a: 0, why: "Mardi = martedì; jeudi = giovedì." },
+            { t: "type", q: "Completa: «___, je commence à sept heures.» (domani)", a: ["Demain"], why: "Demain = domani." },
+            { t: "type", q: "Scrivi in francese il mese di agosto.", a: ["août", "aout"], why: "Août, si pronuncia «ut»." },
+            { t: "type", say: "En hiver, il fait froid, mais les marchés de Noël sont magnifiques.", q: "Ascolta e completa: «En ___, il fait froid.»", a: ["hiver"], why: "L'hiver = l'inverno." },
+            { t: "order", q: "Riordina: «Il mio compleanno è il primo aprile.»", words: ["Mon", "anniversaire", "est", "le", "premier", "avril."], why: "Le premier + mese." },
+            { t: "match", q: "Abbina", pairs: [["le printemps", "la primavera"], ["l'été", "l'estate"], ["l'automne", "l'autunno"], ["l'hiver", "l'inverno"]] }
+          ],
+          recap: {
+            can: ["Dire i giorni della settimana e i mesi", "Dire una data completa, anche con l'anno", "Parlare di ieri, oggi e domani", "Usare le stagioni con en e au"],
+            phrases: [{ fr: "Aujourd'hui, nous sommes le mardi trois mars.", it: "Oggi è martedì 3 marzo." }, { fr: "Mon anniversaire est le premier juillet.", it: "Il mio compleanno è il primo luglio." }, { fr: "Au printemps et en été, Paris est magnifique.", it: "In primavera e in estate Parigi è magnifica." }],
+            trap: "Solo il primo del mese è «le premier»; gli altri giorni usano il numero normale: le deux, le trois… E niente maiuscole per giorni e mesi."
+          }
+        },
+        /* ---------------- LEZIONE 5-3 ---------------- */
+        {
+          id: "5-3", street: "Rue de la Routine", title: "La giornata tipo: i verbi riflessivi",
+          goal: "Raccontare la tua giornata con i verbi riflessivi (je me lève, je m'habille…) e i connettivi d'abord, ensuite, puis, enfin.",
+          episode: {
+            title: "La giornata di un pizzaiolo",
+            intro: "Odette ha promesso di portare le lettere di Zizì al caffè, ma solo «dopo le sette di sera». Nel frattempo Gigi deve lavorare. Léa, curiosa, gli chiede come passa le sue giornate da quando è a Parigi. Croissant ascolta e prende appunti mentali.",
+            lines: [
+              { who: "Léa", fr: "Gigi, tu as toujours l'air fatigué. Tu te lèves à quelle heure le matin ?", it: "Gigi, sembri sempre stanco. A che ora ti alzi la mattina?" },
+              { who: "Gigi", fr: "Je me réveille à cinq heures, mais je me lève à cinq heures et quart.", it: "Mi sveglio alle cinque, ma mi alzo alle cinque e un quarto." },
+              { who: "Gigi", fr: "D'abord, je me douche ; ensuite, je m'habille et je prépare la pâte.", it: "Prima mi faccio la doccia; poi mi vesto e preparo l'impasto." },
+              { who: "Léa", fr: "Et le soir ? Tu te reposes un peu, ou tu travailles encore ?", it: "E la sera? Ti riposi un po', o lavori ancora?" },
+              { who: "Gigi", fr: "Le soir, je nettoie le café, puis je me couche vers onze heures.", it: "La sera pulisco il caffè, poi vado a letto verso le undici." },
+              { who: "Croissant", fr: "Ma routine est plus simple : je me réveille, je mange, je me lave, je dors.", it: "La mia routine è più semplice: mi sveglio, mangio, mi lavo, dormo." },
+              { who: "Léa", fr: "Et tu t'amuses quand, Gigi ? Il faut aussi se promener et voir des amis !", it: "E quando ti diverti, Gigi? Bisogna anche passeggiare e vedere degli amici!" },
+              { who: "Gigi", fr: "Tu as raison. Dimanche, je me repose enfin : on se promène au bord de la Seine ?", it: "Hai ragione. Domenica finalmente mi riposo: passeggiamo lungo la Senna?" }
+            ],
+            outro: "Alle sette in punto Odette entra nel caffè con un pacchetto di lettere legate da un nastro blu. Le timbrature dicono tutte la stessa cosa: «Roussillon, Vaucluse». Un paesino della Provenza con le case color ocra. Zizì ha vissuto lì per vent'anni.",
+            you: "«{nome}, nei verbi riflessivi c'è un pronome in più: je ME lève, tu TE lèves, il SE lève. Esattamente come in italiano: io MI alzo, tu TI alzi. Questa volta il francese ti fa un regalo.»",
+            mine: { fr: "Je m'appelle {nome} : d'abord je me lève, ensuite je prends un café, puis je m'habille.", it: "Mi chiamo {nome}: prima mi alzo, poi prendo un caffè, poi mi vesto." }
+          },
+          words: [
+            { fr: "se réveiller", it: "svegliarsi", say: "sə révèjé", hook: "SE RÉVEILLER: il RÉVEIL (la sveglia) suona e tu ti RISVEGLI. Je me réveille, tu te réveilles.",
+              ex: { fr: "Je me réveille sans réveil, grâce au soleil qui entre par la fenêtre.", it: "Mi sveglio senza sveglia, grazie al sole che entra dalla finestra." } },
+            { fr: "se lever", it: "alzarsi", say: "sə ləvé", hook: "SE LEVER = alzarsi, come una LEVA che ti solleva dal letto. Je me lève: con l'accento grave nelle forme brevi.",
+              ex: { fr: "Le week-end, je me lève tard et je prends un long petit-déjeuner.", it: "Nel fine settimana mi alzo tardi e faccio una lunga colazione." } },
+            { fr: "se doucher / se laver", it: "farsi la doccia / lavarsi", say: "sə dushé / sə lavé", hook: "SE DOUCHER: la DOCCIA, con OU = u. SE LAVER = lavarsi. Croissant si lava con la lingua, ovviamente.",
+              ex: { fr: "Je me douche le matin, mais mon frère préfère se laver le soir.", it: "Io mi faccio la doccia la mattina, ma mio fratello preferisce lavarsi la sera." } },
+            { fr: "s'habiller", it: "vestirsi", say: "sabijé", hook: "S'HABILLER: mettersi l'ABITO. Con la H muta il pronome si apostrofa: je m'habille, tu t'habilles.",
+              ex: { fr: "Je m'habille vite, parce que je suis toujours en retard le lundi.", it: "Mi vesto in fretta, perché il lunedì sono sempre in ritardo." } },
+            { fr: "se coucher", it: "andare a letto, coricarsi", say: "sə kushé", hook: "SE COUCHER: andare sul COUCH (divano-letto) e coricarsi. Le soleil se couche = il sole tramonta!",
+              ex: { fr: "En semaine, je me couche vers onze heures pour être en forme.", it: "Nei giorni feriali vado a letto verso le undici per essere in forma." } },
+            { fr: "se reposer", it: "riposarsi", say: "sə rəpozé", hook: "SE REPOSER = riposarsi: quasi identico. Il «repos» è il riposo, e il dimanche è le jour de repos.",
+              ex: { fr: "Après le déjeuner, ma grand-mère se repose une heure sur le canapé.", it: "Dopo pranzo mia nonna si riposa un'ora sul divano." } },
+            { fr: "se promener", it: "passeggiare", say: "sə promné", hook: "SE PROMENER: fare una PROMENADE, una passeggiata. On se promène? = facciamo due passi?",
+              ex: { fr: "Le dimanche, nous nous promenons au jardin du Luxembourg.", it: "La domenica passeggiamo al giardino del Luxembourg." } },
+            { fr: "d'abord / ensuite", it: "prima / poi, in seguito", say: "dabòr / ãsüìt", hook: "D'ABORD: «all'abbordaggio», si comincia! ENSUITE: «in seguito», la SUITE di una storia.",
+              ex: { fr: "D'abord je bois un café, ensuite je lis les nouvelles sur mon téléphone.", it: "Prima bevo un caffè, poi leggo le notizie sul telefono." } },
+            { fr: "puis / enfin", it: "poi / infine", say: "püì / ãfẽ", hook: "PUIS = poi, corto e veloce. ENFIN = infine… e anche «finalmente!» quando qualcosa arriva dopo tanto.",
+              ex: { fr: "Je travaille, puis je fais les courses, et enfin je rentre à la maison.", it: "Lavoro, poi faccio la spesa, e infine torno a casa." } },
+            { fr: "d'habitude", it: "di solito", say: "dabitüd", hook: "D'HABITUDE: per ABITUDINE, di solito. Comme d'habitude = come al solito (anche una canzone famosissima!).",
+              ex: { fr: "D'habitude, je prends le métro, mais aujourd'hui je marche.", it: "Di solito prendo il metrò, ma oggi cammino." } }
+          ],
+          tip: {
+            title: "I verbi riflessivi: il pronome specchio",
+            body: "<div class='tbl'><table><thead><tr><th></th><th>se lever (alzarsi)</th><th>s'habiller (vestirsi)</th></tr></thead><tbody><tr><td>je</td><td>me lève</td><td>m'habille</td></tr><tr><td>tu</td><td>te lèves</td><td>t'habilles</td></tr><tr><td>il / elle</td><td>se lève</td><td>s'habille</td></tr><tr><td>nous</td><td>nous levons</td><td>nous habillons</td></tr><tr><td>vous</td><td>vous levez</td><td>vous habillez</td></tr><tr><td>ils / elles</td><td>se lèvent</td><td>s'habillent</td></tr></tbody></table></div><ul><li>Il pronome riflessivo va <b>prima del verbo</b>, come in italiano: je <b>me</b> lève = io <b>mi</b> alzo.</li><li>Davanti a vocale o H muta: <b>m', t', s'</b>.</li><li>Negazione: il <b>ne</b> va prima del pronome: je <b>ne</b> me lève <b>pas</b>.</li><li>Per raccontare in ordine: <b>d'abord → ensuite → puis → enfin</b>.</li></ul>",
+            examples: [
+              { fr: "Je me lève à sept heures et je me douche tout de suite.", it: "Mi alzo alle sette e mi faccio subito la doccia." },
+              { fr: "Tu te couches toujours après minuit ?", it: "Vai sempre a letto dopo mezzanotte?" },
+              { fr: "Nous nous promenons souvent au bord du canal.", it: "Passeggiamo spesso lungo il canale." },
+              { fr: "Le dimanche, je ne me réveille pas avant dix heures.", it: "La domenica non mi sveglio prima delle dieci." },
+              { fr: "D'abord ils s'habillent, puis ils prennent le petit-déjeuner.", it: "Prima si vestono, poi fanno colazione." }
+            ]
+          },
+          practice: [
+            { t: "mcq", q: "Completa: «Je ___ lève à sept heures.»", opts: ["me", "se", "te", "m'"], a: 0, why: "Je me lève." },
+            { t: "mcq", q: "Completa: «Tu ___ habilles vite.»", opts: ["t'", "te", "s'", "m'"], a: 0, why: "Davanti alla H muta: t'habilles." },
+            { t: "listen", say: "En semaine, je me couche vers onze heures pour être en forme.", q: "A che ora va a letto?", opts: ["Verso le undici", "Verso mezzanotte", "Alle dieci in punto", "Verso le sette"], a: 0, why: "Je me couche = vado a letto." },
+            { t: "match", q: "Abbina", pairs: [["se lever", "alzarsi"], ["s'habiller", "vestirsi"], ["se coucher", "andare a letto"], ["se promener", "passeggiare"]] },
+            { t: "order", q: "Riordina: «Prima mi faccio la doccia, poi mi vesto.»", words: ["D'abord,", "je", "me", "douche,", "ensuite", "je", "m'habille."], why: "D'abord… ensuite…" }
+          ],
+          test: [
+            { t: "mcq", q: "Completa: «Nous ___ promenons le dimanche.»", opts: ["nous", "se", "vous", "nos"], a: 0, why: "Nous nous promenons." },
+            { t: "mcq", q: "Come si dice «non mi alzo»?", opts: ["Je ne me lève pas.", "Je me ne lève pas.", "Je ne lève me pas.", "Ne je me lève pas."], a: 0, why: "Ne prima del pronome, pas dopo il verbo." },
+            { t: "mcq", q: "Completa: «Ils ___ couchent tard.»", opts: ["se", "me", "les", "s'"], a: 0, why: "Ils se couchent." },
+            { t: "mcq", q: "Qual è l'ordine giusto dei connettivi?", opts: ["d'abord, ensuite, puis, enfin", "enfin, puis, d'abord, ensuite", "puis, d'abord, enfin, ensuite", "ensuite, enfin, d'abord, puis"], a: 0, why: "Prima, poi, poi, infine." },
+            { t: "listen", say: "Je me réveille à cinq heures, mais je me lève à cinq heures et quart.", q: "A che ora si alza Gigi?", opts: ["Alle cinque e un quarto", "Alle cinque", "Alle sei meno un quarto", "Alle quattro e mezza"], a: 0, why: "Je me lève à cinq heures et quart." },
+            { t: "listen", say: "D'habitude, je prends le métro, mais aujourd'hui je marche.", q: "Cosa fa oggi?", opts: ["Va a piedi", "Prende il metrò", "Prende l'autobus", "Resta a casa"], a: 0, why: "D'habitude = di solito; aujourd'hui je marche." },
+            { t: "listen", say: "Après le déjeuner, ma grand-mère se repose une heure sur le canapé.", q: "Cosa fa la nonna dopo pranzo?", opts: ["Si riposa un'ora sul divano.", "Fa una passeggiata di un'ora.", "Si lava e si veste.", "Va a dormire fino a sera."], a: 0, why: "Se reposer = riposarsi." },
+            { t: "type", q: "Completa: «Je ___ douche le matin.» (mi)", a: ["me"], why: "Je me douche." },
+            { t: "type", q: "Completa: «___, je rentre à la maison.» (infine)", a: ["Enfin"], why: "Enfin = infine / finalmente." },
+            { t: "type", say: "Le week-end, je me lève tard.", q: "Ascolta e completa: «Le week-end, je me ___ tard.»", a: ["lève", "leve"], why: "Je me lève, con l'accento grave." },
+            { t: "order", q: "Riordina: «Di solito vado a letto verso le undici.»", words: ["D'habitude,", "je", "me", "couche", "vers", "onze", "heures."], why: "Se coucher = andare a letto." },
+            { t: "match", q: "Abbina", pairs: [["d'abord", "prima"], ["ensuite", "poi"], ["enfin", "infine"], ["d'habitude", "di solito"]] }
+          ],
+          recap: {
+            can: ["Coniugare i verbi riflessivi: je me lève, tu t'habilles…", "Raccontare la tua giornata dalla mattina alla sera", "Mettere in ordine le azioni con d'abord, ensuite, puis, enfin", "Fare la negazione con i riflessivi"],
+            phrases: [{ fr: "Je me lève à sept heures et je me douche.", it: "Mi alzo alle sette e mi faccio la doccia." }, { fr: "D'abord je m'habille, ensuite je prends un café.", it: "Prima mi vesto, poi prendo un caffè." }, { fr: "Le dimanche, je ne me réveille pas avant dix heures.", it: "La domenica non mi sveglio prima delle dieci." }],
+            trap: "Con la negazione, NE va prima del pronome riflessivo: je NE me lève PAS (non «je me ne lève pas»)."
+          }
+        },
+        /* ---------------- LEZIONE 5-4 ---------------- */
+        {
+          id: "5-4", street: "Rue de la Météo", title: "Che tempo fa? Il meteo",
+          goal: "Descrivere il tempo atmosferico con «il fait», «il pleut», «il neige» e fare progetti in base al meteo.",
+          episode: {
+            title: "Il picnic sotto la pioggia",
+            intro: "Domenica, giorno di riposo. Léa ha organizzato un picnic al giardino del Luxembourg per festeggiare le lettere ritrovate. Cestino, tovaglia a quadri, una baguette per persona. Il cielo, però, ha altri programmi.",
+            lines: [
+              { who: "Léa", fr: "Quel beau temps ! Il fait soleil et il fait vingt-deux degrés : parfait pour un pique-nique.", it: "Che bel tempo! C'è il sole e ci sono ventidue gradi: perfetto per un picnic." },
+              { who: "Gigi", fr: "Hmm… Regarde ces nuages gris là-bas. Il y a aussi beaucoup de vent.", it: "Mmh… Guarda quelle nuvole grigie laggiù. C'è anche molto vento." },
+              { who: "Mme Lefèvre", fr: "La météo annonce de la pluie cet après-midi. Il va pleuvoir vers trois heures.", it: "Il meteo annuncia pioggia questo pomeriggio. Pioverà verso le tre." },
+              { who: "Croissant", fr: "Je déteste la pluie. Un chat mouillé, c'est un chat sans dignité.", it: "Detesto la pioggia. Un gatto bagnato è un gatto senza dignità." },
+              { who: "Léa", fr: "Oh non, il pleut ! Vite, sous les arbres ! Il fait froid tout à coup !", it: "Oh no, piove! Presto, sotto gli alberi! Fa freddo all'improvviso!" },
+              { who: "Gigi", fr: "À Naples, en octobre, il fait encore chaud et le ciel est toujours bleu…", it: "A Napoli, a ottobre, fa ancora caldo e il cielo è sempre azzurro…" },
+              { who: "Mme Lefèvre", fr: "Et en Provence aussi. Zizì écrit dans ses lettres : « Ici, il fait beau trois cents jours par an. »", it: "Anche in Provenza. Zizì scrive nelle sue lettere: «Qui fa bel tempo trecento giorni all'anno.»" },
+              { who: "Gigi", fr: "Alors c'est décidé : la semaine prochaine, nous partons en Provence, à Roussillon !", it: "Allora è deciso: la settimana prossima partiamo per la Provenza, per Roussillon!" }
+            ],
+            outro: "Sotto un ombrellone del caffè dei giardini, bagnati fino alle ossa, decidono il viaggio. Françoise chiuderà la panetteria per tre giorni, Léa prenderà le ferie, Croissant viaggerà in una cesta «di prima classe». Il prossimo arrondissement è un viaggio: si va in treno verso il sud.",
+            you: "«{nome}, per il tempo i francesi usano quasi sempre IL FAIT: il fait beau, il fait chaud, il fait froid. Ma per la pioggia e la neve hanno verbi tutti loro: il pleut, il neige. E da te, oggi, che tempo fa?»",
+            mine: { fr: "Je m'appelle {nome} : chez moi, aujourd'hui, il fait beau, mais il fait un peu froid.", it: "Mi chiamo {nome}: da me, oggi, fa bel tempo, ma fa un po' freddo." }
+          },
+          words: [
+            { fr: "Quel temps fait-il ?", it: "Che tempo fa?", say: "kèl tã fè til", hook: "LE TEMPS è sia il tempo che passa sia il tempo atmosferico, proprio come in italiano. «Fait-il» = fa.",
+              ex: { fr: "Quel temps fait-il à Rome aujourd'hui ? Ici, à Paris, il pleut encore.", it: "Che tempo fa a Roma oggi? Qui a Parigi piove ancora." } },
+            { fr: "il fait beau / il fait mauvais", it: "fa bel tempo / fa brutto tempo", say: "il fè bò / il fè movè", hook: "IL FAIT BEAU: «fa bello». MAUVAIS = cattivo, brutto (pensa a «malvagio»).",
+              ex: { fr: "Quand il fait beau, nous mangeons sur la terrasse du café.", it: "Quando fa bel tempo mangiamo sulla terrazza del caffè." } },
+            { fr: "il fait chaud / il fait froid", it: "fa caldo / fa freddo", say: "il fè shò / il fè frwa", hook: "Trappola! CHAUD vuol dire CALDO, anche se suona come «freddo» in inglese (cold). Sul rubinetto: C = chaud = caldo!",
+              ex: { fr: "En juillet, il fait très chaud à Paris, et le métro est un four.", it: "A luglio fa molto caldo a Parigi, e il metrò è un forno." } },
+            { fr: "il pleut / la pluie", it: "piove / la pioggia", say: "il plö / la plüì", hook: "IL PLEUT = piove, con EU che si legge «ö». LA PLUIE = la pioggia. Il verbo è «pleuvoir».",
+              ex: { fr: "Il pleut depuis ce matin, alors je reste à la maison avec un bon livre.", it: "Piove da stamattina, quindi resto a casa con un buon libro." } },
+            { fr: "il neige / la neige", it: "nevica / la neve", say: "il nèj / la nèj", hook: "NEIGE = neve: la G si legge «j» morbida, come la neve che cade piano.",
+              ex: { fr: "Il neige rarement à Paris, mais quand il neige, la ville est magique.", it: "A Parigi nevica raramente, ma quando nevica la città è magica." } },
+            { fr: "le soleil", it: "il sole", say: "lə solèj", hook: "SOLEIL = sole, con un finale «-èj» come un raggio che brilla. Il y a du soleil = c'è il sole.",
+              ex: { fr: "Il y a du soleil, mais n'oublie pas ton parapluie : on ne sait jamais.", it: "C'è il sole, ma non dimenticare l'ombrello: non si sa mai." } },
+            { fr: "le vent / le nuage", it: "il vento / la nuvola", say: "lə vã / lə nüàj", hook: "VENT = vento col naso. NUAGE = nuvola, ed è MASCHILE: un nuage gris.",
+              ex: { fr: "Il y a beaucoup de vent et de gros nuages noirs sur la mer.", it: "C'è molto vento e grosse nuvole nere sul mare." } },
+            { fr: "le parapluie", it: "l'ombrello", say: "lə paraplüì", hook: "PARA-PLUIE: «para-pioggia», come il parafulmine o il paracadute. Logico!",
+              ex: { fr: "J'ai encore oublié mon parapluie dans le métro, c'est le troisième ce mois-ci !", it: "Ho di nuovo dimenticato l'ombrello nel metrò, è il terzo questo mese!" } },
+            { fr: "… degrés", it: "… gradi", say: "dəgré", hook: "Il fait vingt DEGRÉS = ci sono venti gradi. Sotto zero: il fait moins cinq.",
+              ex: { fr: "Aujourd'hui, il fait vingt-cinq degrés à l'ombre : allons à la piscine !", it: "Oggi ci sono venticinque gradi all'ombra: andiamo in piscina!" } },
+            { fr: "la météo", it: "le previsioni del tempo", say: "la météò", hook: "LA MÉTÉO: il meteo, ma femminile in francese. «Selon la météo…» = secondo le previsioni…",
+              ex: { fr: "Selon la météo, il va faire beau tout le week-end en Provence.", it: "Secondo le previsioni, farà bel tempo tutto il fine settimana in Provenza." } }
+          ],
+          tip: {
+            title: "Il fait, il pleut, il y a: il meteo in tre mosse",
+            body: "<div class='tbl'><table><thead><tr><th>Struttura</th><th>Esempi</th></tr></thead><tbody><tr><td><b>Il fait</b> + aggettivo</td><td>il fait beau, chaud, froid, mauvais, doux</td></tr><tr><td><b>Il fait</b> + gradi</td><td>il fait vingt degrés, il fait moins deux</td></tr><tr><td>Verbo da solo</td><td>il pleut, il neige</td></tr><tr><td><b>Il y a</b> + du / des</td><td>il y a du soleil, du vent, des nuages</td></tr><tr><td>Il cielo</td><td>le ciel est bleu / gris / couvert</td></tr><tr><td>Previsioni</td><td>il va pleuvoir, il va faire beau</td></tr></tbody></table></div><ul><li>Il soggetto è sempre <b>il</b>, impersonale: il fait, il pleut (come «piove» senza soggetto in italiano).</li><li><b>Chaud</b> = caldo, non freddo! Freddo = <b>froid</b>.</li><li>Per il futuro immediato: <b>il va</b> + infinito (il va pleuvoir = pioverà). Lo approfondirai nel prossimo modulo.</li></ul>",
+            examples: [
+              { fr: "Quel temps fait-il chez toi ? — Il fait beau et doux.", it: "Che tempo fa da te? — Fa bello ed è mite." },
+              { fr: "Il y a du vent et des nuages, mais il ne pleut pas.", it: "C'è vento e ci sono nuvole, ma non piove." },
+              { fr: "En hiver, à Strasbourg, il fait souvent moins cinq.", it: "In inverno, a Strasburgo, ci sono spesso meno cinque gradi." },
+              { fr: "Prends ton parapluie : il va pleuvoir cet après-midi.", it: "Prendi l'ombrello: pioverà questo pomeriggio." },
+              { fr: "En Provence, le ciel est bleu presque toute l'année.", it: "In Provenza il cielo è azzurro quasi tutto l'anno." }
+            ]
+          },
+          practice: [
+            { t: "mcq", q: "«Il fait chaud» significa…", opts: ["fa caldo", "fa freddo", "fa bello", "c'è vento"], a: 0, why: "Chaud = caldo (C come sul rubinetto)." },
+            { t: "mcq", q: "Come si dice «piove»?", opts: ["Il pleut.", "Il fait pluie.", "Il y a pleut.", "Il est pluie."], a: 0, why: "Il pleut, dal verbo pleuvoir." },
+            { t: "listen", say: "Il neige rarement à Paris, mais quand il neige, la ville est magique.", q: "Cosa hai sentito?", opts: ["A Parigi nevica raramente, ma quando nevica la città è magica.", "A Parigi nevica spesso e la città è bianca.", "A Parigi piove raramente, ma quando piove è triste.", "A Parigi non nevica mai."], a: 0, why: "Il neige = nevica." },
+            { t: "match", q: "Abbina", pairs: [["le soleil", "il sole"], ["le vent", "il vento"], ["la pluie", "la pioggia"], ["le parapluie", "l'ombrello"]] },
+            { t: "order", q: "Riordina: «Quando fa bel tempo mangiamo in terrazza.»", words: ["Quand", "il", "fait", "beau,", "nous", "mangeons", "sur", "la", "terrasse."], why: "Il fait beau = fa bel tempo." }
+          ],
+          test: [
+            { t: "mcq", q: "Completa: «Il y a ___ soleil.»", opts: ["du", "le", "un", "de"], a: 0, why: "Il y a du soleil, du vent." },
+            { t: "mcq", q: "Come chiedi che tempo fa?", opts: ["Quel temps fait-il ?", "Quelle météo est-il ?", "Comment est le temps fait ?", "Quel temps il y a ?"], a: 0, why: "Quel temps fait-il?" },
+            { t: "mcq", q: "«Il va pleuvoir» significa…", opts: ["Pioverà.", "Sta piovendo.", "Ha piovuto.", "Non piove."], a: 0, why: "Aller + infinito = futuro vicino." },
+            { t: "mcq", q: "Quale frase è sbagliata?", opts: ["Il fait pluie.", "Il fait froid.", "Il pleut.", "Il y a du vent."], a: 0, why: "Per la pioggia si usa il verbo: il pleut." },
+            { t: "listen", say: "Il fait soleil et il fait vingt-deux degrés : parfait pour un pique-nique.", q: "Quanti gradi ci sono?", opts: ["22", "12", "32", "20"], a: 0, why: "Vingt-deux = 22." },
+            { t: "listen", say: "Il pleut depuis ce matin, alors je reste à la maison avec un bon livre.", q: "Perché resta a casa?", opts: ["Perché piove da stamattina.", "Perché fa troppo caldo.", "Perché nevica.", "Perché è stanco."], a: 0, why: "Il pleut = piove." },
+            { t: "listen", say: "En juillet, il fait très chaud à Paris, et le métro est un four.", q: "Com'è il tempo a luglio?", opts: ["Fa molto caldo.", "Fa molto freddo.", "Piove sempre.", "C'è molto vento."], a: 0, why: "Chaud = caldo." },
+            { t: "type", q: "Completa: «Il fait ___, prends ton manteau !» (freddo)", a: ["froid"], why: "Froid = freddo." },
+            { t: "type", q: "Completa: «N'oublie pas ton ___ : il pleut !» (ombrello)", a: ["parapluie"], why: "Para-pluie = para-pioggia." },
+            { t: "type", say: "Selon la météo, il va faire beau tout le week-end.", q: "Ascolta e completa: «Selon la ___, il va faire beau tout le week-end.»", a: ["météo", "meteo"], why: "La météo = le previsioni." },
+            { t: "order", q: "Riordina: «C'è molto vento e ci sono nuvole grigie.»", words: ["Il", "y", "a", "beaucoup", "de", "vent", "et", "des", "nuages", "gris."], why: "Il y a + vento, nuvole." },
+            { t: "match", q: "Abbina", pairs: [["il fait beau", "fa bel tempo"], ["il fait chaud", "fa caldo"], ["il neige", "nevica"], ["le nuage", "la nuvola"]] }
+          ],
+          recap: {
+            can: ["Chiedere e dire che tempo fa", "Usare il fait, il pleut, il neige, il y a du…", "Dire la temperatura in gradi", "Capire una previsione: il va pleuvoir, il va faire beau"],
+            phrases: [{ fr: "Quel temps fait-il ? — Il fait beau et chaud.", it: "Che tempo fa? — Fa bello e caldo." }, { fr: "Il pleut, prends ton parapluie !", it: "Piove, prendi l'ombrello!" }, { fr: "Il y a du vent, mais il fait vingt degrés.", it: "C'è vento, ma ci sono venti gradi." }],
+            trap: "CHAUD = caldo (non freddo!). E per la pioggia non si dice «il fait pluie», ma «il pleut»."
+          }
+        }
+      ]
+    },
+    {
+      n: 6, arr: "6e", name: "Voyager", it: "Viaggiare", level: "A2",
+      lessons: [
+        /* ---------------- LEZIONE 6-1 ---------------- */
+        {
+          id: "6-1", street: "Rue de la Gare", title: "Alla stazione: biglietti e treni",
+          goal: "Comprare un biglietto del treno, chiedere orari e binari e capire gli annunci di partenza e di ritardo.",
+          episode: {
+            title: "Gare de Lyon, binario 11",
+            intro: "Sette e mezza del mattino alla Gare de Lyon. Sotto il grande orologio, migliaia di persone corrono con le valigie. Gigi ha in mano la cesta di Croissant, Léa le lettere di Zizì, Françoise un sacchetto di croissant «per il viaggio». Nessuno ha ancora il biglietto.",
+            lines: [
+              { who: "Gigi", fr: "Bonjour madame. Je voudrais trois billets aller-retour pour Avignon, s'il vous plaît.", it: "Buongiorno signora. Vorrei tre biglietti di andata e ritorno per Avignone, per favore." },
+              { who: "Mme Girard", fr: "Pour aujourd'hui ? Le prochain TGV part à huit heures douze, voie onze.", it: "Per oggi? Il prossimo TGV parte alle otto e dodici, binario undici." },
+              { who: "Léa", fr: "Le voyage dure combien de temps ? Et il faut changer de train ?", it: "Quanto dura il viaggio? E bisogna cambiare treno?" },
+              { who: "Mme Girard", fr: "Non, c'est direct : environ deux heures quarante. Vous préférez la première ou la deuxième classe ?", it: "No, è diretto: circa due ore e quaranta. Preferite la prima o la seconda classe?" },
+              { who: "Gigi", fr: "La deuxième classe, côté fenêtre si possible. Ça fait combien en tout ?", it: "La seconda classe, lato finestrino se possibile. Quanto fa in tutto?" },
+              { who: "Mme Girard", fr: "Deux cent dix euros. Et pour le chat, il faut un billet animal à sept euros.", it: "Duecentodieci euro. E per il gatto serve un biglietto per animali da sette euro." },
+              { who: "Croissant", fr: "Sept euros ? J'exige au moins une place en première classe pour ce prix.", it: "Sette euro? Per questo prezzo esigo almeno un posto in prima classe." },
+              { who: "Annonce", fr: "Le TGV à destination d'Avignon partira avec un retard de quinze minutes. Nous vous prions de nous excuser.", it: "Il TGV diretto ad Avignone partirà con un ritardo di quindici minuti. Ci scusiamo per il disagio." }
+            ],
+            outro: "Quindici minuti di ritardo bastano a Françoise per comprare altri croissant e a Gigi per perdere i biglietti due volte (erano nella sua tasca). Alle otto e ventisette il treno parte. Fuori dal finestrino Parigi diventa campagna, poi colline, poi cielo azzurro.",
+            you: "«{nome}, in stazione le parole magiche sono «un aller simple» (solo andata) e «un aller-retour» (andata e ritorno). E non dimenticare: «la voie» è il binario. Bon voyage!»",
+            mine: { fr: "Bonjour, je m'appelle {nome} et je voudrais un aller-retour pour Paris en deuxième classe, s'il vous plaît.", it: "Buongiorno, mi chiamo {nome} e vorrei un'andata e ritorno per Parigi in seconda classe, per favore." }
+          },
+          words: [
+            { fr: "le billet", it: "il biglietto", say: "lə bijè", hook: "BILLET = biglietto, con la doppia L che si legge «i». Attenzione: anche la banconota è «un billet» (un billet de vingt euros).",
+              ex: { fr: "J'achète toujours mon billet de train sur internet, c'est moins cher.", it: "Compro sempre il biglietto del treno su internet, costa meno." } },
+            { fr: "un aller simple / un aller-retour", it: "solo andata / andata e ritorno", say: "ẽ nalé sẽpl / ẽ nalé rətur", hook: "ALLER = andare, RETOUR = ritorno. Un aller simple: «un'andata semplice», senza ritorno.",
+              ex: { fr: "Un aller-retour pour Lyon, départ vendredi et retour dimanche soir.", it: "Un'andata e ritorno per Lione, partenza venerdì e ritorno domenica sera." } },
+            { fr: "la voie / le quai", it: "il binario / la banchina", say: "la vwa / lə kè", hook: "LA VOIE: la «via» del treno, cioè il binario. LE QUAI è la banchina dove aspetti (lo stesso quai dei bouquinistes sulla Senna).",
+              ex: { fr: "Le train pour Marseille part de la voie sept : dépêchons-nous !", it: "Il treno per Marsiglia parte dal binario sette: sbrighiamoci!" } },
+            { fr: "partir / arriver", it: "partire / arrivare", say: "partìr / arivé", hook: "Uguali all'italiano! Le départ = la partenza, l'arrivée = l'arrivo: li leggi sui tabelloni.",
+              ex: { fr: "Le train part à huit heures et arrive à Avignon vers onze heures.", it: "Il treno parte alle otto e arriva ad Avignone verso le undici." } },
+            { fr: "le retard", it: "il ritardo", say: "lə rətar", hook: "LE RETARD l'hai già visto con «en retard». Negli annunci: «un retard de dix minutes». Sospiro collettivo garantito.",
+              ex: { fr: "À cause de la neige, tous les trains ont une heure de retard.", it: "A causa della neve, tutti i treni hanno un'ora di ritardo." } },
+            { fr: "changer (de train)", it: "cambiare (treno)", say: "shãjé", hook: "CHANGER DE TRAIN: cambiare treno. Con «changer» si usa DE senza articolo: changer de place, changer d'avis.",
+              ex: { fr: "Pour aller à Roussillon, il faut changer de train à Avignon et prendre un bus.", it: "Per andare a Roussillon bisogna cambiare treno ad Avignone e prendere un autobus." } },
+            { fr: "combien de temps", it: "quanto tempo", say: "kõbjẽ də tã", hook: "COMBIEN DE TEMPS ? = quanto tempo? Il viaggio «dure» (dura) due ore. Combien = quanto, come al mercato.",
+              ex: { fr: "Combien de temps dure le trajet entre Paris et Marseille en TGV ?", it: "Quanto dura il tragitto tra Parigi e Marsiglia in TGV?" } },
+            { fr: "la place / côté fenêtre", it: "il posto / lato finestrino", say: "la plas / kòté fənètr", hook: "Sul treno LA PLACE è il posto a sedere. Côté fenêtre (finestrino) o côté couloir (corridoio).",
+              ex: { fr: "Excusez-moi, je crois que vous êtes à ma place : j'ai le siège quarante-deux.", it: "Mi scusi, credo che lei sia al mio posto: ho il sedile quarantadue." } },
+            { fr: "la valise / le sac à dos", it: "la valigia / lo zaino", say: "la valìz / lə sak a dò", hook: "LA VALISE la conosci (quella rossa di Zizì!). Il SAC À DOS è il «sacco sulla schiena».",
+              ex: { fr: "Je voyage avec un petit sac à dos, parce que les grosses valises m'énervent.", it: "Viaggio con un piccolo zaino, perché le valigie grosse mi innervosiscono." } },
+            { fr: "le voyage", it: "il viaggio", say: "lə vwajaj", hook: "VOYAGE: «Bon voyage!» lo conosci già. Il verbo è voyager: nous voyageons (con la E, come mangeons).",
+              ex: { fr: "Le voyage en train est long, mais le paysage est magnifique.", it: "Il viaggio in treno è lungo, ma il paesaggio è magnifico." } }
+          ],
+          tip: {
+            title: "Biglietto in mano: le frasi della stazione",
+            body: "<div class='tbl'><table><thead><tr><th>Vuoi…</th><th>Dici</th></tr></thead><tbody><tr><td>comprare il biglietto</td><td>Je voudrais un aller simple / un aller-retour pour Lyon.</td></tr><tr><td>sapere l'orario</td><td>Le prochain train pour Lyon part à quelle heure ?</td></tr><tr><td>sapere il binario</td><td>Il part de quelle voie ?</td></tr><tr><td>sapere la durata</td><td>Le voyage dure combien de temps ?</td></tr><tr><td>sapere se cambi</td><td>C'est direct ? Il faut changer ?</td></tr><tr><td>scegliere il posto</td><td>Côté fenêtre / côté couloir, s'il vous plaît.</td></tr></tbody></table></div><ul><li>Sul tabellone: <b>départ</b> (partenza), <b>arrivée</b> (arrivo), <b>voie</b> (binario), <b>retard</b> (ritardo), <b>supprimé</b> (cancellato).</li><li><b>Le prochain train</b> = il prossimo treno; <b>le dernier train</b> = l'ultimo treno.</li><li><b>Il faut</b> + infinito = bisogna: il faut changer à Lyon.</li><li>TGV = Train à Grande Vitesse, il treno ad alta velocità.</li></ul>",
+            examples: [
+              { fr: "Je voudrais un aller simple pour Marseille, en deuxième classe.", it: "Vorrei un biglietto di sola andata per Marsiglia, in seconda classe." },
+              { fr: "Le prochain train pour Lyon part de quelle voie ?", it: "Il prossimo treno per Lione parte da quale binario?" },
+              { fr: "Le voyage dure trois heures, et il faut changer à Dijon.", it: "Il viaggio dura tre ore, e bisogna cambiare a Digione." },
+              { fr: "Attention, le train de dix heures est supprimé.", it: "Attenzione, il treno delle dieci è cancellato." },
+              { fr: "Nous arrivons à Avignon avec vingt minutes de retard.", it: "Arriviamo ad Avignone con venti minuti di ritardo." }
+            ]
+          },
+          practice: [
+            { t: "mcq", q: "«Un aller-retour» è…", opts: ["un biglietto di andata e ritorno", "un biglietto di sola andata", "un treno che torna indietro", "un rimborso"], a: 0, why: "Aller = andata, retour = ritorno." },
+            { t: "mcq", q: "Sul tabellone «voie 11» significa…", opts: ["binario 11", "vagone 11", "posto 11", "uscita 11"], a: 0, why: "La voie = il binario." },
+            { t: "listen", say: "Le train part à huit heures et arrive à Avignon vers onze heures.", q: "A che ora arriva il treno?", opts: ["Verso le undici", "Alle otto", "Verso mezzogiorno", "Alle nove"], a: 0, why: "Arrive vers onze heures." },
+            { t: "match", q: "Abbina", pairs: [["le billet", "il biglietto"], ["le retard", "il ritardo"], ["la valise", "la valigia"], ["le départ", "la partenza"]] },
+            { t: "order", q: "Riordina: «Vorrei un biglietto di andata e ritorno per Avignone.»", words: ["Je", "voudrais", "un", "aller-retour", "pour", "Avignon."], why: "Je voudrais + biglietto + pour + città." }
+          ],
+          test: [
+            { t: "mcq", q: "Come chiedi quanto dura il viaggio?", opts: ["Le voyage dure combien de temps ?", "Le voyage est combien ?", "Combien coûte le voyage ?", "Le voyage part quand ?"], a: 0, why: "Combien de temps = quanto tempo." },
+            { t: "mcq", q: "Sul tabellone leggi «supprimé». Il treno è…", opts: ["cancellato", "in ritardo", "in anticipo", "pieno"], a: 0, why: "Supprimé = soppresso, cancellato." },
+            { t: "mcq", q: "Completa: «Il faut changer ___ train à Lyon.»", opts: ["de", "le", "du", "un"], a: 0, why: "Changer de + nome, senza articolo." },
+            { t: "mcq", q: "Vuoi il posto vicino al finestrino. Dici:", opts: ["Côté fenêtre, s'il vous plaît.", "Côté couloir, s'il vous plaît.", "Près de la porte, merci.", "En première fenêtre."], a: 0, why: "Côté fenêtre = lato finestrino." },
+            { t: "listen", say: "Le prochain TGV part à huit heures douze, voie onze.", q: "Da quale binario parte il TGV?", opts: ["11", "12", "8", "2"], a: 0, why: "Voie onze = binario 11." },
+            { t: "listen", say: "Le TGV à destination d'Avignon partira avec un retard de quinze minutes.", q: "Di quanto è in ritardo il treno?", opts: ["15 minuti", "50 minuti", "5 minuti", "1 ora"], a: 0, why: "Quinze = 15." },
+            { t: "listen", say: "Pour aller à Roussillon, il faut changer de train à Avignon et prendre un bus.", q: "Come si arriva a Roussillon?", opts: ["Cambiando treno ad Avignone e poi in autobus", "Con un treno diretto da Parigi", "Solo in macchina", "In aereo fino a Marsiglia"], a: 0, why: "Changer de train + prendre un bus." },
+            { t: "type", q: "Completa: «Je voudrais un aller ___ pour Lyon.» (solo andata)", a: ["simple"], why: "Un aller simple = sola andata." },
+            { t: "type", q: "Completa: «Le train part de quelle ___ ?» (binario)", a: ["voie"], why: "La voie = il binario." },
+            { t: "type", say: "J'achète toujours mon billet de train sur internet.", q: "Ascolta e completa: «J'achète toujours mon ___ de train sur internet.»", a: ["billet"], why: "Le billet = il biglietto." },
+            { t: "order", q: "Riordina: «Il viaggio dura tre ore ed è diretto.»", words: ["Le", "voyage", "dure", "trois", "heures", "et", "c'est", "direct."], why: "Durer = durare." },
+            { t: "match", q: "Abbina", pairs: [["partir", "partire"], ["arriver", "arrivare"], ["le quai", "la banchina"], ["le sac à dos", "lo zaino"]] }
+          ],
+          recap: {
+            can: ["Comprare un biglietto: aller simple o aller-retour", "Chiedere orario, binario, durata e cambi", "Capire tabelloni e annunci: retard, supprimé, voie", "Scegliere classe e posto"],
+            phrases: [{ fr: "Je voudrais un aller-retour pour Avignon, s'il vous plaît.", it: "Vorrei un'andata e ritorno per Avignone, per favore." }, { fr: "Le prochain train part à quelle heure et de quelle voie ?", it: "A che ora e da quale binario parte il prossimo treno?" }, { fr: "Le train a vingt minutes de retard.", it: "Il treno ha venti minuti di ritardo." }],
+            trap: "LA VOIE è il binario, LE QUAI la banchina. E «changer DE train» si dice senza articolo."
+          }
+        },
+        /* ---------------- LEZIONE 6-2 ---------------- */
+        {
+          id: "6-2", street: "Rue de l'Hôtel", title: "In albergo: prenotare e fare il check-in",
+          goal: "Prenotare una camera, fare il check-in, chiedere i servizi dell'albergo e segnalare un problema in modo cortese.",
+          episode: {
+            title: "Hôtel des Ocres",
+            intro: "Roussillon è un paesino arroccato su una collina color arancio, rosso e giallo: sono le famose ocre. L'unico albergo ha le persiane azzurre e un gatto rosso addormentato sul gradino. Croissant lo guarda con sospetto. La receptionist ha gli occhiali sulla punta del naso.",
+            lines: [
+              { who: "Gigi", fr: "Bonjour madame, nous avons réservé deux chambres pour trois nuits, au nom de Esposito.", it: "Buongiorno signora, abbiamo prenotato due camere per tre notti, a nome Esposito." },
+              { who: "Mme Garnier", fr: "Bienvenue à Roussillon ! Oui : une chambre double et une chambre simple, avec salle de bains.", it: "Benvenuti a Roussillon! Sì: una camera doppia e una singola, con bagno." },
+              { who: "Léa", fr: "Le petit-déjeuner est compris ? Et à quelle heure est-ce qu'il est servi ?", it: "La colazione è inclusa? E a che ora viene servita?" },
+              { who: "Mme Garnier", fr: "Oui, il est compris. Il est servi de sept heures à dix heures, sur la terrasse.", it: "Sì, è inclusa. Viene servita dalle sette alle dieci, sulla terrazza." },
+              { who: "Gigi", fr: "Est-ce qu'il y a le wifi dans les chambres ? Et un ascenseur pour les valises ?", it: "C'è il wifi nelle camere? E un ascensore per le valigie?" },
+              { who: "Mme Garnier", fr: "Le wifi, oui. L'ascenseur, non : c'est une maison du dix-septième siècle. Voici vos clés.", it: "Il wifi sì. L'ascensore no: è una casa del Seicento. Ecco le vostre chiavi." },
+              { who: "Mme Lefèvre", fr: "Excusez-moi, madame, dans ma chambre, la douche ne marche pas et il n'y a pas de serviettes.", it: "Mi scusi, signora, nella mia camera la doccia non funziona e non ci sono asciugamani." },
+              { who: "Mme Garnier", fr: "Je suis désolée ! J'envoie quelqu'un tout de suite. Vous êtes… de la famille de Zizì ? Vous avez ses yeux.", it: "Mi dispiace! Mando subito qualcuno. Lei è… della famiglia di Zizì? Ha i suoi occhi." }
+            ],
+            outro: "Madame Garnier si toglie gli occhiali e si siede sul gradino accanto al gatto rosso. «Zizì? Tutto il paese la conosceva. Aveva una piccola bottega di dolci in place de la Mairie. Domani vi accompagno a vederla.»",
+            you: "«{nome}, in albergo tre domande ti salvano la vacanza: «Le petit-déjeuner est compris ?», «Il y a le wifi ?» e «À quelle heure faut-il libérer la chambre ?». E se qualcosa non funziona: «… ne marche pas».»",
+            mine: { fr: "Bonjour, je m'appelle {nome} et j'ai réservé une chambre simple pour deux nuits.", it: "Buongiorno, mi chiamo {nome} e ho prenotato una camera singola per due notti." }
+          },
+          words: [
+            { fr: "réserver / la réservation", it: "prenotare / la prenotazione", say: "rézèrvé / la rézèrvasjõ", hook: "RÉSERVER: «riservare» un posto solo per te. J'ai réservé = ho prenotato (passato, lo studierai presto).",
+              ex: { fr: "J'ai une réservation pour deux personnes au nom de Martin.", it: "Ho una prenotazione per due persone a nome Martin." } },
+            { fr: "la chambre", it: "la camera", say: "la shãbr", hook: "CHAMBRE = camera (da letto). Trappola: «la camera» fotografica è «l'appareil photo»! Une chambre double / simple.",
+              ex: { fr: "Notre chambre est petite, mais elle a une vue magnifique sur les collines.", it: "La nostra camera è piccola, ma ha una vista magnifica sulle colline." } },
+            { fr: "la nuit", it: "la notte", say: "la nüì", hook: "NUIT = notte: la UI scivola via come chi si addormenta. «Pour trois nuits» = per tre notti. Bonne nuit!",
+              ex: { fr: "La chambre coûte quatre-vingt-dix euros la nuit, petit-déjeuner compris.", it: "La camera costa novanta euro a notte, colazione inclusa." } },
+            { fr: "compris / inclus", it: "compreso, incluso", say: "kõprì / ẽklü", hook: "COMPRIS = compreso nel prezzo (e anche «capito!»: «C'est compris?» = è chiaro?).",
+              ex: { fr: "Est-ce que le petit-déjeuner est compris dans le prix de la chambre ?", it: "La colazione è compresa nel prezzo della camera?" } },
+            { fr: "le petit-déjeuner", it: "la colazione", say: "lə pəti déjöné", hook: "PETIT-DÉJEUNER: il «piccolo pranzo» del mattino. Le déjeuner = il pranzo, le dîner = la cena.",
+              ex: { fr: "Au petit-déjeuner, il y a des croissants, du pain frais et de la confiture.", it: "A colazione ci sono croissant, pane fresco e marmellata." } },
+            { fr: "la clé", it: "la chiave", say: "la klé", hook: "LA CLÉ la conosci benissimo: la chiave col nastro blu! In albergo spesso è una carta: «la carte».",
+              ex: { fr: "N'oubliez pas de laisser la clé à la réception quand vous sortez.", it: "Non dimenticate di lasciare la chiave alla reception quando uscite." } },
+            { fr: "l'ascenseur", it: "l'ascensore", say: "lasãsör", hook: "ASCENSEUR = ascensore, con «-eur» finale. È maschile: l'ascenseur est en panne (è guasto).",
+              ex: { fr: "L'ascenseur est en panne, alors nous montons au cinquième étage à pied.", it: "L'ascensore è guasto, quindi saliamo al quinto piano a piedi." } },
+            { fr: "la salle de bains", it: "il bagno", say: "la sal də bẽ", hook: "SALLE DE BAINS: la «sala dei bagni». Le toilettes (sempre plurale!) sono il WC.",
+              ex: { fr: "La salle de bains est grande, avec une baignoire et une douche.", it: "Il bagno è grande, con una vasca e una doccia." } },
+            { fr: "… ne marche pas", it: "… non funziona", say: "nə marsh pa", hook: "MARCHER = camminare, ma anche funzionare: una macchina che «cammina» funziona! La télé ne marche pas = la tv non funziona.",
+              ex: { fr: "Excusez-moi, le chauffage ne marche pas et il fait très froid dans la chambre.", it: "Mi scusi, il riscaldamento non funziona e fa molto freddo in camera." } },
+            { fr: "la serviette", it: "l'asciugamano", say: "la sèrvjèt", hook: "Trappola: LA SERVIETTE è l'asciugamano (o il tovagliolo), non la «salvietta» struccante. Pour la plage: une serviette de plage.",
+              ex: { fr: "Pourriez-vous nous apporter deux serviettes propres, s'il vous plaît ?", it: "Potrebbe portarci due asciugamani puliti, per favore?" } }
+          ],
+          tip: {
+            title: "Check-in senza panico: le frasi dell'albergo",
+            body: "<div class='tbl'><table><thead><tr><th>Situazione</th><th>Frase</th></tr></thead><tbody><tr><td>Arrivo</td><td>J'ai réservé une chambre au nom de…</td></tr><tr><td>Senza prenotazione</td><td>Vous avez une chambre libre pour ce soir ?</td></tr><tr><td>Prezzo</td><td>C'est combien la nuit ?</td></tr><tr><td>Servizi</td><td>Le petit-déjeuner est compris ? Il y a le wifi ?</td></tr><tr><td>Partenza</td><td>À quelle heure faut-il libérer la chambre ?</td></tr><tr><td>Problema</td><td>La douche ne marche pas. / Il n'y a pas de serviettes.</td></tr></tbody></table></div><ul><li><b>Est-ce que</b> + frase = domanda (sì/no) più formale: <b>Est-ce que</b> le petit-déjeuner est compris ?</li><li>Dopo la negazione, un / une / des diventano <b>de</b>: il n'y a pas <b>de</b> serviettes.</li><li><b>Pourriez-vous… ?</b> (potrebbe…?) è la formula più gentile per chiedere un favore.</li><li>Il piano terra è <b>le rez-de-chaussée</b>; il primo piano <b>le premier étage</b>.</li></ul>",
+            examples: [
+              { fr: "Bonsoir, vous avez une chambre double pour deux nuits ?", it: "Buonasera, avete una camera doppia per due notti?" },
+              { fr: "Est-ce que le parking est gratuit pour les clients ?", it: "Il parcheggio è gratuito per i clienti?" },
+              { fr: "À quelle heure faut-il libérer la chambre ? — Avant onze heures.", it: "A che ora bisogna lasciare la camera? — Prima delle undici." },
+              { fr: "Il n'y a pas de papier toilette dans la salle de bains.", it: "Non c'è carta igienica nel bagno." },
+              { fr: "Pourriez-vous me réveiller à six heures demain matin ?", it: "Potrebbe svegliarmi alle sei domattina?" }
+            ]
+          },
+          practice: [
+            { t: "mcq", q: "«Le petit-déjeuner est compris» significa…", opts: ["La colazione è inclusa.", "La colazione è piccola.", "La colazione è finita.", "La colazione si paga a parte."], a: 0, why: "Compris = compreso, incluso." },
+            { t: "mcq", q: "«La télé ne marche pas» significa…", opts: ["La tv non funziona.", "La tv non cammina.", "La tv non c'è.", "La tv è spenta."], a: 0, why: "Marcher = anche funzionare." },
+            { t: "listen", say: "La chambre coûte quatre-vingt-dix euros la nuit, petit-déjeuner compris.", q: "Quanto costa la camera?", opts: ["90 € a notte, colazione inclusa", "80 € a notte, senza colazione", "19 € a notte", "90 € per tre notti"], a: 0, why: "Quatre-vingt-dix = 90." },
+            { t: "match", q: "Abbina", pairs: [["la chambre", "la camera"], ["la nuit", "la notte"], ["l'ascenseur", "l'ascensore"], ["la serviette", "l'asciugamano"]] },
+            { t: "order", q: "Riordina: «Ho prenotato una camera singola per due notti.»", words: ["J'ai", "réservé", "une", "chambre", "simple", "pour", "deux", "nuits."], why: "J'ai réservé = ho prenotato." }
+          ],
+          test: [
+            { t: "mcq", q: "Arrivi in albergo senza prenotazione. Chiedi:", opts: ["Vous avez une chambre libre pour ce soir ?", "J'ai réservé une chambre libre.", "Où est ma chambre réservée ?", "La chambre est compris ?"], a: 0, why: "Une chambre libre = una camera libera." },
+            { t: "mcq", q: "Completa: «Il n'y a pas ___ serviettes.»", opts: ["de", "des", "les", "du"], a: 0, why: "Dopo la negazione: pas de." },
+            { t: "mcq", q: "«L'appareil photo» è…", opts: ["la macchina fotografica", "la camera da letto", "il televisore", "il telefono"], a: 0, why: "La camera da letto è la chambre." },
+            { t: "mcq", q: "Qual è il modo più gentile per chiedere un favore?", opts: ["Pourriez-vous m'apporter une serviette ?", "Donnez-moi une serviette.", "Je veux une serviette.", "Une serviette, vite !"], a: 0, why: "Pourriez-vous… ? = potrebbe…?" },
+            { t: "listen", say: "Le petit-déjeuner est servi de sept heures à dix heures, sur la terrasse.", q: "Quando e dove viene servita la colazione?", opts: ["Dalle 7 alle 10, sulla terrazza", "Dalle 8 alle 11, in sala", "Alle 7 in punto, in camera", "Dalle 6 alle 9, sulla terrazza"], a: 0, why: "De sept heures à dix heures." },
+            { t: "listen", say: "L'ascenseur est en panne, alors nous montons au cinquième étage à pied.", q: "Perché salgono a piedi?", opts: ["Perché l'ascensore è guasto.", "Perché la camera è al primo piano.", "Perché non c'è l'ascensore.", "Perché vogliono fare sport."], a: 0, why: "En panne = guasto." },
+            { t: "listen", say: "Excusez-moi, le chauffage ne marche pas et il fait très froid dans la chambre.", q: "Qual è il problema?", opts: ["Il riscaldamento non funziona e fa freddo.", "La doccia non funziona.", "La camera è troppo calda.", "La finestra non si chiude."], a: 0, why: "Le chauffage = il riscaldamento." },
+            { t: "type", q: "Completa: «J'ai une ___ au nom de Martin.» (prenotazione)", a: ["réservation", "reservation"], why: "La réservation." },
+            { t: "type", q: "Completa: «La ___ de bains est au fond du couloir.» (sala)", a: ["salle"], why: "La salle de bains = il bagno." },
+            { t: "type", say: "N'oubliez pas de laisser la clé à la réception.", q: "Ascolta e completa: «N'oubliez pas de laisser la ___ à la réception.»", a: ["clé", "cle"], why: "La clé = la chiave." },
+            { t: "order", q: "Riordina: «A che ora bisogna lasciare la camera?»", words: ["À", "quelle", "heure", "faut-il", "libérer", "la", "chambre", "?"], why: "Libérer la chambre = lasciare la camera." },
+            { t: "match", q: "Abbina", pairs: [["réserver", "prenotare"], ["compris", "incluso"], ["le petit-déjeuner", "la colazione"], ["en panne", "guasto"]] }
+          ],
+          recap: {
+            can: ["Fare il check-in e chiedere una camera libera", "Chiedere prezzo, colazione, wifi e orari", "Segnalare un problema: … ne marche pas, il n'y a pas de…", "Chiedere un favore con «Pourriez-vous… ?»"],
+            phrases: [{ fr: "J'ai réservé une chambre double au nom de Rossi.", it: "Ho prenotato una camera doppia a nome Rossi." }, { fr: "Le petit-déjeuner est compris ?", it: "La colazione è inclusa?" }, { fr: "La douche ne marche pas et il n'y a pas de serviettes.", it: "La doccia non funziona e non ci sono asciugamani." }],
+            trap: "LA CHAMBRE è la camera da letto, LA SERVIETTE l'asciugamano: falsi amici da hotel!"
+          }
+        },
+        /* ---------------- LEZIONE 6-3 ---------------- */
+        {
+          id: "6-3", street: "Rue des Projets", title: "Il futuro prossimo: aller + infinito",
+          goal: "Parlare dei tuoi progetti e di quello che sta per succedere con «aller + infinito», anche in frase negativa.",
+          episode: {
+            title: "La bottega in place de la Mairie",
+            intro: "La mattina dopo, Madame Garnier li accompagna in place de la Mairie. All'angolo, sotto un platano enorme, c'è una vetrina chiusa da anni. Sopra la porta, scolorita dal sole, si legge ancora una scritta: «Les Douceurs de Zizì». Tutti restano in silenzio.",
+            lines: [
+              { who: "Mme Garnier", fr: "Voilà la boutique de Zizì. Le propriétaire va la vendre le mois prochain.", it: "Ecco la bottega di Zizì. Il proprietario la venderà il mese prossimo." },
+              { who: "Gigi", fr: "La vendre ? Non ! Je vais téléphoner au propriétaire tout de suite.", it: "Venderla? No! Telefono subito al proprietario." },
+              { who: "Léa", fr: "Attends, Gigi. Qu'est-ce que tu vas faire avec une boutique en Provence ?", it: "Aspetta, Gigi. Cosa farai con una bottega in Provenza?" },
+              { who: "Gigi", fr: "Je ne vais pas l'acheter, mais je vais demander les vieilles recettes et les photos.", it: "Non la comprerò, ma chiederò le vecchie ricette e le foto." },
+              { who: "Mme Lefèvre", fr: "Et cet après-midi, nous allons visiter le village et parler avec les anciens.", it: "E questo pomeriggio visiteremo il paese e parleremo con gli anziani." },
+              { who: "Croissant", fr: "Moi, je vais dormir sous ce platane. Les projets, ça fatigue.", it: "Io dormirò sotto questo platano. I progetti stancano." },
+              { who: "Mme Garnier", fr: "Allez voir Madame Pons, au café de la place. Elle va tout vous raconter.", it: "Andate a trovare Madame Pons, al caffè della piazza. Vi racconterà tutto." },
+              { who: "Léa", fr: "Parfait ! Ce soir, on va manger sur la place et on va enfin comprendre le secret de Zizì.", it: "Perfetto! Stasera mangeremo in piazza e finalmente capiremo il segreto di Zizì." }
+            ],
+            outro: "Attraverso il vetro impolverato si vedono ancora i barattoli vuoti, una bilancia di ottone e, appesa al muro, una fotografia: Zizì sorridente, con in braccio una bambina dai capelli ricci. Françoise si avvicina al vetro e trattiene il fiato: «Quella bambina… sono io.»",
+            you: "«{nome}, per parlare del futuro vicino basta il verbo «aller» che conosci già, più un verbo all'infinito: je vais manger, tu vas voir. È come l'italiano «sto per», ma lo usi per tutto: domani, stasera, l'anno prossimo.»",
+            mine: { fr: "Je m'appelle {nome}, et l'année prochaine je vais visiter la France et parler français.", it: "Mi chiamo {nome}, e l'anno prossimo visiterò la Francia e parlerò francese." }
+          },
+          words: [
+            { fr: "je vais + infinitif", it: "farò, sto per…", say: "jə vè", hook: "JE VAIS MANGER: «vado a mangiare» = mangerò. Il futuro più facile del mondo: aller (che sai già) + verbo all'infinito.",
+              ex: { fr: "Ce soir, je vais préparer des lasagnes pour toute la famille.", it: "Stasera preparerò le lasagne per tutta la famiglia." } },
+            { fr: "demain matin / ce soir", it: "domattina / stasera", say: "dəmẽ matẽ / sə swar", hook: "CE SOIR = «questa sera». Ce matin, cet après-midi, ce soir: CE/CET + parte della giornata = oggi.",
+              ex: { fr: "Demain matin, nous allons prendre le bus de huit heures pour Gordes.", it: "Domattina prenderemo l'autobus delle otto per Gordes." } },
+            { fr: "la semaine prochaine", it: "la settimana prossima", say: "la səmèn proshèn", hook: "PROCHAIN(E) = prossimo/a: le mois prochain, l'année prochaine. Viene sempre DOPO il nome.",
+              ex: { fr: "La semaine prochaine, je vais commencer un cours de cuisine provençale.", it: "La settimana prossima comincerò un corso di cucina provenzale." } },
+            { fr: "visiter", it: "visitare", say: "vizité", hook: "VISITER si usa per i LUOGHI: visiter un musée. Per le persone si dice «rendre visite à» (fare visita a).",
+              ex: { fr: "Cet après-midi, nous allons visiter les carrières d'ocre du village.", it: "Questo pomeriggio visiteremo le cave d'ocra del paese." } },
+            { fr: "acheter / vendre", it: "comprare / vendere", say: "ashté / vãdr", hook: "ACHETER = comprare: pensa a «acquisto». VENDRE = vendere, con la D finale che si sente appena.",
+              ex: { fr: "Le propriétaire va vendre la boutique, mais personne ne veut l'acheter.", it: "Il proprietario venderà la bottega, ma nessuno vuole comprarla." } },
+            { fr: "téléphoner à", it: "telefonare a", say: "téléfoné a", hook: "TÉLÉPHONER À quelqu'un: come in italiano, «telefonare a». Il telefono si chiama anche «le portable» (il cellulare).",
+              ex: { fr: "Je vais téléphoner à ma mère ce soir pour lui raconter le voyage.", it: "Stasera telefonerò a mia madre per raccontarle il viaggio." } },
+            { fr: "raconter", it: "raccontare", say: "rakõté", hook: "RACONTER = raccontare: un racconto è «un conte» (una fiaba). Raconte-moi! = raccontami!",
+              ex: { fr: "Madame Pons va nous raconter toute l'histoire de Zizì.", it: "Madame Pons ci racconterà tutta la storia di Zizì." } },
+            { fr: "le projet", it: "il progetto", say: "lə projè", hook: "PROJET = progetto, con la J dolce. Tu as des projets pour le week-end? = hai programmi per il weekend?",
+              ex: { fr: "Gigi a un nouveau projet : rouvrir la confiserie de Zizì à Paris.", it: "Gigi ha un nuovo progetto: riaprire la confetteria di Zizì a Parigi." } },
+            { fr: "bientôt", it: "presto, a breve", say: "bjẽtò", hook: "BIENTÔT = «ben presto». À bientôt! = a presto! Lo conosci dalla lezione dei saluti.",
+              ex: { fr: "Nous allons bientôt rentrer à Paris, mais je vais revenir ici.", it: "Presto torneremo a Parigi, ma io tornerò qui." } },
+            { fr: "le village", it: "il paese, il villaggio", say: "lə vilaj", hook: "VILLAGE: il paesino, il borgo. Roussillon è classificato tra «les plus beaux villages de France».",
+              ex: { fr: "Le village est petit, mais il y a un marché tous les jeudis matin.", it: "Il paese è piccolo, ma c'è un mercato tutti i giovedì mattina." } }
+          ],
+          tip: {
+            title: "Il futuro prossimo: aller + infinito",
+            body: "<div class='tbl'><table><thead><tr><th></th><th>aller</th><th>+ infinito</th></tr></thead><tbody><tr><td>je</td><td>vais</td><td>manger</td></tr><tr><td>tu</td><td>vas</td><td>partir</td></tr><tr><td>il / elle / on</td><td>va</td><td>visiter</td></tr><tr><td>nous</td><td>allons</td><td>voir</td></tr><tr><td>vous</td><td>allez</td><td>acheter</td></tr><tr><td>ils / elles</td><td>vont</td><td>dormir</td></tr></tbody></table></div><ul><li>Si usa per i <b>progetti</b> e per quello che <b>sta per succedere</b>: il va pleuvoir.</li><li>Negazione intorno ad <b>aller</b>: je <b>ne</b> vais <b>pas</b> partir.</li><li>Espressioni di tempo: ce soir, demain, la semaine <b>prochaine</b>, le mois <b>prochain</b>, l'année <b>prochaine</b>, bientôt.</li><li><b>On</b> = noi (familiare), con il verbo alla 3ª persona: <b>on va</b> manger = mangeremo.</li></ul>",
+            examples: [
+              { fr: "Demain, je vais visiter le musée et je vais acheter des cartes postales.", it: "Domani visiterò il museo e comprerò delle cartoline." },
+              { fr: "Attention, tu vas tomber !", it: "Attento, stai per cadere!" },
+              { fr: "Nous n'allons pas rentrer tard ce soir.", it: "Non torneremo tardi stasera." },
+              { fr: "L'année prochaine, mes parents vont venir à Paris.", it: "L'anno prossimo i miei genitori verranno a Parigi." },
+              { fr: "On va manger une pizza ? — Bonne idée !", it: "Mangiamo una pizza? — Buona idea!" }
+            ]
+          },
+          practice: [
+            { t: "mcq", q: "Completa: «Ce soir, nous ___ manger au restaurant.»", opts: ["allons", "vont", "allez", "vais"], a: 0, why: "Nous allons + infinito." },
+            { t: "mcq", q: "«Il va pleuvoir» significa…", opts: ["Sta per piovere / pioverà.", "Va a piovere altrove.", "Ha appena piovuto.", "Piove sempre."], a: 0, why: "Aller + infinito = futuro vicino." },
+            { t: "listen", say: "Ce soir, je vais préparer des lasagnes pour toute la famille.", q: "Cosa farà stasera?", opts: ["Preparerà le lasagne per tutta la famiglia.", "Mangerà le lasagne al ristorante.", "Comprerà le lasagne al supermercato.", "Ha preparato le lasagne ieri."], a: 0, why: "Je vais préparer = preparerò." },
+            { t: "match", q: "Abbina", pairs: [["acheter", "comprare"], ["vendre", "vendere"], ["raconter", "raccontare"], ["bientôt", "presto"]] },
+            { t: "order", q: "Riordina: «Domani visiteremo il paese.»", words: ["Demain,", "nous", "allons", "visiter", "le", "village."], why: "Nous allons visiter." }
+          ],
+          test: [
+            { t: "mcq", q: "Come si dice «non partirò»?", opts: ["Je ne vais pas partir.", "Je vais ne pas partir.", "Je ne vais partir pas.", "Je vais partir pas."], a: 0, why: "Ne… pas intorno ad aller." },
+            { t: "mcq", q: "Completa: «L'année ___, je vais apprendre l'espagnol.»", opts: ["prochaine", "prochain", "dernière", "passée"], a: 0, why: "L'année è femminile: prochaine." },
+            { t: "mcq", q: "Completa: «Ils ___ vendre la boutique.»", opts: ["vont", "vais", "allons", "va"], a: 0, why: "Ils vont + infinito." },
+            { t: "mcq", q: "Per «fare visita a un amico» si dice…", opts: ["rendre visite à un ami", "visiter un ami", "aller visiter à un ami", "faire visite un ami"], a: 0, why: "Visiter è per i luoghi." },
+            { t: "listen", say: "Demain matin, nous allons prendre le bus de huit heures pour Gordes.", q: "Cosa faranno domattina?", opts: ["Prenderanno l'autobus delle otto per Gordes.", "Hanno preso l'autobus per Gordes.", "Andranno a Gordes a piedi alle otto.", "Prenderanno il treno delle otto."], a: 0, why: "Nous allons prendre = prenderemo." },
+            { t: "listen", say: "Le propriétaire va vendre la boutique, mais personne ne veut l'acheter.", q: "Cosa succede alla bottega?", opts: ["Il proprietario la venderà, ma nessuno vuole comprarla.", "Il proprietario l'ha già venduta.", "Gigi la comprerà domani.", "La bottega riaprirà presto."], a: 0, why: "Va vendre = venderà." },
+            { t: "listen", say: "Nous allons bientôt rentrer à Paris, mais je vais revenir ici.", q: "Cosa dice la persona?", opts: ["Presto torneranno a Parigi, ma lui tornerà qui.", "Resteranno qui per sempre.", "Non torneranno mai a Parigi.", "Sono appena arrivati da Parigi."], a: 0, why: "Bientôt = presto." },
+            { t: "type", q: "Completa: «Je vais ___ à ma mère ce soir.» (telefonare)", a: ["téléphoner", "telephoner"], why: "Aller + infinito." },
+            { t: "type", q: "Completa: «Tu ___ voir, c'est magnifique !» (vai a / vedrai)", a: ["vas"], why: "Tu vas + infinito." },
+            { t: "type", say: "Madame Pons va nous raconter toute l'histoire.", q: "Ascolta e completa: «Madame Pons va nous ___ toute l'histoire.»", a: ["raconter"], why: "Raconter = raccontare." },
+            { t: "order", q: "Riordina: «La settimana prossima comincerò un corso di cucina.»", words: ["La", "semaine", "prochaine,", "je", "vais", "commencer", "un", "cours", "de", "cuisine."], why: "Je vais commencer." },
+            { t: "match", q: "Abbina", pairs: [["ce soir", "stasera"], ["demain matin", "domattina"], ["le mois prochain", "il mese prossimo"], ["le projet", "il progetto"]] }
+          ],
+          recap: {
+            can: ["Parlare dei tuoi progetti con aller + infinito", "Dire cosa sta per succedere: il va pleuvoir", "Usare ce soir, demain, la semaine prochaine…", "Fare la negazione del futuro prossimo"],
+            phrases: [{ fr: "Ce soir, nous allons manger sur la place.", it: "Stasera mangeremo in piazza." }, { fr: "Je ne vais pas acheter la boutique.", it: "Non comprerò la bottega." }, { fr: "L'année prochaine, je vais visiter la France.", it: "L'anno prossimo visiterò la Francia." }],
+            trap: "La negazione va intorno ad ALLER, non all'infinito: je NE vais PAS partir."
+          }
+        },
+        /* ---------------- LEZIONE 6-4 ---------------- */
+        {
+          id: "6-4", street: "Rue des Imprévus", title: "Imprevisti: pouvoir, vouloir, devoir",
+          goal: "Gestire gli imprevisti di viaggio, chiedere aiuto e usare i verbi pouvoir, vouloir e devoir.",
+          episode: {
+            title: "Il segreto di Madame Pons",
+            intro: "Al caffè della piazza, Madame Pons ha novant'anni, una treccia bianca e la voce di una cantante. Racconta, e tutti ascoltano. Ma intanto il cielo diventa nero, e la loro giornata sta per riempirsi di imprevisti.",
+            lines: [
+              { who: "Mme Pons", fr: "Zizì est partie de Paris parce qu'elle était malade. Elle ne voulait pas inquiéter Henri.", it: "Zizì è partita da Parigi perché era malata. Non voleva far preoccupare Henri." },
+              { who: "Mme Lefèvre", fr: "Malade ? Et elle ne pouvait pas nous le dire ? Je voulais seulement lui dire au revoir…", it: "Malata? E non poteva dircelo? Volevo solo salutarla…" },
+              { who: "Mme Pons", fr: "Ici, au soleil, elle a guéri. Mais elle devait rester loin, elle avait promis à son médecin.", it: "Qui, al sole, è guarita. Ma doveva restare lontano, l'aveva promesso al suo medico." },
+              { who: "Léa", fr: "Oh non ! Gigi, on a un problème : il y a une grève, il n'y a plus de bus ce soir !", it: "Oh no! Gigi, abbiamo un problema: c'è uno sciopero, stasera non ci sono più autobus!" },
+              { who: "Gigi", fr: "Et notre train part d'Avignon demain à sept heures. Comment est-ce qu'on peut y aller ?", it: "E il nostro treno parte da Avignone domani alle sette. Come possiamo andarci?" },
+              { who: "Mme Pons", fr: "Mon petit-fils peut vous emmener en voiture. Vous voulez partir à quelle heure ?", it: "Mio nipote può accompagnarvi in macchina. A che ora volete partire?" },
+              { who: "Croissant", fr: "Je ne veux pas voyager en voiture. Je dois protester. Formellement.", it: "Non voglio viaggiare in macchina. Devo protestare. Formalmente." },
+              { who: "Mme Pons", fr: "Avant de partir, vous devez prendre ceci : c'est le dernier carnet de recettes de Zizì.", it: "Prima di partire dovete prendere questo: è l'ultimo quaderno di ricette di Zizì." }
+            ],
+            outro: "Il quaderno è pieno di ricette provenzali e, sull'ultima pagina, di una frase: «Pour la petite Françoise, quand elle sera grande. Pardonne-moi.» Françoise piange e ride insieme. Il viaggio è finito; nel prossimo arrondissement, tornati a Parigi, ognuno racconterà quello che ha vissuto.",
+            you: "«{nome}, in viaggio gli imprevisti capitano: «J'ai perdu mon billet», «Le train est supprimé». Ricorda tre verbi d'oro: je peux (posso), je veux (voglio), je dois (devo). E soprattutto: «Vous pouvez m'aider ?»»",
+            mine: { fr: "Excusez-moi, je m'appelle {nome}, j'ai perdu mon billet : vous pouvez m'aider, s'il vous plaît ?", it: "Mi scusi, mi chiamo {nome}, ho perso il biglietto: può aiutarmi, per favore?" }
+          },
+          words: [
+            { fr: "pouvoir (je peux)", it: "potere (posso)", say: "puvwar (jə pö)", hook: "JE PEUX = posso, con EU = ö. «Je peux?» da solo = posso? (entrare, sedermi…). Vous pouvez m'aider? = può aiutarmi?",
+              ex: { fr: "Est-ce que je peux payer par carte, ou seulement en espèces ?", it: "Posso pagare con la carta, o solo in contanti?" } },
+            { fr: "vouloir (je veux)", it: "volere (voglio)", say: "vulwar (jə vö)", hook: "JE VEUX = voglio, diretto (ricordi? al bar meglio «je voudrais»). Ils veulent = vogliono.",
+              ex: { fr: "Les enfants veulent rester à la plage jusqu'au coucher du soleil.", it: "I bambini vogliono restare in spiaggia fino al tramonto." } },
+            { fr: "devoir (je dois)", it: "dovere (devo)", say: "dəvwar (jə dwa)", hook: "JE DOIS = devo: pensa a un «dovere» con la bocca a cuore: dwa. Tu dois, il doit, nous devons, ils doivent.",
+              ex: { fr: "Je dois partir tôt demain, parce que mon train est à sept heures.", it: "Devo partire presto domani, perché il mio treno è alle sette." } },
+            { fr: "perdre / j'ai perdu", it: "perdere / ho perso", say: "pèrdr / jé pèrdü", hook: "PERDRE = perdere. J'AI PERDU mon passeport: la frase che non vorresti mai dire, ma che devi sapere.",
+              ex: { fr: "J'ai perdu mon portefeuille dans le train : qu'est-ce que je dois faire ?", it: "Ho perso il portafoglio sul treno: cosa devo fare?" } },
+            { fr: "la grève", it: "lo sciopero", say: "la grèv", hook: "LA GRÈVE: lo sciopero, sport nazionale francese! Viene dalla place de Grève di Parigi, dove si radunavano i lavoratori.",
+              ex: { fr: "À cause de la grève, il n'y a pas de métro ni de bus aujourd'hui.", it: "A causa dello sciopero oggi non c'è né metrò né autobus." } },
+            { fr: "en panne", it: "guasto", say: "ã pan", hook: "EN PANNE: guasto, in avaria. Une voiture en panne, un ascenseur en panne. Pensa a una «panna» che si è rovinata.",
+              ex: { fr: "Notre voiture est en panne au milieu de la campagne, sans réseau.", it: "La nostra macchina è guasta in mezzo alla campagna, senza campo." } },
+            { fr: "aider / l'aide", it: "aiutare / l'aiuto", say: "èdé / lèd", hook: "AIDER = aiutare. Au secours! = aiuto! (in un'emergenza). Vous pouvez m'aider? = può aiutarmi?",
+              ex: { fr: "Merci beaucoup de nous aider, vous êtes vraiment très gentil.", it: "Grazie mille per averci aiutato, lei è davvero molto gentile." } },
+            { fr: "annulé", it: "annullato, cancellato", say: "anülé", hook: "ANNULÉ = annullato. Mon vol est annulé = il mio volo è cancellato. Sinonimo per i treni: supprimé.",
+              ex: { fr: "Le vol pour Nice est annulé à cause du mauvais temps.", it: "Il volo per Nizza è cancellato a causa del maltempo." } },
+            { fr: "il n'y a plus de…", it: "non c'è più…", say: "il nja plü də", hook: "NE… PLUS = non… più: il n'y a plus de bus = non ci sono più autobus. Come ne… pas, ma con «più».",
+              ex: { fr: "Désolé, il n'y a plus de chambres libres ce soir dans l'hôtel.", it: "Mi dispiace, stasera non ci sono più camere libere in albergo." } },
+            { fr: "emmener", it: "accompagnare, portare (qualcuno)", say: "ãmné", hook: "EMMENER: «portare con sé» una persona. Je t'emmène à la gare = ti accompagno alla stazione.",
+              ex: { fr: "Mon voisin peut nous emmener à l'aéroport demain matin.", it: "Il mio vicino può accompagnarci all'aeroporto domattina." } }
+          ],
+          tip: {
+            title: "Pouvoir, vouloir, devoir: i tre verbi del viaggiatore",
+            body: "<div class='tbl'><table><thead><tr><th></th><th>pouvoir</th><th>vouloir</th><th>devoir</th></tr></thead><tbody><tr><td>je</td><td>peux</td><td>veux</td><td>dois</td></tr><tr><td>tu</td><td>peux</td><td>veux</td><td>dois</td></tr><tr><td>il / elle</td><td>peut</td><td>veut</td><td>doit</td></tr><tr><td>nous</td><td>pouvons</td><td>voulons</td><td>devons</td></tr><tr><td>vous</td><td>pouvez</td><td>voulez</td><td>devez</td></tr><tr><td>ils / elles</td><td>peuvent</td><td>veulent</td><td>doivent</td></tr></tbody></table></div><ul><li>Tutti e tre vogliono un <b>infinito</b> dopo: je peux partir, je veux dormir, je dois travailler.</li><li><b>Vous pouvez m'aider ?</b> = può aiutarmi? La frase più utile in caso di problemi.</li><li><b>Ne… plus</b> = non… più: il n'y a <b>plus de</b> bus.</li><li>Emergenze: <b>Au secours !</b> (aiuto!), il 112 è il numero europeo.</li></ul>",
+            examples: [
+              { fr: "Vous pouvez m'aider ? J'ai perdu mon passeport.", it: "Può aiutarmi? Ho perso il passaporto." },
+              { fr: "Nous voulons changer notre billet pour le train de midi.", it: "Vogliamo cambiare il biglietto per il treno di mezzogiorno." },
+              { fr: "Vous devez valider votre billet avant de monter.", it: "Dovete convalidare il biglietto prima di salire." },
+              { fr: "Mon train est supprimé : est-ce que je peux prendre le suivant ?", it: "Il mio treno è cancellato: posso prendere il successivo?" },
+              { fr: "Il n'y a plus de taxis à la gare, nous devons attendre.", it: "Non ci sono più taxi alla stazione, dobbiamo aspettare." }
+            ]
+          },
+          practice: [
+            { t: "mcq", q: "Completa: «Vous ___ m'aider, s'il vous plaît ?» (potere)", opts: ["pouvez", "peux", "pouvons", "peuvent"], a: 0, why: "Vous pouvez." },
+            { t: "mcq", q: "«La grève» è…", opts: ["lo sciopero", "il treno", "la stazione", "il ritardo"], a: 0, why: "Grève = sciopero." },
+            { t: "listen", say: "J'ai perdu mon portefeuille dans le train : qu'est-ce que je dois faire ?", q: "Cosa ha perso?", opts: ["Il portafoglio", "Il biglietto", "Il passaporto", "La valigia"], a: 0, why: "Le portefeuille = il portafoglio." },
+            { t: "match", q: "Abbina", pairs: [["je peux", "posso"], ["je veux", "voglio"], ["je dois", "devo"], ["en panne", "guasto"]] },
+            { t: "order", q: "Riordina: «Devo partire presto domani.»", words: ["Je", "dois", "partir", "tôt", "demain."], why: "Devoir + infinito." }
+          ],
+          test: [
+            { t: "mcq", q: "Completa: «Les enfants ___ rester à la plage.» (volere)", opts: ["veulent", "voulent", "veut", "voulez"], a: 0, why: "Ils veulent: irregolare." },
+            { t: "mcq", q: "Completa: «Nous ___ valider le billet.» (dovere)", opts: ["devons", "doivons", "doit", "devez"], a: 0, why: "Nous devons." },
+            { t: "mcq", q: "«Il n'y a plus de bus» significa…", opts: ["Non ci sono più autobus.", "Ci sono più autobus.", "Non c'è nessun autobus in più.", "C'è un solo autobus."], a: 0, why: "Ne… plus = non… più." },
+            { t: "mcq", q: "In un'emergenza gridi:", opts: ["Au secours !", "À bientôt !", "Bon voyage !", "Pas de problème !"], a: 0, why: "Au secours = aiuto!" },
+            { t: "listen", say: "À cause de la grève, il n'y a pas de métro ni de bus aujourd'hui.", q: "Perché non ci sono mezzi?", opts: ["Per uno sciopero", "Per la neve", "Per un guasto", "Perché è domenica"], a: 0, why: "La grève = lo sciopero." },
+            { t: "listen", say: "Notre voiture est en panne au milieu de la campagne, sans réseau.", q: "Qual è il problema?", opts: ["La macchina è guasta in campagna e non c'è campo.", "Hanno perso la strada in città.", "Non c'è benzina vicino alla stazione.", "Il treno si è fermato in campagna."], a: 0, why: "En panne = guasta; sans réseau = senza campo." },
+            { t: "listen", say: "Le vol pour Nice est annulé à cause du mauvais temps.", q: "Cosa è successo al volo?", opts: ["È cancellato per il maltempo.", "È in ritardo per uno sciopero.", "È partito in anticipo.", "È pieno."], a: 0, why: "Annulé = cancellato." },
+            { t: "type", q: "Completa: «J'ai ___ mon passeport !» (perso)", a: ["perdu"], why: "J'ai perdu = ho perso." },
+            { t: "type", q: "Completa: «Est-ce que je ___ payer par carte ?» (posso)", a: ["peux"], why: "Je peux." },
+            { t: "type", say: "Mon voisin peut nous emmener à l'aéroport demain matin.", q: "Ascolta e completa: «Mon voisin peut nous ___ à l'aéroport.»", a: ["emmener"], why: "Emmener = accompagnare qualcuno." },
+            { t: "order", q: "Riordina: «Può aiutarmi? Ho perso il biglietto.»", words: ["Vous", "pouvez", "m'aider", "?", "J'ai", "perdu", "mon", "billet."], why: "Vous pouvez m'aider ?" },
+            { t: "match", q: "Abbina", pairs: [["la grève", "lo sciopero"], ["annulé", "cancellato"], ["aider", "aiutare"], ["perdre", "perdere"]] }
+          ],
+          recap: {
+            can: ["Coniugare pouvoir, vouloir e devoir", "Chiedere aiuto: «Vous pouvez m'aider ?»", "Spiegare un problema: j'ai perdu…, … est en panne, … est annulé", "Usare ne… plus (non… più)"],
+            phrases: [{ fr: "Vous pouvez m'aider ? J'ai perdu mon billet.", it: "Può aiutarmi? Ho perso il biglietto." }, { fr: "Il y a une grève, il n'y a plus de bus.", it: "C'è uno sciopero, non ci sono più autobus." }, { fr: "Nous devons partir tôt, notre train est à sept heures.", it: "Dobbiamo partire presto, il nostro treno è alle sette." }],
+            trap: "Pouvoir, vouloir e devoir cambiano molto al plurale: ils PEUVENT, ils VEULENT, ils DOIVENT."
+          }
+        }
+      ]
+    },
     { n: 7, arr: "7e", name: "Raconter", it: "Raccontare", level: "A2", soon: "Passé composé con avoir ed être · Il weekend · Le date" },
     { n: 8, arr: "8e", name: "Faire les courses", it: "Fare la spesa", level: "A2", soon: "Negozi e quantità · Partitivo · Taglie · Pronomi" },
     { n: 9, arr: "9e", name: "Santé", it: "Salute", level: "A2", soon: "In farmacia · Dal medico · Il corpo · Il faut" },

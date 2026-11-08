@@ -239,9 +239,9 @@ input.answer:focus{border-color:var(--plaque);outline:none}
   <main id="main"><p class="muted">Caricamento del corso…</p></main>
 </div>
 
-<script src="content.js" charset="utf-8"></script>
-<script src="art.js" charset="utf-8"></script>
-<script src="recaps.js" charset="utf-8"></script>
+<script src="content.js?v=202611081941" charset="utf-8"></script>
+<script src="art.js?v=202611081941" charset="utf-8"></script>
+<script src="recaps.js?v=202611081941" charset="utf-8"></script>
 <script>
 /* ================= UTILITÀ ================= */
 const $ = (sel, el=document) => el.querySelector(sel);
@@ -764,7 +764,7 @@ function ExamView(){
   const all = m.lessons.flatMap(l => l.test.map((q,i)=>({ id:`${l.id}:t${i}`, q })));
   const ex = Store.data.exams[m.n];
   body.append(h("div",{class:"result"},
-    h("p",{}, `15 domande pescate a caso da tutte e quattro le lezioni. Serve il 70%. Superandolo si apre il ${m.n + 1}° arrondissement.`),
+    h("p",{}, `15 domande pescate a caso da tutte e quattro le lezioni. Serve il 70%. ` + (nextMod ? `Superandolo si apre il ${m.n + 1}° arrondissement.` : `È l'ultimo esame: superandolo completi il corso A1-A2.`)),
     ex ? h("p",{class:"muted"}, `Miglior risultato: ${ex.best}%`) : null,
     h("button",{class:"btn lamp", onclick:start}, ex ? "Rifai l'esame" : "Inizia l'esame")));
   function start(){
@@ -773,7 +773,7 @@ function ExamView(){
       const pct = Math.round(res.correct/res.total*100), pass = pct>=70;
       const r = Store.data.exams[m.n] || {}; r.best = Math.max(r.best??0, pct); r.passed = r.passed || pass; Store.data.exams[m.n] = r; Store.save();
       showResult(body, { pct, pass, res, title:"Esame di modulo", actions:[
-        pass ? h("p",{class:"notice"}, `${m.n}° arrondissement conquistato, ${NAME()}! ` + (nextMod && nextMod.lessons ? `Il ${nextMod.n}° arrondissement (${nextMod.name}) ti aspetta.` : nextMod ? `Il ${nextMod.n}° arrondissement (${nextMod.name}) è in arrivo.` : "")) : null,
+        pass ? h("p",{class:"notice"}, `${m.n}° arrondissement conquistato, ${NAME()}! ` + (nextMod && nextMod.lessons ? `Il ${nextMod.n}° arrondissement (${nextMod.name}) ti aspetta.` : nextMod ? `Il ${nextMod.n}° arrondissement (${nextMod.name}) è in arrivo.` : `Félicitations ! Hai completato tutto il corso A1-A2: 40 episodi, 40 test e 10 esami. Ora sei pronto per preparare il B1. Croissant, a modo suo, è fiero di te.`)) : null,
         pass && nextMod && nextMod.lessons ? h("button",{class:"btn", onclick:()=>go("lesson",{lessonId:nextMod.lessons[0].id, step:0})}, `Vai al ${nextMod.n}° arrondissement →`) : null,
         h("button",{class:"btn ghost", onclick:()=>{ body.innerHTML=""; start(); }}, "Rifai l'esame"),
         h("button",{class:"btn", onclick:()=>go("home")}, "Mappa")]});

@@ -1984,9 +1984,1321 @@ const COURSE = {
         }
       ]
     },
-    { n: 7, arr: "7e", name: "Raconter", it: "Raccontare", level: "A2", soon: "Passé composé con avoir ed être · Il weekend · Le date" },
-    { n: 8, arr: "8e", name: "Faire les courses", it: "Fare la spesa", level: "A2", soon: "Negozi e quantità · Partitivo · Taglie · Pronomi" },
-    { n: 9, arr: "9e", name: "Santé", it: "Salute", level: "A2", soon: "In farmacia · Dal medico · Il corpo · Il faut" },
-    { n: 10, arr: "10e", name: "Vers le B1", it: "Verso il B1", level: "A2", soon: "Imparfait · Opinioni · Comparativi · Scrivere un messaggio" }
+    {
+      n: 7, arr: "7e", name: "Raconter", it: "Raccontare", level: "A2",
+      lessons: [
+        /* ---------------- LEZIONE 7-1 ---------------- */
+        {
+          id: "7-1", street: "Rue du Passé", title: "Il passé composé con avoir",
+          goal: "Raccontare cosa hai fatto con il passé composé dei verbi in -er (j'ai mangé, nous avons visité), anche in frase negativa.",
+          episode: {
+            title: "Il ritorno a Montmartre",
+            intro: "Di nuovo a Parigi, il caffè riapre il lunedì mattina. Alle otto in punto entra M. Bernard, cappello grigio e ombrello. Ma questa volta non si siede vicino alla vetrina: si siede al bancone, davanti a Gigi, e chiede: «Allora? Raccontatemi tutto.»",
+            lines: [
+              { who: "M. Bernard", fr: "Alors, mes amis ? Qu'est-ce que vous avez fait en Provence ?", it: "Allora, amici miei? Cosa avete fatto in Provenza?" },
+              { who: "Gigi", fr: "Nous avons visité Roussillon et nous avons trouvé la boutique de Zizì.", it: "Abbiamo visitato Roussillon e abbiamo trovato la bottega di Zizì." },
+              { who: "Léa", fr: "J'ai parlé avec Madame Pons pendant trois heures. Elle a tout raconté.", it: "Ho parlato con Madame Pons per tre ore. Ha raccontato tutto." },
+              { who: "M. Bernard", fr: "Et vous avez mangé la fameuse tarte au citron du café de la place ?", it: "E avete mangiato la famosa torta al limone del caffè della piazza?" },
+              { who: "Gigi", fr: "Non, nous n'avons pas mangé de tarte : il y a eu une grève et un orage !", it: "No, non abbiamo mangiato la torta: c'è stato uno sciopero e un temporale!" },
+              { who: "Croissant", fr: "J'ai voyagé en train, en bus, en voiture. J'ai beaucoup souffert. Personne n'a écouté mes plaintes.", it: "Ho viaggiato in treno, in autobus, in macchina. Ho sofferto molto. Nessuno ha ascoltato le mie lamentele." },
+              { who: "Léa", fr: "Monsieur Bernard, Zizì a quitté Paris parce qu'elle était malade. Elle a beaucoup pensé à vous.", it: "Signor Bernard, Zizì ha lasciato Parigi perché era malata. Ha pensato molto a lei." },
+              { who: "M. Bernard", fr: "J'ai attendu des années sans comprendre. Maintenant, j'ai enfin trouvé la paix.", it: "Ho aspettato per anni senza capire. Adesso ho finalmente trovato la pace." }
+            ],
+            outro: "M. Bernard finisce il suo café crème, lascia cinque euro sul bancone e, per la prima volta, non dice «gardez la monnaie». Dice invece: «Domani torno. E porto delle fotografie.»",
+            you: "«{nome}, per raccontare il passato il francese usa AVOIR + participio, proprio come l'italiano «ho mangiato»: j'ai mangé. Per i verbi in -ER il participio è facilissimo: -er diventa -é, e si pronuncia uguale!»",
+            mine: { fr: "Je m'appelle {nome} et hier j'ai étudié le français, puis j'ai regardé un film.", it: "Mi chiamo {nome} e ieri ho studiato francese, poi ho guardato un film." }
+          },
+          words: [
+            { fr: "j'ai mangé", it: "ho mangiato", say: "jé mãjé", hook: "J'AI + MANGÉ: come «ho mangiato». Il participio dei verbi in -ER finisce in -É e si pronuncia come l'infinito: manger / mangé.",
+              ex: { fr: "Hier soir, j'ai mangé une soupe à l'oignon dans un petit bistrot.", it: "Ieri sera ho mangiato una zuppa di cipolle in un piccolo bistrot." } },
+            { fr: "nous avons visité", it: "abbiamo visitato", say: "nu zavõ vizité", hook: "NOUS AVONS: «abbiamo», con la liaison nu-za-võ. Visiter → visité.",
+              ex: { fr: "L'été dernier, nous avons visité la Bretagne en vélo.", it: "L'estate scorsa abbiamo visitato la Bretagna in bici." } },
+            { fr: "hier / hier soir", it: "ieri / ieri sera", say: "jèr / jèr swar", hook: "HIER è la parola-chiave del passato. Hier matin, hier après-midi, hier soir: tutta la giornata di ieri.",
+              ex: { fr: "Hier soir, j'ai téléphoné à mes parents pendant une heure.", it: "Ieri sera ho telefonato ai miei genitori per un'ora." } },
+            { fr: "la semaine dernière", it: "la settimana scorsa", say: "la səmèn dèrnjèr", hook: "DERNIER/DERNIÈRE = ultimo, scorso. La semaine dernière, le mois dernier, l'année dernière. Contrario di «prochain».",
+              ex: { fr: "La semaine dernière, Léa a travaillé tous les jours au café.", it: "La settimana scorsa Léa ha lavorato tutti i giorni al caffè." } },
+            { fr: "trouver / trouvé", it: "trovare / trovato", say: "truvé", hook: "J'ai trouvé = ho trovato. Sul tavolo degli oggetti smarriti: «objets trouvés».",
+              ex: { fr: "J'ai trouvé un vieux portefeuille dans le métro, je l'ai donné à la police.", it: "Ho trovato un vecchio portafoglio nel metrò, l'ho dato alla polizia." } },
+            { fr: "attendre / attendu", it: "aspettare / aspettato", say: "atãdr / atãdü", hook: "Trappola! ATTENDRE = aspettare, non «attendere» nel senso di «fare attenzione». I verbi in -RE fanno il participio in -U: attendu.",
+              ex: { fr: "J'ai attendu le bus pendant quarante minutes sous la pluie.", it: "Ho aspettato l'autobus per quaranta minuti sotto la pioggia." } },
+            { fr: "quitter", it: "lasciare (un luogo, una persona)", say: "kité", hook: "QUITTER = lasciare: «quitter Paris», «quitter son travail». Al telefono: «Ne quittez pas» = resti in linea!",
+              ex: { fr: "Zizì a quitté Paris un matin d'hiver, sans dire au revoir.", it: "Zizì ha lasciato Parigi una mattina d'inverno, senza salutare." } },
+            { fr: "pendant", it: "durante, per (tempo)", say: "pãdã", hook: "PENDANT = durante: pendant les vacances. Con una durata: pendant trois heures = per tre ore.",
+              ex: { fr: "Pendant les vacances, nous avons beaucoup marché et beaucoup mangé.", it: "Durante le vacanze abbiamo camminato e mangiato molto." } },
+            { fr: "déjà / pas encore", it: "già / non ancora", say: "déja / pa zãkòr", hook: "DÉJÀ = già (come il «déjà vu»!). PAS ENCORE = non ancora: je n'ai pas encore mangé.",
+              ex: { fr: "Tu as déjà visité le Louvre ? — Non, pas encore, mais je vais y aller.", it: "Hai già visitato il Louvre? — No, non ancora, ma ci andrò." } },
+            { fr: "il y a (+ tempo)", it: "fa (tempo fa)", say: "il ja", hook: "IL Y A + tempo = «fa»: il y a deux jours = due giorni fa. Lo stesso «il y a» di «c'è», ma col tempo!",
+              ex: { fr: "Je suis arrivé à Paris il y a trois mois, et j'adore déjà la ville.", it: "Sono arrivato a Parigi tre mesi fa, e adoro già la città." } }
+          ],
+          tip: {
+            title: "Il passé composé con avoir: la ricetta",
+            body: "<div class='tbl'><table><thead><tr><th></th><th>avoir</th><th>+ participio</th></tr></thead><tbody><tr><td>j'</td><td>ai</td><td>parlé</td></tr><tr><td>tu</td><td>as</td><td>mangé</td></tr><tr><td>il / elle / on</td><td>a</td><td>visité</td></tr><tr><td>nous</td><td>avons</td><td>trouvé</td></tr><tr><td>vous</td><td>avez</td><td>écouté</td></tr><tr><td>ils / elles</td><td>ont</td><td>travaillé</td></tr></tbody></table></div><ul><li>Participio: verbi in <b>-er → -é</b> (parler → parlé); in <b>-ir → -i</b> (finir → fini); in <b>-re → -u</b> (attendre → attendu).</li><li>Negazione intorno ad <b>avoir</b>: je <b>n'</b>ai <b>pas</b> mangé.</li><li>Dopo la negazione, un / une / des / du diventano <b>de</b>: je n'ai pas mangé <b>de</b> tarte.</li><li>Parole del passato: <b>hier, la semaine dernière, il y a deux jours, déjà, pendant</b>.</li></ul>",
+            examples: [
+              { fr: "Hier, j'ai travaillé jusqu'à minuit.", it: "Ieri ho lavorato fino a mezzanotte." },
+              { fr: "Tu as fini tes devoirs ? — Oui, j'ai fini il y a une heure.", it: "Hai finito i compiti? — Sì, ho finito un'ora fa." },
+              { fr: "Nous n'avons pas trouvé la rue, alors nous avons demandé.", it: "Non abbiamo trovato la strada, così abbiamo chiesto." },
+              { fr: "Ils ont attendu le train pendant une heure.", it: "Hanno aspettato il treno per un'ora." },
+              { fr: "Vous avez déjà mangé des escargots ?", it: "Avete già mangiato le lumache?" }
+            ]
+          },
+          practice: [
+            { t: "mcq", q: "Completa: «Hier, j'___ mangé une pizza.»", opts: ["ai", "as", "a", "suis"], a: 0, why: "J'ai + participio." },
+            { t: "mcq", q: "Qual è il participio di «attendre»?", opts: ["attendu", "attendé", "attendi", "attendre"], a: 0, why: "Verbi in -re → -u." },
+            { t: "listen", say: "Hier soir, j'ai téléphoné à mes parents pendant une heure.", q: "Cosa ha fatto ieri sera?", opts: ["Ha telefonato ai genitori per un'ora.", "Ha visitato i genitori per un'ora.", "Telefonerà ai genitori stasera.", "Ha aspettato i genitori per un'ora."], a: 0, why: "J'ai téléphoné = ho telefonato." },
+            { t: "match", q: "Abbina", pairs: [["hier", "ieri"], ["déjà", "già"], ["pendant", "durante"], ["il y a deux jours", "due giorni fa"]] },
+            { t: "order", q: "Riordina: «Abbiamo visitato Roussillon e abbiamo trovato la bottega.»", words: ["Nous", "avons", "visité", "Roussillon", "et", "nous", "avons", "trouvé", "la", "boutique."], why: "Nous avons + participio." }
+          ],
+          test: [
+            { t: "mcq", q: "Completa: «Ils ___ travaillé tout le week-end.»", opts: ["ont", "sont", "avons", "a"], a: 0, why: "Ils ont + participio." },
+            { t: "mcq", q: "Come si dice «non ho mangiato»?", opts: ["Je n'ai pas mangé.", "Je n'ai mangé pas.", "Je ne pas ai mangé.", "Je n'ai pas manger."], a: 0, why: "Ne… pas intorno ad avoir; poi il participio." },
+            { t: "mcq", q: "«Il y a trois mois» significa…", opts: ["tre mesi fa", "ci sono tre mesi", "tra tre mesi", "per tre mesi"], a: 0, why: "Il y a + tempo = fa." },
+            { t: "mcq", q: "Qual è il participio di «finir»?", opts: ["fini", "finé", "finu", "finit"], a: 0, why: "Verbi in -ir → -i." },
+            { t: "listen", say: "Nous avons visité Roussillon et nous avons trouvé la boutique de Zizì.", q: "Cosa hanno fatto?", opts: ["Hanno visitato Roussillon e trovato la bottega di Zizì.", "Visiteranno Roussillon domani.", "Hanno comprato la bottega di Zizì.", "Hanno cercato Roussillon senza trovarlo."], a: 0, why: "Nous avons visité, nous avons trouvé." },
+            { t: "listen", say: "J'ai attendu le bus pendant quarante minutes sous la pluie.", q: "Quanto ha aspettato l'autobus?", opts: ["40 minuti", "14 minuti", "4 minuti", "Un'ora"], a: 0, why: "Quarante = 40; j'ai attendu = ho aspettato." },
+            { t: "listen", say: "Tu as déjà visité le Louvre ? Non, pas encore.", q: "Ha già visitato il Louvre?", opts: ["No, non ancora.", "Sì, già due volte.", "Sì, ieri.", "Non vuole visitarlo."], a: 0, why: "Pas encore = non ancora." },
+            { t: "type", q: "Completa: «Nous avons ___ la Bretagne.» (visitato)", a: ["visité", "visite"], why: "Visiter → visité." },
+            { t: "type", q: "Completa: «La semaine ___, j'ai beaucoup travaillé.» (scorsa)", a: ["dernière", "derniere"], why: "La semaine dernière." },
+            { t: "type", say: "Zizì a quitté Paris un matin d'hiver.", q: "Ascolta e completa: «Zizì a ___ Paris un matin d'hiver.»", a: ["quitté", "quitte"], why: "Quitter = lasciare." },
+            { t: "order", q: "Riordina: «Non abbiamo mangiato la torta.»", words: ["Nous", "n'avons", "pas", "mangé", "de", "tarte."], why: "Ne… pas + de dopo la negazione." },
+            { t: "match", q: "Abbina", pairs: [["parler", "parlé"], ["finir", "fini"], ["attendre", "attendu"], ["quitter", "quitté"]] }
+          ],
+          recap: {
+            can: ["Raccontare cosa hai fatto con avoir + participio", "Formare il participio: -é, -i, -u", "Fare la negazione al passato", "Usare hier, la semaine dernière, il y a, déjà, pendant"],
+            phrases: [{ fr: "Hier, j'ai mangé dans un petit bistrot.", it: "Ieri ho mangiato in un piccolo bistrot." }, { fr: "Nous avons visité Roussillon il y a une semaine.", it: "Abbiamo visitato Roussillon una settimana fa." }, { fr: "Je n'ai pas encore trouvé la réponse.", it: "Non ho ancora trovato la risposta." }],
+            trap: "IL Y A + tempo = «fa» (il y a deux jours = due giorni fa). E ATTENDRE = aspettare, non «fare attenzione»."
+          }
+        },
+        /* ---------------- LEZIONE 7-2 ---------------- */
+        {
+          id: "7-2", street: "Rue des Participes", title: "I participi irregolari: fait, pris, vu…",
+          goal: "Usare i participi irregolari più frequenti (fait, pris, vu, eu, été, bu, lu, écrit, mis, dit, ouvert) per raccontare esperienze.",
+          episode: {
+            title: "Le fotografie di Henri",
+            intro: "Martedì mattina, come promesso, M. Bernard arriva con una scatola di scarpe piena di fotografie. Le sparge sul bancone. Ognuna ha una data scritta dietro, a matita. Françoise, Léa e Gigi le guardano una per una, e lui racconta.",
+            lines: [
+              { who: "M. Bernard", fr: "Cette photo, je l'ai prise en soixante-six, le jour où nous avons ouvert le café.", it: "Questa foto l'ho scattata nel sessantasei, il giorno in cui abbiamo aperto il caffè." },
+              { who: "Léa", fr: "Vous avez ouvert le café ensemble ? Vous ne l'avez jamais dit !", it: "Avete aperto il caffè insieme? Non l'ha mai detto!" },
+              { who: "M. Bernard", fr: "J'ai fait les tables et les chaises de mes mains. Zizì a mis des fleurs partout.", it: "Ho fatto i tavoli e le sedie con le mie mani. Zizì ha messo fiori dappertutto." },
+              { who: "Gigi", fr: "Et ici ? Vous avez bu du champagne… C'était une fête ?", it: "E qui? Avete bevuto champagne… Era una festa?" },
+              { who: "M. Bernard", fr: "Oui. Ce soir-là, j'ai eu le courage de lui écrire une lettre d'amour.", it: "Sì. Quella sera ho avuto il coraggio di scriverle una lettera d'amore." },
+              { who: "Mme Lefèvre", fr: "Et elle l'a lue ? Qu'est-ce qu'elle a répondu ?", it: "E lei l'ha letta? Cosa ha risposto?" },
+              { who: "M. Bernard", fr: "Elle a lu la lettre, elle a ri, et elle a dit : « Tu as mis trois ans pour écrire ça ? »", it: "Ha letto la lettera, ha riso, e ha detto: «Ci hai messo tre anni per scrivere questo?»" },
+              { who: "Croissant", fr: "J'ai vu beaucoup d'histoires d'amour dans ce café. Celle-ci est la meilleure. Ne le répétez pas.", it: "Ho visto molte storie d'amore in questo caffè. Questa è la migliore. Non ripetetelo." }
+            ],
+            outro: "Sotto l'ultima fotografia c'è un foglio piegato in quattro: è la lettera d'amore del 1968, ingiallita, con la risposta di Zizì scritta in fondo con un rossetto: «Oui.» M. Bernard la tiene in mano come un tesoro e, per un po', nessuno dice niente.",
+            you: "«{nome}, i verbi più usati hanno participi strani: faire → fait, prendre → pris, voir → vu, boire → bu. Non c'è una regola: impariamoli come le facce degli amici, una alla volta.»",
+            mine: { fr: "Je m'appelle {nome} : l'année dernière, j'ai vu Paris, j'ai pris beaucoup de photos et j'ai bu un vrai café crème.", it: "Mi chiamo {nome}: l'anno scorso ho visto Parigi, ho fatto molte foto e ho bevuto un vero café crème." }
+          },
+          words: [
+            { fr: "faire → fait", it: "fare → fatto", say: "fè", hook: "FAIT = fatto: quasi identico! J'ai fait les courses, j'ai fait du sport. La T finale è muta.",
+              ex: { fr: "Qu'est-ce que tu as fait ce week-end ? — J'ai fait une longue balade à vélo.", it: "Cosa hai fatto questo weekend? — Ho fatto un lungo giro in bici." } },
+            { fr: "prendre → pris", it: "prendere → preso", say: "prì", hook: "PRIS = preso, come una «presa». J'ai pris le métro, j'ai pris une photo (ho scattato una foto).",
+              ex: { fr: "Nous avons pris le dernier métro et nous sommes rentrés à une heure.", it: "Abbiamo preso l'ultimo metrò e siamo rientrati all'una." } },
+            { fr: "voir → vu", it: "vedere → visto", say: "vü", hook: "VU = visto: come il «déjà vu», qualcosa di già visto! Tu as vu le dernier film de Spielberg?",
+              ex: { fr: "J'ai vu la tour Eiffel illuminée pour la première fois hier soir.", it: "Ieri sera ho visto la Torre Eiffel illuminata per la prima volta." } },
+            { fr: "avoir → eu / être → été", it: "avere → avuto / essere → stato", say: "ü / été", hook: "EU si pronuncia «ü»: j'ai eu = ho avuto. ÉTÉ = stato (e anche l'estate!): j'ai été malade.",
+              ex: { fr: "J'ai eu de la chance : j'ai été le premier client de la journée.", it: "Ho avuto fortuna: sono stato il primo cliente della giornata." } },
+            { fr: "boire → bu", it: "bere → bevuto", say: "bü", hook: "BU = bevuto, cortissimo come un sorso. J'ai bu un café, nous avons bu du champagne.",
+              ex: { fr: "Au mariage de mon cousin, nous avons bu du champagne jusqu'à l'aube.", it: "Al matrimonio di mio cugino abbiamo bevuto champagne fino all'alba." } },
+            { fr: "lire → lu / écrire → écrit", it: "leggere → letto / scrivere → scritto", say: "lü / ekrì", hook: "LU = letto; ÉCRIT = scritto (come in italiano «scritto», senza la S). Tu as lu le livre? Elle a écrit une lettre.",
+              ex: { fr: "J'ai lu toutes les lettres de Zizì, et j'ai écrit une réponse à Madame Pons.", it: "Ho letto tutte le lettere di Zizì, e ho scritto una risposta a Madame Pons." } },
+            { fr: "mettre → mis", it: "mettere → messo", say: "mì", hook: "MIS = messo. J'ai mis mon manteau. E «mettre du temps» = metterci tempo: tu as mis trois ans!",
+              ex: { fr: "Où est-ce que tu as mis mes clés ? Je les cherche depuis une heure !", it: "Dove hai messo le mie chiavi? Le cerco da un'ora!" } },
+            { fr: "dire → dit", it: "dire → detto", say: "dì", hook: "DIT = detto. Il a dit oui! = ha detto sì! La T si sente solo con la liaison.",
+              ex: { fr: "Elle m'a dit la vérité, et maintenant je comprends tout.", it: "Mi ha detto la verità, e adesso capisco tutto." } },
+            { fr: "ouvrir → ouvert", it: "aprire → aperto", say: "uvèr", hook: "OUVERT = aperto, lo conosci dai cartelli dei negozi! J'ai ouvert la fenêtre. Anche offrir → offert.",
+              ex: { fr: "Nous avons ouvert la boîte et nous avons trouvé une lettre d'amour.", it: "Abbiamo aperto la scatola e abbiamo trovato una lettera d'amore." } },
+            { fr: "jamais", it: "mai", say: "jamè", hook: "NE… JAMAIS = non… mai: je n'ai jamais vu la mer. Come ne… pas, ma per sempre!",
+              ex: { fr: "Je n'ai jamais pris l'avion, mais j'ai fait beaucoup de voyages en train.", it: "Non ho mai preso l'aereo, ma ho fatto molti viaggi in treno." } }
+          ],
+          tip: {
+            title: "I participi ribelli: impara le loro facce",
+            body: "<div class='tbl'><table><thead><tr><th>Infinito</th><th>Participio</th><th>Esempio</th></tr></thead><tbody><tr><td>faire</td><td>fait</td><td>j'ai fait</td></tr><tr><td>prendre</td><td>pris</td><td>j'ai pris</td></tr><tr><td>mettre</td><td>mis</td><td>j'ai mis</td></tr><tr><td>dire</td><td>dit</td><td>j'ai dit</td></tr><tr><td>écrire</td><td>écrit</td><td>j'ai écrit</td></tr><tr><td>voir</td><td>vu</td><td>j'ai vu</td></tr><tr><td>lire</td><td>lu</td><td>j'ai lu</td></tr><tr><td>boire</td><td>bu</td><td>j'ai bu</td></tr><tr><td>avoir</td><td>eu</td><td>j'ai eu</td></tr><tr><td>être</td><td>été</td><td>j'ai été</td></tr><tr><td>ouvrir</td><td>ouvert</td><td>j'ai ouvert</td></tr></tbody></table></div><ul><li>Trucco: raggruppali per suono. <b>-it/-is</b>: fait, dit, écrit, pris, mis. <b>-u</b>: vu, lu, bu, eu. <b>-ert</b>: ouvert, offert.</li><li><b>Être</b> al passato usa avoir: j'<b>ai été</b> = sono stato.</li><li><b>Ne… jamais</b> = non… mai: je <b>n'</b>ai <b>jamais</b> vu.</li></ul>",
+            examples: [
+              { fr: "Qu'est-ce que vous avez fait hier ? — Nous avons vu un film.", it: "Cosa avete fatto ieri? — Abbiamo visto un film." },
+              { fr: "J'ai pris le train de sept heures et j'ai lu un roman.", it: "Ho preso il treno delle sette e ho letto un romanzo." },
+              { fr: "Il a écrit une lettre et il l'a mise dans une enveloppe.", it: "Ha scritto una lettera e l'ha messa in una busta." },
+              { fr: "Je n'ai jamais bu de vin de Provence.", it: "Non ho mai bevuto vino della Provenza." },
+              { fr: "Elle a été très malade, mais elle a eu de la chance.", it: "È stata molto malata, ma ha avuto fortuna." }
+            ]
+          },
+          practice: [
+            { t: "mcq", q: "Qual è il participio di «prendre»?", opts: ["pris", "prendu", "prendé", "prit"], a: 0, why: "Prendre → pris." },
+            { t: "mcq", q: "Completa: «Tu as ___ la tour Eiffel ?» (visto)", opts: ["vu", "voi", "vois", "voyé"], a: 0, why: "Voir → vu." },
+            { t: "listen", say: "J'ai vu la tour Eiffel illuminée pour la première fois hier soir.", q: "Cosa ha visto ieri sera?", opts: ["La Torre Eiffel illuminata", "Un film sulla Torre Eiffel", "I fuochi d'artificio", "Il Louvre di notte"], a: 0, why: "J'ai vu = ho visto." },
+            { t: "match", q: "Abbina", pairs: [["faire", "fait"], ["boire", "bu"], ["écrire", "écrit"], ["mettre", "mis"]] },
+            { t: "order", q: "Riordina: «Non ho mai preso l'aereo.»", words: ["Je", "n'ai", "jamais", "pris", "l'avion."], why: "Ne… jamais intorno ad avoir." }
+          ],
+          test: [
+            { t: "mcq", q: "Completa: «Elle a ___ une lettre d'amour.» (scritto)", opts: ["écrit", "écrivé", "écri", "écrite"], a: 0, why: "Écrire → écrit." },
+            { t: "mcq", q: "Come si dice «sono stato malato»?", opts: ["J'ai été malade.", "Je suis été malade.", "J'ai être malade.", "J'étais été malade."], a: 0, why: "Être al passato: j'ai été." },
+            { t: "mcq", q: "Qual è il participio di «avoir»?", opts: ["eu", "avu", "avé", "ai"], a: 0, why: "Avoir → eu (si pronuncia «ü»)." },
+            { t: "mcq", q: "«Je n'ai jamais lu ce livre» significa…", opts: ["Non ho mai letto questo libro.", "Non leggerò mai questo libro.", "Ho già letto questo libro.", "Non ho letto il libro ieri."], a: 0, why: "Ne… jamais = non… mai." },
+            { t: "listen", say: "Nous avons pris le dernier métro et nous sommes rentrés à une heure.", q: "Cosa hanno fatto?", opts: ["Hanno preso l'ultimo metrò e sono rientrati all'una.", "Hanno perso l'ultimo metrò.", "Hanno preso un taxi all'una.", "Sono rimasti fuori tutta la notte."], a: 0, why: "Nous avons pris = abbiamo preso." },
+            { t: "listen", say: "Où est-ce que tu as mis mes clés ? Je les cherche depuis une heure !", q: "Cosa cerca la persona?", opts: ["Le sue chiavi", "Il suo telefono", "Il suo portafoglio", "I suoi occhiali"], a: 0, why: "Tu as mis = hai messo." },
+            { t: "listen", say: "Elle m'a dit la vérité, et maintenant je comprends tout.", q: "Cosa è successo?", opts: ["Lei gli ha detto la verità.", "Lei gli ha scritto una lettera.", "Lei non ha detto niente.", "Lei ha mentito."], a: 0, why: "Elle a dit = ha detto." },
+            { t: "type", q: "Completa: «Qu'est-ce que tu as ___ ce week-end ?» (fatto)", a: ["fait"], why: "Faire → fait." },
+            { t: "type", q: "Completa: «Nous avons ___ du champagne.» (bevuto)", a: ["bu"], why: "Boire → bu." },
+            { t: "type", say: "Nous avons ouvert la boîte et nous avons trouvé une lettre.", q: "Ascolta e completa: «Nous avons ___ la boîte.»", a: ["ouvert"], why: "Ouvrir → ouvert." },
+            { t: "order", q: "Riordina: «Ho letto la lettera e ho detto sì.»", words: ["J'ai", "lu", "la", "lettre", "et", "j'ai", "dit", "oui."], why: "Lire → lu; dire → dit." },
+            { t: "match", q: "Abbina", pairs: [["voir", "vu"], ["lire", "lu"], ["dire", "dit"], ["ouvrir", "ouvert"]] }
+          ],
+          recap: {
+            can: ["Usare i participi irregolari più frequenti", "Raccontare esperienze: j'ai vu, j'ai pris, j'ai fait…", "Dire «non ho mai» con ne… jamais", "Usare être al passato: j'ai été"],
+            phrases: [{ fr: "Qu'est-ce que tu as fait hier ? — J'ai vu un film.", it: "Cosa hai fatto ieri? — Ho visto un film." }, { fr: "J'ai pris le métro et j'ai lu un livre.", it: "Ho preso il metrò e ho letto un libro." }, { fr: "Je n'ai jamais bu de champagne.", it: "Non ho mai bevuto champagne." }],
+            trap: "ÊTRE al passato si coniuga con AVOIR: j'ai été (sono stato), mai «je suis été»."
+          }
+        },
+        /* ---------------- LEZIONE 7-3 ---------------- */
+        {
+          id: "7-3", street: "Rue de la Maison d'Être", title: "Il passé composé con être",
+          goal: "Usare il passé composé con être per i verbi di movimento (aller, venir, partir, arriver…) e accordare il participio.",
+          episode: {
+            title: "La vita di Zizì",
+            intro: "Mercoledì sera, a caffè chiuso, Odette Duval arriva con il suo quaderno rosso. Ha deciso di raccontare la vita di Zizì dall'inizio alla fine, come una storia. Le luci sono basse, il caffè profuma di cannella. Croissant si mette in prima fila.",
+            lines: [
+              { who: "Mme Duval", fr: "Zizì est née à Naples en mille neuf cent quarante-six, dans une famille de pâtissiers.", it: "Zizì è nata a Napoli nel 1946, in una famiglia di pasticcieri." },
+              { who: "Mme Duval", fr: "À dix-neuf ans, elle est partie seule et elle est arrivée à Paris avec sa valise rouge.", it: "A diciannove anni è partita da sola ed è arrivata a Parigi con la sua valigia rossa." },
+              { who: "Gigi", fr: "Et ma famille ? Elle est restée en contact avec mon grand-père ?", it: "E la mia famiglia? È rimasta in contatto con mio nonno?" },
+              { who: "Mme Duval", fr: "Oui. Ton grand-père est venu à Paris deux fois. Ils sont allés danser ensemble au bal.", it: "Sì. Tuo nonno è venuto a Parigi due volte. Sono andati a ballare insieme al ballo." },
+              { who: "Léa", fr: "Et après la Provence, elle est revenue à Paris, à la fin ?", it: "E dopo la Provenza, è tornata a Parigi, alla fine?" },
+              { who: "Mme Duval", fr: "Elle est rentrée il y a cinq ans, en secret. Elle est montée au café une seule fois.", it: "È rientrata cinque anni fa, in segreto. È salita al caffè una volta sola." },
+              { who: "Croissant", fr: "Ce jour-là, je suis descendu de mon fauteuil pour elle. Je ne descends jamais pour personne.", it: "Quel giorno sono sceso dalla mia poltrona per lei. Io non scendo mai per nessuno." },
+              { who: "Mme Duval", fr: "Elle est morte l'hiver dernier, tranquille. Et elle a laissé le café à Gigi, avec Croissant.", it: "È morta lo scorso inverno, serena. E ha lasciato il caffè a Gigi, insieme a Croissant." }
+            ],
+            outro: "Nel silenzio, Croissant salta sulle ginocchia di Françoise, cosa che non ha mai fatto. «Era lei», sussurra Gigi, «era lei che ti aveva portato qui.» Il gatto chiude gli occhi. Nella sua lingua, che solo il pubblico capisce, dice: «Finalmente avete capito.»",
+            you: "«{nome}, alcuni verbi, soprattutto di movimento, usano ÊTRE al passato, come in italiano: je suis allé = sono andato. E come in italiano il participio si accorda: elle est partiE, ils sont partiS. Il francese e l'italiano qui sono gemelli!»",
+            mine: { fr: "Je m'appelle {nome} : je suis né en Italie et l'été dernier je suis allé à la mer.", it: "Mi chiamo {nome}: sono nato in Italia e l'estate scorsa sono andato al mare." }
+          },
+          words: [
+            { fr: "je suis allé(e)", it: "sono andato/a", say: "jə süì zalé", hook: "JE SUIS ALLÉ: «sono andato», con ÊTRE come in italiano. Se sei una donna aggiungi una E (muta): je suis allée.",
+              ex: { fr: "Samedi dernier, je suis allé au marché aux puces de Saint-Ouen.", it: "Sabato scorso sono andato al mercato delle pulci di Saint-Ouen." } },
+            { fr: "partir / arriver", it: "partire / arrivare", say: "partì / arivé", hook: "Elle est partie, elle est arrivée: la coppia del viaggio. Il participio si accorda con il soggetto: partiE per lei.",
+              ex: { fr: "Nous sommes partis à six heures et nous sommes arrivés à midi.", it: "Siamo partiti alle sei e siamo arrivati a mezzogiorno." } },
+            { fr: "venir → venu / revenir", it: "venire → venuto / tornare", say: "vənü / rəvənìr", hook: "VENU = venuto. REVENIR = «ri-venire», tornare: elle est revenue = è tornata.",
+              ex: { fr: "Mes cousins sont venus de Naples pour l'ouverture du café.", it: "I miei cugini sono venuti da Napoli per l'inaugurazione del caffè." } },
+            { fr: "naître → né / mourir → mort", it: "nascere → nato / morire → morto", say: "né / mòr", hook: "NÉ = nato (je suis né à Rome). MORT = morto. L'inizio e la fine della vita usano ÊTRE.",
+              ex: { fr: "Mon grand-père est né en mille neuf cent trente, dans un petit village.", it: "Mio nonno è nato nel 1930, in un piccolo paese." } },
+            { fr: "rester", it: "restare, rimanere", say: "rèsté", hook: "Trappola: RESTER = restare (non «riposare»!). Je suis resté à la maison = sono rimasto a casa.",
+              ex: { fr: "Il a plu tout le week-end, alors nous sommes restés à la maison.", it: "Ha piovuto tutto il weekend, così siamo rimasti a casa." } },
+            { fr: "entrer / sortir", it: "entrare / uscire", say: "ãtré / sortìr", hook: "Come in italiano: «sono entrato», «sono uscito». Sur les portes: ENTRÉE (ingresso), SORTIE (uscita).",
+              ex: { fr: "Elle est entrée dans le café, elle a regardé partout, puis elle est sortie.", it: "È entrata nel caffè, si è guardata intorno, poi è uscita." } },
+            { fr: "monter / descendre", it: "salire / scendere", say: "mõté / desãdr", hook: "MONTER: salire sul MONTE. DESCENDRE = discendere, scendere. Je suis monté au 5e étage.",
+              ex: { fr: "Nous sommes montés au sommet de Montmartre, puis nous sommes descendus à pied.", it: "Siamo saliti in cima a Montmartre, poi siamo scesi a piedi." } },
+            { fr: "rentrer", it: "rientrare, tornare a casa", say: "rãtré", hook: "RENTRER = rientrare a casa. Je suis rentré tard = sono tornato tardi. Anche «la rentrée» = il ritorno a scuola a settembre!",
+              ex: { fr: "Hier soir, je suis rentré à minuit, et ce matin je suis très fatigué.", it: "Ieri sera sono rientrato a mezzanotte, e stamattina sono stanchissimo." } },
+            { fr: "tomber", it: "cadere", say: "tõbé", hook: "TOMBER = cadere: pensa a una TOMBOLA… di oggetti che cadono! Je suis tombé dans l'escalier. E «tomber amoureux» = innamorarsi.",
+              ex: { fr: "Elle est tombée amoureuse de Paris dès le premier jour.", it: "Si è innamorata di Parigi fin dal primo giorno." } },
+            { fr: "seul(e)", it: "solo/a, da solo/a", say: "söl", hook: "SEUL = solo, da solo, con EU = ö. Elle est partie seule = è partita da sola (con la E).",
+              ex: { fr: "À dix-neuf ans, elle est partie seule dans une ville inconnue.", it: "A diciannove anni è partita da sola per una città sconosciuta." } }
+          ],
+          tip: {
+            title: "La casa di Être: i verbi che usano être",
+            body: "<div class='tbl'><table><thead><tr><th>Coppia</th><th>Participio</th><th>Esempio</th></tr></thead><tbody><tr><td>aller / venir</td><td>allé / venu</td><td>elle est allée</td></tr><tr><td>arriver / partir</td><td>arrivé / parti</td><td>nous sommes partis</td></tr><tr><td>entrer / sortir</td><td>entré / sorti</td><td>il est sorti</td></tr><tr><td>monter / descendre</td><td>monté / descendu</td><td>je suis monté</td></tr><tr><td>naître / mourir</td><td>né / mort</td><td>elle est née</td></tr><tr><td>rester / tomber</td><td>resté / tombé</td><td>ils sont restés</td></tr><tr><td>(re)venir, rentrer, retourner</td><td>revenu, rentré, retourné</td><td>elle est rentrée</td></tr></tbody></table></div><ul><li>Immagina una <b>casa</b>: si nasce, si entra, si sale, si scende, si esce, si parte, si cade, si muore… Tutti questi movimenti usano <b>être</b>.</li><li>Il participio si <b>accorda</b> col soggetto: elle est part<b>ie</b>, ils sont part<b>is</b>, elles sont part<b>ies</b>.</li><li>Anche i verbi riflessivi usano être: je <b>me suis</b> levé.</li><li>Quasi sempre come in italiano: se dici «sono andato», in francese è <b>être</b>.</li></ul>",
+            examples: [
+              { fr: "Je suis né à Milan, mais je suis venu à Paris à vingt ans.", it: "Sono nato a Milano, ma sono venuto a Parigi a vent'anni." },
+              { fr: "Elle est partie lundi et elle est rentrée vendredi.", it: "È partita lunedì ed è tornata venerdì." },
+              { fr: "Nous sommes allés au cinéma, puis nous sommes restés au café.", it: "Siamo andati al cinema, poi siamo rimasti al caffè." },
+              { fr: "Les enfants sont tombés dans la neige en riant.", it: "I bambini sono caduti nella neve ridendo." },
+              { fr: "Ce matin, je me suis levé à six heures.", it: "Stamattina mi sono alzato alle sei." }
+            ]
+          },
+          practice: [
+            { t: "mcq", q: "Completa: «Hier, je ___ allé au cinéma.»", opts: ["suis", "ai", "es", "étais"], a: 0, why: "Aller usa être: je suis allé." },
+            { t: "mcq", q: "Completa: «Elle est ___ à Paris.» (arrivata)", opts: ["arrivée", "arrivé", "arrivés", "arriver"], a: 0, why: "Accordo col soggetto femminile: arrivée." },
+            { t: "listen", say: "Nous sommes partis à six heures et nous sommes arrivés à midi.", q: "A che ora sono arrivati?", opts: ["A mezzogiorno", "Alle sei", "A mezzanotte", "Alle dieci"], a: 0, why: "Nous sommes arrivés à midi." },
+            { t: "match", q: "Abbina", pairs: [["naître", "né"], ["mourir", "mort"], ["venir", "venu"], ["partir", "parti"]] },
+            { t: "order", q: "Riordina: «Siamo rimasti a casa tutto il weekend.»", words: ["Nous", "sommes", "restés", "à", "la", "maison", "tout", "le", "week-end."], why: "Rester usa être; accordo plurale." }
+          ],
+          test: [
+            { t: "mcq", q: "Quale verbo usa «être» al passé composé?", opts: ["partir", "manger", "voir", "faire"], a: 0, why: "Partir è un verbo di movimento della «casa di être»." },
+            { t: "mcq", q: "Completa: «Mes cousins sont ___ de Naples.» (venuti)", opts: ["venus", "venu", "venue", "venir"], a: 0, why: "Soggetto maschile plurale: venus." },
+            { t: "mcq", q: "Come dice una donna «sono nata a Roma»?", opts: ["Je suis née à Rome.", "J'ai née à Rome.", "Je suis né à Rome.", "J'ai été née à Rome."], a: 0, why: "Naître + être + accordo: née." },
+            { t: "mcq", q: "«Rester» significa…", opts: ["restare", "riposare", "tornare", "riposarsi"], a: 0, why: "Rester = restare; se reposer = riposarsi." },
+            { t: "listen", say: "À dix-neuf ans, elle est partie seule et elle est arrivée à Paris avec sa valise rouge.", q: "Come è arrivata Zizì a Parigi?", opts: ["Da sola, a diciannove anni, con la valigia rossa.", "Con la famiglia, a nove anni.", "Con Henri, in macchina.", "Da sola, a ventinove anni, senza valigia."], a: 0, why: "Elle est partie seule." },
+            { t: "listen", say: "Il a plu tout le week-end, alors nous sommes restés à la maison.", q: "Perché sono rimasti a casa?", opts: ["Perché ha piovuto tutto il weekend.", "Perché erano malati.", "Perché c'era uno sciopero.", "Perché faceva troppo caldo."], a: 0, why: "Nous sommes restés = siamo rimasti." },
+            { t: "listen", say: "Elle est tombée amoureuse de Paris dès le premier jour.", q: "Cosa è successo?", opts: ["Si è innamorata di Parigi fin dal primo giorno.", "È caduta il primo giorno a Parigi.", "Ha lasciato Parigi dopo un giorno.", "Ha odiato Parigi il primo giorno."], a: 0, why: "Tomber amoureux = innamorarsi." },
+            { t: "type", q: "Completa: «Ils ___ allés danser au bal.» (sono)", a: ["sont"], why: "Ils sont allés." },
+            { t: "type", q: "Completa: «Hier soir, je suis ___ à minuit.» (rientrato)", a: ["rentré", "rentre"], why: "Rentrer usa être: je suis rentré." },
+            { t: "type", say: "Nous sommes montés au sommet de Montmartre.", q: "Ascolta e completa: «Nous sommes ___ au sommet de Montmartre.»", a: ["montés", "montes"], why: "Monter + être, plurale: montés." },
+            { t: "order", q: "Riordina: «È entrata nel caffè, poi è uscita.»", words: ["Elle", "est", "entrée", "dans", "le", "café,", "puis", "elle", "est", "sortie."], why: "Entrer / sortir + être, femminile." },
+            { t: "match", q: "Abbina", pairs: [["monter", "salire"], ["descendre", "scendere"], ["tomber", "cadere"], ["rester", "restare"]] }
+          ],
+          recap: {
+            can: ["Usare être al passé composé con i verbi di movimento", "Accordare il participio: allé, allée, allés, allées", "Raccontare una vita: naître, partir, arriver, mourir", "Riconoscere i verbi della «casa di être»"],
+            phrases: [{ fr: "Je suis né en Italie et je suis venu à Paris.", it: "Sono nato in Italia e sono venuto a Parigi." }, { fr: "Elle est partie seule et elle est arrivée à Paris.", it: "È partita da sola ed è arrivata a Parigi." }, { fr: "Nous sommes restés à la maison tout le week-end.", it: "Siamo rimasti a casa tutto il weekend." }],
+            trap: "Con être il participio si accorda: elle est allÉE, ils sont allÉS. Con avoir, di norma, no: elle a mangÉ."
+          }
+        },
+        /* ---------------- LEZIONE 7-4 ---------------- */
+        {
+          id: "7-4", street: "Rue du Récit", title: "Raccontare un weekend: avoir o être?",
+          goal: "Raccontare un'esperienza passata dall'inizio alla fine, scegliendo avoir o être e collegando le frasi con i connettivi.",
+          episode: {
+            title: "La versione di Croissant",
+            intro: "Giovedì, giornata tranquilla. Léa scrive un lungo messaggio alla sua amica Camille per raccontarle il viaggio in Provenza. Gigi la aiuta. Croissant, offeso perché nessuno ha chiesto la SUA versione, decide di raccontarla lo stesso, ad alta voce.",
+            lines: [
+              { who: "Léa", fr: "Bon, j'écris à Camille. D'abord, nous sommes partis de la gare de Lyon samedi matin.", it: "Bene, scrivo a Camille. Prima di tutto, siamo partiti dalla Gare de Lyon sabato mattina." },
+              { who: "Gigi", fr: "Ensuite, nous sommes arrivés à Roussillon et nous avons dormi dans un hôtel charmant.", it: "Poi siamo arrivati a Roussillon e abbiamo dormito in un albergo delizioso." },
+              { who: "Léa", fr: "Le lendemain, nous avons rencontré Madame Pons, et elle nous a raconté le secret de Zizì.", it: "Il giorno dopo abbiamo incontrato Madame Pons, e lei ci ha raccontato il segreto di Zizì." },
+              { who: "Gigi", fr: "Après, il y a eu une grève, mais son petit-fils nous a emmenés à Avignon.", it: "Dopo c'è stato uno sciopero, ma suo nipote ci ha accompagnato ad Avignone." },
+              { who: "Croissant", fr: "Ma version : on m'a mis dans une cage. J'ai vu un chat roux vulgaire. J'ai mangé des croquettes provençales. Fin.", it: "La mia versione: mi hanno messo in una gabbia. Ho visto un gatto rosso volgare. Ho mangiato crocchette provenzali. Fine." },
+              { who: "Léa", fr: "Finalement, nous sommes rentrés lundi soir, fatigués mais très heureux.", it: "Alla fine siamo rientrati lunedì sera, stanchi ma felicissimi." },
+              { who: "Gigi", fr: "Ajoute aussi : « Françoise a souri pendant tout le voyage. » C'est le plus important.", it: "Aggiungi anche: «Françoise ha sorriso per tutto il viaggio.» È la cosa più importante." },
+              { who: "Léa", fr: "Envoyé ! Camille a déjà répondu : « Quand est-ce que vous ouvrez la confiserie ? »", it: "Inviato! Camille ha già risposto: «Quando aprite la confetteria?»" }
+            ],
+            outro: "La domanda di Camille resta nell'aria. Riaprire la confetteria di Zizì, qui a Parigi, nel caffè? Gigi guarda Françoise, Françoise guarda il quaderno di ricette, M. Bernard (appena entrato) guarda tutti. «Allora», dice Gigi, «domani si va a fare la spesa.» Benvenuti nell'8° arrondissement.",
+            you: "«{nome}, per raccontare come un francese usa i connettivi: d'abord, ensuite, le lendemain, après, finalement. E ricorda la regola d'oro: movimento e riflessivi con ÊTRE, quasi tutto il resto con AVOIR.»",
+            mine: { fr: "Je m'appelle {nome} : le week-end dernier, je suis allé au cinéma, puis j'ai mangé une pizza avec des amis.", it: "Mi chiamo {nome}: lo scorso weekend sono andato al cinema, poi ho mangiato una pizza con degli amici." }
+          },
+          words: [
+            { fr: "le week-end dernier", it: "lo scorso weekend", say: "lə wikènd dèrnjè", hook: "WEEK-END: i francesi hanno adottato la parola inglese, ma la dicono alla francese. Dernier = scorso.",
+              ex: { fr: "Le week-end dernier, nous sommes allés à la campagne chez mes grands-parents.", it: "Lo scorso weekend siamo andati in campagna dai miei nonni." } },
+            { fr: "le lendemain", it: "il giorno dopo", say: "lə lãdmẽ", hook: "LE LENDEMAIN: «l'indomani». Si usa nei racconti al passato, invece di «demain».",
+              ex: { fr: "Nous sommes arrivés le soir, et le lendemain nous avons visité le village.", it: "Siamo arrivati la sera, e il giorno dopo abbiamo visitato il paese." } },
+            { fr: "après / ensuite", it: "dopo / poi", say: "aprè / ãsüìt", hook: "APRÈS = dopo: après le déjeuner. ENSUITE = poi, in seguito. Alternali per non ripetere sempre la stessa parola.",
+              ex: { fr: "Après le dîner, nous avons fait une promenade, ensuite nous sommes rentrés.", it: "Dopo cena abbiamo fatto una passeggiata, poi siamo rientrati." } },
+            { fr: "finalement", it: "alla fine", say: "finalmã", hook: "Trappola gentile: FINALEMENT = alla fine (in conclusione), non sempre «finalmente!». Per «finalmente!» si dice «enfin!».",
+              ex: { fr: "Nous avons cherché un hôtel pendant deux heures, et finalement nous avons trouvé.", it: "Abbiamo cercato un albergo per due ore, e alla fine l'abbiamo trovato." } },
+            { fr: "rencontrer", it: "incontrare, conoscere", say: "rãkõtré", hook: "RENCONTRER = incontrare, anche per la prima volta (conoscere qualcuno). J'ai rencontré ma femme à Paris.",
+              ex: { fr: "Pendant le voyage, j'ai rencontré des gens très sympathiques.", it: "Durante il viaggio ho conosciuto persone molto simpatiche." } },
+            { fr: "dormir → dormi", it: "dormire → dormito", say: "dormì", hook: "DORMI = dormito: come i verbi in -ir, participio in -i. J'ai bien dormi = ho dormito bene.",
+              ex: { fr: "Cette nuit, j'ai très mal dormi à cause du bruit de la rue.", it: "Stanotte ho dormito malissimo a causa del rumore della strada." } },
+            { fr: "heureux / heureuse", it: "felice", say: "örö / öröz", hook: "HEUREUX: felice, «a buon'ora» (heure). Il contrario è malheureux, infelice.",
+              ex: { fr: "Nous sommes rentrés fatigués, mais vraiment heureux de ce voyage.", it: "Siamo rientrati stanchi, ma davvero felici di questo viaggio." } },
+            { fr: "envoyer", it: "inviare, mandare", say: "ãvwajé", hook: "ENVOYER = inviare: «en-voyer», mandare in viaggio. J'ai envoyé un message, une carte postale.",
+              ex: { fr: "J'ai envoyé une carte postale à ma grand-mère depuis la Provence.", it: "Ho mandato una cartolina a mia nonna dalla Provenza." } },
+            { fr: "s'amuser", it: "divertirsi", say: "samüzé", hook: "S'AMUSER = divertirsi: le MUSE ti fanno divertire. Al passato: je me suis bien amusé (riflessivo → être!).",
+              ex: { fr: "À la fête, nous nous sommes bien amusés jusqu'à deux heures du matin.", it: "Alla festa ci siamo divertiti un sacco fino alle due di notte." } },
+            { fr: "la fin", it: "la fine", say: "la fẽ", hook: "LA FIN: la fine, come alla fine dei film francesi (FIN). À la fin = alla fine; enfin = finalmente.",
+              ex: { fr: "À la fin du film, tout le monde a pleuré dans la salle.", it: "Alla fine del film tutti hanno pianto in sala." } }
+          ],
+          tip: {
+            title: "Avoir o être? La bussola del racconto",
+            body: "<div class='tbl'><table><thead><tr><th>Usa ÊTRE con</th><th>Usa AVOIR con</th></tr></thead><tbody><tr><td>i verbi della «casa»: aller, venir, partir, arriver, entrer, sortir, monter, descendre, naître, mourir, rester, tomber, rentrer…</td><td>quasi tutti gli altri verbi: manger, faire, voir, prendre, dormir, rencontrer…</td></tr><tr><td>tutti i verbi riflessivi: se lever, s'amuser, se promener…</td><td>être e avoir stessi: j'ai été, j'ai eu</td></tr><tr><td>→ participio <b>accordato</b>: elle est partie</td><td>→ participio <b>invariabile</b>: elle a mangé</td></tr></tbody></table></div><ul><li><b>Ordine del racconto:</b> d'abord → ensuite / après → le lendemain → finalement.</li><li>Nei racconti al passato: <b>la veille</b> (il giorno prima), <b>le lendemain</b> (il giorno dopo), non hier/demain.</li><li><b>On</b> (= noi) usa la 3ª persona: on est partis, on a mangé.</li></ul>",
+            examples: [
+              { fr: "D'abord, on est allés à la plage, ensuite on a mangé des moules.", it: "Prima siamo andati in spiaggia, poi abbiamo mangiato le cozze." },
+              { fr: "Le lendemain, nous nous sommes levés tôt pour voir le lever du soleil.", it: "Il giorno dopo ci siamo alzati presto per vedere l'alba." },
+              { fr: "Elle est sortie avec ses amies et elle a dansé toute la nuit.", it: "È uscita con le sue amiche e ha ballato tutta la notte." },
+              { fr: "Finalement, nous sommes rentrés en taxi, parce qu'il pleuvait.", it: "Alla fine siamo rientrati in taxi, perché pioveva." },
+              { fr: "Je me suis bien amusé et j'ai rencontré des gens formidables.", it: "Mi sono divertito tanto e ho conosciuto persone fantastiche." }
+            ]
+          },
+          practice: [
+            { t: "mcq", q: "Completa: «Le week-end dernier, nous ___ allés à la mer.»", opts: ["sommes", "avons", "êtes", "allons"], a: 0, why: "Aller usa être." },
+            { t: "mcq", q: "Completa: «Hier, j'___ très bien dormi.»", opts: ["ai", "suis", "as", "es"], a: 0, why: "Dormir usa avoir." },
+            { t: "listen", say: "Nous sommes arrivés le soir, et le lendemain nous avons visité le village.", q: "Quando hanno visitato il paese?", opts: ["Il giorno dopo l'arrivo", "La sera stessa", "Il giorno prima", "Mai"], a: 0, why: "Le lendemain = il giorno dopo." },
+            { t: "match", q: "Abbina", pairs: [["le lendemain", "il giorno dopo"], ["finalement", "alla fine"], ["rencontrer", "incontrare"], ["envoyer", "inviare"]] },
+            { t: "order", q: "Riordina: «Prima siamo partiti, poi siamo arrivati a Roussillon.»", words: ["D'abord,", "nous", "sommes", "partis,", "ensuite", "nous", "sommes", "arrivés", "à", "Roussillon."], why: "Partir / arriver + être, plurale." }
+          ],
+          test: [
+            { t: "mcq", q: "Quale frase è corretta?", opts: ["Je me suis bien amusé.", "Je m'ai bien amusé.", "J'ai me bien amusé.", "Je suis bien m'amusé."], a: 0, why: "Riflessivi → être: je me suis amusé." },
+            { t: "mcq", q: "Completa: «Elle ___ rencontré Paul à Paris.»", opts: ["a", "est", "as", "s'est"], a: 0, why: "Rencontrer usa avoir." },
+            { t: "mcq", q: "Nei racconti al passato «il giorno dopo» si dice…", opts: ["le lendemain", "demain", "après-demain", "hier"], a: 0, why: "Le lendemain." },
+            { t: "mcq", q: "Completa: «Elles sont ___ avec leurs amies.» (uscite)", opts: ["sorties", "sorti", "sortis", "sortie"], a: 0, why: "Femminile plurale: sorties." },
+            { t: "listen", say: "Après, il y a eu une grève, mais son petit-fils nous a emmenés à Avignon.", q: "Come sono arrivati ad Avignone?", opts: ["Li ha accompagnati il nipote di Madame Pons.", "In autobus, nonostante lo sciopero.", "In treno.", "A piedi."], a: 0, why: "Son petit-fils nous a emmenés." },
+            { t: "listen", say: "Nous avons cherché un hôtel pendant deux heures, et finalement nous avons trouvé.", q: "Cosa è successo alla fine?", opts: ["Hanno trovato un albergo.", "Hanno dormito in macchina.", "Sono tornati a casa.", "Hanno cercato ancora."], a: 0, why: "Finalement = alla fine." },
+            { t: "listen", say: "Cette nuit, j'ai très mal dormi à cause du bruit de la rue.", q: "Perché ha dormito male?", opts: ["Per il rumore della strada", "Per il caldo", "Per un brutto sogno", "Per il letto scomodo"], a: 0, why: "Le bruit = il rumore." },
+            { t: "type", q: "Completa: «J'ai ___ une carte postale à ma grand-mère.» (mandato)", a: ["envoyé", "envoye"], why: "Envoyer → envoyé." },
+            { t: "type", q: "Completa: «Nous sommes rentrés fatigués, mais très ___.» (felici)", a: ["heureux"], why: "Heureux, maschile plurale invariato." },
+            { t: "type", say: "À la fin du film, tout le monde a pleuré.", q: "Ascolta e completa: «À la ___ du film, tout le monde a pleuré.»", a: ["fin"], why: "La fin = la fine." },
+            { t: "order", q: "Riordina: «Alla festa ci siamo divertiti molto.»", words: ["À", "la", "fête,", "nous", "nous", "sommes", "bien", "amusés."], why: "S'amuser: riflessivo → être." },
+            { t: "match", q: "Abbina", pairs: [["je suis allé", "être"], ["j'ai mangé", "avoir"], ["je me suis levé", "être (riflessivo)"], ["j'ai été", "avoir (être al passato)"]] }
+          ],
+          recap: {
+            can: ["Raccontare un weekend o un viaggio dall'inizio alla fine", "Scegliere tra avoir ed être", "Usare d'abord, ensuite, le lendemain, finalement", "Usare i riflessivi al passato: je me suis amusé"],
+            phrases: [{ fr: "Le week-end dernier, nous sommes partis en Provence.", it: "Lo scorso weekend siamo partiti per la Provenza." }, { fr: "Le lendemain, nous avons rencontré Madame Pons.", it: "Il giorno dopo abbiamo incontrato Madame Pons." }, { fr: "Finalement, nous sommes rentrés fatigués mais heureux.", it: "Alla fine siamo rientrati stanchi ma felici." }],
+            trap: "FINALEMENT = alla fine (conclusione); ENFIN = finalmente! E i riflessivi vogliono sempre ÊTRE."
+          }
+        }
+      ]
+    },
+    {
+      n: 8, arr: "8e", name: "Faire les courses", it: "Fare la spesa", level: "A2",
+      lessons: [
+        /* ---------------- LEZIONE 8-1 ---------------- */
+        {
+          id: "8-1", street: "Rue des Commerces", title: "I negozi: chez le boulanger, à la fromagerie",
+          goal: "Riconoscere i negozi tradizionali francesi, dire dove compri cosa e usare «chez» con le persone.",
+          episode: {
+            title: "La lista della spesa",
+            intro: "È deciso: tra due settimane, dentro il caffè, riaprirà la confetteria di Zizì, «Au Petit Bonheur». Françoise ha scritto una lista lunghissima. Gigi, Léa e Croissant (nel carrello della spesa, come un re) partono per i negozi di rue Lepic.",
+            lines: [
+              { who: "Mme Lefèvre", fr: "Pour le pain, ne cherchez pas : vous allez chez moi, à la boulangerie, évidemment.", it: "Per il pane non cercate: venite da me, in panetteria, ovviamente." },
+              { who: "Léa", fr: "Le beurre et la crème, on les achète à la crèmerie, ou chez le fromager ?", it: "Il burro e la panna li compriamo alla latteria o dal formaggiaio?" },
+              { who: "Gigi", fr: "Chez le fromager : il a le meilleur beurre de Normandie de tout le quartier.", it: "Dal formaggiaio: ha il miglior burro di Normandia di tutto il quartiere." },
+              { who: "Léa", fr: "Et les amandes, le miel, les fruits confits ? Ça, c'est à l'épicerie fine.", it: "E le mandorle, il miele, la frutta candita? Quello è alla drogheria fine." },
+              { who: "Croissant", fr: "Je propose une petite visite à la poissonnerie. Pour l'inspiration, bien sûr.", it: "Propongo una piccola visita alla pescheria. Per l'ispirazione, s'intende." },
+              { who: "Gigi", fr: "Non, Croissant. Et pour les boîtes et les rubans bleus, on va dans une papeterie.", it: "No, Croissant. E per le scatole e i nastri blu andiamo in una cartoleria." },
+              { who: "Léa", fr: "Pourquoi ne pas tout acheter au supermarché ? C'est plus rapide et moins cher.", it: "Perché non compriamo tutto al supermercato? È più veloce e costa meno." },
+              { who: "Mme Lefèvre", fr: "Parce que Zizì achetait tout chez les petits commerçants. C'est ça, le secret du goût.", it: "Perché Zizì comprava tutto dai piccoli negozianti. È questo il segreto del sapore." }
+            ],
+            outro: "Due ore dopo tornano carichi come muli: dieci chili di mandorle, sei vasetti di miele di lavanda, burro, zucchero, nastri blu. Il formaggiaio ha regalato un pezzo di comté «per la signora Françoise», e il pescivendolo una sardina «per il signor gatto». Croissant ha deciso che i piccoli negozi sono una civiltà superiore.",
+            you: "«{nome}, in Francia molti negozi prendono il nome dal mestiere: le boulanger lavora nella boulangerie, le boucher nella boucherie. E per dire «dal panettiere» si usa CHEZ: je vais chez le boulanger.»",
+            mine: { fr: "Je m'appelle {nome} et le samedi je vais chez le boulanger, puis au marché pour acheter des fruits.", it: "Mi chiamo {nome} e il sabato vado dal panettiere, poi al mercato a comprare la frutta." }
+          },
+          words: [
+            { fr: "la boucherie / le boucher", it: "la macelleria / il macellaio", say: "la bushrì / lə bushé", hook: "BOUCHER: in origine vendeva carne di caprone (bouc). Oggi vende bistecche: un steak, du poulet, du bœuf.",
+              ex: { fr: "Chez le boucher, j'achète un poulet fermier pour le repas du dimanche.", it: "Dal macellaio compro un pollo ruspante per il pranzo della domenica." } },
+            { fr: "la fromagerie / le fromager", it: "la formaggeria / il formaggiaio", say: "la fromajrì / lə fromajé", hook: "FROMAGERIE: il regno del FROMAGE. Il fromager ti fa assaggiare tutto prima di comprare: approfittane!",
+              ex: { fr: "Le fromager m'a fait goûter un camembert vraiment délicieux.", it: "Il formaggiaio mi ha fatto assaggiare un camembert davvero delizioso." } },
+            { fr: "l'épicerie", it: "la drogheria, l'alimentari", say: "lepisrì", hook: "ÉPICERIE: in origine vendeva spezie (épices). Oggi è il piccolo alimentari sotto casa; l'épicerie fine vende prodotti di lusso.",
+              ex: { fr: "L'épicerie du coin est ouverte jusqu'à minuit, même le dimanche.", it: "L'alimentari all'angolo è aperto fino a mezzanotte, anche la domenica." } },
+            { fr: "la poissonnerie", it: "la pescheria", say: "la pwasonrì", hook: "POISSON = pesce (con due S, si legge «pwasõ»). Attenzione: «poison» con una S sola è il veleno!",
+              ex: { fr: "À la poissonnerie, il y a des huîtres, des moules et du saumon frais.", it: "In pescheria ci sono ostriche, cozze e salmone fresco." } },
+            { fr: "le supermarché", it: "il supermercato", say: "lə süpèrmarshé", hook: "SUPERMARCHÉ: il super-mercato. Più piccolo è la «supérette», più grande «l'hypermarché».",
+              ex: { fr: "Je fais les grosses courses au supermarché une fois par semaine.", it: "Faccio la spesa grossa al supermercato una volta alla settimana." } },
+            { fr: "chez le / la…", it: "da (una persona)", say: "shé", hook: "CHEZ = da, presso una persona: chez le boulanger, chez moi, chez Françoise. Con il negozio si usa à: à la boulangerie.",
+              ex: { fr: "Ce soir, nous dînons chez des amis qui habitent à côté du canal.", it: "Stasera ceniamo da amici che abitano vicino al canale." } },
+            { fr: "faire les courses", it: "fare la spesa", say: "fèr lé kurs", hook: "FAIRE LES COURSES: «fare le corse»… e infatti al supermercato il sabato si corre! Le shopping (vestiti) è «faire les magasins».",
+              ex: { fr: "Le samedi matin, nous faisons les courses au marché du quartier.", it: "Il sabato mattina facciamo la spesa al mercato del quartiere." } },
+            { fr: "le commerçant", it: "il negoziante", say: "lə komèrsã", hook: "COMMERÇANT: chi fa COMMERCIO. «Les petits commerçants» sono i piccoli negozi di quartiere.",
+              ex: { fr: "Dans mon quartier, les commerçants connaissent tous les habitants par leur prénom.", it: "Nel mio quartiere i negozianti conoscono tutti gli abitanti per nome." } },
+            { fr: "la liste de courses", it: "la lista della spesa", say: "la list də kurs", hook: "Senza lista si torna sempre con tre cose inutili e senza il latte. LA LISTE DE COURSES salva la vita.",
+              ex: { fr: "J'ai oublié ma liste de courses à la maison, et je ne me souviens de rien.", it: "Ho dimenticato la lista della spesa a casa, e non mi ricordo niente." } },
+            { fr: "Et avec ceci ?", it: "Altro? (in negozio)", say: "e avèk səsì", hook: "In negozio è il cugino di «Et avec ça ?». Risposta: «Ce sera tout, merci» (sarà tutto, grazie).",
+              ex: { fr: "Et avec ceci, madame ? — Ce sera tout, merci. Je vous dois combien ?", it: "Desidera altro, signora? — È tutto, grazie. Quanto le devo?" } }
+          ],
+          tip: {
+            title: "Mestiere, negozio e «chez»: la mappa della spesa",
+            body: "<div class='tbl'><table><thead><tr><th>Negozio (à la…)</th><th>Persona (chez le…)</th><th>Cosa compri</th></tr></thead><tbody><tr><td>la boulangerie</td><td>le boulanger</td><td>pain, baguette, croissants</td></tr><tr><td>la pâtisserie</td><td>le pâtissier</td><td>gâteaux, tartes, éclairs</td></tr><tr><td>la boucherie</td><td>le boucher</td><td>viande, poulet</td></tr><tr><td>la fromagerie</td><td>le fromager</td><td>fromage, beurre</td></tr><tr><td>la poissonnerie</td><td>le poissonnier</td><td>poisson, fruits de mer</td></tr><tr><td>l'épicerie</td><td>l'épicier</td><td>un peu de tout</td></tr><tr><td>la pharmacie</td><td>le pharmacien</td><td>médicaments</td></tr></tbody></table></div><ul><li>Con il <b>negozio</b>: à la boulangerie, au supermarché.</li><li>Con la <b>persona</b>: <b>chez</b> le boulanger, chez le boucher.</li><li><b>Chez moi / chez toi</b> = a casa mia / a casa tua.</li><li>Faire <b>les courses</b> = fare la spesa; faire <b>les magasins</b> = fare shopping.</li></ul>",
+            examples: [
+              { fr: "Je vais à la boulangerie, ou plutôt chez le boulanger de la rue Lepic.", it: "Vado in panetteria, o meglio dal panettiere di rue Lepic." },
+              { fr: "On achète le poisson à la poissonnerie du marché.", it: "Compriamo il pesce alla pescheria del mercato." },
+              { fr: "Tu viens chez moi ce soir ? Je fais une raclette.", it: "Vieni da me stasera? Faccio una raclette." },
+              { fr: "Le samedi, je fais les courses ; le dimanche, je fais les magasins.", it: "Il sabato faccio la spesa; la domenica faccio shopping." },
+              { fr: "Et avec ceci ? — Ce sera tout, merci beaucoup.", it: "Altro? — È tutto, grazie mille." }
+            ]
+          },
+          practice: [
+            { t: "mcq", q: "Dove compri la carne?", opts: ["à la boucherie", "à la poissonnerie", "à la fromagerie", "à la papeterie"], a: 0, why: "Boucherie = macelleria." },
+            { t: "mcq", q: "Completa: «Je vais ___ le boulanger.»", opts: ["chez", "à", "au", "dans"], a: 0, why: "Con la persona: chez." },
+            { t: "listen", say: "À la poissonnerie, il y a des huîtres, des moules et du saumon frais.", q: "Cosa c'è in pescheria?", opts: ["Ostriche, cozze e salmone fresco", "Pollo, manzo e salsicce", "Formaggi, burro e panna", "Pane, croissant e torte"], a: 0, why: "Poissonnerie = pescheria." },
+            { t: "match", q: "Abbina", pairs: [["la boucherie", "la macelleria"], ["la fromagerie", "la formaggeria"], ["l'épicerie", "l'alimentari"], ["la poissonnerie", "la pescheria"]] },
+            { t: "order", q: "Riordina: «Il sabato faccio la spesa al mercato.»", words: ["Le", "samedi,", "je", "fais", "les", "courses", "au", "marché."], why: "Faire les courses = fare la spesa." }
+          ],
+          test: [
+            { t: "mcq", q: "«Faire les courses» significa…", opts: ["fare la spesa", "fare una corsa", "fare shopping di vestiti", "fare le pulizie"], a: 0, why: "Faire les courses = fare la spesa." },
+            { t: "mcq", q: "Completa: «Ce soir, nous dînons ___ des amis.»", opts: ["chez", "à", "aux", "dans"], a: 0, why: "Chez + persone." },
+            { t: "mcq", q: "«Poisson» e «poison» significano…", opts: ["pesce / veleno", "veleno / pesce", "pesce / pesca", "pozione / pesce"], a: 0, why: "Poisson (due S) = pesce; poison = veleno!" },
+            { t: "mcq", q: "Il negoziante ti chiede «Et avec ceci ?». Hai finito. Rispondi:", opts: ["Ce sera tout, merci.", "Avec ceci, merci.", "Oui, avec ça.", "Je fais les courses."], a: 0, why: "Ce sera tout = sarà tutto." },
+            { t: "listen", say: "Chez le boucher, j'achète un poulet fermier pour le repas du dimanche.", q: "Cosa compra dal macellaio?", opts: ["Un pollo ruspante", "Una bistecca", "Del pesce", "Del formaggio"], a: 0, why: "Le poulet = il pollo." },
+            { t: "listen", say: "L'épicerie du coin est ouverte jusqu'à minuit, même le dimanche.", q: "Fino a che ora è aperto l'alimentari?", opts: ["Fino a mezzanotte, anche la domenica", "Fino alle otto, tranne la domenica", "Solo la domenica", "Fino a mezzogiorno"], a: 0, why: "Jusqu'à minuit = fino a mezzanotte." },
+            { t: "listen", say: "J'ai oublié ma liste de courses à la maison, et je ne me souviens de rien.", q: "Qual è il problema?", opts: ["Ha dimenticato la lista della spesa a casa.", "Ha perso il portafoglio.", "Il negozio è chiuso.", "Non ha abbastanza soldi."], a: 0, why: "La liste de courses." },
+            { t: "type", q: "Completa: «J'achète le pain à la ___.» (panetteria)", a: ["boulangerie"], why: "La boulangerie." },
+            { t: "type", q: "Completa: «Tu viens ___ moi ce soir ?» (da)", a: ["chez"], why: "Chez moi = a casa mia." },
+            { t: "type", say: "Le fromager m'a fait goûter un camembert délicieux.", q: "Ascolta e completa: «Le ___ m'a fait goûter un camembert délicieux.»", a: ["fromager"], why: "Le fromager = il formaggiaio." },
+            { t: "order", q: "Riordina: «Faccio la spesa grossa al supermercato.»", words: ["Je", "fais", "les", "grosses", "courses", "au", "supermarché."], why: "Au supermarché." },
+            { t: "match", q: "Abbina", pairs: [["le boulanger", "il panettiere"], ["le boucher", "il macellaio"], ["le commerçant", "il negoziante"], ["le supermarché", "il supermercato"]] }
+          ],
+          recap: {
+            can: ["Riconoscere i negozi tradizionali francesi", "Dire dove compri cosa", "Usare chez con le persone e à con i negozi", "Rispondere in negozio: «Ce sera tout, merci»"],
+            phrases: [{ fr: "Je vais chez le boulanger, puis à la fromagerie.", it: "Vado dal panettiere, poi in formaggeria." }, { fr: "Le samedi, je fais les courses au marché.", it: "Il sabato faccio la spesa al mercato." }, { fr: "Et avec ceci ? — Ce sera tout, merci.", it: "Altro? — È tutto, grazie." }],
+            trap: "CHEZ si usa con le persone (chez le boucher), À con i negozi (à la boucherie). E poisson (pesce) ≠ poison (veleno)!"
+          }
+        },
+        /* ---------------- LEZIONE 8-2 ---------------- */
+        {
+          id: "8-2", street: "Rue du Partitif", title: "Du, de la, des: il partitivo e le quantità",
+          goal: "Usare il partitivo (du, de la, de l', des) per le quantità non precise e «de» dopo le quantità e la negazione.",
+          episode: {
+            title: "La prima ricetta",
+            intro: "Sabato pomeriggio, cucina del caffè. Françoise legge ad alta voce il quaderno di Zizì: la prima ricetta da rifare sono i calissons, dolcetti provenzali di mandorle e melone candito. Léa pesa, Gigi mescola, Croissant sorveglia il burro.",
+            lines: [
+              { who: "Mme Lefèvre", fr: "Alors : il faut de la poudre d'amandes, du sucre, du melon confit et de l'eau de fleur d'oranger.", it: "Allora: ci vuole farina di mandorle, zucchero, melone candito e acqua di fiori d'arancio." },
+              { who: "Léa", fr: "Combien de sucre ? Zizì écrit seulement « un peu de sucre ». Ce n'est pas très précis !", it: "Quanto zucchero? Zizì scrive solo «un po' di zucchero». Non è molto preciso!" },
+              { who: "Gigi", fr: "Ma nonna faisait pareil : « un peu de farine, beaucoup d'amour ». Mettons deux cents grammes.", it: "Mia nonna faceva lo stesso: «un po' di farina, tanto amore». Mettiamo duecento grammi." },
+              { who: "Mme Lefèvre", fr: "Il n'y a pas de beurre dans les calissons. Croissant, arrête de regarder le beurre.", it: "Nei calissons non c'è burro. Croissant, smettila di guardare il burro." },
+              { who: "Croissant", fr: "Je ne regarde pas le beurre. Le beurre me regarde. C'est différent.", it: "Non sono io che guardo il burro. È il burro che guarda me. È diverso." },
+              { who: "Léa", fr: "Oh non, nous n'avons plus d'œufs ! Il faut un blanc d'œuf pour le glaçage.", it: "Oh no, non abbiamo più uova! Serve un albume per la glassa." },
+              { who: "Gigi", fr: "Je descends chez Françoise : elle a toujours une douzaine d'œufs et un pot de miel.", it: "Scendo da Françoise: ha sempre una dozzina di uova e un vasetto di miele." },
+              { who: "Mme Lefèvre", fr: "Prends aussi une bouteille de lait et un paquet de farine. Demain, on fait des madeleines !", it: "Prendi anche una bottiglia di latte e un pacco di farina. Domani facciamo le madeleine!" }
+            ],
+            outro: "A mezzanotte, sul bancone ci sono quaranta calissons perfetti, a forma di piccole barche bianche. Françoise ne assaggia uno, chiude gli occhi e non dice niente per un lungo momento. Poi sorride: «È lei. È esattamente il sapore di zia Zizì.»",
+            you: "«{nome}, il partitivo è il «po' di» invisibile: in italiano dici «compro pane», in francese «j'achète DU pain». Ma con le quantità precise e con la negazione torna il piccolo DE: beaucoup de sucre, pas de beurre.»",
+            mine: { fr: "Je m'appelle {nome} et au petit-déjeuner je prends du pain, de la confiture et beaucoup de café.", it: "Mi chiamo {nome} e a colazione prendo pane, marmellata e tanto caffè." }
+          },
+          words: [
+            { fr: "du / de la / de l'", it: "del / della / dell' (un po' di)", say: "dü / də la / də l", hook: "Il PARTITIVO è una «parte» di qualcosa che non si conta: du pain, de la confiture, de l'eau. In italiano spesso non lo diciamo nemmeno!",
+              ex: { fr: "Je voudrais du pain, de la confiture et de l'eau, s'il vous plaît.", it: "Vorrei del pane, della marmellata e dell'acqua, per favore." } },
+            { fr: "des", it: "dei, delle", say: "dé", hook: "DES per le cose al plurale: des amandes, des œufs. È lo stesso «des» degli articoli indeterminativi.",
+              ex: { fr: "Pour la recette, il faut des amandes, des œufs et des fruits confits.", it: "Per la ricetta servono mandorle, uova e frutta candita." } },
+            { fr: "un peu de", it: "un po' di", say: "ẽ pö də", hook: "UN PEU DE = un po' di. Dopo le quantità sempre DE da solo: un peu DE sucre (non «un peu du sucre»).",
+              ex: { fr: "Tu veux un peu de lait dans ton café, ou tu le prends noir ?", it: "Vuoi un po' di latte nel caffè, o lo prendi nero?" } },
+            { fr: "beaucoup de", it: "molto, tanto", say: "boku də", hook: "BEAUCOUP DE = molto/tanti, sempre con DE: beaucoup DE gens, beaucoup D'amour.",
+              ex: { fr: "Il y a beaucoup de monde au marché le dimanche matin.", it: "C'è tantissima gente al mercato la domenica mattina." } },
+            { fr: "pas de", it: "niente, nessun", say: "pa də", hook: "Dopo la negazione, du / de la / des diventano DE: je ne mange pas DE viande. Il partitivo «sparisce»!",
+              ex: { fr: "Je suis végétarien : je ne mange pas de viande ni de poisson.", it: "Sono vegetariano: non mangio né carne né pesce." } },
+            { fr: "une bouteille de", it: "una bottiglia di", say: "ün butèj də", hook: "BOUTEILLE = bottiglia, con -EILLE che si legge «èj». Une bouteille de vin, d'eau, de lait.",
+              ex: { fr: "Nous avons apporté une bouteille de vin de Provence pour le dîner.", it: "Abbiamo portato una bottiglia di vino della Provenza per la cena." } },
+            { fr: "un pot / un paquet de", it: "un vasetto / un pacco di", say: "ẽ pò / ẽ pakè də", hook: "UN POT: un vasetto (de miel, de confiture). UN PAQUET: un pacco, una confezione (de farine, de biscuits).",
+              ex: { fr: "Achète un paquet de farine et un pot de miel de lavande, s'il te plaît.", it: "Compra un pacco di farina e un vasetto di miele di lavanda, per favore." } },
+            { fr: "une douzaine de", it: "una dozzina di", say: "ün duzèn də", hook: "DOUZAINE = dozzina (douze = 12). Le uova in Francia si comprano a dozzine o a mezze dozzine.",
+              ex: { fr: "Une douzaine d'œufs bien frais, s'il vous plaît, et une demi-baguette.", it: "Una dozzina di uova freschissime, per favore, e mezza baguette." } },
+            { fr: "il faut", it: "ci vuole, serve, bisogna", say: "il fò", hook: "IL FAUT: «serve», «ci vuole» (in ricetta) oppure «bisogna» + infinito. Il faut du sucre = ci vuole zucchero.",
+              ex: { fr: "Pour faire une bonne crêpe, il faut de la farine, du lait et des œufs.", it: "Per fare una buona crêpe ci vogliono farina, latte e uova." } },
+            { fr: "… grammes", it: "… grammi", say: "gram", hook: "Deux cents GRAMMES de sucre: come in italiano. Mezzo chilo = un demi-kilo, o cinq cents grammes.",
+              ex: { fr: "Il faut deux cents grammes de sucre et cent grammes de beurre.", it: "Servono duecento grammi di zucchero e cento grammi di burro." } }
+          ],
+          tip: {
+            title: "Il partitivo: il «po' di» invisibile",
+            body: "<div class='tbl'><table><thead><tr><th>Caso</th><th>Forma</th><th>Esempio</th></tr></thead><tbody><tr><td>maschile</td><td><b>du</b></td><td>du pain, du sucre</td></tr><tr><td>femminile</td><td><b>de la</b></td><td>de la farine, de la confiture</td></tr><tr><td>davanti a vocale</td><td><b>de l'</b></td><td>de l'eau, de l'huile</td></tr><tr><td>plurale</td><td><b>des</b></td><td>des œufs, des amandes</td></tr><tr><td>dopo una quantità</td><td><b>de / d'</b></td><td>beaucoup de sucre, un kilo d'amandes</td></tr><tr><td>dopo la negazione</td><td><b>de / d'</b></td><td>pas de beurre, plus d'œufs</td></tr></tbody></table></div><ul><li>Partitivo = quantità <b>non precisa</b> di una cosa non contabile: <b>du</b> pain (un po' di pane).</li><li>Con i verbi di gusto si usa l'articolo determinativo: j'aime <b>le</b> pain, ma j'achète <b>du</b> pain.</li><li>Quantità: un peu <b>de</b>, beaucoup <b>de</b>, un kilo <b>de</b>, une bouteille <b>de</b>, assez <b>de</b>, trop <b>de</b>.</li><li>Negazione: je n'ai pas <b>de</b> sucre (mai «pas du sucre»).</li></ul>",
+            examples: [
+              { fr: "Le matin, je bois du café et je mange de la brioche.", it: "La mattina bevo caffè e mangio brioche." },
+              { fr: "J'aime le fromage, alors j'achète du fromage tous les jours.", it: "Mi piace il formaggio, quindi compro formaggio tutti i giorni." },
+              { fr: "Il n'y a plus de lait dans le frigo.", it: "Non c'è più latte nel frigo." },
+              { fr: "Tu as mis trop de sel dans la soupe !", it: "Hai messo troppo sale nella zuppa!" },
+              { fr: "Pour la fête, il faut des bouteilles d'eau et beaucoup de gâteaux.", it: "Per la festa servono bottiglie d'acqua e tante torte." }
+            ]
+          },
+          practice: [
+            { t: "mcq", q: "Completa: «Je voudrais ___ pain.»", opts: ["du", "de la", "des", "le"], a: 0, why: "Pain è maschile: du pain." },
+            { t: "mcq", q: "Completa: «Je ne mange pas ___ viande.»", opts: ["de", "de la", "du", "la"], a: 0, why: "Dopo la negazione: de." },
+            { t: "listen", say: "Pour faire une bonne crêpe, il faut de la farine, du lait et des œufs.", q: "Cosa serve per le crêpe?", opts: ["Farina, latte e uova", "Zucchero, burro e sale", "Farina, acqua e lievito", "Latte, cioccolato e uova"], a: 0, why: "De la farine, du lait, des œufs." },
+            { t: "match", q: "Abbina", pairs: [["un peu de", "un po' di"], ["beaucoup de", "molto"], ["une bouteille de", "una bottiglia di"], ["un pot de", "un vasetto di"]] },
+            { t: "order", q: "Riordina: «Vorrei dell'acqua e della marmellata.»", words: ["Je", "voudrais", "de", "l'eau", "et", "de", "la", "confiture."], why: "De l'eau (vocale), de la confiture (femminile)." }
+          ],
+          test: [
+            { t: "mcq", q: "Completa: «Il faut ___ eau de fleur d'oranger.»", opts: ["de l'", "du", "de la", "des"], a: 0, why: "Davanti a vocale: de l'." },
+            { t: "mcq", q: "Completa: «Il y a beaucoup ___ monde.»", opts: ["de", "du", "des", "le"], a: 0, why: "Beaucoup de + nome." },
+            { t: "mcq", q: "Quale frase è corretta?", opts: ["J'aime le fromage et j'achète du fromage.", "J'aime du fromage et j'achète le fromage.", "J'aime de fromage et j'achète du fromage.", "J'aime le fromage et j'achète le du fromage."], a: 0, why: "Gusti → le; acquisto non preciso → du." },
+            { t: "mcq", q: "Completa: «Nous n'avons plus ___ œufs.»", opts: ["d'", "des", "les", "de les"], a: 0, why: "Ne… plus + de (d' davanti a vocale)." },
+            { t: "listen", say: "Tu veux un peu de lait dans ton café, ou tu le prends noir ?", q: "Cosa ti chiedono?", opts: ["Se vuoi un po' di latte nel caffè.", "Se vuoi un caffè lungo.", "Se vuoi lo zucchero.", "Se vuoi un tè nero."], a: 0, why: "Un peu de lait = un po' di latte." },
+            { t: "listen", say: "Je suis végétarien : je ne mange pas de viande ni de poisson.", q: "Cosa non mangia?", opts: ["Né carne né pesce", "Né formaggio né uova", "Solo la carne", "Né pane né pasta"], a: 0, why: "Pas de viande ni de poisson." },
+            { t: "listen", say: "Il faut deux cents grammes de sucre et cent grammes de beurre.", q: "Quanto zucchero serve?", opts: ["200 grammi", "100 grammi", "2 chili", "20 grammi"], a: 0, why: "Deux cents grammes = 200 g." },
+            { t: "type", q: "Completa: «Achète un paquet ___ farine.»", a: ["de"], why: "Quantità + de." },
+            { t: "type", q: "Completa: «Le matin, je bois ___ café.»", a: ["du"], why: "Café è maschile: du café." },
+            { t: "type", say: "Une douzaine d'œufs bien frais, s'il vous plaît.", q: "Ascolta e completa: «Une ___ d'œufs bien frais, s'il vous plaît.»", a: ["douzaine"], why: "Douzaine = dozzina." },
+            { t: "order", q: "Riordina: «Non c'è più latte nel frigo.»", words: ["Il", "n'y", "a", "plus", "de", "lait", "dans", "le", "frigo."], why: "Ne… plus + de." },
+            { t: "match", q: "Abbina", pairs: [["du sucre", "maschile"], ["de la farine", "femminile"], ["de l'huile", "davanti a vocale"], ["des œufs", "plurale"]] }
+          ],
+          recap: {
+            can: ["Usare du, de la, de l', des per le quantità non precise", "Usare de dopo le quantità: beaucoup de, un kilo de…", "Usare de dopo la negazione: pas de, plus de", "Leggere e scrivere una ricetta semplice"],
+            phrases: [{ fr: "Il faut de la farine, du lait et des œufs.", it: "Servono farina, latte e uova." }, { fr: "Un peu de sucre et beaucoup d'amour.", it: "Un po' di zucchero e tanto amore." }, { fr: "Il n'y a pas de beurre dans les calissons.", it: "Nei calissons non c'è burro." }],
+            trap: "J'AIME LE pain (gusto: articolo determinativo), ma J'ACHÈTE DU pain (quantità: partitivo). E dopo la negazione: pas DE pain."
+          }
+        },
+        /* ---------------- LEZIONE 8-3 ---------------- */
+        {
+          id: "8-3", street: "Rue de la Mode", title: "Vestiti, taglie e colori",
+          goal: "Comprare un vestito: chiedere la taglia, provarlo, dire se va bene, e accordare i colori con i nomi.",
+          episode: {
+            title: "Un vestito per l'inaugurazione",
+            intro: "L'inaugurazione si avvicina e Léa ha deciso: Gigi non può presentarsi con il grembiule sporco di farina. Lo trascina in un grande magazzino vicino all'Opéra. Françoise viene «solo per guardare». Croissant viene perché ha sentito parlare di papillon.",
+            lines: [
+              { who: "Mme Laurent", fr: "Bonjour, je peux vous aider ? Vous cherchez quelque chose de particulier ?", it: "Buongiorno, posso aiutarvi? Cercate qualcosa in particolare?" },
+              { who: "Léa", fr: "Oui : une chemise blanche et une veste bleue pour lui. C'est pour une inauguration.", it: "Sì: una camicia bianca e una giacca blu per lui. È per un'inaugurazione." },
+              { who: "Mme Laurent", fr: "Très bien. Vous faites quelle taille ? Du quarante-huit, peut-être ?", it: "Benissimo. Che taglia porta? Una quarantotto, forse?" },
+              { who: "Gigi", fr: "Je ne sais pas… En Italie, je fais du cinquante. Je peux essayer ?", it: "Non so… In Italia porto la cinquanta. Posso provarla?" },
+              { who: "Mme Laurent", fr: "Bien sûr, les cabines d'essayage sont au fond, à droite.", it: "Certo, i camerini sono in fondo, a destra." },
+              { who: "Gigi", fr: "La veste est un peu trop petite, et les manches sont trop courtes.", it: "La giacca è un po' troppo piccola, e le maniche sono troppo corte." },
+              { who: "Mme Lefèvre", fr: "Essaie celle-ci, la grise. Ah, voilà : elle te va très bien, Gigi !", it: "Prova questa, quella grigia. Ah, ecco: ti sta benissimo, Gigi!" },
+              { who: "Croissant", fr: "Et pour moi, un nœud papillon rouge. Taille unique : je suis unique.", it: "E per me un papillon rosso. Taglia unica: io sono unico." }
+            ],
+            outro: "Escono con una camicia bianca, una giacca grigia, un vestito blu per Françoise (che doveva «solo guardare») e un minuscolo papillon rosso. Alla cassa, Gigi guarda lo scontrino e impallidisce. Léa gli batte una mano sulla spalla: «Si apre una confetteria una volta sola nella vita.»",
+            you: "«{nome}, in negozio ti servono tre frasi: «Je fais du 42» (porto la 42), «Je peux l'essayer ?» (posso provarlo?) e «Ça me va» (mi sta bene). E ricorda: in francese anche i colori si accordano!»",
+            mine: { fr: "Je m'appelle {nome} : aujourd'hui je porte un pantalon noir, une chemise blanche et des chaussures marron.", it: "Mi chiamo {nome}: oggi porto pantaloni neri, una camicia bianca e scarpe marroni." }
+          },
+          words: [
+            { fr: "la chemise / le pantalon", it: "la camicia / i pantaloni", say: "la shəmìz / lə pãtalõ", hook: "Trappola! LA CHEMISE è la camicia (non la «chemisier» da donna). LE PANTALON è SINGOLARE in francese: un pantalon.",
+              ex: { fr: "Pour l'entretien, il a mis une chemise blanche et un pantalon noir.", it: "Per il colloquio ha messo una camicia bianca e dei pantaloni neri." } },
+            { fr: "la veste / le manteau", it: "la giacca / il cappotto", say: "la vèst / lə mãtò", hook: "Trappola: LA VESTE è la giacca, non la «veste»! LE MANTEAU è il cappotto (il «mantello»).",
+              ex: { fr: "En novembre, il fait froid : prends ton manteau, pas seulement ta veste.", it: "A novembre fa freddo: prendi il cappotto, non solo la giacca." } },
+            { fr: "la robe / la jupe", it: "il vestito (da donna) / la gonna", say: "la ròb / la jüp", hook: "LA ROBE: il vestito da donna (pensa alla «roba» elegante). LA JUPE: la gonna, che salta (jump) quando balli.",
+              ex: { fr: "Françoise a acheté une robe bleue pour la fête, avec des chaussures assorties.", it: "Françoise ha comprato un vestito blu per la festa, con le scarpe abbinate." } },
+            { fr: "les chaussures", it: "le scarpe", say: "lé shosür", hook: "CHAUSSURES: le scarpe CALZATE (chausser = calzare). Les chaussettes sono i calzini, le «piccole scarpe».",
+              ex: { fr: "Ces chaussures sont belles, mais elles me font mal aux pieds.", it: "Queste scarpe sono belle, ma mi fanno male ai piedi." } },
+            { fr: "la taille / la pointure", it: "la taglia / il numero (di scarpe)", say: "la taj / la pwẽtür", hook: "LA TAILLE per i vestiti (Vous faites quelle taille ?); LA POINTURE per le scarpe (Vous chaussez du combien ?).",
+              ex: { fr: "Vous avez cette robe dans une taille plus grande ? Je fais du quarante.", it: "Avete questo vestito in una taglia più grande? Porto la quaranta." } },
+            { fr: "essayer / la cabine d'essayage", it: "provare / il camerino", say: "esèjé / la kabìn desèjaj", hook: "ESSAYER = provare, fare un saggio (essai). La cabine d'essayage è il camerino dove si prova.",
+              ex: { fr: "Je peux essayer ce pantalon ? — Oui, les cabines sont au fond du magasin.", it: "Posso provare questi pantaloni? — Sì, i camerini sono in fondo al negozio." } },
+            { fr: "Ça me va", it: "Mi sta bene", say: "sa mə va", hook: "ÇA ME VA: «mi va», mi sta bene. Elle te va bien = ti sta bene. Anche «ça me va» = mi va bene (d'accordo!).",
+              ex: { fr: "Cette couleur ne me va pas du tout, je préfère le vert.", it: "Questo colore non mi sta per niente bene, preferisco il verde." } },
+            { fr: "trop grand / trop petit", it: "troppo grande / troppo piccolo", say: "tro grã / tro pəti", hook: "TROP = troppo. Al femminile: trop grande, trop petite. Il juste milieu: «c'est parfait!».",
+              ex: { fr: "Ce manteau est trop grand pour moi : vous avez la taille en dessous ?", it: "Questo cappotto è troppo grande per me: avete la taglia sotto?" } },
+            { fr: "blanc / noir / gris", it: "bianco / nero / grigio", say: "blã / nwar / grì", hook: "Femminili: blanCHE, noirE, griSE. Una chemise blanche, une veste grise, une robe noire.",
+              ex: { fr: "Il porte toujours un pull gris et une écharpe noire en hiver.", it: "In inverno porta sempre un maglione grigio e una sciarpa nera." } },
+            { fr: "bleu / vert / rouge / marron", it: "blu / verde / rosso / marrone", say: "blö / vèr / ruj / marõ", hook: "BLEU → bleue, VERT → verte, ROUGE resta uguale. MARRON e ORANGE non cambiano mai (sono nomi di frutti!).",
+              ex: { fr: "J'ai acheté des chaussures marron et une cravate verte pour le mariage.", it: "Ho comprato scarpe marroni e una cravatta verde per il matrimonio." } }
+          ],
+          tip: {
+            title: "Colori e taglie: le regole della boutique",
+            body: "<div class='tbl'><table><thead><tr><th>Maschile</th><th>Femminile</th><th>Plurale</th></tr></thead><tbody><tr><td>un pull noir</td><td>une robe noire</td><td>des chaussures noires</td></tr><tr><td>un pantalon vert</td><td>une veste verte</td><td>des jupes vertes</td></tr><tr><td>un manteau blanc</td><td>une chemise blanche</td><td>des chemises blanches</td></tr><tr><td>un pull gris</td><td>une veste grise</td><td>des vestes grises</td></tr><tr><td>un sac rouge</td><td>une robe rouge</td><td>des robes rouges</td></tr><tr><td>un sac marron</td><td>une veste marron</td><td>des chaussures marron</td></tr></tbody></table></div><ul><li>Il colore va <b>dopo</b> il nome: une veste <b>bleue</b>.</li><li><b>Marron</b> e <b>orange</b> non cambiano mai.</li><li>Taglia: <b>Je fais du</b> 42. Scarpe: <b>Je chausse du</b> 39.</li><li>Provare: <b>Je peux l'essayer ?</b> Va bene? <b>Ça me va.</b> / <b>Ça ne me va pas.</b></li><li>Per un'altra taglia: <b>la taille au-dessus</b> (più grande) / <b>en dessous</b> (più piccola).</li></ul>",
+            examples: [
+              { fr: "Je cherche une veste noire, en taille quarante-deux.", it: "Cerco una giacca nera, taglia quarantadue." },
+              { fr: "Je peux essayer cette robe rouge ?", it: "Posso provare questo vestito rosso?" },
+              { fr: "Elle est trop petite : vous avez la taille au-dessus ?", it: "È troppo piccola: avete la taglia sopra?" },
+              { fr: "Ces chaussures marron vous vont très bien.", it: "Queste scarpe marroni le stanno molto bene." },
+              { fr: "Je vais prendre la chemise blanche, s'il vous plaît.", it: "Prendo la camicia bianca, per favore." }
+            ]
+          },
+          practice: [
+            { t: "mcq", q: "«La veste» è…", opts: ["la giacca", "il vestito", "la veste da camera", "la gonna"], a: 0, why: "Falso amico: la veste = la giacca." },
+            { t: "mcq", q: "Completa: «une chemise ___» (bianca)", opts: ["blanche", "blanc", "blance", "blanches"], a: 0, why: "Blanc → blanche." },
+            { t: "listen", say: "Ces chaussures sont belles, mais elles me font mal aux pieds.", q: "Qual è il problema?", opts: ["Le scarpe fanno male ai piedi.", "Le scarpe sono troppo care.", "Le scarpe sono brutte.", "Le scarpe sono troppo grandi."], a: 0, why: "Elles me font mal = mi fanno male." },
+            { t: "match", q: "Abbina", pairs: [["la chemise", "la camicia"], ["la robe", "il vestito da donna"], ["la jupe", "la gonna"], ["le manteau", "il cappotto"]] },
+            { t: "order", q: "Riordina: «Posso provare questi pantaloni?»", words: ["Je", "peux", "essayer", "ce", "pantalon", "?"], why: "Le pantalon è singolare in francese." }
+          ],
+          test: [
+            { t: "mcq", q: "Come chiedi «posso provarlo?»", opts: ["Je peux l'essayer ?", "Je peux le prouver ?", "Je peux l'éprouver ?", "Je peux le tester ?"], a: 0, why: "Essayer = provare (un vestito)." },
+            { t: "mcq", q: "Completa: «des chaussures ___» (marroni)", opts: ["marron", "marrons", "marronnes", "marrone"], a: 0, why: "Marron non cambia mai." },
+            { t: "mcq", q: "«Elle te va très bien» significa…", opts: ["Ti sta benissimo.", "Va benissimo per te.", "Ti va di andare?", "È molto buona."], a: 0, why: "Aller bien à quelqu'un = stare bene." },
+            { t: "mcq", q: "Per le scarpe, «il numero» si dice…", opts: ["la pointure", "la taille", "le numéro", "la mesure"], a: 0, why: "La pointure = il numero di scarpe." },
+            { t: "listen", say: "Vous avez cette robe dans une taille plus grande ? Je fais du quarante.", q: "Cosa chiede la cliente?", opts: ["Il vestito in una taglia più grande; porta la 40.", "Il vestito in un altro colore.", "Una gonna taglia 40.", "Il prezzo del vestito."], a: 0, why: "Une taille plus grande; je fais du 40." },
+            { t: "listen", say: "Ce manteau est trop grand pour moi : vous avez la taille en dessous ?", q: "Cosa vuole?", opts: ["Una taglia più piccola del cappotto", "Una taglia più grande", "Un altro colore", "Un altro modello"], a: 0, why: "En dessous = sotto, più piccola." },
+            { t: "listen", say: "Il porte toujours un pull gris et une écharpe noire en hiver.", q: "Cosa porta in inverno?", opts: ["Un maglione grigio e una sciarpa nera", "Un cappotto nero e un cappello grigio", "Una giacca grigia e dei guanti neri", "Un maglione nero e una sciarpa grigia"], a: 0, why: "Pull gris, écharpe noire." },
+            { t: "type", q: "Completa: «une veste ___» (verde)", a: ["verte"], why: "Vert → verte." },
+            { t: "type", q: "Completa: «Les cabines d'___ sont au fond.» (prova)", a: ["essayage"], why: "La cabine d'essayage = il camerino." },
+            { t: "type", say: "Cette couleur ne me va pas du tout.", q: "Ascolta e completa: «Cette couleur ne me ___ pas du tout.»", a: ["va"], why: "Ça me va / ça ne me va pas." },
+            { t: "order", q: "Riordina: «Porto la quarantadue, avete la taglia sopra?»", words: ["Je", "fais", "du", "quarante-deux,", "vous", "avez", "la", "taille", "au-dessus", "?"], why: "Je fais du + taglia." },
+            { t: "match", q: "Abbina", pairs: [["blanc", "blanche"], ["vert", "verte"], ["gris", "grise"], ["bleu", "bleue"]] }
+          ],
+          recap: {
+            can: ["Nominare i vestiti principali", "Chiedere la taglia e il numero di scarpe", "Provare un capo e dire se va bene", "Accordare i colori con i nomi"],
+            phrases: [{ fr: "Je fais du quarante-deux. Je peux l'essayer ?", it: "Porto la quarantadue. Posso provarlo?" }, { fr: "Elle est trop petite : vous avez la taille au-dessus ?", it: "È troppo piccola: avete la taglia sopra?" }, { fr: "Cette veste grise te va très bien.", it: "Questa giacca grigia ti sta benissimo." }],
+            trap: "LA VESTE = la giacca, LE PANTALON è singolare, e MARRON e ORANGE non cambiano mai."
+          }
+        },
+        /* ---------------- LEZIONE 8-4 ---------------- */
+        {
+          id: "8-4", street: "Rue des Pronoms", title: "I pronomi le, la, les: je le prends!",
+          goal: "Usare i pronomi complemento diretto (le, la, l', les) per non ripetere i nomi, anche al passato e con i verbi all'infinito.",
+          episode: {
+            title: "I preparativi",
+            intro: "Mancano tre giorni all'inaugurazione. Il caffè è un cantiere: scatole ovunque, nastri blu sui tavoli, l'insegna nuova appoggiata al muro. Françoise dirige le operazioni come un generale. Tutti corrono, tranne Croissant, che «supervisiona».",
+            lines: [
+              { who: "Mme Lefèvre", fr: "L'enseigne « Au Petit Bonheur » ? Gigi, tu la mets au-dessus du comptoir, s'il te plaît.", it: "L'insegna «Au Petit Bonheur»? Gigi, la metti sopra il bancone, per favore." },
+              { who: "Gigi", fr: "D'accord, je la mets là. Et les bocaux de bonbons, je les place où ?", it: "D'accordo, la metto lì. E i barattoli di caramelle, dove li metto?" },
+              { who: "Léa", fr: "Dans la vitrine ! Comme ça, les clients les voient de la rue.", it: "In vetrina! Così i clienti li vedono dalla strada." },
+              { who: "Mme Lefèvre", fr: "Et le portrait de Zizì ? Je veux le mettre à côté de la caisse.", it: "E il ritratto di Zizì? Voglio metterlo accanto alla cassa." },
+              { who: "Gigi", fr: "Les invitations, tu les as envoyées, Léa ? Monsieur Bernard l'a reçue ?", it: "Gli inviti, li hai mandati, Léa? Il signor Bernard l'ha ricevuto?" },
+              { who: "Léa", fr: "Oui, je les ai toutes envoyées hier. Odette et Madame Pons, je les ai appelées aussi.", it: "Sì, li ho mandati tutti ieri. Odette e Madame Pons, le ho anche chiamate." },
+              { who: "Croissant", fr: "Mon nœud papillon ? Personne ne le trouve ? Je le veux pour la photo officielle.", it: "Il mio papillon? Nessuno lo trova? Lo voglio per la foto ufficiale." },
+              { who: "Gigi", fr: "Ton nœud papillon ? Tu dors dessus depuis ce matin, Croissant !", it: "Il tuo papillon? Ci dormi sopra da stamattina, Croissant!" }
+            ],
+            outro: "La sera, quando tutto è pronto, Françoise spegne le luci e accende solo l'insegna: «Au Petit Bonheur» brilla di blu sopra il bancone, come cinquant'anni fa. Ma proprio quella notte Gigi si sveglia con la febbre e la gola in fiamme. Riuscirà a stare in piedi per l'inaugurazione? Si va al 9° arrondissement: la salute.",
+            you: "«{nome}, i pronomi le, la, les ti evitano di ripetere tutto: «Tu prends la veste ? Oui, je LA prends.» Vanno PRIMA del verbo, come in italiano: la prendo. Facile, no?»",
+            mine: { fr: "Je m'appelle {nome} : le français, je l'étudie tous les jours et je le parle de mieux en mieux.", it: "Mi chiamo {nome}: il francese lo studio tutti i giorni e lo parlo sempre meglio." }
+          },
+          words: [
+            { fr: "le (l')", it: "lo, lo (l')", say: "lə", hook: "LE sostituisce un nome maschile: le gâteau → je LE mange. Davanti a vocale: je L'achète.",
+              ex: { fr: "Ce gâteau au chocolat ? Je le prends, il a l'air délicieux.", it: "Questa torta al cioccolato? La prendo, sembra deliziosa." } },
+            { fr: "la (l')", it: "la (l')", say: "la", hook: "LA sostituisce un nome femminile: la robe → je LA prends. Davanti a vocale: je L'essaie.",
+              ex: { fr: "Cette robe bleue, je la trouve magnifique, mais elle est trop chère.", it: "Questo vestito blu lo trovo magnifico, ma è troppo caro." } },
+            { fr: "les", it: "li, le", say: "lé", hook: "LES sostituisce un plurale, maschile o femminile: les bonbons, les chaussures → je LES prends.",
+              ex: { fr: "Tes clés ? Je les ai vues sur la table de la cuisine.", it: "Le tue chiavi? Le ho viste sul tavolo della cucina." } },
+            { fr: "je le prends", it: "lo prendo", say: "jə lə prã", hook: "La frase magica del negozio: JE LE PRENDS (lo prendo) o JE LA PRENDS (la prendo). Affare fatto!",
+              ex: { fr: "Il vous va très bien, ce manteau. — Oui, je le prends !", it: "Le sta molto bene, questo cappotto. — Sì, lo prendo!" } },
+            { fr: "mettre", it: "mettere", say: "mètr", hook: "METTRE = mettere: je mets, tu mets, il met, nous mettons, vous mettez, ils mettent. Participio: mis.",
+              ex: { fr: "Où est-ce que je mets les fleurs ? — Mets-les sur la table, près de la fenêtre.", it: "Dove metto i fiori? — Mettili sul tavolo, vicino alla finestra." } },
+            { fr: "l'invitation", it: "l'invito", say: "lẽvitasjõ", hook: "L'INVITATION è femminile in francese: une invitation. Il verbo è inviter, invitare.",
+              ex: { fr: "Nous avons envoyé cent invitations pour la fête d'ouverture.", it: "Abbiamo mandato cento inviti per la festa d'apertura." } },
+            { fr: "appeler", it: "chiamare", say: "aplé", hook: "APPELER = chiamare (al telefono o per nome). Je m'appelle = «io mi chiamo»! J'appelle, nous appelons.",
+              ex: { fr: "Appelle-moi quand tu arrives à la gare, je viens te chercher.", it: "Chiamami quando arrivi in stazione, vengo a prenderti." } },
+            { fr: "la vitrine", it: "la vetrina", say: "la vitrìn", hook: "VITRINE = vetrina, la «vetrata» del negozio. Faire du lèche-vitrines = guardare le vetrine (letteralmente «leccare le vetrine»!).",
+              ex: { fr: "Le samedi, j'adore faire du lèche-vitrines sur les grands boulevards.", it: "Il sabato adoro guardare le vetrine sui grandi viali." } },
+            { fr: "la caisse", it: "la cassa", say: "la kès", hook: "LA CAISSE = la cassa, dove si paga. Le caissier / la caissière = il cassiere / la cassiera.",
+              ex: { fr: "Vous pouvez payer à la caisse numéro trois, il n'y a personne.", it: "Può pagare alla cassa numero tre, non c'è nessuno." } },
+            { fr: "recevoir / reçu", it: "ricevere / ricevuto", say: "rəsəvwar / rəsü", hook: "RECEVOIR = ricevere. La Ç (c con la cediglia) si legge S: reçu. Le reçu = anche lo scontrino!",
+              ex: { fr: "Tu as reçu mon message ? Je t'ai écrit ce matin.", it: "Hai ricevuto il mio messaggio? Ti ho scritto stamattina." } }
+          ],
+          tip: {
+            title: "Le, la, les: i pronomi che evitano le ripetizioni",
+            body: "<div class='tbl'><table><thead><tr><th>Tempo</th><th>Posizione</th><th>Esempio</th></tr></thead><tbody><tr><td>presente</td><td>prima del verbo</td><td>Je <b>le</b> prends.</td></tr><tr><td>negazione</td><td>ne + pronome + verbo + pas</td><td>Je ne <b>la</b> prends pas.</td></tr><tr><td>con infinito</td><td>prima dell'infinito</td><td>Je veux <b>les</b> voir.</td></tr><tr><td>passé composé</td><td>prima di avoir</td><td>Je <b>l'</b>ai vu.</td></tr><tr><td>imperativo +</td><td>dopo, con il trattino</td><td>Prends-<b>le</b> !</td></tr></tbody></table></div><ul><li><b>le</b> (maschile), <b>la</b> (femminile), <b>l'</b> (davanti a vocale), <b>les</b> (plurale).</li><li>Al passé composé il participio si accorda con il pronome che sta prima: la lettre → je l'ai écrit<b>e</b>; les invitations → je les ai envoyé<b>es</b>.</li><li>Come in italiano: «la prendo», «li ho visti».</li></ul>",
+            examples: [
+              { fr: "Tu aimes cette chemise ? — Oui, je l'aime beaucoup.", it: "Ti piace questa camicia? — Sì, mi piace molto." },
+              { fr: "Le pain ? Je ne le trouve pas, il n'y en a plus.", it: "Il pane? Non lo trovo, non ce n'è più." },
+              { fr: "Les enfants ? Je vais les chercher à l'école à quatre heures.", it: "I bambini? Vado a prenderli a scuola alle quattro." },
+              { fr: "La lettre de Zizì ? Je l'ai lue cent fois.", it: "La lettera di Zizì? L'ho letta cento volte." },
+              { fr: "Les gâteaux sont prêts : mange-les tant qu'ils sont chauds !", it: "Le torte sono pronte: mangiale finché sono calde!" }
+            ]
+          },
+          practice: [
+            { t: "mcq", q: "«Tu prends la veste ?» — «Oui, je ___ prends.»", opts: ["la", "le", "les", "lui"], a: 0, why: "La veste è femminile: la." },
+            { t: "mcq", q: "«Tu as vu mes clés ?» — «Oui, je ___ ai vues.»", opts: ["les", "le", "la", "l'"], a: 0, why: "Plurale: les." },
+            { t: "listen", say: "Ce gâteau au chocolat ? Je le prends, il a l'air délicieux.", q: "Cosa fa la persona?", opts: ["Prende la torta al cioccolato.", "Non prende la torta.", "Prepara la torta.", "Regala la torta."], a: 0, why: "Je le prends = lo prendo." },
+            { t: "match", q: "Abbina", pairs: [["la vitrine", "la vetrina"], ["la caisse", "la cassa"], ["l'invitation", "l'invito"], ["appeler", "chiamare"]] },
+            { t: "order", q: "Riordina: «Voglio metterlo accanto alla cassa.»", words: ["Je", "veux", "le", "mettre", "à", "côté", "de", "la", "caisse."], why: "Il pronome va prima dell'infinito." }
+          ],
+          test: [
+            { t: "mcq", q: "Come si dice «non la prendo»?", opts: ["Je ne la prends pas.", "Je la ne prends pas.", "Je ne prends la pas.", "Je ne prends pas la."], a: 0, why: "Ne + pronome + verbo + pas." },
+            { t: "mcq", q: "«La lettre ? Je l'ai ___.» (scritta)", opts: ["écrite", "écrit", "écrits", "écrites"], a: 0, why: "Accordo con il pronome femminile prima di avoir." },
+            { t: "mcq", q: "«Le manteau ? Je ___ achète.»", opts: ["l'", "le", "la", "les"], a: 0, why: "Davanti a vocale: l'achète." },
+            { t: "mcq", q: "Imperativo: «Mangia le torte!» con il pronome…", opts: ["Mange-les !", "Les mange !", "Mange les !", "Les-mange !"], a: 0, why: "Imperativo affermativo: pronome dopo, con trattino." },
+            { t: "listen", say: "Tes clés ? Je les ai vues sur la table de la cuisine.", q: "Dove sono le chiavi?", opts: ["Sul tavolo della cucina", "Nella borsa", "Sotto il letto", "Vicino alla porta"], a: 0, why: "Je les ai vues sur la table." },
+            { t: "listen", say: "Oui, je les ai toutes envoyées hier. Odette et Madame Pons, je les ai appelées aussi.", q: "Cosa ha fatto Léa?", opts: ["Ha mandato tutti gli inviti e chiamato Odette e Madame Pons.", "Ha dimenticato gli inviti.", "Manderà gli inviti domani.", "Ha chiamato solo M. Bernard."], a: 0, why: "Je les ai envoyées, je les ai appelées." },
+            { t: "listen", say: "Il vous va très bien, ce manteau. Oui, je le prends !", q: "Cosa decide il cliente?", opts: ["Prende il cappotto.", "Prova un altro cappotto.", "Non compra niente.", "Chiede uno sconto."], a: 0, why: "Je le prends." },
+            { t: "type", q: "«Tu regardes le film ?» — «Oui, je ___ regarde.»", a: ["le"], why: "Le film è maschile: le." },
+            { t: "type", q: "Completa: «Tu as ___ mon message ?» (ricevuto)", a: ["reçu", "recu"], why: "Recevoir → reçu." },
+            { t: "type", say: "Appelle-moi quand tu arrives à la gare.", q: "Ascolta e completa: «___-moi quand tu arrives à la gare.»", a: ["Appelle"], why: "Appeler → appelle-moi (chiamami)." },
+            { t: "order", q: "Riordina: «Le invitazioni, le ho mandate ieri.»", words: ["Les", "invitations,", "je", "les", "ai", "envoyées", "hier."], why: "Les prima di avoir; accordo -ées." },
+            { t: "match", q: "Abbina", pairs: [["le gâteau", "je le mange"], ["la robe", "je la prends"], ["les bonbons", "je les aime"], ["l'enseigne", "je l'installe"]] }
+          ],
+          recap: {
+            can: ["Sostituire un nome con le, la, l', les", "Mettere il pronome al posto giusto (presente, negazione, infinito)", "Usare il pronome al passé composé con l'accordo", "Dire in negozio: «Je le prends !»"],
+            phrases: [{ fr: "Cette veste ? Je la prends !", it: "Questa giacca? La prendo!" }, { fr: "Les invitations, je les ai envoyées hier.", it: "Gli inviti li ho mandati ieri." }, { fr: "Je veux le mettre à côté de la caisse.", it: "Voglio metterlo accanto alla cassa." }],
+            trap: "Il pronome va PRIMA del verbo (je LA prends), ma con un infinito va prima dell'infinito: je veux LA prendre."
+          }
+        }
+      ]
+    },
+    {
+      n: 9, arr: "9e", name: "Santé", it: "Salute", level: "A2",
+      lessons: [
+        /* ---------------- LEZIONE 9-1 ---------------- */
+        {
+          id: "9-1", street: "Rue du Corps", title: "Il corpo e «avoir mal à»",
+          goal: "Nominare le parti del corpo e dire dove ti fa male con «j'ai mal à la / au / aux».",
+          episode: {
+            title: "Gigi sta male",
+            intro: "Mancano due giorni all'inaugurazione. Alle sei del mattino Léa trova Gigi seduto al bancone, pallido come la farina, avvolto in una coperta. Croissant lo osserva da vicino con l'aria di un medico molto preoccupato e poco qualificato.",
+            lines: [
+              { who: "Léa", fr: "Gigi, tu es tout blanc ! Qu'est-ce que tu as ? Tu as mal quelque part ?", it: "Gigi, sei bianchissimo! Cos'hai? Ti fa male da qualche parte?" },
+              { who: "Gigi", fr: "J'ai mal à la tête, j'ai mal à la gorge, et j'ai mal partout.", it: "Mi fa male la testa, mi fa male la gola, e mi fa male dappertutto." },
+              { who: "Léa", fr: "Tu as mal au ventre aussi ? Tu as mangé tous les calissons d'hier ?", it: "Ti fa male anche la pancia? Hai mangiato tutti i calissons di ieri?" },
+              { who: "Gigi", fr: "Non, seulement trois… ou quatre. Mais j'ai très mal au dos et aux jambes.", it: "No, solo tre… o quattro. Ma ho molto male alla schiena e alle gambe." },
+              { who: "Croissant", fr: "Moi, j'ai mal au cœur quand je vois cette couverture. Elle n'est pas à toi, elle est à moi.", it: "A me si spezza il cuore quando vedo questa coperta. Non è tua, è mia." },
+              { who: "Léa", fr: "Montre-moi ta main… Tu es brûlant ! Tu as sûrement de la fièvre.", it: "Fammi vedere la mano… Scotti! Avrai sicuramente la febbre." },
+              { who: "Gigi", fr: "Ce n'est rien, je vais bien. Je dois préparer les gâteaux pour samedi.", it: "Non è niente, sto bene. Devo preparare i dolci per sabato." },
+              { who: "Léa", fr: "Pas question. Tu retournes au lit, et moi je vais tout de suite à la pharmacie.", it: "Non se ne parla. Torni a letto, e io vado subito in farmacia." }
+            ],
+            outro: "Gigi protesta, ma le gambe non lo reggono. Torna su per le scale, una mano sulla fronte e l'altra sulla ringhiera. Croissant lo segue, si stende sui suoi piedi e non si muove più: per una volta, la coperta la divide.",
+            you: "«{nome}, per dire dove fa male basta «j'ai mal à» + parte del corpo: j'ai mal à la tête, au dos, aux pieds. Attenzione alle fusioni: à + le = au, à + les = aux. Le conosci già!»",
+            mine: { fr: "Je m'appelle {nome}, et quand je travaille trop à l'ordinateur, j'ai mal aux yeux et au dos.", it: "Mi chiamo {nome}, e quando lavoro troppo al computer mi fanno male gli occhi e la schiena." }
+          },
+          words: [
+            { fr: "la tête", it: "la testa", say: "la tèt", hook: "TÊTE = testa: il cappellino sulla Ê ricorda la S scomparsa (testa → tête). Che coincidenza: un cappello sulla testa!",
+              ex: { fr: "J'ai mal à la tête depuis ce matin, à cause du bruit des travaux.", it: "Mi fa male la testa da stamattina, per colpa del rumore dei lavori." } },
+            { fr: "la gorge", it: "la gola", say: "la gòrj", hook: "GORGE = gola (pensa alla «gorgia» toscana o ai gargarismi). J'ai mal à la gorge = ho mal di gola.",
+              ex: { fr: "J'ai mal à la gorge et je n'arrive presque plus à parler.", it: "Ho mal di gola e non riesco quasi più a parlare." } },
+            { fr: "le ventre", it: "la pancia", say: "lə vãtr", hook: "VENTRE = ventre, pancia. J'ai mal au ventre = ho mal di pancia (spesso dopo troppi calissons).",
+              ex: { fr: "Les enfants ont mangé trop de bonbons, maintenant ils ont mal au ventre.", it: "I bambini hanno mangiato troppe caramelle, adesso hanno mal di pancia." } },
+            { fr: "le dos", it: "la schiena", say: "lə dò", hook: "LE DOS = il dorso, la schiena. Il sac à dos è lo zaino! J'ai mal au dos = ho mal di schiena.",
+              ex: { fr: "Après dix heures de travail debout, j'ai toujours mal au dos.", it: "Dopo dieci ore di lavoro in piedi ho sempre mal di schiena." } },
+            { fr: "le bras / la main", it: "il braccio / la mano", say: "lə bra / la mẽ", hook: "BRAS = braccio (la S è muta). MAIN = mano, con la nasale: «mẽ». Gli innamorati camminano «main dans la main», mano nella mano.",
+              ex: { fr: "Je me suis coupé la main en préparant le dîner.", it: "Mi sono tagliato la mano preparando la cena." } },
+            { fr: "la jambe / le pied", it: "la gamba / il piede", say: "la jãb / lə pjé", hook: "JAMBE = gamba, con la J dolce: jãb. PIED = piede (ricordi «à pied»?).",
+              ex: { fr: "J'ai marché toute la journée dans Paris, j'ai mal aux pieds et aux jambes.", it: "Ho camminato tutto il giorno per Parigi, mi fanno male i piedi e le gambe." } },
+            { fr: "les yeux / l'œil", it: "gli occhi / l'occhio", say: "lé zjö / löj", hook: "Plurale stranissimo: un ŒIL, des YEUX (lé-zjö). Come se gli occhi cambiassero faccia quando sono in due!",
+              ex: { fr: "Elle a de très beaux yeux verts, comme sa grand-mère.", it: "Ha degli occhi verdi bellissimi, come sua nonna." } },
+            { fr: "le cœur", it: "il cuore", say: "lə kör", hook: "CŒUR = cuore. Par cœur = a memoria (col cuore!). «J'ai mal au cœur» = ho la nausea, non mal di cuore!",
+              ex: { fr: "Dans le bateau, j'ai eu mal au cœur pendant tout le voyage.", it: "Sulla barca ho avuto la nausea per tutto il viaggio." } },
+            { fr: "avoir mal à", it: "avere male a", say: "avwar mal a", hook: "J'AI MAL À + la / au / aux: j'ai mal à la tête, au dos, aux dents. Mai «j'ai mal de»!",
+              ex: { fr: "J'ai mal aux dents : je dois prendre rendez-vous chez le dentiste.", it: "Ho mal di denti: devo prendere appuntamento dal dentista." } },
+            { fr: "la fièvre", it: "la febbre", say: "la fjèvr", hook: "FIÈVRE = febbre, con IÈ al posto della E italiana. J'ai de la fièvre = ho la febbre (partitivo!).",
+              ex: { fr: "Il a trente-neuf de fièvre, il doit rester au lit trois jours.", it: "Ha trentanove di febbre, deve restare a letto tre giorni." } }
+          ],
+          tip: {
+            title: "Avoir mal à: dove fa male?",
+            body: "<div class='tbl'><table><thead><tr><th>Parte del corpo</th><th>Genere</th><th>Ho mal di…</th></tr></thead><tbody><tr><td>la tête, la gorge, la jambe</td><td>femminile</td><td>j'ai mal <b>à la</b> tête</td></tr><tr><td>le dos, le ventre, le bras, le pied</td><td>maschile</td><td>j'ai mal <b>au</b> dos</td></tr><tr><td>l'oreille, l'épaule</td><td>vocale</td><td>j'ai mal <b>à l'</b>oreille</td></tr><tr><td>les dents, les yeux, les pieds</td><td>plurale</td><td>j'ai mal <b>aux</b> dents</td></tr></tbody></table></div><ul><li>Struttura: <b>avoir mal à</b> + articolo determinativo (au, à la, à l', aux).</li><li><b>J'ai mal au cœur</b> = ho la nausea (non dolore al cuore!).</li><li>Domande: <b>Qu'est-ce que tu as ?</b> (cos'hai?), <b>Où as-tu mal ?</b> (dove ti fa male?)</li><li>Plurali irregolari: un œil → des <b>yeux</b>.</li></ul>",
+            examples: [
+              { fr: "Qu'est-ce que tu as ? — J'ai mal à la tête et au ventre.", it: "Cos'hai? — Mi fanno male la testa e la pancia." },
+              { fr: "Après le sport, j'ai mal aux jambes et aux bras.", it: "Dopo lo sport mi fanno male le gambe e le braccia." },
+              { fr: "J'ai mal à l'oreille droite depuis deux jours.", it: "Mi fa male l'orecchio destro da due giorni." },
+              { fr: "Elle a de la fièvre et elle a mal à la gorge.", it: "Ha la febbre e ha mal di gola." },
+              { fr: "Où as-tu mal exactement ? Montre-moi.", it: "Dove ti fa male esattamente? Fammi vedere." }
+            ]
+          },
+          practice: [
+            { t: "mcq", q: "Completa: «J'ai mal ___ tête.»", opts: ["à la", "au", "aux", "de la"], a: 0, why: "La tête è femminile: à la." },
+            { t: "mcq", q: "Completa: «J'ai mal ___ dos.»", opts: ["au", "à la", "aux", "à le"], a: 0, why: "À + le = au." },
+            { t: "listen", say: "J'ai marché toute la journée dans Paris, j'ai mal aux pieds et aux jambes.", q: "Cosa gli fa male?", opts: ["I piedi e le gambe", "La testa e la schiena", "Le braccia e le mani", "Gli occhi"], a: 0, why: "Aux pieds, aux jambes." },
+            { t: "match", q: "Abbina", pairs: [["la tête", "la testa"], ["le dos", "la schiena"], ["la gorge", "la gola"], ["le ventre", "la pancia"]] },
+            { t: "order", q: "Riordina: «Ho mal di gola e ho la febbre.»", words: ["J'ai", "mal", "à", "la", "gorge", "et", "j'ai", "de", "la", "fièvre."], why: "Avoir mal à + avoir de la fièvre." }
+          ],
+          test: [
+            { t: "mcq", q: "Completa: «J'ai mal ___ dents.»", opts: ["aux", "au", "à les", "des"], a: 0, why: "À + les = aux." },
+            { t: "mcq", q: "Il plurale di «un œil» è…", opts: ["des yeux", "des œils", "des œux", "des yeils"], a: 0, why: "Plurale irregolare: des yeux." },
+            { t: "mcq", q: "«J'ai mal au cœur» significa…", opts: ["Ho la nausea.", "Ho un dolore al petto.", "Sono innamorato.", "Ho il cuore spezzato."], a: 0, why: "Avoir mal au cœur = avere la nausea." },
+            { t: "mcq", q: "Come chiedi a un amico «cos'hai?»", opts: ["Qu'est-ce que tu as ?", "Qu'est-ce que tu es ?", "Où tu es mal ?", "Tu as quoi mal ?"], a: 0, why: "Qu'est-ce que tu as ?" },
+            { t: "listen", say: "J'ai mal à la gorge et je n'arrive presque plus à parler.", q: "Qual è il problema?", opts: ["Ha mal di gola e quasi non riesce a parlare.", "Ha mal di testa e non riesce a dormire.", "Ha mal di pancia e non mangia.", "Ha perso la voce per aver cantato."], a: 0, why: "Mal à la gorge." },
+            { t: "listen", say: "Il a trente-neuf de fièvre, il doit rester au lit trois jours.", q: "Quanta febbre ha?", opts: ["39", "38", "37", "40"], a: 0, why: "Trente-neuf = 39." },
+            { t: "listen", say: "Après dix heures de travail debout, j'ai toujours mal au dos.", q: "Quando gli fa male la schiena?", opts: ["Dopo dieci ore di lavoro in piedi", "La mattina appena sveglio", "Dopo lo sport", "Quando dorme male"], a: 0, why: "J'ai mal au dos." },
+            { t: "type", q: "Completa: «J'ai mal ___ ventre.»", a: ["au"], why: "Le ventre → au." },
+            { t: "type", q: "Completa: «Elle a de beaux ___ verts.» (occhi)", a: ["yeux"], why: "Des yeux." },
+            { t: "type", say: "J'ai mal à la tête depuis ce matin.", q: "Ascolta e completa: «J'ai mal à la ___ depuis ce matin.»", a: ["tête", "tete"], why: "La tête = la testa." },
+            { t: "order", q: "Riordina: «Dopo lo sport mi fanno male le gambe.»", words: ["Après", "le", "sport,", "j'ai", "mal", "aux", "jambes."], why: "Aux jambes (plurale)." },
+            { t: "match", q: "Abbina", pairs: [["le bras", "il braccio"], ["la main", "la mano"], ["le pied", "il piede"], ["la jambe", "la gamba"]] }
+          ],
+          recap: {
+            can: ["Nominare le principali parti del corpo", "Dire dove fa male con j'ai mal à la / au / aux", "Dire che hai la febbre", "Chiedere a qualcuno cos'ha e dove ha male"],
+            phrases: [{ fr: "J'ai mal à la tête et à la gorge.", it: "Mi fanno male la testa e la gola." }, { fr: "J'ai mal au dos et aux jambes.", it: "Mi fanno male la schiena e le gambe." }, { fr: "Tu as de la fièvre ? Qu'est-ce que tu as ?", it: "Hai la febbre? Cos'hai?" }],
+            trap: "«J'ai mal AU CŒUR» vuol dire «ho la nausea», non mal di cuore. E un œil, ma des YEUX!"
+          }
+        },
+        /* ---------------- LEZIONE 9-2 ---------------- */
+        {
+          id: "9-2", street: "Rue de la Pharmacie", title: "In farmacia",
+          goal: "Spiegare i sintomi al farmacista, chiedere un medicinale e capire come prenderlo.",
+          episode: {
+            title: "La croce verde",
+            intro: "La farmacia all'angolo ha l'insegna a croce verde che lampeggia anche di giorno. La farmacista, Madame Petit, conosce tutti nel quartiere e sa già che il nuovo padrone del caffè «lavora troppo». Léa entra di corsa con una lista di sintomi scritta sul telefono.",
+            lines: [
+              { who: "Léa", fr: "Bonjour madame. Je voudrais quelque chose contre la fièvre et le mal de gorge, s'il vous plaît.", it: "Buongiorno signora. Vorrei qualcosa contro la febbre e il mal di gola, per favore." },
+              { who: "Mme Petit", fr: "C'est pour vous ? Il a d'autres symptômes ? Il tousse ? Il a le nez qui coule ?", it: "È per lei? Ha altri sintomi? Tossisce? Ha il naso che cola?" },
+              { who: "Léa", fr: "C'est pour mon ami. Il tousse un peu, il a mal partout et il est très fatigué.", it: "È per il mio amico. Tossisce un po', ha male dappertutto ed è molto stanco." },
+              { who: "Mme Petit", fr: "Ça ressemble à une grosse grippe. Je vous donne du paracétamol et un sirop pour la toux.", it: "Sembra una brutta influenza. Le do del paracetamolo e uno sciroppo per la tosse." },
+              { who: "Léa", fr: "Il doit prendre combien de comprimés par jour ? Avant ou après les repas ?", it: "Quante compresse deve prendere al giorno? Prima o dopo i pasti?" },
+              { who: "Mme Petit", fr: "Un comprimé toutes les six heures, maximum quatre par jour. Le sirop, trois fois par jour, après les repas.", it: "Una compressa ogni sei ore, massimo quattro al giorno. Lo sciroppo tre volte al giorno, dopo i pasti." },
+              { who: "Mme Petit", fr: "Et si la fièvre ne baisse pas dans deux jours, il faut aller chez le médecin.", it: "E se la febbre non scende entro due giorni, bisogna andare dal medico." },
+              { who: "Croissant", fr: "Vous avez quelque chose pour un chat stressé par la maladie de son humain ?", it: "Avete qualcosa per un gatto stressato dalla malattia del suo umano?" }
+            ],
+            outro: "Léa torna con un sacchetto di medicine, un termometro e una tisana al timo «della ricetta di mia nonna», regalo di Madame Petit. Ma la sera la febbre di Gigi sale a trentanove e mezzo. Françoise prende il telefono: «Domattina chiamo il dottor Dubois.»",
+            you: "«{nome}, in Francia i farmacisti sono bravissimi a consigliare. Spiega i sintomi con «j'ai mal à…», «je tousse», «j'ai de la fièvre», e chiedi: «Je dois en prendre combien par jour ?»»",
+            mine: { fr: "Bonjour, je m'appelle {nome}, j'ai un rhume et je voudrais quelque chose pour le nez, s'il vous plaît.", it: "Buongiorno, mi chiamo {nome}, ho il raffreddore e vorrei qualcosa per il naso, per favore." }
+          },
+          words: [
+            { fr: "le médicament", it: "il medicinale, la medicina", say: "lə médikamã", hook: "MÉDICAMENT = medicamento, medicina. La médecine invece è la scienza medica (e anche… le medicine in senso generale).",
+              ex: { fr: "Ce médicament est en vente libre, vous n'avez pas besoin d'ordonnance.", it: "Questo medicinale è da banco, non le serve la ricetta." } },
+            { fr: "le comprimé", it: "la compressa", say: "lə kõprimé", hook: "COMPRIMÉ: una polvere COMPRESSA in pastiglia. Prendre un comprimé avec un verre d'eau.",
+              ex: { fr: "Prenez un comprimé le matin et un comprimé le soir, pendant cinq jours.", it: "Prenda una compressa la mattina e una la sera, per cinque giorni." } },
+            { fr: "le sirop", it: "lo sciroppo", say: "lə sirò", hook: "SIROP = sciroppo, quasi identico. Un sirop contre la toux. E il «sirop de menthe» è una bibita!",
+              ex: { fr: "Le sirop pour la toux a un goût horrible, mais il marche bien.", it: "Lo sciroppo per la tosse ha un sapore orribile, ma funziona bene." } },
+            { fr: "l'ordonnance", it: "la ricetta medica", say: "lordonãs", hook: "Trappola: L'ORDONNANCE è la ricetta del medico (ordina le medicine). La ricetta di cucina è «la recette»!",
+              ex: { fr: "Pour cet antibiotique, il faut une ordonnance du médecin.", it: "Per questo antibiotico serve la ricetta del medico." } },
+            { fr: "tousser / la toux", it: "tossire / la tosse", say: "tusé / la tu", hook: "TOUSSER = tossire, con OU = u. LA TOUX = la tosse, con la X muta: «tu».",
+              ex: { fr: "Il tousse toute la nuit, il ne peut pas dormir.", it: "Tossisce tutta la notte, non riesce a dormire." } },
+            { fr: "le rhume", it: "il raffreddore", say: "lə rüm", hook: "RHUME = raffreddore, dal greco «rheuma» (flusso): il naso che cola! Être enrhumé = essere raffreddato.",
+              ex: { fr: "J'ai un gros rhume : j'ai le nez bouché et j'éternue sans arrêt.", it: "Ho un brutto raffreddore: ho il naso chiuso e starnutisco di continuo." } },
+            { fr: "la grippe", it: "l'influenza", say: "la grip", hook: "LA GRIPPE: l'influenza, che ti «aggrappa» (gripper) e non ti lascia. Avoir la grippe.",
+              ex: { fr: "Chaque hiver, beaucoup de gens attrapent la grippe au bureau.", it: "Ogni inverno molte persone si prendono l'influenza in ufficio." } },
+            { fr: "contre / pour", it: "contro / per", say: "kõtr / pur", hook: "Quelque chose CONTRE la fièvre o POUR la gorge: tutti e due vanno bene in farmacia.",
+              ex: { fr: "Vous avez quelque chose contre les piqûres de moustique ?", it: "Avete qualcosa contro le punture di zanzara?" } },
+            { fr: "… fois par jour", it: "… volte al giorno", say: "fwa par jur", hook: "UNE FOIS, DEUX FOIS: una volta, due volte. Par jour = al giorno, par semaine = alla settimana.",
+              ex: { fr: "Prenez ce sirop trois fois par jour, après les repas.", it: "Prenda questo sciroppo tre volte al giorno, dopo i pasti." } },
+            { fr: "le nez", it: "il naso", say: "lə né", hook: "NEZ = naso: la Z finale è muta, «né». Avoir le nez qui coule = avere il naso che cola.",
+              ex: { fr: "Mon fils a le nez qui coule depuis trois jours.", it: "Mio figlio ha il naso che cola da tre giorni." } }
+          ],
+          tip: {
+            title: "In farmacia: spiegare i sintomi e capire la posologia",
+            body: "<div class='tbl'><table><thead><tr><th>Vuoi dire</th><th>In francese</th></tr></thead><tbody><tr><td>Vorrei qualcosa per…</td><td>Je voudrais quelque chose contre / pour…</td></tr><tr><td>Ho la febbre</td><td>J'ai de la fièvre.</td></tr><tr><td>Tossisco</td><td>Je tousse. / J'ai de la toux.</td></tr><tr><td>Ho il raffreddore</td><td>J'ai un rhume. / Je suis enrhumé(e).</td></tr><tr><td>Ho l'influenza</td><td>J'ai la grippe.</td></tr><tr><td>Quante al giorno?</td><td>Combien de fois par jour ?</td></tr><tr><td>Serve la ricetta?</td><td>Il faut une ordonnance ?</td></tr></tbody></table></div><ul><li><b>Posologia:</b> un comprimé <b>toutes les</b> six heures (ogni sei ore), deux fois <b>par</b> jour, <b>avant / après</b> les repas.</li><li><b>L'ordonnance</b> = ricetta medica; <b>la recette</b> = ricetta di cucina.</li><li>La farmacia di turno si chiama <b>la pharmacie de garde</b>.</li></ul>",
+            examples: [
+              { fr: "Je voudrais quelque chose contre le mal de tête, s'il vous plaît.", it: "Vorrei qualcosa contro il mal di testa, per favore." },
+              { fr: "Je suis enrhumée et j'ai un peu de fièvre depuis hier.", it: "Sono raffreddata e ho un po' di febbre da ieri." },
+              { fr: "Prenez deux comprimés toutes les huit heures.", it: "Prenda due compresse ogni otto ore." },
+              { fr: "Il faut une ordonnance pour ce médicament ?", it: "Serve la ricetta per questo medicinale?" },
+              { fr: "La pharmacie de garde est ouverte toute la nuit.", it: "La farmacia di turno è aperta tutta la notte." }
+            ]
+          },
+          practice: [
+            { t: "mcq", q: "«L'ordonnance» è…", opts: ["la ricetta del medico", "la ricetta di cucina", "l'ordine di arrivo", "lo scontrino"], a: 0, why: "Ricetta medica = ordonnance; di cucina = recette." },
+            { t: "mcq", q: "«Je tousse» significa…", opts: ["tossisco", "starnutisco", "ho la febbre", "ho sete"], a: 0, why: "Tousser = tossire." },
+            { t: "listen", say: "Prenez ce sirop trois fois par jour, après les repas.", q: "Come si prende lo sciroppo?", opts: ["Tre volte al giorno, dopo i pasti", "Una volta al giorno, prima di dormire", "Tre volte al giorno, prima dei pasti", "Ogni tre ore"], a: 0, why: "Trois fois par jour, après les repas." },
+            { t: "match", q: "Abbina", pairs: [["le comprimé", "la compressa"], ["le sirop", "lo sciroppo"], ["le rhume", "il raffreddore"], ["la grippe", "l'influenza"]] },
+            { t: "order", q: "Riordina: «Vorrei qualcosa contro la febbre, per favore.»", words: ["Je", "voudrais", "quelque", "chose", "contre", "la", "fièvre,", "s'il", "vous", "plaît."], why: "Quelque chose contre…" }
+          ],
+          test: [
+            { t: "mcq", q: "«Un comprimé toutes les six heures» significa…", opts: ["una compressa ogni sei ore", "sei compresse al giorno", "una compressa alle sei", "una compressa per sei giorni"], a: 0, why: "Toutes les + ore = ogni." },
+            { t: "mcq", q: "La farmacia aperta di notte si chiama…", opts: ["la pharmacie de garde", "la pharmacie de nuit ouverte", "la pharmacie libre", "la pharmacie d'urgence"], a: 0, why: "Pharmacie de garde." },
+            { t: "mcq", q: "«Je suis enrhumé» significa…", opts: ["Sono raffreddato.", "Sono ubriaco.", "Sono stanco.", "Sono guarito."], a: 0, why: "Enrhumé = raffreddato." },
+            { t: "mcq", q: "Completa: «J'ai ___ fièvre.»", opts: ["de la", "la", "une", "du"], a: 0, why: "Avoir de la fièvre (partitivo)." },
+            { t: "listen", say: "Un comprimé toutes les six heures, maximum quatre par jour.", q: "Quante compresse al massimo al giorno?", opts: ["4", "6", "2", "8"], a: 0, why: "Maximum quatre par jour." },
+            { t: "listen", say: "J'ai un gros rhume : j'ai le nez bouché et j'éternue sans arrêt.", q: "Cos'ha?", opts: ["Un brutto raffreddore con naso chiuso e starnuti", "Mal di pancia e nausea", "Mal di schiena", "Un'allergia agli occhi"], a: 0, why: "Rhume, nez bouché, éternuer." },
+            { t: "listen", say: "Pour cet antibiotique, il faut une ordonnance du médecin.", q: "Cosa serve per l'antibiotico?", opts: ["La ricetta del medico", "Un documento d'identità", "Pagare in contanti", "Niente"], a: 0, why: "Il faut une ordonnance." },
+            { t: "type", q: "Completa: «Il ___ toute la nuit.» (tossisce)", a: ["tousse"], why: "Tousser → il tousse." },
+            { t: "type", q: "Completa: «Prenez ce sirop deux ___ par jour.» (volte)", a: ["fois"], why: "Deux fois par jour." },
+            { t: "type", say: "Mon fils a le nez qui coule depuis trois jours.", q: "Ascolta e completa: «Mon fils a le ___ qui coule.»", a: ["nez"], why: "Le nez = il naso." },
+            { t: "order", q: "Riordina: «Serve la ricetta per questo medicinale?»", words: ["Il", "faut", "une", "ordonnance", "pour", "ce", "médicament", "?"], why: "Il faut une ordonnance ?" },
+            { t: "match", q: "Abbina", pairs: [["le médicament", "il medicinale"], ["l'ordonnance", "la ricetta medica"], ["la toux", "la tosse"], ["le nez", "il naso"]] }
+          ],
+          recap: {
+            can: ["Spiegare i sintomi in farmacia", "Chiedere un medicinale contro o per qualcosa", "Capire la posologia: toutes les six heures, deux fois par jour", "Sapere cosa sono l'ordonnance e la pharmacie de garde"],
+            phrases: [{ fr: "Je voudrais quelque chose contre la fièvre et la toux.", it: "Vorrei qualcosa contro la febbre e la tosse." }, { fr: "Je dois en prendre combien par jour ?", it: "Quante ne devo prendere al giorno?" }, { fr: "Un comprimé toutes les six heures, après les repas.", it: "Una compressa ogni sei ore, dopo i pasti." }],
+            trap: "L'ORDONNANCE è la ricetta del medico; LA RECETTE è la ricetta di cucina. Non chiedere una «recette» in farmacia!"
+          }
+        },
+        /* ---------------- LEZIONE 9-3 ---------------- */
+        {
+          id: "9-3", street: "Rue du Médecin", title: "Dal medico: prendere appuntamento e spiegare",
+          goal: "Prendere un appuntamento dal medico, rispondere alle sue domande e capire i suoi consigli con «il faut» e «devoir».",
+          episode: {
+            title: "Il dottor Dubois",
+            intro: "Venerdì mattina, il giorno prima dell'inaugurazione. Françoise ha ottenuto un appuntamento d'urgenza dal dottor Dubois, un medico anziano con la barba bianca che cura il quartiere da trent'anni. Gigi entra nello studio appoggiato a Léa, con Croissant nella cesta «per sostegno morale».",
+            lines: [
+              { who: "M. Dubois", fr: "Bonjour, asseyez-vous. Alors, qu'est-ce qui ne va pas, jeune homme ?", it: "Buongiorno, si sieda. Allora, cosa c'è che non va, giovanotto?" },
+              { who: "Gigi", fr: "J'ai de la fièvre, je tousse et j'ai mal partout. Je suis très fatigué.", it: "Ho la febbre, tossisco e ho male dappertutto. Sono stanchissimo." },
+              { who: "M. Dubois", fr: "Depuis quand avez-vous ces symptômes ? Et combien de fièvre ?", it: "Da quando ha questi sintomi? E quanta febbre?" },
+              { who: "Gigi", fr: "Depuis mercredi. Hier soir, j'avais trente-neuf et demi.", it: "Da mercoledì. Ieri sera avevo trentanove e mezzo." },
+              { who: "M. Dubois", fr: "Respirez profondément… Toussez… Ouvrez la bouche. Hmm, c'est la grippe.", it: "Respiri profondamente… Tossisca… Apra la bocca. Mmh, è l'influenza." },
+              { who: "M. Dubois", fr: "Vous devez rester au lit trois jours et boire beaucoup d'eau. Il ne faut pas travailler.", it: "Deve restare a letto tre giorni e bere molta acqua. Non deve lavorare." },
+              { who: "Gigi", fr: "Trois jours ? Impossible, docteur : demain, j'ouvre une confiserie !", it: "Tre giorni? Impossibile, dottore: domani apro una confetteria!" },
+              { who: "M. Dubois", fr: "La confiserie de Zizì ? Alors… vous pouvez venir une heure, assis, avec un masque. Pas plus.", it: "La confetteria di Zizì? Allora… può venire un'ora, seduto, con la mascherina. Non di più." }
+            ],
+            outro: "Il dottor Dubois scrive la ricetta e poi, sul retro, aggiunge una riga: «Je serai là demain. J'achetais mes bonbons chez Zizì quand j'avais six ans.» Sembra che tutto il quartiere abbia una storia con Zizì. Gigi esce un po' più leggero, nonostante la febbre.",
+            you: "«{nome}, dal medico la prima domanda è sempre «Qu'est-ce qui ne va pas ?» e la seconda «Depuis quand ?». Prepara le risposte: i sintomi con «j'ai mal à…» e la durata con «depuis + tempo».»",
+            mine: { fr: "Bonjour, je m'appelle {nome}, je voudrais prendre rendez-vous avec le médecin, le plus tôt possible.", it: "Buongiorno, mi chiamo {nome}, vorrei prendere un appuntamento con il medico, il prima possibile." }
+          },
+          words: [
+            { fr: "le médecin / le docteur", it: "il medico / il dottore", say: "lə médsẽ / lə doktör", hook: "LE MÉDECIN è la professione (anche per una donna: elle est médecin). DOCTEUR si usa per chiamarlo: «Bonjour, docteur».",
+              ex: { fr: "Mon médecin est très gentil, et il prend toujours le temps d'écouter.", it: "Il mio medico è molto gentile, e si prende sempre il tempo di ascoltare." } },
+            { fr: "prendre rendez-vous", it: "prendere appuntamento", say: "prãdr rãdévu", hook: "RENDEZ-VOUS: «rendetevi» in un luogo! Prendre rendez-vous chez le médecin, chez le coiffeur.",
+              ex: { fr: "J'ai pris rendez-vous chez le dentiste pour mardi à quinze heures.", it: "Ho preso appuntamento dal dentista per martedì alle quindici." } },
+            { fr: "Qu'est-ce qui ne va pas ?", it: "Cosa c'è che non va?", say: "kèskì nə va pa", hook: "La domanda classica del medico (e degli amici preoccupati): «cosa non va?». Rispondi con i sintomi.",
+              ex: { fr: "Tu as l'air triste : qu'est-ce qui ne va pas ? Tu veux en parler ?", it: "Sembri triste: cosa c'è che non va? Vuoi parlarne?" } },
+            { fr: "Depuis quand… ?", it: "Da quando…?", say: "dəpüì kã", hook: "DEPUIS QUAND ? = da quando? Risposta: depuis mercredi, depuis trois jours. Con il presente, come in italiano.",
+              ex: { fr: "Depuis quand avez-vous mal au dos ? — Depuis une semaine, environ.", it: "Da quando ha mal di schiena? — Da una settimana, circa." } },
+            { fr: "le symptôme", it: "il sintomo", say: "lə sẽptòm", hook: "SYMPTÔME: sintomo, con la Ô col cappellino. Les symptômes de la grippe: fièvre, toux, fatigue.",
+              ex: { fr: "Si les symptômes continuent après trois jours, rappelez-moi.", it: "Se i sintomi continuano dopo tre giorni, mi richiami." } },
+            { fr: "respirer", it: "respirare", say: "rèspiré", hook: "RESPIRER = respirare, identico. «Respirez profondément» = respiri profondamente: lo dicono tutti i medici del mondo.",
+              ex: { fr: "Respirez profondément par le nez, puis soufflez lentement.", it: "Respiri profondamente dal naso, poi soffi lentamente." } },
+            { fr: "il faut / il ne faut pas", it: "bisogna / non bisogna", say: "il fò / il nə fò pa", hook: "IL FAUT + infinito = bisogna. IL NE FAUT PAS = non bisogna, non si deve (un divieto gentile).",
+              ex: { fr: "Il faut boire beaucoup d'eau, et il ne faut pas sortir pendant trois jours.", it: "Bisogna bere molta acqua, e non bisogna uscire per tre giorni." } },
+            { fr: "malade / guéri", it: "malato / guarito", say: "malad / gérì", hook: "MALADE = malato (la maladie = la malattia). GUÉRIR = guarire, con GU che si legge «g» dura: guéri.",
+              ex: { fr: "J'ai été malade une semaine, mais maintenant je suis complètement guéri.", it: "Sono stato malato una settimana, ma adesso sono completamente guarito." } },
+            { fr: "fatigué(e)", it: "stanco/a", say: "fatigé", hook: "FATIGUÉ = stanco, affaticato. Con la GU dura. Je suis crevé (familiare) = sono distrutto!",
+              ex: { fr: "Je suis très fatigué ces jours-ci, je dors mal à cause du stress.", it: "Sono molto stanco in questi giorni, dormo male per lo stress." } },
+            { fr: "les urgences", it: "il pronto soccorso", say: "lé zürjãs", hook: "LES URGENCES (sempre plurale): il pronto soccorso. Il numero per l'ambulanza in Francia è il 15 (o il 112 europeo).",
+              ex: { fr: "Il s'est cassé la jambe au ski, on l'a emmené aux urgences.", it: "Si è rotto la gamba sciando, l'hanno portato al pronto soccorso." } }
+          ],
+          tip: {
+            title: "Dal medico: le domande e le risposte",
+            body: "<div class='tbl'><table><thead><tr><th>Il medico chiede</th><th>Tu rispondi</th></tr></thead><tbody><tr><td>Qu'est-ce qui ne va pas ?</td><td>J'ai mal à la gorge et je tousse.</td></tr><tr><td>Depuis quand ?</td><td>Depuis trois jours. / Depuis mercredi.</td></tr><tr><td>Vous avez de la fièvre ?</td><td>Oui, j'ai trente-neuf.</td></tr><tr><td>Vous prenez des médicaments ?</td><td>Oui, du paracétamol. / Non, rien.</td></tr><tr><td>Vous êtes allergique ?</td><td>Je suis allergique à la pénicilline.</td></tr></tbody></table></div><ul><li><b>Il faut</b> + infinito = bisogna: il faut rester au lit.</li><li><b>Il ne faut pas</b> + infinito = non bisogna / non si deve.</li><li><b>Vous devez</b> + infinito = deve (più personale).</li><li><b>Depuis</b> + presente: j'ai mal <b>depuis</b> trois jours (ho male da tre giorni).</li><li>Emergenze: <b>le 15</b> (SAMU, ambulanza), <b>le 112</b> (numero europeo), <b>les urgences</b>.</li></ul>",
+            examples: [
+              { fr: "Bonjour, je voudrais prendre rendez-vous avec le docteur Dubois.", it: "Buongiorno, vorrei prendere appuntamento con il dottor Dubois." },
+              { fr: "J'ai mal au ventre depuis hier soir.", it: "Ho mal di pancia da ieri sera." },
+              { fr: "Il faut vous reposer et il ne faut pas faire de sport.", it: "Deve riposarsi e non deve fare sport." },
+              { fr: "Vous devez prendre ces médicaments pendant une semaine.", it: "Deve prendere queste medicine per una settimana." },
+              { fr: "Je suis allergique aux arachides.", it: "Sono allergico alle arachidi." }
+            ]
+          },
+          practice: [
+            { t: "mcq", q: "Il medico ti chiede «Depuis quand ?». Rispondi:", opts: ["Depuis trois jours.", "Pendant trois jours.", "Dans trois jours.", "Il y a trois jours que."], a: 0, why: "Depuis + durata." },
+            { t: "mcq", q: "«Il ne faut pas sortir» significa…", opts: ["Non bisogna uscire.", "Non serve uscire.", "Bisogna uscire.", "Non si può entrare."], a: 0, why: "Il ne faut pas = non bisogna." },
+            { t: "listen", say: "J'ai pris rendez-vous chez le dentiste pour mardi à quinze heures.", q: "Quando è l'appuntamento?", opts: ["Martedì alle 15", "Mercoledì alle 15", "Martedì alle 5", "Giovedì alle 13"], a: 0, why: "Mardi à quinze heures." },
+            { t: "match", q: "Abbina", pairs: [["le médecin", "il medico"], ["le symptôme", "il sintomo"], ["respirer", "respirare"], ["les urgences", "il pronto soccorso"]] },
+            { t: "order", q: "Riordina: «Vorrei prendere appuntamento con il medico.»", words: ["Je", "voudrais", "prendre", "rendez-vous", "avec", "le", "médecin."], why: "Prendre rendez-vous." }
+          ],
+          test: [
+            { t: "mcq", q: "Il medico ti chiede «Qu'est-ce qui ne va pas ?». Significa…", opts: ["Cosa c'è che non va?", "Dove va?", "Cosa non le piace?", "Perché non viene?"], a: 0, why: "Domanda classica del medico." },
+            { t: "mcq", q: "Completa: «J'ai mal à la tête ___ hier.»", opts: ["depuis", "pendant", "il y a", "dans"], a: 0, why: "Depuis + punto di inizio." },
+            { t: "mcq", q: "In Francia, il numero dell'ambulanza (SAMU) è…", opts: ["il 15", "il 118", "il 911", "il 17"], a: 0, why: "15 = SAMU; 112 = numero europeo." },
+            { t: "mcq", q: "Una donna medico dice:", opts: ["Je suis médecin.", "Je suis médecine.", "Je suis médecinne.", "Je suis la docteure."], a: 0, why: "Médecin si usa anche per le donne." },
+            { t: "listen", say: "Depuis quand avez-vous mal au dos ? Depuis une semaine, environ.", q: "Da quanto ha mal di schiena?", opts: ["Da circa una settimana", "Da ieri", "Da un mese", "Da tre giorni"], a: 0, why: "Depuis une semaine." },
+            { t: "listen", say: "Vous devez rester au lit trois jours et boire beaucoup d'eau. Il ne faut pas travailler.", q: "Cosa consiglia il medico?", opts: ["Restare a letto tre giorni, bere molta acqua e non lavorare.", "Lavorare meno e fare sport.", "Prendere un antibiotico per una settimana.", "Andare al pronto soccorso."], a: 0, why: "Rester au lit, boire de l'eau, ne pas travailler." },
+            { t: "listen", say: "J'ai été malade une semaine, mais maintenant je suis complètement guéri.", q: "Come sta adesso?", opts: ["È completamente guarito.", "È ancora malato.", "Sta peggiorando.", "Deve tornare dal medico."], a: 0, why: "Guéri = guarito." },
+            { t: "type", q: "Completa: «Respirez ___.» (profondamente)", a: ["profondément", "profondement"], why: "Respirez profondément." },
+            { t: "type", q: "Completa: «Il ___ boire beaucoup d'eau.» (bisogna)", a: ["faut"], why: "Il faut + infinito." },
+            { t: "type", say: "Je suis très fatigué ces jours-ci, je dors mal.", q: "Ascolta e completa: «Je suis très ___ ces jours-ci.»", a: ["fatigué", "fatigue"], why: "Fatigué = stanco." },
+            { t: "order", q: "Riordina: «Da quando ha questi sintomi?»", words: ["Depuis", "quand", "avez-vous", "ces", "symptômes", "?"], why: "Depuis quand + presente." },
+            { t: "match", q: "Abbina", pairs: [["malade", "malato"], ["guéri", "guarito"], ["fatigué", "stanco"], ["prendre rendez-vous", "prendere appuntamento"]] }
+          ],
+          recap: {
+            can: ["Prendere un appuntamento dal medico", "Rispondere a «Qu'est-ce qui ne va pas ?» e «Depuis quand ?»", "Capire i consigli con il faut, il ne faut pas, vous devez", "Conoscere i numeri d'emergenza francesi"],
+            phrases: [{ fr: "Je voudrais prendre rendez-vous, le plus tôt possible.", it: "Vorrei prendere un appuntamento, il prima possibile." }, { fr: "J'ai de la fièvre et je tousse depuis mercredi.", it: "Ho la febbre e tossisco da mercoledì." }, { fr: "Il faut rester au lit et il ne faut pas travailler.", it: "Bisogna restare a letto e non bisogna lavorare." }],
+            trap: "DEPUIS + presente: «j'ai mal depuis trois jours» (ho male da tre giorni), non «j'ai eu mal depuis»."
+          }
+        },
+        /* ---------------- LEZIONE 9-4 ---------------- */
+        {
+          id: "9-4", street: "Rue des Conseils", title: "Dare consigli: l'imperativo",
+          goal: "Dare consigli e istruzioni con l'imperativo (prends, prenez, repose-toi), anche in forma negativa.",
+          episode: {
+            title: "Tutti i consigli del mondo",
+            intro: "Venerdì sera, nella camera sopra il caffè. Gigi è a letto con la febbre e una tisana. Uno dopo l'altro, tutti salgono le scale per dargli un consiglio. Gigi ne riceve così tanti che comincia a sentirsi meglio solo per farli smettere.",
+            lines: [
+              { who: "Léa", fr: "Bois ta tisane, prends ton médicament et dors. Ne regarde pas ton téléphone !", it: "Bevi la tua tisana, prendi la medicina e dormi. Non guardare il telefono!" },
+              { who: "Mme Lefèvre", fr: "Repose-toi, Gigi. Ne t'inquiète pas pour demain : je m'occupe de tout.", it: "Riposati, Gigi. Non preoccuparti per domani: mi occupo di tutto io." },
+              { who: "M. Bernard", fr: "Mange un peu de soupe, mon garçon. Zizì disait toujours : « Une bonne soupe guérit tout. »", it: "Mangia un po' di zuppa, ragazzo mio. Zizì diceva sempre: «Una buona zuppa guarisce tutto.»" },
+              { who: "Mme Duval", fr: "Mettez un pull, fermez la fenêtre et ne prenez pas de douche froide !", it: "Si metta un maglione, chiuda la finestra e non faccia la doccia fredda!" },
+              { who: "Gigi", fr: "Merci, merci à tous… Mais s'il vous plaît, laissez-moi dormir un peu !", it: "Grazie, grazie a tutti… Ma per favore, lasciatemi dormire un po'!" },
+              { who: "Croissant", fr: "Écoutez-moi tous : sortez de cette chambre. Le seul bon remède, c'est un chat sur les pieds.", it: "Ascoltatemi tutti: uscite da questa camera. L'unico vero rimedio è un gatto sui piedi." },
+              { who: "Léa", fr: "Bon, Croissant a raison. Venez, on descend. Dors bien, Gigi, à demain !", it: "Va bene, Croissant ha ragione. Venite, scendiamo. Dormi bene, Gigi, a domani!" },
+              { who: "Gigi", fr: "Réveillez-moi à huit heures… et n'ouvrez pas sans moi, promettez-le !", it: "Svegliatemi alle otto… e non aprite senza di me, promettetelo!" }
+            ],
+            outro: "La mattina dopo, miracolo: la febbre è scesa a trentasette e mezzo. Gigi si alza, si fa la doccia (calda), si mette la camicia bianca e la giacca grigia. Croissant ha già il papillon rosso. Di sotto si sentono già le voci dei primi invitati. È arrivato il grande giorno: benvenuti nel 10° arrondissement, l'ultimo.",
+            you: "«{nome}, l'imperativo è la forma dei consigli: prends, bois, dors (tu) e prenez, buvez, dormez (vous). È il verbo senza il soggetto. Ecco il mio consiglio per te: révise un peu chaque jour!»",
+            mine: { fr: "{nome}, écoute bien : bois beaucoup d'eau, dors huit heures et parle français tous les jours !", it: "{nome}, ascolta bene: bevi molta acqua, dormi otto ore e parla francese tutti i giorni!" }
+          },
+          words: [
+            { fr: "prends / prenez", it: "prendi / prenda, prendete", say: "prã / prəné", hook: "L'imperativo è il verbo SENZA soggetto: tu prends → PRENDS! vous prenez → PRENEZ! Semplicissimo.",
+              ex: { fr: "Prends ton parapluie, il va pleuvoir cet après-midi.", it: "Prendi l'ombrello, pioverà questo pomeriggio." } },
+            { fr: "bois / buvez", it: "bevi / beva, bevete", say: "bwa / büvé", hook: "BOIRE è irregolare: bois (tu), buvez (vous). Buvez de l'eau! = bevete acqua! Il consiglio di ogni medico.",
+              ex: { fr: "Il fait très chaud : buvez beaucoup d'eau et restez à l'ombre.", it: "Fa molto caldo: bevete molta acqua e restate all'ombra." } },
+            { fr: "repose-toi / reposez-vous", it: "riposati / si riposi", say: "rəpòz twa / rəpozé vu", hook: "Con i riflessivi il pronome va DOPO, col trattino: repose-TOI, reposez-VOUS. Come in italiano: riposaTI!",
+              ex: { fr: "Tu travailles trop : repose-toi un peu ce week-end.", it: "Lavori troppo: riposati un po' questo weekend." } },
+            { fr: "ne t'inquiète pas", it: "non preoccuparti", say: "nə tẽkjèt pa", hook: "S'INQUIÉTER = preoccuparsi (inquietarsi). Al negativo il pronome torna PRIMA: ne T'inquiète pas.",
+              ex: { fr: "Ne t'inquiète pas, tout va bien se passer demain.", it: "Non preoccuparti, domani andrà tutto bene." } },
+            { fr: "mange / mangez", it: "mangia / mangi, mangiate", say: "mãj / mãjé", hook: "Con i verbi in -ER la forma «tu» perde la S: tu manges → MANGE! tu parles → PARLE!",
+              ex: { fr: "Mange tes légumes, sinon pas de dessert !", it: "Mangia le verdure, altrimenti niente dolce!" } },
+            { fr: "fais / faites", it: "fai / faccia, fate", say: "fè / fèt", hook: "FAIRE all'imperativo: fais (tu), faites (vous). Faites attention! = fate attenzione!",
+              ex: { fr: "Faites attention en traversant, il y a beaucoup de voitures.", it: "Fate attenzione quando attraversate, ci sono tante macchine." } },
+            { fr: "laisse / laissez", it: "lascia / lasci, lasciate", say: "lès / lèsé", hook: "LAISSER = lasciare. Laissez-moi dormir! = lasciatemi dormire! Con «moi» dopo il verbo.",
+              ex: { fr: "Laissez-moi vous aider avec vos valises, elles ont l'air lourdes.", it: "Mi lasci aiutarla con le valigie, sembrano pesanti." } },
+            { fr: "le conseil", it: "il consiglio", say: "lə kõsèj", hook: "CONSEIL = consiglio, con -EIL che si legge «èj». Donner un conseil = dare un consiglio.",
+              ex: { fr: "Je peux te donner un conseil ? Ne pars pas sans réservation en août.", it: "Posso darti un consiglio? Non partire senza prenotazione ad agosto." } },
+            { fr: "le remède", it: "il rimedio", say: "lə rəmèd", hook: "REMÈDE = rimedio. Un remède de grand-mère = un rimedio della nonna (tisana, miele, limone…).",
+              ex: { fr: "Le miel et le citron, c'est le meilleur remède contre le mal de gorge.", it: "Miele e limone sono il miglior rimedio contro il mal di gola." } },
+            { fr: "aller mieux", it: "stare meglio", say: "alé mjö", hook: "ALLER MIEUX = andare meglio, stare meglio. Je vais mieux = sto meglio. Ça va mieux? = va meglio?",
+              ex: { fr: "Merci pour la soupe, je vais beaucoup mieux ce matin !", it: "Grazie per la zuppa, stamattina sto molto meglio!" } }
+          ],
+          tip: {
+            title: "L'imperativo: la forma dei consigli",
+            body: "<div class='tbl'><table><thead><tr><th>Verbo</th><th>tu</th><th>nous</th><th>vous</th></tr></thead><tbody><tr><td>prendre</td><td>prends</td><td>prenons</td><td>prenez</td></tr><tr><td>manger</td><td>mange</td><td>mangeons</td><td>mangez</td></tr><tr><td>boire</td><td>bois</td><td>buvons</td><td>buvez</td></tr><tr><td>faire</td><td>fais</td><td>faisons</td><td>faites</td></tr><tr><td>aller</td><td>va</td><td>allons</td><td>allez</td></tr><tr><td>être</td><td>sois</td><td>soyons</td><td>soyez</td></tr><tr><td>se reposer</td><td>repose-toi</td><td>reposons-nous</td><td>reposez-vous</td></tr></tbody></table></div><ul><li>Imperativo = presente <b>senza soggetto</b>: tu prends → prends!</li><li>Verbi in <b>-er</b> (e aller): la forma «tu» <b>perde la S</b>: mange, parle, va.</li><li>Negativo: <b>ne</b> + verbo + <b>pas</b>: ne mange pas, ne buvez pas.</li><li>Riflessivi: affermativo repose-<b>toi</b>; negativo ne <b>te</b> repose pas.</li><li><b>Nous</b> = proposta: allons-y! (andiamo!), mangeons! (mangiamo!).</li></ul>",
+            examples: [
+              { fr: "Prends ce médicament et repose-toi.", it: "Prendi questa medicina e riposati." },
+              { fr: "Ne mangez pas trop de sucre avant de dormir.", it: "Non mangiate troppi zuccheri prima di dormire." },
+              { fr: "Soyez patients, le médecin arrive dans cinq minutes.", it: "Siate pazienti, il medico arriva tra cinque minuti." },
+              { fr: "Allons-y, le film commence à huit heures !", it: "Andiamo, il film comincia alle otto!" },
+              { fr: "Ne t'inquiète pas et dors bien.", it: "Non preoccuparti e dormi bene." }
+            ]
+          },
+          practice: [
+            { t: "mcq", q: "Imperativo di «tu manges»:", opts: ["Mange !", "Manges !", "Tu mange !", "Mangez !"], a: 0, why: "Verbi in -er: la forma tu perde la S." },
+            { t: "mcq", q: "Come si dice «riposati!»?", opts: ["Repose-toi !", "Te repose !", "Repose-te !", "Tu te reposes !"], a: 0, why: "Riflessivo affermativo: pronome dopo, toi." },
+            { t: "listen", say: "Il fait très chaud : buvez beaucoup d'eau et restez à l'ombre.", q: "Quali consigli dà?", opts: ["Bere molta acqua e restare all'ombra.", "Fare una doccia fredda.", "Restare a casa e dormire.", "Mangiare frutta e verdura."], a: 0, why: "Buvez, restez." },
+            { t: "match", q: "Abbina", pairs: [["prends", "prendi"], ["bois", "bevi"], ["fais", "fai"], ["va", "vai"]] },
+            { t: "order", q: "Riordina: «Non preoccuparti, va tutto bene.»", words: ["Ne", "t'inquiète", "pas,", "tout", "va", "bien."], why: "Negativo: ne + te + verbo + pas." }
+          ],
+          test: [
+            { t: "mcq", q: "Imperativo «vous» di «faire»:", opts: ["Faites !", "Faisez !", "Fais !", "Faitez !"], a: 0, why: "Faire → faites (irregolare)." },
+            { t: "mcq", q: "Come si dice «non bevete!»?", opts: ["Ne buvez pas !", "Buvez pas ne !", "Ne bois pas vous !", "Pas buvez !"], a: 0, why: "Ne + verbo + pas." },
+            { t: "mcq", q: "Imperativo «tu» di «aller»:", opts: ["Va !", "Vas !", "Allez !", "Aller !"], a: 0, why: "Aller → va (senza S)." },
+            { t: "mcq", q: "«Je vais mieux» significa…", opts: ["Sto meglio.", "Vado meglio a piedi.", "Andrò meglio.", "Vado al meglio."], a: 0, why: "Aller mieux = stare meglio." },
+            { t: "listen", say: "Bois ta tisane, prends ton médicament et dors. Ne regarde pas ton téléphone !", q: "Cosa NON deve fare Gigi?", opts: ["Guardare il telefono", "Bere la tisana", "Prendere la medicina", "Dormire"], a: 0, why: "Ne regarde pas ton téléphone." },
+            { t: "listen", say: "Mettez un pull, fermez la fenêtre et ne prenez pas de douche froide !", q: "Quale consiglio dà Odette?", opts: ["Mettersi un maglione e chiudere la finestra", "Aprire la finestra e fare una doccia fredda", "Togliersi il maglione", "Uscire a prendere aria"], a: 0, why: "Mettez un pull, fermez la fenêtre." },
+            { t: "listen", say: "Le miel et le citron, c'est le meilleur remède contre le mal de gorge.", q: "Qual è il miglior rimedio contro il mal di gola?", opts: ["Miele e limone", "Latte caldo", "Una zuppa", "Lo sciroppo"], a: 0, why: "Le miel et le citron." },
+            { t: "type", q: "Completa: «___ attention en traversant !» (fate)", a: ["Faites"], why: "Faire → faites." },
+            { t: "type", q: "Completa: «Reposez-___, vous êtes fatigué.»", a: ["vous"], why: "Reposez-vous." },
+            { t: "type", say: "Merci pour la soupe, je vais beaucoup mieux ce matin !", q: "Ascolta e completa: «Je vais beaucoup ___ ce matin !»", a: ["mieux"], why: "Aller mieux = stare meglio." },
+            { t: "order", q: "Riordina: «Prendi questa medicina e riposati.»", words: ["Prends", "ce", "médicament", "et", "repose-toi."], why: "Prends! Repose-toi!" },
+            { t: "match", q: "Abbina", pairs: [["le conseil", "il consiglio"], ["le remède", "il rimedio"], ["laissez-moi", "lasciatemi"], ["ne t'inquiète pas", "non preoccuparti"]] }
+          ],
+          recap: {
+            can: ["Dare consigli con l'imperativo (tu, nous, vous)", "Formare l'imperativo negativo", "Usare l'imperativo dei riflessivi: repose-toi", "Dire che stai meglio: je vais mieux"],
+            phrases: [{ fr: "Prends ton médicament et repose-toi.", it: "Prendi la medicina e riposati." }, { fr: "Ne t'inquiète pas, je m'occupe de tout.", it: "Non preoccuparti, mi occupo di tutto io." }, { fr: "Buvez beaucoup d'eau et ne sortez pas.", it: "Bevete molta acqua e non uscite." }],
+            trap: "Con i verbi in -ER l'imperativo «tu» perde la S: MANGE! (non «manges!»). E il riflessivo: repose-TOI, ma ne TE repose pas."
+          }
+        }
+      ]
+    },
+    {
+      n: 10, arr: "10e", name: "Vers le B1", it: "Verso il B1", level: "A2",
+      lessons: [
+        /* ---------------- LEZIONE 10-1 ---------------- */
+        {
+          id: "10-1", street: "Rue de l'Imparfait", title: "L'imparfait: com'era una volta",
+          goal: "Descrivere il passato e le abitudini di una volta con l'imparfait, e distinguerlo dal passé composé.",
+          episode: {
+            title: "Il discorso di Henri",
+            intro: "Sabato, ore undici. Il caffè è pieno: vicini, negozianti, il dottor Dubois, Madame Petit, Odette, perfino Madame Garnier arrivata da Roussillon. Sopra il bancone brilla l'insegna blu. Françoise batte un cucchiaino su un bicchiere: M. Bernard vuole dire qualche parola.",
+            lines: [
+              { who: "M. Bernard", fr: "Quand j'étais jeune, ce café était le cœur du quartier. Tout le monde venait ici.", it: "Quando ero giovane, questo caffè era il cuore del quartiere. Tutti venivano qui." },
+              { who: "M. Bernard", fr: "Le matin, Zizì préparait les bonbons, et l'odeur du sucre remplissait toute la rue.", it: "La mattina Zizì preparava le caramelle, e il profumo dello zucchero riempiva tutta la strada." },
+              { who: "M. Bernard", fr: "Les enfants attendaient devant la vitrine. Elle leur donnait toujours un bonbon de plus.", it: "I bambini aspettavano davanti alla vetrina. Lei regalava sempre una caramella in più." },
+              { who: "M. Dubois", fr: "C'est vrai ! J'avais six ans, et je venais tous les jeudis avec dix centimes.", it: "È vero! Avevo sei anni, e venivo tutti i giovedì con dieci centesimi." },
+              { who: "M. Bernard", fr: "Le samedi soir, nous dansions ici, entre les tables. Il y avait de la musique et beaucoup de rires.", it: "Il sabato sera ballavamo qui, tra i tavoli. C'era musica e tante risate." },
+              { who: "M. Bernard", fr: "Un jour, Zizì est partie. Et ce café est devenu silencieux pendant très longtemps.", it: "Un giorno Zizì è partita. E questo caffè è diventato silenzioso per moltissimo tempo." },
+              { who: "Croissant", fr: "J'étais là aussi, bien sûr. Mais personne ne m'écoutait. Comme d'habitude.", it: "C'ero anch'io, naturalmente. Ma nessuno mi ascoltava. Come al solito." },
+              { who: "M. Bernard", fr: "Aujourd'hui, grâce à Gigi, le café rit de nouveau. À Zizì, et au Petit Bonheur !", it: "Oggi, grazie a Gigi, il caffè ride di nuovo. A Zizì, e al Petit Bonheur!" }
+            ],
+            outro: "Tutti alzano i bicchieri: «À Zizì!» Françoise piange, Odette piange, perfino il dottor Dubois si soffia il naso. Poi Gigi apre la vetrina e i bambini del quartiere entrano di corsa. Ognuno, naturalmente, riceve una caramella in più.",
+            you: "«{nome}, l'imparfait è il tempo dei ricordi e delle descrizioni: «c'era», «ero», «facevamo sempre». Il passé composé invece racconta i fatti: «è partita». Insieme sono come la scenografia e l'azione di un film.»",
+            mine: { fr: "Je m'appelle {nome} : quand j'étais petit, je passais les étés chez mes grands-parents et je jouais dehors.", it: "Mi chiamo {nome}: quando ero piccolo passavo le estati dai nonni e giocavo fuori." }
+          },
+          words: [
+            { fr: "j'étais", it: "ero", say: "jetè", hook: "J'ÉTAIS = ero: «ét» come «essere», più la desinenza -ais (che si legge «è»). Quand j'étais petit = quando ero piccolo.",
+              ex: { fr: "Quand j'étais enfant, j'habitais dans un petit village près de la mer.", it: "Quando ero bambino abitavo in un paesino vicino al mare." } },
+            { fr: "il y avait", it: "c'era, c'erano", say: "il javè", hook: "IL Y AVAIT = c'era: l'imparfait di «il y a». La formula d'inizio di ogni favola: «Il était une fois…» (c'era una volta).",
+              ex: { fr: "Autrefois, il y avait un cinéma dans cette rue, mais il a fermé.", it: "Una volta c'era un cinema in questa strada, ma ha chiuso." } },
+            { fr: "j'avais", it: "avevo", say: "javè", hook: "J'AVAIS = avevo. Si usa per l'età nel passato: j'avais six ans = avevo sei anni.",
+              ex: { fr: "J'avais dix ans quand j'ai vu la mer pour la première fois.", it: "Avevo dieci anni quando ho visto il mare per la prima volta." } },
+            { fr: "-ais, -ait, -ions, -iez, -aient", it: "le desinenze dell'imparfait", say: "è, è, jõ, jé, è", hook: "Una sola serie per TUTTI i verbi! Cinque forme su sei suonano «è»: je parlais, tu parlais, il parlait, ils parlaient.",
+              ex: { fr: "Nous parlions italien à la maison, mais nos parents parlaient aussi français.", it: "A casa parlavamo italiano, ma i nostri genitori parlavano anche francese." } },
+            { fr: "autrefois / avant", it: "una volta / prima", say: "otrəfwa / avã", hook: "AUTREFOIS: «un'altra volta», cioè una volta, in passato. AVANT = prima. Avant, c'était mieux? Chissà!",
+              ex: { fr: "Avant, je fumais beaucoup, mais maintenant je fais du sport.", it: "Prima fumavo molto, ma adesso faccio sport." } },
+            { fr: "tous les jeudis", it: "tutti i giovedì", say: "tu lé jödì", hook: "Le abitudini del passato vogliono l'imparfait: tous les jours, chaque été, d'habitude, souvent… → je venais.",
+              ex: { fr: "Chaque été, nous allions en vacances chez ma tante en Bretagne.", it: "Ogni estate andavamo in vacanza da mia zia in Bretagna." } },
+            { fr: "un jour", it: "un giorno", say: "ẽ jur", hook: "UN JOUR introduce un fatto improvviso: passé composé! «Tout était calme… Un jour, elle est partie.»",
+              ex: { fr: "Tout allait bien, et puis un jour, il a décidé de partir en Australie.", it: "Andava tutto bene, e poi un giorno ha deciso di partire per l'Australia." } },
+            { fr: "le souvenir", it: "il ricordo", say: "lə suvnìr", hook: "SOUVENIR = ricordo (e anche l'oggetto ricordo). Se souvenir de = ricordarsi di.",
+              ex: { fr: "J'ai de très beaux souvenirs de mes vacances en Provence.", it: "Ho dei bellissimi ricordi delle mie vacanze in Provenza." } },
+            { fr: "devenir", it: "diventare", say: "dəvnìr", hook: "DEVENIR = diventare: si coniuga come venir e usa ÊTRE al passato: il est devenu célèbre.",
+              ex: { fr: "Ce petit café est devenu l'endroit préféré de tout le quartier.", it: "Questo piccolo caffè è diventato il posto preferito di tutto il quartiere." } },
+            { fr: "de nouveau", it: "di nuovo", say: "də nuvò", hook: "DE NOUVEAU = di nuovo, ancora una volta. Sinonimo: encore une fois. «Le café rit de nouveau.»",
+              ex: { fr: "Après la pluie, le soleil brille de nouveau sur Paris.", it: "Dopo la pioggia, il sole splende di nuovo su Parigi." } }
+          ],
+          tip: {
+            title: "Imparfait o passé composé? La scenografia e l'azione",
+            body: "<div class='tbl'><table><thead><tr><th></th><th>parler</th><th>être</th><th>avoir</th></tr></thead><tbody><tr><td>je</td><td>parlais</td><td>étais</td><td>avais</td></tr><tr><td>tu</td><td>parlais</td><td>étais</td><td>avais</td></tr><tr><td>il / elle</td><td>parlait</td><td>était</td><td>avait</td></tr><tr><td>nous</td><td>parlions</td><td>étions</td><td>avions</td></tr><tr><td>vous</td><td>parliez</td><td>étiez</td><td>aviez</td></tr><tr><td>ils / elles</td><td>parlaient</td><td>étaient</td><td>avaient</td></tr></tbody></table></div><ul><li><b>Formazione:</b> prendi «nous» al presente (nous parl<b>ons</b>), togli -ons, aggiungi -ais, -ais, -ait, -ions, -iez, -aient. Unica eccezione: être → <b>ét</b>-.</li><li><b>Imparfait</b> = descrizioni, abitudini, situazioni: il faisait beau, je venais tous les jeudis.</li><li><b>Passé composé</b> = azioni concluse, fatti: un jour, elle <b>est partie</b>.</li><li>Come in italiano: «ero / c'era / facevo» = imparfait; «sono stato / è successo / ho fatto» = passé composé.</li></ul>",
+            examples: [
+              { fr: "Il faisait beau, les enfants jouaient, et tout à coup il a commencé à pleuvoir.", it: "Faceva bel tempo, i bambini giocavano, e all'improvviso ha cominciato a piovere." },
+              { fr: "Quand j'avais vingt ans, je travaillais dans un restaurant.", it: "Quando avevo vent'anni lavoravo in un ristorante." },
+              { fr: "Nous allions à la plage tous les dimanches.", it: "Andavamo al mare tutte le domeniche." },
+              { fr: "Elle lisait un livre quand le téléphone a sonné.", it: "Leggeva un libro quando è squillato il telefono." },
+              { fr: "Autrefois, il y avait beaucoup de petits commerces dans le quartier.", it: "Una volta c'erano tanti piccoli negozi nel quartiere." }
+            ]
+          },
+          practice: [
+            { t: "mcq", q: "Completa: «Quand j'___ petit, j'habitais à Naples.»", opts: ["étais", "ai été", "suis", "serai"], a: 0, why: "Descrizione nel passato: imparfait." },
+            { t: "mcq", q: "«Il y avait» significa…", opts: ["c'era", "c'è", "ci sarà", "c'è stato"], a: 0, why: "Imparfait di il y a." },
+            { t: "listen", say: "Chaque été, nous allions en vacances chez ma tante en Bretagne.", q: "Cosa facevano ogni estate?", opts: ["Andavano in vacanza dalla zia in Bretagna.", "Andavano al mare in Provenza.", "Restavano a casa.", "Visitavano la nonna a Parigi."], a: 0, why: "Nous allions = andavamo (abitudine)." },
+            { t: "match", q: "Abbina", pairs: [["j'étais", "ero"], ["j'avais", "avevo"], ["il y avait", "c'era"], ["nous dansions", "ballavamo"]] },
+            { t: "order", q: "Riordina: «Quando avevo sei anni, venivo qui tutti i giovedì.»", words: ["Quand", "j'avais", "six", "ans,", "je", "venais", "ici", "tous", "les", "jeudis."], why: "Età e abitudine nel passato: imparfait." }
+          ],
+          test: [
+            { t: "mcq", q: "Completa: «Nous ___ souvent au cinéma.» (andavamo)", opts: ["allions", "sommes allés", "allons", "irons"], a: 0, why: "Abitudine: imparfait." },
+            { t: "mcq", q: "Quale frase usa correttamente i due tempi?", opts: ["Il pleuvait quand je suis sorti.", "Il a plu quand je sortais toujours.", "Il pleuvait quand je sortais un jour.", "Il a plu quand j'étais sorti hier."], a: 0, why: "Situazione (imparfait) + azione (passé composé)." },
+            { t: "mcq", q: "L'imparfait di «être» alla 3ª persona plurale è…", opts: ["étaient", "étions", "était", "sont été"], a: 0, why: "Ils étaient." },
+            { t: "mcq", q: "«Un jour, elle est partie.» Perché il passé composé?", opts: ["È un'azione precisa e conclusa.", "È una descrizione.", "È un'abitudine.", "È una situazione che dura."], a: 0, why: "«Un jour» introduce un fatto." },
+            { t: "listen", say: "Quand j'étais jeune, ce café était le cœur du quartier. Tout le monde venait ici.", q: "Cosa ricorda M. Bernard?", opts: ["Il caffè era il cuore del quartiere e tutti venivano qui.", "Il caffè era sempre vuoto.", "Il caffè era chiuso il sabato.", "Il caffè era in un altro quartiere."], a: 0, why: "Était, venait: descrizione e abitudine." },
+            { t: "listen", say: "J'avais dix ans quand j'ai vu la mer pour la première fois.", q: "Quanti anni aveva quando ha visto il mare?", opts: ["10", "6", "12", "20"], a: 0, why: "J'avais dix ans." },
+            { t: "listen", say: "Elle lisait un livre quand le téléphone a sonné.", q: "Cosa è successo?", opts: ["Mentre leggeva un libro, è squillato il telefono.", "Ha letto un libro al telefono.", "Ha chiamato per parlare di un libro.", "Il telefono squillava e lei non rispondeva."], a: 0, why: "Lisait (situazione) + a sonné (azione)." },
+            { t: "type", q: "Completa: «Autrefois, il y ___ un cinéma ici.» (c'era)", a: ["avait"], why: "Il y avait." },
+            { t: "type", q: "Completa: «Le samedi soir, nous ___ entre les tables.» (ballavamo)", a: ["dansions"], why: "Nous dansions." },
+            { t: "type", say: "Ce petit café est devenu l'endroit préféré du quartier.", q: "Ascolta e completa: «Ce petit café est ___ l'endroit préféré du quartier.»", a: ["devenu"], why: "Devenir → devenu (con être)." },
+            { t: "order", q: "Riordina: «Faceva bel tempo e i bambini giocavano in piazza.»", words: ["Il", "faisait", "beau", "et", "les", "enfants", "jouaient", "sur", "la", "place."], why: "Descrizione: imparfait." },
+            { t: "match", q: "Abbina", pairs: [["je parlais", "parlavo"], ["il faisait", "faceva"], ["ils venaient", "venivano"], ["vous aviez", "avevate"]] }
+          ],
+          recap: {
+            can: ["Formare l'imparfait di tutti i verbi", "Descrivere com'era una persona, un luogo, un'epoca", "Raccontare le abitudini del passato", "Distinguere imparfait (scenario) e passé composé (azione)"],
+            phrases: [{ fr: "Quand j'étais petit, j'habitais près de la mer.", it: "Quando ero piccolo abitavo vicino al mare." }, { fr: "Autrefois, il y avait beaucoup de petits commerces.", it: "Una volta c'erano tanti piccoli negozi." }, { fr: "Il faisait beau quand elle est partie.", it: "Faceva bel tempo quando è partita." }],
+            trap: "Imparfait per descrivere e per le abitudini (j'allais, il faisait), passé composé per i fatti (je suis allé, il a fait). Come «andavo» e «sono andato» in italiano."
+          }
+        },
+        /* ---------------- LEZIONE 10-2 ---------------- */
+        {
+          id: "10-2", street: "Rue des Opinions", title: "Dare la propria opinione",
+          goal: "Esprimere e motivare un'opinione (je pense que, à mon avis, parce que), dire se sei d'accordo e reagire alle idee degli altri.",
+          episode: {
+            title: "Il grande dibattito",
+            intro: "Primo pomeriggio. La festa continua e, come in ogni festa francese che si rispetti, comincia un dibattito appassionato. Argomento: il futuro del Petit Bonheur. Tutti hanno un'opinione. Croissant ne ha almeno tre.",
+            lines: [
+              { who: "Léa", fr: "À mon avis, la confiserie doit ouvrir tous les jours, parce que les gens adorent les bonbons.", it: "Secondo me la confetteria deve aprire tutti i giorni, perché la gente adora le caramelle." },
+              { who: "Gigi", fr: "Je ne suis pas d'accord : je pense qu'il faut aussi garder du temps pour vivre !", it: "Non sono d'accordo: penso che bisogna anche tenersi del tempo per vivere!" },
+              { who: "Mme Lefèvre", fr: "Je trouve que Gigi a raison. Le dimanche, on ferme, et on va se promener.", it: "Trovo che Gigi abbia ragione. La domenica si chiude, e si va a passeggiare." },
+              { who: "Mme Duval", fr: "Et pourquoi ne pas faire aussi des pizzas le vendredi soir ? Ce serait une excellente idée.", it: "E perché non fare anche le pizze il venerdì sera? Sarebbe un'ottima idea." },
+              { who: "M. Bernard", fr: "Des pizzas dans une confiserie ? Franchement, je ne crois pas que ce soit possible…", it: "Pizze in una confetteria? Francamente non credo che sia possibile…" },
+              { who: "Gigi", fr: "Moi, je pense que c'est génial ! Un café, des bonbons de Zizì et des pizzas de Naples.", it: "Io penso che sia geniale! Un caffè, le caramelle di Zizì e le pizze di Napoli." },
+              { who: "Croissant", fr: "D'après moi, il manque l'essentiel : un menu spécial pour les chats. Qui est d'accord ?", it: "Secondo me manca l'essenziale: un menù speciale per gatti. Chi è d'accordo?" },
+              { who: "Léa", fr: "Bon, on vote ! Qui est pour les pizzas du vendredi ? … Tout le monde, sauf Monsieur Bernard !", it: "Bene, votiamo! Chi è a favore delle pizze del venerdì? … Tutti, tranne il signor Bernard!" }
+            ],
+            outro: "M. Bernard sbuffa, poi sorride: «Va bene. Ma la prima pizza la voglio io, con le acciughe.» Il Petit Bonheur avrà dunque le caramelle tutti i giorni tranne la domenica, e la pizza il venerdì sera. Croissant ha ottenuto una ciotola d'argento con il suo nome: non era il menù, ma è un inizio.",
+            you: "«{nome}, al livello B1 ti chiederanno spesso la tua opinione. Prepara le formule: «à mon avis», «je pense que», «je trouve que», e soprattutto motiva sempre con «parce que». Un'opinione senza «parce que» è come un croissant senza burro.»",
+            mine: { fr: "Je m'appelle {nome} et, à mon avis, apprendre le français est utile parce que c'est une langue parlée dans le monde entier.", it: "Mi chiamo {nome} e, secondo me, imparare il francese è utile perché è una lingua parlata in tutto il mondo." }
+          },
+          words: [
+            { fr: "à mon avis", it: "secondo me", say: "a mõ navì", hook: "À MON AVIS: «al mio avviso». Il modo più naturale per iniziare un'opinione. Mai «selon moi je pense» (doppione!).",
+              ex: { fr: "À mon avis, Paris est plus belle au printemps qu'en été.", it: "Secondo me Parigi è più bella in primavera che in estate." } },
+            { fr: "je pense que / je trouve que", it: "penso che / trovo che", say: "jə pãs kə / jə truv kə", hook: "Dopo JE PENSE QUE e JE TROUVE QUE si usa il normale indicativo: je pense que c'est vrai (non il congiuntivo, come in italiano!).",
+              ex: { fr: "Je trouve que ce film est trop long, mais les acteurs sont excellents.", it: "Trovo che questo film sia troppo lungo, ma gli attori sono eccellenti." } },
+            { fr: "être d'accord", it: "essere d'accordo", say: "ètr dakòr", hook: "D'ACCORD = d'accordo, con la D e senza la seconda D. Je suis d'accord avec toi. E «d'accord!» da solo = ok!",
+              ex: { fr: "Je suis d'accord avec toi : il faut protéger les petits commerces.", it: "Sono d'accordo con te: bisogna proteggere i piccoli negozi." } },
+            { fr: "avoir raison / avoir tort", it: "avere ragione / avere torto", say: "avwar rèzõ / avwar tòr", hook: "Con AVOIR, come in italiano: tu as raison, il a tort. Tort = torto (la T finale è muta).",
+              ex: { fr: "Tu as raison, j'ai eu tort de partir sans dire au revoir.", it: "Hai ragione, ho avuto torto a partire senza salutare." } },
+            { fr: "parce que", it: "perché (risposta)", say: "parskə", hook: "PARCE QUE risponde; POURQUOI chiede. Pourquoi tu ris? — Parce que c'est drôle!",
+              ex: { fr: "Je préfère le train parce que c'est plus écologique et plus confortable.", it: "Preferisco il treno perché è più ecologico e più comodo." } },
+            { fr: "pour / contre", it: "a favore / contro", say: "pur / kõtr", hook: "Être POUR = essere a favore; être CONTRE = essere contro. Le pour et le contre = i pro e i contro.",
+              ex: { fr: "Je suis pour les pizzas du vendredi, mais contre les anchois !", it: "Sono a favore delle pizze del venerdì, ma contro le acciughe!" } },
+            { fr: "franchement", it: "francamente, sinceramente", say: "frãshmã", hook: "FRANCHEMENT: con FRANCHEZZA. Molto usato in conversazione: «Franchement, c'est nul!» (francamente, fa schifo!).",
+              ex: { fr: "Franchement, je ne comprends pas pourquoi ce restaurant est si cher.", it: "Francamente non capisco perché questo ristorante sia così caro." } },
+            { fr: "une bonne idée", it: "una buona idea", say: "ün bòn idé", hook: "C'EST UNE BONNE IDÉE! oppure, se sei entusiasta: c'est génial! Se no: ce n'est pas une bonne idée.",
+              ex: { fr: "Faire un pique-nique au bord de la Seine ? C'est une très bonne idée !", it: "Fare un picnic lungo la Senna? È un'ottima idea!" } },
+            { fr: "d'après moi / selon moi", it: "secondo me", say: "daprè mwa / səlõ mwa", hook: "Sinonimi di «à mon avis»: d'après moi, selon moi. Variare le formule fa salire il voto all'esame!",
+              ex: { fr: "Selon moi, le plus important dans la vie, c'est l'amitié.", it: "Secondo me la cosa più importante nella vita è l'amicizia." } },
+            { fr: "génial / nul", it: "geniale / pessimo", say: "jénjal / nül", hook: "Registro familiare: GÉNIAL! (fantastico) e NUL (pessimo, zero). Il film? Génial! Il dessert? Nul!",
+              ex: { fr: "Le concert était génial, mais le son était vraiment nul.", it: "Il concerto era fantastico, ma l'audio era davvero pessimo." } }
+          ],
+          tip: {
+            title: "Esprimere un'opinione come al B1",
+            body: "<div class='tbl'><table><thead><tr><th>Vuoi…</th><th>Formule</th></tr></thead><tbody><tr><td>dare un'opinione</td><td>À mon avis… / Je pense que… / Je trouve que… / Selon moi…</td></tr><tr><td>motivare</td><td>… parce que… / … car… (più formale)</td></tr><tr><td>essere d'accordo</td><td>Je suis d'accord. / Tu as raison. / Exactement !</td></tr><tr><td>non essere d'accordo</td><td>Je ne suis pas d'accord. / Je ne pense pas. / Tu as tort.</td></tr><tr><td>essere a metà</td><td>Oui, mais… / Ça dépend. / C'est vrai, mais…</td></tr><tr><td>chiedere un'opinione</td><td>Qu'est-ce que tu en penses ? / Tu es d'accord ?</td></tr></tbody></table></div><ul><li>Dopo <b>je pense que</b> / <b>je trouve que</b> si usa l'<b>indicativo</b>: je pense que c'<b>est</b> vrai.</li><li>Al negativo (<b>je ne pense pas que</b>) si usa il congiuntivo: lo vedrai al B1.</li><li>Struttura vincente all'esame: <b>opinione + parce que + esempio</b>.</li></ul>",
+            examples: [
+              { fr: "À mon avis, il faut apprendre une langue en voyageant.", it: "Secondo me bisogna imparare una lingua viaggiando." },
+              { fr: "Je pense que tu as raison, mais c'est difficile.", it: "Penso che tu abbia ragione, ma è difficile." },
+              { fr: "Je ne suis pas d'accord, parce que le métro est plus rapide.", it: "Non sono d'accordo, perché il metrò è più veloce." },
+              { fr: "Qu'est-ce que tu en penses ? — Ça dépend du prix.", it: "Cosa ne pensi? — Dipende dal prezzo." },
+              { fr: "Je trouve que les Parisiens sont plus gentils qu'on dit.", it: "Trovo che i parigini siano più gentili di quanto si dica." }
+            ]
+          },
+          practice: [
+            { t: "mcq", q: "Come inizi un'opinione?", opts: ["À mon avis…", "À mon avis je pense…", "Pour mon avis…", "Dans mon avis…"], a: 0, why: "À mon avis = secondo me." },
+            { t: "mcq", q: "«Tu as tort» significa…", opts: ["Hai torto.", "Hai ragione.", "Hai una torta.", "Sei stanco."], a: 0, why: "Avoir tort = avere torto." },
+            { t: "listen", say: "Je préfère le train parce que c'est plus écologique et plus confortable.", q: "Perché preferisce il treno?", opts: ["Perché è più ecologico e comodo.", "Perché è più veloce.", "Perché costa meno.", "Perché ha paura dell'aereo."], a: 0, why: "Parce que c'est plus écologique." },
+            { t: "match", q: "Abbina", pairs: [["à mon avis", "secondo me"], ["être d'accord", "essere d'accordo"], ["avoir raison", "avere ragione"], ["parce que", "perché"]] },
+            { t: "order", q: "Riordina: «Non sono d'accordo con te.»", words: ["Je", "ne", "suis", "pas", "d'accord", "avec", "toi."], why: "Être d'accord avec quelqu'un." }
+          ],
+          test: [
+            { t: "mcq", q: "Completa: «Je pense que c'___ une bonne idée.»", opts: ["est", "soit", "sera", "être"], a: 0, why: "Dopo je pense que: indicativo." },
+            { t: "mcq", q: "Come chiedi l'opinione di un amico?", opts: ["Qu'est-ce que tu en penses ?", "Qu'est-ce que tu penses de ça en ?", "Tu penses quoi de ?", "Comment tu penses ?"], a: 0, why: "Qu'est-ce que tu en penses ?" },
+            { t: "mcq", q: "Sei parzialmente d'accordo. Dici:", opts: ["Oui, mais ça dépend.", "Exactement !", "Tu as tort.", "Pas du tout !"], a: 0, why: "Oui, mais… / ça dépend." },
+            { t: "mcq", q: "«Être pour les pizzas» significa…", opts: ["essere a favore delle pizze", "essere per le pizze (destinatario)", "mangiare le pizze", "essere contro le pizze"], a: 0, why: "Être pour = essere a favore." },
+            { t: "listen", say: "À mon avis, la confiserie doit ouvrir tous les jours, parce que les gens adorent les bonbons.", q: "Cosa pensa Léa?", opts: ["La confetteria deve aprire tutti i giorni perché la gente adora le caramelle.", "La confetteria deve chiudere la domenica.", "La confetteria deve vendere pizze.", "La confetteria è troppo piccola."], a: 0, why: "À mon avis… parce que…" },
+            { t: "listen", say: "Je suis d'accord avec toi : il faut protéger les petits commerces.", q: "Su cosa è d'accordo?", opts: ["Bisogna proteggere i piccoli negozi.", "Bisogna andare al supermercato.", "I piccoli negozi sono troppo cari.", "Bisogna chiudere i piccoli negozi."], a: 0, why: "Je suis d'accord." },
+            { t: "listen", say: "Le concert était génial, mais le son était vraiment nul.", q: "Com'era il concerto?", opts: ["Fantastico, ma con un audio pessimo.", "Pessimo, ma con un ottimo audio.", "Fantastico in tutto.", "Noioso e troppo lungo."], a: 0, why: "Génial / nul." },
+            { t: "type", q: "Completa: «Tu as ___, c'est une excellente idée !» (ragione)", a: ["raison"], why: "Avoir raison." },
+            { t: "type", q: "Completa: «Je suis ___ accord avec toi.»", a: ["d'"], why: "Être d'accord." },
+            { t: "type", say: "Franchement, je ne comprends pas pourquoi ce restaurant est si cher.", q: "Ascolta e completa: «___, je ne comprends pas pourquoi ce restaurant est si cher.»", a: ["Franchement"], why: "Franchement = francamente." },
+            { t: "order", q: "Riordina: «Secondo me Parigi è più bella in primavera.»", words: ["À", "mon", "avis,", "Paris", "est", "plus", "belle", "au", "printemps."], why: "À mon avis + opinione." },
+            { t: "match", q: "Abbina", pairs: [["pour", "a favore"], ["contre", "contro"], ["génial", "fantastico"], ["nul", "pessimo"]] }
+          ],
+          recap: {
+            can: ["Dare la tua opinione con varie formule", "Motivare con parce que", "Dire se sei d'accordo, in disaccordo o a metà", "Chiedere l'opinione degli altri"],
+            phrases: [{ fr: "À mon avis, c'est une très bonne idée.", it: "Secondo me è un'ottima idea." }, { fr: "Je ne suis pas d'accord, parce que c'est trop cher.", it: "Non sono d'accordo, perché è troppo caro." }, { fr: "Qu'est-ce que tu en penses ? — Tu as raison.", it: "Cosa ne pensi? — Hai ragione." }],
+            trap: "Dopo JE PENSE QUE si usa l'indicativo (je pense que c'EST vrai), non il congiuntivo come in italiano («penso che SIA vero»)."
+          }
+        },
+        /* ---------------- LEZIONE 10-3 ---------------- */
+        {
+          id: "10-3", street: "Rue des Comparaisons", title: "Confrontare: plus, moins, aussi, meilleur",
+          goal: "Confrontare persone, cose e luoghi con plus / moins / aussi… que, usare meilleur e mieux e il superlativo.",
+          episode: {
+            title: "La sfida dei dolci",
+            intro: "Tardo pomeriggio. Madame Pons, arrivata in treno da Roussillon con un cesto di dolci provenzali, lancia una sfida: i calissons di Zizì contro le sfogliatelle napoletane di Gigi. Giuria: tutto il quartiere. Croissant si autoproclama presidente.",
+            lines: [
+              { who: "Mme Pons", fr: "Les calissons de Provence sont plus délicats que tous les gâteaux d'Italie !", it: "I calissons della Provenza sono più delicati di tutti i dolci d'Italia!" },
+              { who: "Gigi", fr: "Peut-être, mais la sfogliatella est plus croustillante et beaucoup moins sucrée.", it: "Forse, ma la sfogliatella è più croccante e molto meno dolce." },
+              { who: "Léa", fr: "Moi, je trouve les deux aussi bons. Le calisson est aussi parfumé que la sfogliatella.", it: "Io li trovo buoni allo stesso modo. Il calisson è profumato quanto la sfogliatella." },
+              { who: "M. Dubois", fr: "En tant que médecin, je dis que le meilleur gâteau, c'est le plus petit !", it: "Da medico, dico che il dolce migliore è il più piccolo!" },
+              { who: "Mme Lefèvre", fr: "Gigi fait la sfogliatella mieux que tous les pâtissiers de Paris. C'est la meilleure !", it: "Gigi fa la sfogliatella meglio di tutti i pasticcieri di Parigi. È la migliore!" },
+              { who: "Mme Pons", fr: "Et Paris ? C'est plus grand que Roussillon, mais c'est beaucoup moins calme.", it: "E Parigi? È più grande di Roussillon, ma molto meno tranquilla." },
+              { who: "Croissant", fr: "Verdict du président : le meilleur dessert, c'est le beurre. Le plus intelligent du café, c'est moi.", it: "Verdetto del presidente: il dolce migliore è il burro. Il più intelligente del caffè sono io." },
+              { who: "Gigi", fr: "Égalité, alors ! Le calisson et la sfogliatella seront vendus ensemble, comme Paris et Naples.", it: "Pareggio, allora! Il calisson e la sfogliatella saranno venduti insieme, come Parigi e Napoli." }
+            ],
+            outro: "La sfida finisce in pareggio e in un grande applauso. Da domani, nella vetrina del Petit Bonheur ci saranno calissons e sfogliatelle uno accanto all'altro, con un cartellino scritto da Françoise: «Le meilleur de deux pays». La festa sta per finire. Gigi ha ancora una cosa da fare: scrivere una lettera.",
+            you: "«{nome}, per confrontare bastano tre parole: PLUS (più), MOINS (meno), AUSSI (tanto), sempre con QUE: plus grand que. Attenzione solo a «bon»: non si dice «plus bon», ma MEILLEUR. Proprio come in italiano «migliore»!»",
+            mine: { fr: "Je m'appelle {nome} et, à mon avis, le français est plus élégant que l'anglais, mais il est aussi plus difficile.", it: "Mi chiamo {nome} e secondo me il francese è più elegante dell'inglese, ma è anche più difficile." }
+          },
+          words: [
+            { fr: "plus… que", it: "più… di", say: "plü… kə", hook: "PLUS + aggettivo + QUE = più… di. Paris est plus grand QUE Lyon. La S di plus è muta davanti a consonante.",
+              ex: { fr: "Le TGV est beaucoup plus rapide que la voiture pour aller à Marseille.", it: "Il TGV è molto più veloce della macchina per andare a Marsiglia." } },
+            { fr: "moins… que", it: "meno… di", say: "mwẽ… kə", hook: "MOINS = meno (ricordi «midi moins le quart»?). Le métro est moins cher QUE le taxi.",
+              ex: { fr: "La vie à la campagne est moins chère et moins stressante qu'en ville.", it: "La vita in campagna è meno cara e meno stressante che in città." } },
+            { fr: "aussi… que", it: "tanto… quanto", say: "osì… kə", hook: "AUSSI = anche, ma nei confronti significa «tanto quanto»: il est aussi grand QUE moi.",
+              ex: { fr: "Mon frère est aussi grand que mon père, mais il est plus mince.", it: "Mio fratello è alto quanto mio padre, ma è più magro." } },
+            { fr: "meilleur(e)", it: "migliore", say: "mèjör", hook: "BON → MEILLEUR (mai «plus bon»!), come buono → migliore. Il meglio di tutti: le meilleur, la meilleure.",
+              ex: { fr: "Ce croissant est meilleur que celui de la boulangerie d'en face.", it: "Questo croissant è migliore di quello della panetteria di fronte." } },
+            { fr: "mieux", it: "meglio", say: "mjö", hook: "MIEUX = meglio: è il comparativo di BIEN (avverbio). Elle chante mieux que moi. Je vais mieux = sto meglio.",
+              ex: { fr: "Gigi parle français beaucoup mieux qu'il y a trois mois.", it: "Gigi parla francese molto meglio di tre mesi fa." } },
+            { fr: "le plus / le moins", it: "il più / il meno", say: "lə plü / lə mwẽ", hook: "SUPERLATIVO: le / la / les + plus + aggettivo. La tour Eiffel est le monument le plus visité de Paris.",
+              ex: { fr: "C'est le quartier le plus animé et le moins cher de la ville.", it: "È il quartiere più vivace e meno caro della città." } },
+            { fr: "beaucoup plus", it: "molto più", say: "boku plü", hook: "Per rinforzare: BEAUCOUP plus, BEAUCOUP moins. Mai «très plus»!",
+              ex: { fr: "Ce restaurant est beaucoup plus cher, mais la cuisine est incroyable.", it: "Questo ristorante è molto più caro, ma la cucina è incredibile." } },
+            { fr: "le / la même", it: "lo stesso / la stessa", say: "lə / la mèm", hook: "MÊME = stesso (e anche «perfino»). Nous avons le même âge = abbiamo la stessa età.",
+              ex: { fr: "Léa et moi avons le même âge et les mêmes goûts.", it: "Léa e io abbiamo la stessa età e gli stessi gusti." } },
+            { fr: "croustillant", it: "croccante", say: "krustijã", hook: "CROUSTILLANT: fa «crusc» sotto i denti! Il pane francese perfetto è croustillant fuori e morbido (moelleux) dentro.",
+              ex: { fr: "J'aime le pain croustillant à l'extérieur et moelleux à l'intérieur.", it: "Mi piace il pane croccante fuori e morbido dentro." } },
+            { fr: "la différence", it: "la differenza", say: "la diférãs", hook: "DIFFÉRENCE = differenza. Quelle est la différence entre… ? = qual è la differenza tra…? Domanda utilissima!",
+              ex: { fr: "Quelle est la différence entre un croissant et un pain au chocolat ?", it: "Qual è la differenza tra un croissant e un pain au chocolat?" } }
+          ],
+          tip: {
+            title: "Plus, moins, aussi: la bilancia dei confronti",
+            body: "<div class='tbl'><table><thead><tr><th>Confronto</th><th>Struttura</th><th>Esempio</th></tr></thead><tbody><tr><td>superiorità</td><td>plus + agg. + que</td><td>Paris est plus grand que Naples.</td></tr><tr><td>inferiorità</td><td>moins + agg. + que</td><td>Le bus est moins rapide que le métro.</td></tr><tr><td>uguaglianza</td><td>aussi + agg. + que</td><td>Léa est aussi gentille que Gigi.</td></tr><tr><td>superlativo</td><td>le / la / les plus + agg.</td><td>C'est la rue la plus belle.</td></tr><tr><td>bon (agg.)</td><td>meilleur(e)(s)</td><td>Ce gâteau est meilleur.</td></tr><tr><td>bien (avv.)</td><td>mieux</td><td>Il cuisine mieux que moi.</td></tr></tbody></table></div><ul><li><b>Bon → meilleur</b> (aggettivo: un meilleur gâteau); <b>bien → mieux</b> (avverbio: il chante mieux).</li><li>L'aggettivo si accorda: elle est plus grand<b>e</b>, ils sont plus grand<b>s</b>.</li><li>Con i nomi: <b>plus de / moins de / autant de</b> + nome: plus de touristes, autant d'amis.</li></ul>",
+            examples: [
+              { fr: "Le Louvre est plus grand que le musée d'Orsay.", it: "Il Louvre è più grande del museo d'Orsay." },
+              { fr: "En été, il fait moins chaud en Bretagne qu'en Provence.", it: "In estate fa meno caldo in Bretagna che in Provenza." },
+              { fr: "Ta pizza est meilleure que la mienne !", it: "La tua pizza è migliore della mia!" },
+              { fr: "Elle parle français mieux que son professeur.", it: "Parla francese meglio della sua insegnante." },
+              { fr: "C'est le meilleur café de tout Montmartre.", it: "È il miglior caffè di tutta Montmartre." }
+            ]
+          },
+          practice: [
+            { t: "mcq", q: "Completa: «Paris est ___ grand que Lyon.»", opts: ["plus", "plus de", "très", "beaucoup"], a: 0, why: "Plus + aggettivo + que." },
+            { t: "mcq", q: "Come si dice «migliore»?", opts: ["meilleur", "plus bon", "mieux", "plus bien"], a: 0, why: "Bon → meilleur." },
+            { t: "listen", say: "Le TGV est beaucoup plus rapide que la voiture pour aller à Marseille.", q: "Cosa è più veloce?", opts: ["Il TGV", "La macchina", "L'aereo", "L'autobus"], a: 0, why: "Plus rapide que = più veloce di." },
+            { t: "match", q: "Abbina", pairs: [["plus… que", "più… di"], ["moins… que", "meno… di"], ["aussi… que", "tanto… quanto"], ["meilleur", "migliore"]] },
+            { t: "order", q: "Riordina: «Mio fratello è alto quanto mio padre.»", words: ["Mon", "frère", "est", "aussi", "grand", "que", "mon", "père."], why: "Aussi + aggettivo + que." }
+          ],
+          test: [
+            { t: "mcq", q: "Completa: «Elle chante ___ que moi.» (meglio)", opts: ["mieux", "meilleur", "plus bien", "meilleure"], a: 0, why: "Avverbio: bien → mieux." },
+            { t: "mcq", q: "Completa: «Cette tarte est ___ que l'autre.» (migliore)", opts: ["meilleure", "mieux", "plus bonne", "meilleur"], a: 0, why: "Aggettivo femminile: meilleure." },
+            { t: "mcq", q: "Come si dice «il monumento più visitato»?", opts: ["le monument le plus visité", "le plus monument visité", "le monument plus visité que", "le monument très visité"], a: 0, why: "Le / la + nome + le / la plus + aggettivo." },
+            { t: "mcq", q: "«Beaucoup moins cher» significa…", opts: ["molto meno caro", "molto più caro", "caro allo stesso modo", "carissimo"], a: 0, why: "Beaucoup + moins." },
+            { t: "listen", say: "La vie à la campagne est moins chère et moins stressante qu'en ville.", q: "Com'è la vita in campagna?", opts: ["Meno cara e meno stressante che in città", "Più cara e più stressante", "Uguale a quella in città", "Più noiosa che in città"], a: 0, why: "Moins chère, moins stressante." },
+            { t: "listen", say: "Gigi parle français beaucoup mieux qu'il y a trois mois.", q: "Cosa è cambiato per Gigi?", opts: ["Parla francese molto meglio di tre mesi fa.", "Parla francese peggio di prima.", "Parla italiano meglio del francese.", "Ha cominciato il francese tre mesi fa."], a: 0, why: "Beaucoup mieux = molto meglio." },
+            { t: "listen", say: "Léa et moi avons le même âge et les mêmes goûts.", q: "Cosa hanno in comune?", opts: ["La stessa età e gli stessi gusti", "Lo stesso lavoro", "La stessa famiglia", "La stessa casa"], a: 0, why: "Le même âge, les mêmes goûts." },
+            { t: "type", q: "Completa: «Le métro est ___ cher que le taxi.» (meno)", a: ["moins"], why: "Moins + aggettivo + que." },
+            { t: "type", q: "Completa: «C'est le ___ café de Paris !» (migliore)", a: ["meilleur"], why: "Le meilleur." },
+            { t: "type", say: "J'aime le pain croustillant à l'extérieur et moelleux à l'intérieur.", q: "Ascolta e completa: «J'aime le pain ___ à l'extérieur.» (croccante)", a: ["croustillant"], why: "Croustillant = croccante." },
+            { t: "order", q: "Riordina: «Questo croissant è migliore di quello di fronte.»", words: ["Ce", "croissant", "est", "meilleur", "que", "celui", "d'en", "face."], why: "Meilleur que." },
+            { t: "match", q: "Abbina", pairs: [["bon", "meilleur"], ["bien", "mieux"], ["le plus", "il più"], ["le même", "lo stesso"]] }
+          ],
+          recap: {
+            can: ["Confrontare con plus, moins, aussi… que", "Usare meilleur (bon) e mieux (bien)", "Formare il superlativo: le plus, le moins", "Rinforzare con beaucoup plus / beaucoup moins"],
+            phrases: [{ fr: "Paris est plus grand que Naples, mais moins calme.", it: "Parigi è più grande di Napoli, ma meno tranquilla." }, { fr: "Ta pizza est meilleure que la mienne.", it: "La tua pizza è migliore della mia." }, { fr: "C'est le meilleur café de tout le quartier.", it: "È il miglior caffè di tutto il quartiere." }],
+            trap: "Mai «plus bon»: si dice MEILLEUR. E MEILLEUR è un aggettivo (un meilleur gâteau), MIEUX un avverbio (il cuisine mieux)."
+          }
+        },
+        /* ---------------- LEZIONE 10-4 ---------------- */
+        {
+          id: "10-4", street: "Rue de la Lettre", title: "Scrivere un messaggio e una lettera",
+          goal: "Scrivere un messaggio o una lettera in francese, formale o informale, con le formule giuste di apertura e di chiusura.",
+          episode: {
+            title: "La lettera di Gigi",
+            intro: "È sera. Gli ultimi invitati sono andati via, le sedie sono sui tavoli, l'insegna blu brilla nella strada vuota. Gigi si siede al bancone con un foglio, una penna e il quaderno di Zizì. Vuole scrivere ai suoi genitori a Napoli. In francese, per dimostrare quanto ha imparato. Léa lo aiuta. Croissant detta.",
+            lines: [
+              { who: "Gigi", fr: "Comment je commence ? « Chers papa et maman », c'est correct en français ?", it: "Come comincio? «Cari papà e mamma», è corretto in francese?" },
+              { who: "Léa", fr: "Oui, c'est parfait pour la famille. Pour une lettre officielle, on écrit « Madame, Monsieur ».", it: "Sì, è perfetto per la famiglia. Per una lettera ufficiale si scrive «Madame, Monsieur»." },
+              { who: "Gigi", fr: "« Je vous écris pour vous raconter une belle nouvelle : aujourd'hui, nous avons ouvert le Petit Bonheur. »", it: "«Vi scrivo per raccontarvi una bella notizia: oggi abbiamo aperto il Petit Bonheur.»" },
+              { who: "Gigi", fr: "« Quand je suis arrivé à Paris, je ne parlais pas français et je ne connaissais personne. »", it: "«Quando sono arrivato a Parigi non parlavo francese e non conoscevo nessuno.»" },
+              { who: "Gigi", fr: "« Maintenant, j'ai une cousine, des amis, un café… et un chat très bavard. »", it: "«Adesso ho una cugina, degli amici, un caffè… e un gatto molto chiacchierone.»" },
+              { who: "Croissant", fr: "Écris aussi : « Le chat est le vrai patron du café. » C'est important pour l'histoire.", it: "Scrivi anche: «Il gatto è il vero padrone del caffè.» È importante per la storia." },
+              { who: "Léa", fr: "Et pour finir ? Avec la famille, on écrit « Je vous embrasse » ou « Grosses bises ».", it: "E per finire? Con la famiglia si scrive «Vi abbraccio» o «Bacioni»." },
+              { who: "Gigi", fr: "« Venez nous voir bientôt. Je vous embrasse très fort. Votre fils, Gigi. »", it: "«Venite a trovarci presto. Vi abbraccio fortissimo. Vostro figlio, Gigi.»" }
+            ],
+            outro: "Gigi piega la lettera e la mette in una busta, accanto a una sfogliatella e a un calisson incartati con il nastro blu. Spegne le luci. Croissant si arrotola sulla sua poltrona preferita, quella vicino alla vetrina, dove un tempo dormiva accanto a Zizì. Fuori, Montmartre si addormenta. Fin de la première saison.",
+            you: "«{nome}, ce l'hai fatta: hai attraversato tutti i dieci arrondissement! Adesso tocca a te scrivere. Usa la tua frase qui sotto come inizio di una vera lettera a qualcuno. Il B1 ti aspetta, e io, naturalmente, resto qui: il vero padrone del caffè sono io.»",
+            mine: { fr: "Chère Camille, je m'appelle {nome}, j'ai {eta} ans et je t'écris en français pour la première fois. Grosses bises !", it: "Cara Camille, mi chiamo {nome}, ho {eta} anni e ti scrivo in francese per la prima volta. Bacioni!" }
+          },
+          words: [
+            { fr: "Cher / Chère…", it: "Caro / Cara…", say: "shèr", hook: "CHER (maschile) e CHÈRE (femminile) si pronunciano uguali: «shèr». Chers amis (plurale). Lo stesso «cher» di «caro» (prezzo)!",
+              ex: { fr: "Chère Françoise, merci pour cette journée inoubliable.", it: "Cara Françoise, grazie per questa giornata indimenticabile." } },
+            { fr: "Madame, Monsieur", it: "Gentile signora, egregio signore", say: "madam, məsjö", hook: "Per una lettera formale a una persona sconosciuta: «Madame, Monsieur,». Senza «cher» e senza nome!",
+              ex: { fr: "Madame, Monsieur, je vous écris pour réserver une chambre du 3 au 5 mai.", it: "Gentili signori, vi scrivo per prenotare una camera dal 3 al 5 maggio." } },
+            { fr: "Je vous écris pour…", it: "Vi / Le scrivo per…", say: "jə vu zekrì pur", hook: "La frase d'apertura di ogni lettera: JE VOUS ÉCRIS POUR + infinito. Je t'écris pour (informale).",
+              ex: { fr: "Je vous écris pour vous demander des informations sur vos cours de français.", it: "Le scrivo per chiederle informazioni sui suoi corsi di francese." } },
+            { fr: "la nouvelle", it: "la notizia", say: "la nuvèl", hook: "LA NOUVELLE = la notizia (una cosa «nuova»). Les nouvelles = le notizie, il telegiornale. Une bonne nouvelle!",
+              ex: { fr: "J'ai une bonne nouvelle : j'ai réussi mon examen de français !", it: "Ho una bella notizia: ho superato il mio esame di francese!" } },
+            { fr: "connaître", it: "conoscere", say: "konètr", hook: "CONNAÎTRE = conoscere (persone, luoghi): je connais Paris. Il cappellino sulla Î ricorda la S di «conoscere».",
+              ex: { fr: "Quand je suis arrivé, je ne connaissais personne dans le quartier.", it: "Quando sono arrivato non conoscevo nessuno nel quartiere." } },
+            { fr: "Je vous embrasse", it: "Vi abbraccio", say: "jə vu zãbras", hook: "EMBRASSER = abbracciare / baciare. In una lettera ai familiari: «Je vous embrasse» = vi abbraccio forte.",
+              ex: { fr: "Merci pour tout. Je vous embrasse très fort, à bientôt !", it: "Grazie di tutto. Vi abbraccio fortissimo, a presto!" } },
+            { fr: "Bises / Grosses bises", it: "Baci / Bacioni", say: "bìz / gròs bìz", hook: "LA BISE è il bacio sulla guancia dei francesi (uno, due, tre o quattro, dipende dalla regione!). In un messaggio: Bises!",
+              ex: { fr: "On se voit samedi pour le cinéma ? Grosses bises, Léa.", it: "Ci vediamo sabato per il cinema? Bacioni, Léa." } },
+            { fr: "Cordialement", it: "Cordiali saluti", say: "kòrdjalmã", hook: "CORDIALEMENT: la chiusura standard delle email formali. Più formale ancora: «Je vous prie d'agréer mes salutations distinguées».",
+              ex: { fr: "Merci d'avance pour votre réponse. Cordialement, Marco Rossi.", it: "Grazie in anticipo per la sua risposta. Cordiali saluti, Marco Rossi." } },
+            { fr: "À bientôt / Amitiés", it: "A presto / Un caro saluto", say: "a bjẽtò / amitjé", hook: "À BIENTÔT lo conosci dalla lezione 2! AMITIÉS = «amicizie», un saluto caldo ma non troppo intimo.",
+              ex: { fr: "J'espère te voir cet été à Paris. Amitiés, Gigi.", it: "Spero di vederti quest'estate a Parigi. Un caro saluto, Gigi." } },
+            { fr: "la lettre / le message", it: "la lettera / il messaggio", say: "la lètr / lə mesaj", hook: "LA LETTRE: la lettera (anche dell'alfabeto). LE MESSAGE: il messaggio (un SMS, un message vocal).",
+              ex: { fr: "Aujourd'hui on écrit des messages, mais une vraie lettre fait toujours plaisir.", it: "Oggi si scrivono messaggi, ma una vera lettera fa sempre piacere." } }
+          ],
+          tip: {
+            title: "Scrivere come un francese: formale e informale",
+            body: "<div class='tbl'><table><thead><tr><th></th><th>Informale (amici, famiglia)</th><th>Formale (ufficio, albergo, sconosciuti)</th></tr></thead><tbody><tr><td>Apertura</td><td>Cher Paul, / Chère Léa, / Salut !</td><td>Madame, Monsieur, / Madame Dupont,</td></tr><tr><td>Prima frase</td><td>Je t'écris pour te dire que…</td><td>Je vous écris pour vous demander…</td></tr><tr><td>Ringraziare</td><td>Merci pour tout !</td><td>Je vous remercie de votre réponse.</td></tr><tr><td>Chiusura</td><td>Bises / Grosses bises / Je t'embrasse</td><td>Cordialement / Bien cordialement</td></tr><tr><td>Firma</td><td>Ton ami(e), Marco</td><td>Marco Rossi</td></tr></tbody></table></div><ul><li>Dopo l'apertura si mette la <b>virgola</b> e si va a capo: «Chère Léa,».</li><li>Nelle lettere formali usa sempre <b>vous</b>; con amici e famiglia <b>tu</b> (o vous al plurale).</li><li>All'esame B1 c'è sempre una prova scritta: <b>messaggio, email o lettera</b> di circa 160 parole. Le formule di questa pagina valgono già molti punti!</li></ul>",
+            examples: [
+              { fr: "Cher Paul, je t'écris pour t'inviter à ma fête d'anniversaire.", it: "Caro Paul, ti scrivo per invitarti alla mia festa di compleanno." },
+              { fr: "Madame, Monsieur, je souhaite réserver une table pour quatre personnes.", it: "Gentili signori, desidero prenotare un tavolo per quattro persone." },
+              { fr: "Merci beaucoup pour ton cadeau, il est magnifique !", it: "Grazie mille per il tuo regalo, è magnifico!" },
+              { fr: "Je vous remercie par avance de votre aide. Cordialement.", it: "La ringrazio in anticipo per il suo aiuto. Cordiali saluti." },
+              { fr: "J'ai hâte de te revoir. Grosses bises, Léa.", it: "Non vedo l'ora di rivederti. Bacioni, Léa." }
+            ]
+          },
+          practice: [
+            { t: "mcq", q: "Come inizi una lettera formale a uno sconosciuto?", opts: ["Madame, Monsieur,", "Cher Monsieur Inconnu,", "Salut Madame,", "Bonjour toi,"], a: 0, why: "Madame, Monsieur, è la formula standard." },
+            { t: "mcq", q: "Quale chiusura è adatta a un'email di lavoro?", opts: ["Cordialement", "Grosses bises", "Je t'embrasse", "Bisous"], a: 0, why: "Cordialement = cordiali saluti." },
+            { t: "listen", say: "Merci pour tout. Je vous embrasse très fort, à bientôt !", q: "A chi probabilmente scrive?", opts: ["Ai familiari o ad amici stretti", "A un albergo", "A un ufficio pubblico", "Al suo capo"], a: 0, why: "Je vous embrasse è affettuoso." },
+            { t: "match", q: "Abbina", pairs: [["Cher Paul,", "informale"], ["Madame, Monsieur,", "formale"], ["Grosses bises", "informale"], ["Cordialement", "formale"]] },
+            { t: "order", q: "Riordina: «Le scrivo per chiederle informazioni.»", words: ["Je", "vous", "écris", "pour", "vous", "demander", "des", "informations."], why: "Je vous écris pour + infinito." }
+          ],
+          test: [
+            { t: "mcq", q: "Come si scrive «Cara Léa,»?", opts: ["Chère Léa,", "Cher Léa,", "Chèrie Léa,", "Chers Léa,"], a: 0, why: "Femminile: chère." },
+            { t: "mcq", q: "«La nouvelle» in una lettera è…", opts: ["la notizia", "la novella (racconto)", "la nuova arrivata", "la novità di moda"], a: 0, why: "Une bonne nouvelle = una bella notizia." },
+            { t: "mcq", q: "Scrivi a un albergo per prenotare. Quale frase usi?", opts: ["Je vous écris pour réserver une chambre.", "Je t'écris pour réserver une chambre.", "Salut, je veux une chambre.", "Coucou, une chambre stp."], a: 0, why: "Formale: vous." },
+            { t: "mcq", q: "Completa: «Quand je suis arrivé, je ne ___ personne.» (conoscevo)", opts: ["connaissais", "connais", "ai connu", "connaîtrai"], a: 0, why: "Situazione nel passato: imparfait." },
+            { t: "listen", say: "Madame, Monsieur, je vous écris pour réserver une chambre du 3 au 5 mai.", q: "Perché scrive?", opts: ["Per prenotare una camera dal 3 al 5 maggio.", "Per annullare una prenotazione.", "Per lamentarsi della camera.", "Per chiedere un lavoro."], a: 0, why: "Réserver une chambre." },
+            { t: "listen", say: "J'ai une bonne nouvelle : j'ai réussi mon examen de français !", q: "Qual è la bella notizia?", opts: ["Ha superato l'esame di francese.", "Ha trovato lavoro a Parigi.", "Si sposa.", "Ha vinto un viaggio."], a: 0, why: "J'ai réussi mon examen." },
+            { t: "listen", say: "Merci d'avance pour votre réponse. Cordialement, Marco Rossi.", q: "Che tipo di messaggio è?", opts: ["Un messaggio formale", "Un messaggio tra amici", "Un messaggio d'amore", "Un messaggio ai genitori"], a: 0, why: "Cordialement = formale." },
+            { t: "type", q: "Completa: «Je vous ___ pour vous remercier.» (scrivo)", a: ["écris", "ecris"], why: "Je vous écris." },
+            { t: "type", q: "Completa la chiusura informale: «Grosses ___, Léa.»", a: ["bises"], why: "Grosses bises = bacioni." },
+            { t: "type", say: "Quand je suis arrivé, je ne connaissais personne dans le quartier.", q: "Ascolta e completa: «Je ne ___ personne dans le quartier.»", a: ["connaissais"], why: "Connaître all'imparfait." },
+            { t: "order", q: "Riordina: «Caro Paul, ti scrivo per invitarti alla mia festa.»", words: ["Cher", "Paul,", "je", "t'écris", "pour", "t'inviter", "à", "ma", "fête."], why: "Informale: je t'écris pour…" },
+            { t: "match", q: "Abbina", pairs: [["la lettre", "la lettera"], ["la nouvelle", "la notizia"], ["connaître", "conoscere"], ["Je vous embrasse", "Vi abbraccio"]] }
+          ],
+          recap: {
+            can: ["Scrivere un messaggio informale ad amici e familiari", "Scrivere una lettera o email formale", "Usare le formule giuste di apertura e chiusura", "Raccontare per scritto una notizia mescolando passato e presente"],
+            phrases: [{ fr: "Chère Léa, je t'écris pour te dire une bonne nouvelle.", it: "Cara Léa, ti scrivo per darti una bella notizia." }, { fr: "Madame, Monsieur, je vous écris pour réserver une chambre.", it: "Gentili signori, vi scrivo per prenotare una camera." }, { fr: "Merci pour tout. Je vous embrasse. Grosses bises !", it: "Grazie di tutto. Vi abbraccio. Bacioni!" }],
+            trap: "Con gli sconosciuti: «Madame, Monsieur,» e «Cordialement». Mai «Cher Monsieur» con chi non conosci, e mai «bises» al tuo capo!"
+          }
+        }
+      ]
+    }
   ]
 };

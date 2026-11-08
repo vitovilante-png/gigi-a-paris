@@ -672,7 +672,331 @@ const COURSE = {
         }
       ]
     },
-    { n: 3, arr: "3e", name: "Au café", it: "Al caffè", level: "A1", soon: "Ordinare · Verbi in -er · Prezzi · I gusti" },
+    {
+      n: 3, arr: "3e", name: "Au café", it: "Al caffè", level: "A1",
+      lessons: [
+        /* ---------------- LEZIONE 3-1 ---------------- */
+        {
+          id: "3-1", street: "Rue de la Commande", title: "Ordinare al caffè",
+          goal: "Ordinare da bere e da mangiare con «je voudrais», chiedere il conto e pagare con frasi gentili e complete.",
+          episode: {
+            title: "Il cliente misterioso",
+            intro: "Primo vero giorno di servizio al caffè. Alle otto in punto entra un signore anziano, elegantissimo, con un cappello grigio e un ombrello anche se c'è il sole. Si siede al tavolino vicino alla vetrina e guarda Croissant come se lo conoscesse da sempre.",
+            lines: [
+              { who: "Gigi", fr: "Bonjour monsieur, bienvenue chez nous ! Qu'est-ce que je vous sers ce matin ?", it: "Buongiorno signore, benvenuto da noi! Cosa le servo stamattina?" },
+              { who: "M. Bernard", fr: "Bonjour. Je voudrais un café crème, s'il vous plaît, mais sans sucre.", it: "Buongiorno. Vorrei un caffè crème, per favore, ma senza zucchero." },
+              { who: "Gigi", fr: "Très bien. Et avec ça ? Nous avons des croissants tout chauds ce matin.", it: "Benissimo. Desidera altro? Stamattina abbiamo dei croissant caldissimi." },
+              { who: "M. Bernard", fr: "Un croissant, oui, et un grand verre d'eau, s'il vous plaît.", it: "Un croissant, sì, e un grande bicchiere d'acqua, per favore." },
+              { who: "Croissant", fr: "Il commande un croissant. J'espère pour lui qu'il ne parle pas de moi.", it: "Ordina un croissant. Spero per lui che non stia parlando di me." },
+              { who: "Léa", fr: "Voilà votre café crème, votre croissant et votre verre d'eau, monsieur.", it: "Ecco il suo caffè crème, il suo croissant e il suo bicchiere d'acqua, signore." },
+              { who: "M. Bernard", fr: "Merci, mademoiselle. L'addition, s'il vous plaît, je suis un peu pressé.", it: "Grazie, signorina. Il conto, per favore, ho un po' fretta." },
+              { who: "Gigi", fr: "Ça fait cinq euros. Vous payez par carte ou en espèces ?", it: "Sono cinque euro. Paga con la carta o in contanti?" },
+              { who: "M. Bernard", fr: "En espèces. Gardez la monnaie… et regardez bien sous la tasse, jeune homme.", it: "In contanti. Tenga il resto… e guardi bene sotto la tazza, giovanotto." }
+            ],
+            outro: "Sotto la tazza c'è un biglietto scritto a mano: «La clé au ruban bleu ouvre une porte verte, rue Charlot, dans le 3e. Un ami de Zizì.» Gigi corre fuori, ma il signore col cappello grigio è già sparito tra la folla. Croissant, per una volta, non fa battute.",
+            you: "«{nome}, al bar ti basta una formula magica: «Je voudrais…, s'il vous plaît». Con quella ordini tutto, dal caffè al croissant. Purché il croissant non sia io.»",
+            mine: { fr: "Bonjour, je m'appelle {nome} et je voudrais un grand café crème, s'il vous plaît.", it: "Buongiorno, mi chiamo {nome} e vorrei un grande caffè crème, per favore." }
+          },
+          words: [
+            { fr: "je voudrais", it: "vorrei", say: "jə vudrè", hook: "VOUDRAIS sembra «voglio dire» sussurrato con educazione: è il «vorrei» gentile. Al bar non dire mai «je veux» (voglio): suona come un bambino capriccioso.",
+              ex: { fr: "Je voudrais un café et deux croissants, s'il vous plaît, pour emporter.", it: "Vorrei un caffè e due croissant, per favore, da portare via." } },
+            { fr: "un café", it: "un caffè (espresso)", say: "ẽ kafé", hook: "In Francia «un café» è già un espresso: piccolo e forte. Niente sorprese, ma niente schiuma.",
+              ex: { fr: "Le matin, je bois toujours un café très serré avant de commencer le travail.", it: "La mattina bevo sempre un caffè molto ristretto prima di cominciare a lavorare." } },
+            { fr: "un café crème", it: "caffè con latte schiumato", say: "kafé krèm", hook: "CRÈME come la crema: è il «cappuccino» dei francesi, un caffè coperto da una nuvola di crema di latte.",
+              ex: { fr: "Un café crème et un croissant au beurre : c'est le petit-déjeuner parisien classique.", it: "Un caffè crème e un croissant al burro: è la colazione parigina classica." } },
+            { fr: "un thé", it: "un tè", say: "ẽ té", hook: "THÉ si legge proprio «tè», come in italiano: la H è solo decorativa, come il mignolo alzato di chi beve il tè.",
+              ex: { fr: "Ma grand-mère prend un thé au citron tous les après-midi à quatre heures.", it: "Mia nonna prende un tè al limone tutti i pomeriggi alle quattro." } },
+            { fr: "l'eau", it: "l'acqua", say: "lò", hook: "EAU: tre lettere per un solo suono, «o». Come la bocca che fa «oh!» davanti a un bicchiere d'acqua fresca. È femminile: une carafe d'eau.",
+              ex: { fr: "Vous pouvez nous apporter une carafe d'eau, s'il vous plaît ? Il fait très chaud.", it: "Può portarci una caraffa d'acqua, per favore? Fa molto caldo." } },
+            { fr: "avec / sans", it: "con / senza", say: "avèk / sã", hook: "AVEC suona come «ha vecchio»: vai al bar CON il tuo vecchio amico. SANS somiglia a «senza» se lo dici col naso chiuso: sã.",
+              ex: { fr: "Je prends mon café avec un peu de lait, mais sans sucre, merci.", it: "Prendo il caffè con un po' di latte, ma senza zucchero, grazie." } },
+            { fr: "la carte", it: "il menù", say: "la kart", hook: "LA CARTE è il menù, il foglio di carta con tutti i piatti. Attenzione: «le menu» in Francia è il menù fisso a prezzo unico!",
+              ex: { fr: "Excusez-moi, est-ce que je peux voir la carte des desserts, s'il vous plaît ?", it: "Mi scusi, posso vedere il menù dei dolci, per favore?" } },
+            { fr: "l'addition", it: "il conto", say: "ladisjõ", hook: "L'ADDITION: il cameriere fa l'ADDIZIONE di tutto quello che hai preso. Ecco il conto!",
+              ex: { fr: "L'addition, s'il vous plaît : nous avons un train à onze heures.", it: "Il conto, per favore: abbiamo un treno alle undici." } },
+            { fr: "Et avec ça ?", it: "Desidera altro?", say: "e avèk sa", hook: "Letteralmente «e con questo?»: lo dicono tutti i camerieri e i commessi. Rispondi «C'est tout, merci» (è tutto, grazie).",
+              ex: { fr: "Et avec ça, madame ? — C'est tout, merci, je suis au régime !", it: "Desidera altro, signora? — È tutto, grazie, sono a dieta!" } },
+            { fr: "le serveur / la serveuse", it: "il cameriere / la cameriera", say: "sèrvör / sèrvöz", hook: "SERVEUR: quello che SERVE. Per chiamarlo non dire «garçon!», è maleducato: alza la mano e di' «S'il vous plaît !».",
+              ex: { fr: "Le serveur arrive avec un plateau plein de tasses, de verres et de croissants.", it: "Il cameriere arriva con un vassoio pieno di tazze, bicchieri e croissant." } },
+            { fr: "pour emporter / sur place", it: "da portare via / al tavolo", say: "pur ãporté / sür plas", hook: "EM-PORTER: «portare via» con te. SUR PLACE: «sul posto», resti seduto al tavolino a guardare Parigi.",
+              ex: { fr: "C'est pour emporter ou sur place ? — Sur place, je ne suis pas pressé.", it: "È da portare via o lo consuma qui? — Qui, non ho fretta." } }
+          ],
+          tip: {
+            title: "La formula magica: «Je voudrais…, s'il vous plaît»",
+            body: "<div class='tbl'><table><thead><tr><th>Momento</th><th>Tu dici</th><th>Il cameriere dice</th></tr></thead><tbody><tr><td>Ordinare</td><td><b>Je voudrais</b> un café. / <b>Pour moi</b>, un thé.</td><td>Qu'est-ce que je vous sers ?</td></tr><tr><td>Aggiungere</td><td>Et aussi un croissant.</td><td>Et avec ça ?</td></tr><tr><td>Finire</td><td><b>C'est tout</b>, merci.</td><td>Sur place ou à emporter ?</td></tr><tr><td>Pagare</td><td><b>L'addition</b>, s'il vous plaît.</td><td>Ça fait cinq euros.</td></tr><tr><td>Come pagare</td><td>Par carte. / En espèces.</td><td>Vous payez comment ?</td></tr></tbody></table></div><ul><li><b>Je voudrais</b> è il condizionale di «vouloir»: gentile e sempre giusto. «Je veux» al bar suona brusco.</li><li><b>Un café</b> è un espresso. Per il cappuccino chiedi <b>un café crème</b>; per un caffè lungo, <b>un café allongé</b>.</li><li>La <b>carafe d'eau</b> (acqua del rubinetto) è gratuita per legge: chiedila senza paura.</li><li>Il servizio è già incluso nel prezzo: la mancia è un gesto gentile, non un obbligo.</li></ul>",
+            examples: [
+              { fr: "Je voudrais un café crème et un pain au chocolat, s'il vous plaît.", it: "Vorrei un caffè crème e un pain au chocolat, per favore." },
+              { fr: "Pour moi, un thé à la menthe, et pour mon amie, un jus d'orange.", it: "Per me un tè alla menta, e per la mia amica un succo d'arancia." },
+              { fr: "C'est tout, merci. Je peux payer par carte ?", it: "È tutto, grazie. Posso pagare con la carta?" },
+              { fr: "Excusez-moi, nous voudrions aussi une carafe d'eau, s'il vous plaît.", it: "Mi scusi, vorremmo anche una caraffa d'acqua, per favore." },
+              { fr: "L'addition, s'il vous plaît. Le café était délicieux.", it: "Il conto, per favore. Il caffè era delizioso." },
+              { fr: "Un croissant pour emporter, et un café sur place.", it: "Un croissant da portare via e un caffè da bere qui." }
+            ]
+          },
+          practice: [
+            { t: "mcq", q: "Qual è il modo gentile di ordinare al bar?", opts: ["Je voudrais un café, s'il vous plaît.", "Je veux un café.", "Donne-moi un café.", "Café, garçon !"], a: 0, why: "Je voudrais = vorrei: la formula magica." },
+            { t: "mcq", q: "Il cameriere ti chiede «Et avec ça ?». Cosa significa?", opts: ["Desidera altro?", "Con cosa paga?", "Con chi è?", "Va bene così?"], a: 0, why: "Et avec ça? = e con questo? Rispondi «C'est tout, merci»." },
+            { t: "listen", say: "Je prends mon café avec un peu de lait, mais sans sucre, merci.", q: "Cosa hai sentito?", opts: ["Prendo il caffè con un po' di latte, ma senza zucchero, grazie.", "Prendo il caffè senza latte, ma con un po' di zucchero, grazie.", "Prendo il tè con il latte e lo zucchero, grazie.", "Non prendo il caffè, solo latte, grazie."], a: 0, why: "Avec = con, sans = senza." },
+            { t: "match", q: "Abbina", pairs: [["l'addition", "il conto"], ["la carte", "il menù"], ["l'eau", "l'acqua"], ["le serveur", "il cameriere"]] },
+            { t: "order", q: "Riordina: «Vorrei un caffè crème, per favore.»", words: ["Je", "voudrais", "un", "café", "crème,", "s'il", "vous", "plaît."], why: "Je voudrais + quello che vuoi + s'il vous plaît." }
+          ],
+          test: [
+            { t: "mcq", q: "In un caffè francese, «un café» è…", opts: ["un espresso", "un cappuccino", "un caffè americano", "un caffè con panna"], a: 0, why: "Un café = espresso. Il cappuccino è un café crème." },
+            { t: "mcq", q: "Come chiedi il conto?", opts: ["L'addition, s'il vous plaît.", "La carte, s'il vous plaît.", "Le compte, s'il vous plaît.", "La note, merci beaucoup."], a: 0, why: "L'addition: il cameriere fa l'addizione." },
+            { t: "mcq", q: "«C'est pour emporter ou sur place ?» Vuoi sederti al tavolino. Rispondi:", opts: ["Sur place, s'il vous plaît.", "Pour emporter, merci.", "En espèces, merci.", "Avec du sucre."], a: 0, why: "Sur place = sul posto, al tavolo." },
+            { t: "mcq", q: "Come si chiama educatamente il cameriere?", opts: ["S'il vous plaît !", "Garçon !", "Eh, toi !", "Serveur, vite !"], a: 0, why: "«Garçon!» è considerato maleducato: basta «S'il vous plaît!»." },
+            { t: "listen", say: "Merci, mademoiselle. L'addition, s'il vous plaît, je suis un peu pressé.", q: "Cosa hai sentito?", opts: ["Grazie, signorina. Il conto, per favore, ho un po' fretta.", "Grazie, signorina. Il menù, per favore, ho molta fame.", "Grazie, signora. Un caffè, per favore, sono stanco.", "Grazie, signorina. Il conto lo pago domani."], a: 0, why: "L'addition = il conto; pressé = di fretta." },
+            { t: "listen", say: "Vous pouvez nous apporter une carafe d'eau, s'il vous plaît ? Il fait très chaud.", q: "Cosa chiede il cliente?", opts: ["Una caraffa d'acqua, perché fa molto caldo.", "Una bottiglia di vino, perché è una festa.", "Un caffè caldo, perché fa freddo.", "Il menù dei dolci, perché ha fame."], a: 0, why: "Eau = acqua; la carafe d'eau è gratuita." },
+            { t: "type", q: "Completa: «Je ___ un thé au citron, s'il vous plaît.» (vorrei)", a: ["voudrais"], why: "Je voudrais = vorrei." },
+            { t: "type", q: "Completa: «Un café ___ sucre, merci.» (senza)", a: ["sans"], why: "Sans = senza; avec = con." },
+            { t: "type", say: "Et avec ça, madame ? C'est tout, merci.", q: "Ascolta e completa: «Et avec ça, madame ? — C'est ___, merci.»", a: ["tout"], why: "C'est tout = è tutto." },
+            { t: "order", q: "Riordina: «Il conto, per favore, ho un po' fretta.»", words: ["L'addition,", "s'il", "vous", "plaît,", "je", "suis", "un", "peu", "pressé."], why: "Je suis pressé = sono di fretta (être!)." },
+            { t: "match", q: "Abbina", pairs: [["avec", "con"], ["sans", "senza"], ["par carte", "con la carta"], ["en espèces", "in contanti"]] },
+            { t: "mcq", q: "Quale frase NON useresti per ordinare?", opts: ["Ça fait cinq euros.", "Pour moi, un café.", "Je voudrais un croissant.", "Et aussi un jus d'orange."], a: 0, why: "«Ça fait cinq euros» lo dice chi incassa: sono cinque euro." }
+          ]
+        },
+        /* ---------------- LEZIONE 3-2 ---------------- */
+        {
+          id: "3-2", street: "Rue des Verbes", title: "I verbi in -er: parlare, cercare, trovare",
+          goal: "Coniugare al presente i verbi in -er (quasi tutti i verbi francesi) e usarli per raccontare cosa fai e cosa cerchi.",
+          episode: {
+            title: "La porta verde di rue Charlot",
+            intro: "Domenica mattina il caffè è chiuso. Gigi, Léa e Croissant (dentro una borsa di tela, offesissimo) prendono il metrò fino al Marais, nel 3° arrondissement. Rue Charlot è piena di botteghe antiche, ma di porte verdi ce ne sono almeno dieci. Davanti a una piccola drogheria c'è un signore con il grembiule che li osserva incuriosito.",
+            lines: [
+              { who: "Léa", fr: "Bonjour monsieur ! Nous cherchons une vieille boutique. Vous habitez ici depuis longtemps ?", it: "Buongiorno signore! Cerchiamo una vecchia bottega. Abita qui da tanto tempo?" },
+              { who: "M. Karim", fr: "Oui, j'habite et je travaille dans cette rue depuis vingt ans.", it: "Sì, abito e lavoro in questa strada da vent'anni." },
+              { who: "Gigi", fr: "Nous cherchons une porte verte qui va avec cette clé au ruban bleu.", it: "Cerchiamo una porta verde che vada con questa chiave dal nastro blu." },
+              { who: "M. Karim", fr: "Ce ruban bleu… Ici, les anciens parlent encore de la confiserie de Zizì !", it: "Questo nastro blu… Qui gli anziani parlano ancora della confetteria di Zizì!" },
+              { who: "Gigi", fr: "Zizì ? C'est ma grand-tante ! Vous trouvez ça incroyable aussi, non ?", it: "Zizì? È la mia prozia! Anche lei lo trova incredibile, no?" },
+              { who: "M. Karim", fr: "Regardez, c'est la porte verte en face. Elle est fermée depuis très longtemps.", it: "Guardate, è la porta verde qui di fronte. È chiusa da tantissimo tempo." },
+              { who: "Croissant", fr: "Vous cherchez, vous parlez, vous regardez… Et moi, je mange quand, exactement ?", it: "Voi cercate, parlate, guardate… E io, esattamente, quando mangio?" },
+              { who: "Léa", fr: "Gigi, écoute ! La clé tourne dans la serrure… La porte s'ouvre !", it: "Gigi, ascolta! La chiave gira nella serratura… La porta si apre!" },
+              { who: "Gigi", fr: "Incroyable : des bocaux de bonbons partout, et un vieux carnet sur le comptoir.", it: "Incredibile: barattoli di caramelle dappertutto, e un vecchio quaderno sul bancone." }
+            ],
+            outro: "Sotto la polvere, l'insegna dice ancora «Au Petit Bonheur». Il quaderno sul bancone ha la copertina blu, come il nastro, e sulla prima pagina c'è scritto: «Les recettes de Zizì». La prima ricetta è una torta di mele. Croissant annusa il bancone e, per la prima volta, fa le fusa.",
+            you: "«{nome}, hai notato? Quasi tutti i verbi della puntata finiscono in -ER: chercher, parler, habiter, regarder. Ottima notizia: si coniugano tutti allo stesso modo, e quattro forme su sei si pronunciano uguali!»",
+            mine: { fr: "Je m'appelle {nome}, j'habite en Italie et j'aime beaucoup parler français avec mes amis.", it: "Mi chiamo {nome}, abito in Italia e mi piace molto parlare francese con i miei amici." }
+          },
+          words: [
+            { fr: "parler", it: "parlare", say: "parlé", hook: "PARLER è «parlare» che ha perso la A finale ed è diventato elegante: parlé. Je parle, tu parles, il parle: si pronunciano tutti «parl».",
+              ex: { fr: "Dans ce quartier, les gens parlent français, chinois, arabe et même italien.", it: "In questo quartiere la gente parla francese, cinese, arabo e perfino italiano." } },
+            { fr: "habiter", it: "abitare", say: "abité", hook: "HABITER = abitare con un cappellino H che non si pronuncia. Siccome la H è muta, si dice J'HABITE con l'apostrofo.",
+              ex: { fr: "J'habite dans un petit appartement au troisième étage, sans ascenseur.", it: "Abito in un piccolo appartamento al terzo piano, senza ascensore." } },
+            { fr: "travailler", it: "lavorare", say: "travajé", hook: "TRAVAILLER somiglia a «travagliare»: in effetti a volte lavorare è un bel travaglio! La doppia L si legge come una «i».",
+              ex: { fr: "Léa travaille au café le matin et elle étudie à l'université le soir.", it: "Léa lavora al caffè la mattina e studia all'università la sera." } },
+            { fr: "chercher", it: "cercare", say: "shèrshé", hook: "CHERCHER = CERCARE, ma la CH si legge «sc» come in «scena»: scèr-scé. Ti sembra di cercare zittendo qualcuno: sccc!",
+              ex: { fr: "Nous cherchons une porte verte avec une vieille serrure en cuivre.", it: "Cerchiamo una porta verde con una vecchia serratura di rame." } },
+            { fr: "trouver", it: "trovare", say: "truvé", hook: "TROUVER = TROVARE, con OU che si legge «u». Chi cerca (cherche) trova (trouve): stesso proverbio, stessa logica.",
+              ex: { fr: "Je cherche mes clés partout, mais je ne trouve jamais rien le matin.", it: "Cerco le chiavi dappertutto, ma la mattina non trovo mai niente." } },
+            { fr: "aimer", it: "amare / piacere", say: "èmé", hook: "AIMER vuol dire sia amare sia «piacere»: j'aime le café = mi piace il caffè; je t'aime = ti amo. Occhio al contesto, o dichiarerai amore a una baguette!",
+              ex: { fr: "J'aime beaucoup ce quartier, ses petites rues et ses vieilles boutiques.", it: "Mi piace molto questo quartiere, le sue stradine e le sue vecchie botteghe." } },
+            { fr: "manger", it: "mangiare", say: "mãjé", hook: "MANGER = MANGIARE senza la I. Con NOUS aggiunge una E: nous mangEons, per non perdere il suono dolce della G.",
+              ex: { fr: "Le dimanche, nous mangeons tous ensemble chez ma grand-mère.", it: "La domenica mangiamo tutti insieme da mia nonna." } },
+            { fr: "regarder", it: "guardare", say: "rəgardé", hook: "REGARDER = GUARDARE con un «re» davanti. Regarde ! = Guarda! Lo dirai mille volte a Parigi, col naso all'insù.",
+              ex: { fr: "Regarde, Gigi : il y a un vieux nom écrit au-dessus de la porte !", it: "Guarda, Gigi: c'è un vecchio nome scritto sopra la porta!" } },
+            { fr: "écouter", it: "ascoltare", say: "ekuté", hook: "ÉCOUTER sembra «scoutare»: gli scout ASCOLTANO i rumori del bosco. La É iniziale spesso sostituisce una S italiana: école = scuola, étoile = stella.",
+              ex: { fr: "J'écoute la radio française en voiture pour améliorer ma prononciation.", it: "Ascolto la radio francese in macchina per migliorare la pronuncia." } },
+            { fr: "fermé / ouvert", it: "chiuso / aperto", say: "fèrmé / uvèr", hook: "FERMÉ: il negozio si è FERMATO, è chiuso. OUVERT: aperto, come una bocca che dice «uuh». Li vedrai su ogni porta di Parigi.",
+              ex: { fr: "Le dimanche, beaucoup de boutiques sont fermées, mais les boulangeries sont ouvertes.", it: "La domenica molti negozi sono chiusi, ma le panetterie sono aperte." } },
+            { fr: "depuis", it: "da (tempo)", say: "dəpüi", hook: "DEPUIS = «da» per il tempo: j'habite ici depuis vingt ans = abito qui da vent'anni. Si usa il presente, proprio come in italiano.",
+              ex: { fr: "Cette boutique est fermée depuis très longtemps, et personne ne sait pourquoi.", it: "Questa bottega è chiusa da tantissimo tempo, e nessuno sa perché." } }
+          ],
+          tip: {
+            title: "I verbi in -ER: una sola regola per migliaia di verbi",
+            body: "<div class='tbl'><table><thead><tr><th></th><th>parler</th><th>si pronuncia</th></tr></thead><tbody><tr><td>je</td><td>parl<b>e</b></td><td>parl</td></tr><tr><td>tu</td><td>parl<b>es</b></td><td>parl</td></tr><tr><td>il / elle</td><td>parl<b>e</b></td><td>parl</td></tr><tr><td>nous</td><td>parl<b>ons</b></td><td>parlõ</td></tr><tr><td>vous</td><td>parl<b>ez</b></td><td>parlé</td></tr><tr><td>ils / elles</td><td>parl<b>ent</b></td><td>parl</td></tr></tbody></table></div><ul><li>Togli <b>-er</b> e aggiungi <b>-e, -es, -e, -ons, -ez, -ent</b>. Vale per circa il 90% dei verbi francesi.</li><li><b>Trappola:</b> la desinenza <b>-ent</b> di «ils parlent» è muta! Si dice «il parl», non «il parlent».</li><li>Davanti a vocale o H muta, <b>je</b> diventa <b>j'</b>: j'aime, j'habite, j'écoute.</li><li>Con la liaison il plurale si sente: ils‿aiment (il-zèm), nous‿habitons (nu-zabitõ).</li><li>Verbi in -ger aggiungono una E con nous: nous mangeons, nous voyageons.</li></ul>",
+            examples: [
+              { fr: "Je cherche la porte verte, mais je ne trouve pas la rue.", it: "Cerco la porta verde, ma non trovo la strada." },
+              { fr: "Tu parles français avec un joli accent italien.", it: "Parli francese con un bell'accento italiano." },
+              { fr: "Nous habitons à Paris, mais nous travaillons en banlieue.", it: "Abitiamo a Parigi, ma lavoriamo in periferia." },
+              { fr: "Vous écoutez souvent de la musique française ?", it: "Ascoltate spesso musica francese?" },
+              { fr: "Ils aiment le quartier et ils mangent toujours au même restaurant.", it: "Amano il quartiere e mangiano sempre allo stesso ristorante." },
+              { fr: "Elle regarde les vieilles photos et elle trouve une lettre de Zizì.", it: "Guarda le vecchie foto e trova una lettera di Zizì." }
+            ]
+          },
+          practice: [
+            { t: "mcq", q: "Completa: «Nous ___ une porte verte.» (cercare)", opts: ["cherchons", "cherchez", "cherchent", "cherche"], a: 0, why: "Nous → -ons: nous cherchons." },
+            { t: "mcq", q: "Come si pronuncia «ils parlent»?", opts: ["il parl", "il parlènt", "il parlã", "il parlé"], a: 0, why: "La desinenza -ent è muta!" },
+            { t: "listen", say: "J'habite dans un petit appartement au troisième étage, sans ascenseur.", q: "Cosa hai sentito?", opts: ["Abito in un piccolo appartamento al terzo piano, senza ascensore.", "Abito in una grande casa al primo piano, con ascensore.", "Lavoro in un piccolo ufficio al terzo piano, senza finestre.", "Cerco un piccolo appartamento al terzo piano, con ascensore."], a: 0, why: "J'habite = abito; sans = senza." },
+            { t: "match", q: "Abbina", pairs: [["chercher", "cercare"], ["trouver", "trovare"], ["regarder", "guardare"], ["écouter", "ascoltare"]] },
+            { t: "order", q: "Riordina: «Abito e lavoro in questa strada da vent'anni.»", words: ["J'habite", "et", "je", "travaille", "dans", "cette", "rue", "depuis", "vingt", "ans."], why: "Depuis + presente, come in italiano." }
+          ],
+          test: [
+            { t: "mcq", q: "Completa: «Vous ___ français très bien !» (parlare)", opts: ["parlez", "parlons", "parlent", "parles"], a: 0, why: "Vous → -ez: vous parlez." },
+            { t: "mcq", q: "Completa: «Léa ___ au café le matin.» (lavorare)", opts: ["travaille", "travailles", "travaillons", "travaillent"], a: 0, why: "Elle → -e: elle travaille." },
+            { t: "mcq", q: "Quale forma è giusta?", opts: ["J'aime le café.", "Je aime le café.", "J'aimes le café.", "Je aimer le café."], a: 0, why: "Je + vocale = j'; con je la desinenza è -e." },
+            { t: "mcq", q: "«Le dimanche, beaucoup de boutiques sont fermées.» Significa…", opts: ["La domenica molti negozi sono chiusi.", "La domenica molti negozi sono aperti.", "Il lunedì molti negozi sono chiusi.", "La domenica molte botteghe sono piene."], a: 0, why: "Fermé = chiuso, ouvert = aperto." },
+            { t: "mcq", q: "Completa: «Le dimanche, nous ___ chez ma grand-mère.» (mangiare)", opts: ["mangeons", "mangons", "mangez", "mangent"], a: 0, why: "Manger con nous prende la E: nous mangeons." },
+            { t: "listen", say: "Ce ruban bleu… Ici, les anciens parlent encore de la confiserie de Zizì !", q: "Cosa hai sentito?", opts: ["Questo nastro blu… Qui gli anziani parlano ancora della confetteria di Zizì!", "Questa chiave blu… Qui i bambini cercano ancora la casa di Zizì!", "Questo nastro rosso… Qui nessuno parla più di Zizì!", "Questa porta blu… Qui gli anziani abitano ancora con Zizì!"], a: 0, why: "Ils parlent: la -ent non si sente." },
+            { t: "listen", say: "Je cherche mes clés partout, mais je ne trouve jamais rien le matin.", q: "Cosa hai sentito?", opts: ["Cerco le chiavi dappertutto, ma la mattina non trovo mai niente.", "Trovo sempre le chiavi la mattina, ma non cerco mai niente.", "Cerco le chiavi solo la sera, e le trovo sempre.", "Ho perso le chiavi di casa questa mattina."], a: 0, why: "Chercher = cercare, trouver = trovare." },
+            { t: "type", q: "Completa: «Tu ___ la radio française ?» (ascoltare)", a: ["écoutes", "ecoutes"], why: "Tu → -es: tu écoutes." },
+            { t: "type", q: "Completa: «Ils ___ beaucoup le quartier.» (amare)", a: ["aiment"], why: "Ils → -ent (muta): ils aiment, con la liaison il-zèm." },
+            { t: "type", say: "Cette boutique est fermée depuis très longtemps.", q: "Ascolta e completa: «Cette boutique est fermée ___ très longtemps.»", a: ["depuis"], why: "Depuis = da (tempo)." },
+            { t: "order", q: "Riordina: «Cerchiamo una porta verde in questa strada.»", words: ["Nous", "cherchons", "une", "porte", "verte", "dans", "cette", "rue."], why: "Nous cherchons: -ons con nous." },
+            { t: "match", q: "Abbina", pairs: [["je parle", "io parlo"], ["nous parlons", "noi parliamo"], ["vous parlez", "voi parlate"], ["ils parlent", "loro parlano"]] }
+          ]
+        },
+        /* ---------------- LEZIONE 3-3 ---------------- */
+        {
+          id: "3-3", street: "Rue des Prix", title: "I numeri fino a 100 e i prezzi",
+          goal: "Contare fino a 100, capire i prezzi al mercato e chiedere quanto costa qualcosa senza perderti nei conti alla francese.",
+          episode: {
+            title: "Il mercato dei Bambini Rossi",
+            intro: "Per la torta di mele di Zizì servono ingredienti freschi. Léa porta Gigi al Marché des Enfants Rouges, il mercato coperto più antico di Parigi, a due passi dalla bottega. Tra banchi di frutta, formaggi e cucine di mezzo mondo, una venditrice con il cappello di paglia sistema una montagna di mele.",
+            lines: [
+              { who: "Gigi", fr: "Bonjour madame ! Combien coûtent ces belles pommes rouges, s'il vous plaît ?", it: "Buongiorno signora! Quanto costano queste belle mele rosse, per favore?" },
+              { who: "Mme Rose", fr: "Trois euros quarante le kilo. Elles sont bien sucrées, parfaites pour une tarte.", it: "Tre euro e quaranta al chilo. Sono belle dolci, perfette per una torta." },
+              { who: "Gigi", fr: "Parfait ! Je voudrais deux kilos de pommes et six œufs bien frais.", it: "Perfetto! Vorrei due chili di mele e sei uova freschissime." },
+              { who: "Mme Rose", fr: "Voilà. Avec le beurre et la farine, ça fait douze euros cinquante.", it: "Ecco qua. Con il burro e la farina, sono dodici euro e cinquanta." },
+              { who: "Léa", fr: "Douze euros cinquante ? Dans le carnet de Zizì, tout coûte beaucoup moins cher !", it: "Dodici euro e cinquanta? Nel quaderno di Zizì costa tutto molto meno!" },
+              { who: "Mme Rose", fr: "Bien sûr, ma petite : à l'époque de Zizì, on payait en francs, pas en euros !", it: "Certo, piccola mia: ai tempi di Zizì si pagava in franchi, non in euro!" },
+              { who: "Croissant", fr: "Soixante-dix, quatre-vingts, quatre-vingt-dix… Les Français comptent comme des comptables fous.", it: "Sessanta più dieci, quattro volte venti, quattro volte venti più dieci… I francesi contano come ragionieri impazziti." },
+              { who: "Gigi", fr: "J'ai seulement un billet de vingt euros. Vous avez la monnaie, madame ?", it: "Ho solo una banconota da venti euro. Ha il resto, signora?" },
+              { who: "Mme Rose", fr: "Pas de problème. Je vous rends sept euros cinquante. Et ce ruban bleu… c'est celui de Zizì ?", it: "Nessun problema. Le do sette euro e cinquanta di resto. E questo nastro blu… è quello di Zizì?" }
+            ],
+            outro: "Mme Rose sorride: da bambina comprava le caramelle «Au Petit Bonheur» con dieci centesimi di franco, e Zizì le regalava sempre un bonbon in più. «Se riaprite la bottega», dice, «io sarò la vostra prima cliente.» Gigi torna a casa con le mele, le uova e un'idea che gli frulla in testa.",
+            you: "«{nome}, al mercato il difficile non è comprare: è capire i prezzi! Dopo il 60 i francesi fanno i conti: 70 = 60 + 10, 80 = 4 × 20, 90 = 4 × 20 + 10. Nel mio trucco ti spiego come non impazzire.»",
+            mine: { fr: "Je m'appelle {nome}, j'ai {eta} ans et je voudrais un kilo de pommes, s'il vous plaît.", it: "Mi chiamo {nome}, ho {eta} anni e vorrei un chilo di mele, per favore." }
+          },
+          words: [
+            { fr: "vingt / trente", it: "20 / 30", say: "vẽ / trãt", hook: "VINGT si legge «vẽ», come chi ha VINTO e lo dice col naso: la G e la T sono mute. TRENTE è quasi trenta, con la nasale.",
+              ex: { fr: "Ce petit panier de fraises coûte vingt euros ? C'est vraiment beaucoup trop cher !", it: "Questo cestino di fragole costa venti euro? È davvero troppo caro!" } },
+            { fr: "quarante / cinquante", it: "40 / 50", say: "karãt / sẽkãt", hook: "Quasi come in italiano: quaranta → quarante, cinquanta → cinquante. Basta mettere il naso al posto della A finale.",
+              ex: { fr: "Mon père a cinquante ans, mais il court comme un garçon de vingt ans.", it: "Mio padre ha cinquant'anni, ma corre come un ragazzo di venti." } },
+            { fr: "soixante", it: "60", say: "swasãt", hook: "SOIXANTE: la X si legge S, «suasãt». Pensa a un «soave santo» di sessant'anni che conta i soldi con calma.",
+              ex: { fr: "Ma voisine a soixante ans et elle travaille encore tous les jours au marché.", it: "La mia vicina ha sessant'anni e lavora ancora tutti i giorni al mercato." } },
+            { fr: "soixante-dix", it: "70", say: "swasãt-dis", hook: "Il 70 in Francia non esiste! Si dice 60 + 10: SOIXANTE-DIX. E 71 = 60 + 11: soixante et onze.",
+              ex: { fr: "Le bus soixante-dix passe devant le marché toutes les dix minutes.", it: "L'autobus settanta passa davanti al mercato ogni dieci minuti." } },
+            { fr: "quatre-vingts", it: "80", say: "katrə-vẽ", hook: "80 = QUATRE-VINGTS, quattro volte venti: i francesi contano ancora come gli antichi Galli, sulle dita di mani e piedi!",
+              ex: { fr: "La vieille dame du troisième étage a quatre-vingts ans et beaucoup d'énergie.", it: "L'anziana signora del terzo piano ha ottant'anni e tantissima energia." } },
+            { fr: "quatre-vingt-dix", it: "90", say: "katrə-vẽ-dis", hook: "90 = 4 × 20 + 10. Lungo, ma logico. In Belgio e in Svizzera dicono «nonante»: molto più facile, ma a Parigi ti guarderanno storto.",
+              ex: { fr: "Le carnet de recettes de Zizì a quatre-vingt-dix pages écrites à la main.", it: "Il quaderno di ricette di Zizì ha novanta pagine scritte a mano." } },
+            { fr: "cent", it: "100", say: "sã", hook: "CENT è «cento» senza la O, e la T è muta: sã. Come un sospiro di sollievo: finalmente cento, finiti i conti!",
+              ex: { fr: "Ce billet de cent euros est trop gros pour payer un simple café.", it: "Questa banconota da cento euro è troppo grossa per pagare un semplice caffè." } },
+            { fr: "Combien ça coûte ?", it: "Quanto costa?", say: "kõbjẽ sa kut", hook: "COMBIEN: «come bene?» chiede il cliente furbo. COÛTE = costa: il cappellino sulla U ricorda la S scomparsa di «costa».",
+              ex: { fr: "Excusez-moi, combien coûtent ces tomates et ces belles courgettes ?", it: "Mi scusi, quanto costano questi pomodori e queste belle zucchine?" } },
+            { fr: "l'euro / le centime", it: "l'euro / il centesimo", say: "lörò / sãtìm", hook: "In un prezzo si dice «trois euros quarante» (3,40 €): prima gli euro, poi i centesimi, senza «e». Con la liaison: deux‿euros (dö-zörò).",
+              ex: { fr: "Ça fait trois euros et vingt centimes. Vous avez la monnaie, s'il vous plaît ?", it: "Sono tre euro e venti centesimi. Ha gli spiccioli, per favore?" } },
+            { fr: "cher / pas cher", it: "caro / economico", say: "shèr / pa shèr", hook: "CHER = caro, sia per i prezzi sia per le persone (mon cher ami). Per dire «economico» basta PAS CHER: non caro.",
+              ex: { fr: "Ce marché n'est pas cher, et les produits sont frais et délicieux.", it: "Questo mercato non è caro, e i prodotti sono freschi e deliziosi." } },
+            { fr: "un kilo de…", it: "un chilo di…", say: "ẽ kilò də", hook: "Dopo una quantità si usa sempre DE, senza articolo: un kilo DE pommes, une bouteille D'eau, beaucoup DE fromage.",
+              ex: { fr: "Je voudrais un kilo de pommes, une douzaine d'œufs et un peu de beurre.", it: "Vorrei un chilo di mele, una dozzina di uova e un po' di burro." } }
+          ],
+          tip: {
+            title: "Da 20 a 100: i conti alla francese",
+            body: "<div class='tbl'><table><thead><tr><th>Numero</th><th>Francese</th><th>Come ragionano</th></tr></thead><tbody><tr><td>20</td><td>vingt</td><td>20</td></tr><tr><td>21</td><td>vingt et un</td><td>20 e 1</td></tr><tr><td>22</td><td>vingt-deux</td><td>20-2</td></tr><tr><td>30 / 40 / 50</td><td>trente / quarante / cinquante</td><td>come in italiano</td></tr><tr><td>60</td><td>soixante</td><td>60</td></tr><tr><td>70</td><td>soixante-dix</td><td>60 + 10</td></tr><tr><td>71</td><td>soixante et onze</td><td>60 + 11</td></tr><tr><td>80</td><td>quatre-vingts</td><td>4 × 20</td></tr><tr><td>81</td><td>quatre-vingt-un</td><td>4 × 20 + 1</td></tr><tr><td>90</td><td>quatre-vingt-dix</td><td>4 × 20 + 10</td></tr><tr><td>99</td><td>quatre-vingt-dix-neuf</td><td>4 × 20 + 19</td></tr><tr><td>100</td><td>cent</td><td>100</td></tr></tbody></table></div><ul><li>Con 21, 31, 41, 51, 61 e 71 si usa <b>et</b>: vingt et un, soixante et onze. Negli altri casi il trattino.</li><li><b>Quatre-vingts</b> prende la S solo quando è da solo: quatre-vingts, ma quatre-vingt-trois.</li><li><b>Prezzi:</b> 3,40 € si legge «trois euros quarante»; 12,50 € «douze euros cinquante».</li><li><b>Trucco per il 70-99:</b> quando senti «soixante» o «quatre-vingt», aspetta la fine del numero prima di scrivere!</li></ul>",
+            examples: [
+              { fr: "Les pommes coûtent trois euros quarante le kilo.", it: "Le mele costano tre euro e quaranta al chilo." },
+              { fr: "Ma grand-mère a quatre-vingt-deux ans et elle cuisine encore tous les jours.", it: "Mia nonna ha ottantadue anni e cucina ancora tutti i giorni." },
+              { fr: "Il y a soixante-quinze marches pour arriver chez moi.", it: "Ci sono settantacinque gradini per arrivare a casa mia." },
+              { fr: "Ce sac coûte quatre-vingt-dix-neuf euros : c'est trop cher pour moi.", it: "Questa borsa costa novantanove euro: è troppo cara per me." },
+              { fr: "Combien coûte un café en terrasse à Paris ? Environ trois euros.", it: "Quanto costa un caffè all'aperto a Parigi? Circa tre euro." },
+              { fr: "Je vous dois combien ? — Vingt et un euros, s'il vous plaît.", it: "Quanto le devo? — Ventun euro, per favore." }
+            ]
+          },
+          practice: [
+            { t: "mcq", q: "Come si dice 70?", opts: ["soixante-dix", "septante", "sept-dix", "soixante"], a: 0, why: "70 = 60 + 10. «Septante» si usa in Belgio e Svizzera." },
+            { t: "mcq", q: "«Quatre-vingts» è…", opts: ["80", "24", "40", "90"], a: 0, why: "4 × 20 = 80." },
+            { t: "listen", say: "Trois euros quarante le kilo. Elles sont bien sucrées, parfaites pour une tarte.", q: "Quanto costano le mele?", opts: ["3,40 € al chilo", "4,30 € al chilo", "3,14 € al chilo", "13,40 € al chilo"], a: 0, why: "Trois euros quarante = 3,40 €." },
+            { t: "match", q: "Abbina", pairs: [["cinquante", "50"], ["soixante", "60"], ["quatre-vingt-dix", "90"], ["cent", "100"]] },
+            { t: "order", q: "Riordina: «Quanto costano queste mele, per favore?»", words: ["Combien", "coûtent", "ces", "pommes,", "s'il", "vous", "plaît", "?"], why: "Combien coûtent… ? = quanto costano…?" }
+          ],
+          test: [
+            { t: "mcq", q: "Come si dice 71?", opts: ["soixante et onze", "soixante-onze", "soixante-dix-un", "septante et un"], a: 0, why: "71 = 60 + 11, con «et»." },
+            { t: "mcq", q: "Quale numero è «quatre-vingt-quinze»?", opts: ["95", "85", "75", "415"], a: 0, why: "4 × 20 + 15 = 95." },
+            { t: "mcq", q: "Come si legge il prezzo 12,50 €?", opts: ["douze euros cinquante", "douze virgule cinquante euros", "douze et cinquante euros", "cinquante douze euros"], a: 0, why: "Prima gli euro, poi i centesimi: douze euros cinquante." },
+            { t: "mcq", q: "Completa: «Je voudrais un kilo ___ pommes.»", opts: ["de", "des", "les", "du"], a: 0, why: "Dopo una quantità si usa sempre de." },
+            { t: "listen", say: "Ça fait douze euros cinquante.", q: "Quanto devi pagare?", opts: ["12,50 €", "2,50 €", "15,20 €", "12,15 €"], a: 0, why: "Douze = 12, cinquante = 50." },
+            { t: "listen", say: "La vieille dame du troisième étage a quatre-vingts ans et beaucoup d'énergie.", q: "Quanti anni ha la signora?", opts: ["80", "24", "90", "60"], a: 0, why: "Quatre-vingts = 4 × 20 = 80." },
+            { t: "listen", say: "Le carnet de recettes de Zizì a quatre-vingt-dix pages écrites à la main.", q: "Quante pagine ha il quaderno di Zizì?", opts: ["90", "80", "70", "49"], a: 0, why: "Quatre-vingt-dix = 4 × 20 + 10 = 90." },
+            { t: "type", q: "Scrivi in lettere il numero 60.", a: ["soixante"], why: "Soixante: la X si legge S." },
+            { t: "type", q: "Completa: «___ coûtent ces tomates ?» (quanto)", a: ["combien"], why: "Combien = quanto." },
+            { t: "type", say: "Ce marché n'est pas cher, et les produits sont frais.", q: "Ascolta e completa: «Ce marché n'est pas ___, et les produits sont frais.»", a: ["cher"], why: "Pas cher = economico." },
+            { t: "order", q: "Riordina: «Vorrei due chili di mele e sei uova.»", words: ["Je", "voudrais", "deux", "kilos", "de", "pommes", "et", "six", "œufs."], why: "Deux kilos DE pommes: de dopo la quantità." },
+            { t: "match", q: "Abbina", pairs: [["trente", "30"], ["quarante", "40"], ["soixante-dix", "70"], ["quatre-vingts", "80"]] }
+          ]
+        },
+        /* ---------------- LEZIONE 3-4 ---------------- */
+        {
+          id: "3-4", street: "Rue des Goûts", title: "I gusti: j'aime, j'adore, je déteste",
+          goal: "Dire cosa ti piace, cosa adori e cosa detesti, confrontare i gusti con «moi aussi» e «moi non plus» e descrivere un sapore.",
+          episode: {
+            title: "La degustazione",
+            intro: "Lunedì sera, dopo la chiusura, il caffè profuma di burro e di mele. Gigi ha seguito la ricetta di Zizì parola per parola. Françoise arriva con un tagliere di formaggi «per fare le cose per bene», Léa apparecchia, e Croissant si siede sulla sedia migliore, come un giudice di gara.",
+            lines: [
+              { who: "Mme Lefèvre", fr: "J'ai apporté trois fromages : le brie, le roquefort et le comté.", it: "Ho portato tre formaggi: il brie, il roquefort e il comté." },
+              { who: "Gigi", fr: "J'adore le fromage, mais je préfère la mozzarella de Naples, bien sûr !", it: "Adoro il formaggio, ma preferisco la mozzarella di Napoli, ovviamente!" },
+              { who: "Léa", fr: "Moi, je n'aime pas le roquefort : il est trop fort et trop salé.", it: "A me non piace il roquefort: è troppo forte e troppo salato." },
+              { who: "Mme Lefèvre", fr: "Moi non plus ! Je préfère le comté, il est plus doux et délicieux.", it: "Neanche a me! Preferisco il comté, è più delicato e delizioso." },
+              { who: "Croissant", fr: "Le fromage, c'est vulgaire. Moi, j'aime seulement le saumon et le caviar.", it: "Il formaggio è volgare. A me piacciono solo il salmone e il caviale." },
+              { who: "Gigi", fr: "Et maintenant, goûtez la tarte aux pommes de Zizì : c'est ma première tarte !", it: "E adesso assaggiate la torta di mele di Zizì: è la mia prima torta!" },
+              { who: "Léa", fr: "Mmm… c'est délicieux ! Pas trop sucré, et la pâte est vraiment parfaite.", it: "Mmm… è deliziosa! Non troppo dolce, e la pasta è davvero perfetta." },
+              { who: "Mme Lefèvre", fr: "C'est exactement le goût de mon enfance. Bravo, Gigi, j'adore ta tarte.", it: "È esattamente il sapore della mia infanzia. Bravo, Gigi, adoro la tua torta." },
+              { who: "Croissant", fr: "Bon. Je goûte un petit morceau… seulement par politesse, évidemment.", it: "Va bene. Assaggio un pezzettino… solo per educazione, ovviamente." }
+            ],
+            outro: "Croissant mangia tre pezzi di torta «per educazione». Mentre lava i piatti, Gigi sfoglia il quaderno fino all'ultima pagina: c'è una piantina di Parigi disegnata a mano, con una croce rossa e una frase: «Le vrai trésor de Zizì est ici.» Dove? Per scoprirlo bisogna imparare a muoversi in città: ci vediamo nel 4° arrondissement.",
+            you: "«{nome}, ora sai dire i tuoi gusti: j'adore, j'aime, je préfère, je déteste. Ricorda che dopo questi verbi ci vuole sempre l'articolo: j'aime LE fromage. E se qualcuno detesta il roquefort come te, rispondi «moi non plus!».»",
+            mine: { fr: "Je m'appelle {nome} : j'adore le café, j'aime bien le fromage, mais je déteste les oignons.", it: "Mi chiamo {nome}: adoro il caffè, mi piace abbastanza il formaggio, ma detesto le cipolle." }
+          },
+          words: [
+            { fr: "j'adore", it: "adoro", say: "jadòr", hook: "ADORER come «adorare»: i francesi lo usano per tutto, anche per una baguette ben cotta. J'adore! con la R che gratta in gola, come un gatto contento.",
+              ex: { fr: "J'adore les croissants au beurre, surtout quand ils sont encore chauds.", it: "Adoro i croissant al burro, soprattutto quando sono ancora caldi." } },
+            { fr: "j'aime bien", it: "mi piace (abbastanza)", say: "jèm bjẽ", hook: "Trappola gentile: J'AIME BIEN è MENO forte di j'aime! Aggiungere «bien» abbassa il volume: è il «mi piace, sì, carino» per un amico simpatico.",
+              ex: { fr: "J'aime bien ce restaurant, mais je préfère la pizzeria de Gigi.", it: "Questo ristorante mi piace abbastanza, ma preferisco la pizzeria di Gigi." } },
+            { fr: "je préfère", it: "preferisco", say: "jə prefèr", hook: "PRÉFÉRER = preferire. Gli accenti ballano: préférer, ma je préfÈre, con la è aperta, perché la sillaba dopo è muta.",
+              ex: { fr: "Je préfère le thé le matin et le café après le déjeuner.", it: "Preferisco il tè la mattina e il caffè dopo pranzo." } },
+            { fr: "je déteste", it: "detesto", say: "jə detèst", hook: "DÉTESTER = detestare. Molto forte! Per essere più gentile puoi dire «je n'aime pas beaucoup» (non mi piace molto).",
+              ex: { fr: "Je déteste attendre le métro sous la pluie à huit heures du matin.", it: "Detesto aspettare il metrò sotto la pioggia alle otto del mattino." } },
+            { fr: "le goût", it: "il gusto, il sapore", say: "lə gu", hook: "GOÛT è «gusto» a cui hanno rubato lo «sto»: il cappellino sulla U ricorda la S scomparsa, come in coûte (costa) e forêt (foresta).",
+              ex: { fr: "Cette tarte a le goût de mon enfance et de la cuisine de ma grand-mère.", it: "Questa torta ha il sapore della mia infanzia e della cucina di mia nonna." } },
+            { fr: "goûter", it: "assaggiare / la merenda", say: "guté", hook: "GOÛTER = assaggiare. E «le goûter» è la merenda dei bambini francesi alle quattro e mezza: pane e cioccolato!",
+              ex: { fr: "Tu veux goûter ma tarte aux pommes ? C'est la recette secrète de Zizì.", it: "Vuoi assaggiare la mia torta di mele? È la ricetta segreta di Zizì." } },
+            { fr: "délicieux / délicieuse", it: "delizioso / deliziosa", say: "delisjö / delisjöz", hook: "DÉLICIEUX = delizioso: il finale -EUX si dice «ö», come il versetto che fai quando qualcosa è buonissimo: öööh.",
+              ex: { fr: "La soupe est délicieuse, mais le pain est un peu trop sec.", it: "La zuppa è deliziosa, ma il pane è un po' troppo secco." } },
+            { fr: "sucré / salé", it: "dolce / salato", say: "sükré / salé", hook: "SUCRÉ viene da sucre (zucchero), SALÉ da sel (sale). Attenzione: una persona «dolce» si dice doux o douce, non sucrée!",
+              ex: { fr: "Le matin je mange sucré, mais le soir je préfère le salé.", it: "La mattina mangio dolce, ma la sera preferisco il salato." } },
+            { fr: "le fromage", it: "il formaggio", say: "lə fromaj", hook: "FROMAGE è «formaggio» con le lettere mescolate: FOR diventa FRO. La Francia ne ha più di mille tipi, uno per ogni giorno di tre anni!",
+              ex: { fr: "En France, on mange le fromage après le plat principal et avant le dessert.", it: "In Francia il formaggio si mangia dopo il piatto principale e prima del dolce." } },
+            { fr: "la tarte aux pommes", it: "la torta di mele", say: "la tart ò pòm", hook: "POMME = mela: pensa al «pomo» di Adamo. E le patate sono «pommes de terre», mele di terra!",
+              ex: { fr: "La tarte aux pommes de Zizì est simple, mais elle est vraiment parfaite.", it: "La torta di mele di Zizì è semplice, ma è davvero perfetta." } },
+            { fr: "moi aussi / moi non plus", it: "anch'io / neanch'io", say: "mwa osì / mwa nõ plü", hook: "MOI AUSSI risponde a una frase positiva (j'aime → moi aussi). MOI NON PLUS a una negativa (je n'aime pas → moi non plus). Come in italiano: anch'io / neanch'io.",
+              ex: { fr: "Je n'aime pas le roquefort. — Moi non plus, il est beaucoup trop fort !", it: "Non mi piace il roquefort. — Neanche a me, è decisamente troppo forte!" } }
+          ],
+          tip: {
+            title: "Il termometro dei gusti (con l'articolo!)",
+            body: "<div class='tbl'><table><thead><tr><th>Quanto?</th><th>Francese</th><th>Esempio</th></tr></thead><tbody><tr><td>❤❤❤</td><td>j'adore</td><td>J'adore <b>le</b> chocolat.</td></tr><tr><td>❤❤</td><td>j'aime</td><td>J'aime <b>la</b> musique.</td></tr><tr><td>❤</td><td>j'aime bien</td><td>J'aime bien <b>le</b> thé.</td></tr><tr><td>—</td><td>je n'aime pas beaucoup</td><td>Je n'aime pas beaucoup <b>le</b> lait.</td></tr><tr><td>✗</td><td>je n'aime pas</td><td>Je n'aime pas <b>les</b> oignons.</td></tr><tr><td>✗✗</td><td>je déteste</td><td>Je déteste <b>le</b> roquefort.</td></tr></tbody></table></div><ul><li>Dopo aimer, adorer, préférer e détester si usa sempre l'<b>articolo determinativo</b> (le, la, les), come in italiano: «mi piace il formaggio» → j'aime <b>le</b> fromage.</li><li><b>Moi aussi</b> = anch'io (dopo una frase positiva); <b>moi non plus</b> = neanch'io (dopo una negativa).</li><li><b>Trop</b> = troppo: trop sucré, trop salé, trop cher. <b>Pas trop</b> = non troppo.</li><li>Préférer cambia accento: je préf<b>è</b>re, tu préf<b>è</b>res, ma nous préf<b>é</b>rons.</li></ul>",
+            examples: [
+              { fr: "J'adore le chocolat noir, mais je n'aime pas le chocolat blanc.", it: "Adoro il cioccolato fondente, ma non mi piace il cioccolato bianco." },
+              { fr: "Tu aimes le fromage français ? — Oui, j'aime bien le comté.", it: "Ti piace il formaggio francese? — Sì, il comté mi piace abbastanza." },
+              { fr: "Nous préférons le café sans sucre et sans lait.", it: "Preferiamo il caffè senza zucchero e senza latte." },
+              { fr: "J'aime beaucoup Paris. — Moi aussi, surtout au printemps !", it: "Mi piace molto Parigi. — Anche a me, soprattutto in primavera!" },
+              { fr: "Je n'aime pas le métro le matin. — Moi non plus, il y a trop de monde.", it: "Non mi piace il metrò la mattina. — Neanche a me, c'è troppa gente." },
+              { fr: "Ce gâteau est délicieux, mais il est un peu trop sucré pour moi.", it: "Questo dolce è delizioso, ma per me è un po' troppo dolce." }
+            ]
+          },
+          practice: [
+            { t: "mcq", q: "Quale frase esprime il gusto PIÙ forte?", opts: ["J'adore le café.", "J'aime bien le café.", "J'aime le café.", "Je n'aime pas beaucoup le café."], a: 0, why: "J'adore > j'aime > j'aime bien." },
+            { t: "mcq", q: "Qualcuno dice «Je n'aime pas le roquefort». Sei d'accordo. Rispondi:", opts: ["Moi non plus.", "Moi aussi.", "Moi oui.", "Moi pas aussi."], a: 0, why: "Dopo una frase negativa: moi non plus." },
+            { t: "listen", say: "Le matin je mange sucré, mais le soir je préfère le salé.", q: "Cosa hai sentito?", opts: ["La mattina mangio dolce, ma la sera preferisco il salato.", "La mattina mangio salato, ma la sera preferisco il dolce.", "La sera non mangio mai niente di dolce.", "La mattina preferisco lo zucchero e il sale."], a: 0, why: "Sucré = dolce, salé = salato." },
+            { t: "match", q: "Abbina", pairs: [["le fromage", "il formaggio"], ["la pomme", "la mela"], ["le goût", "il sapore"], ["délicieux", "delizioso"]] },
+            { t: "order", q: "Riordina: «Adoro il formaggio, ma preferisco la mozzarella.»", words: ["J'adore", "le", "fromage,", "mais", "je", "préfère", "la", "mozzarella."], why: "Verbo di gusto + articolo determinativo." }
+          ],
+          test: [
+            { t: "mcq", q: "Completa: «J'aime ___ chocolat noir.»", opts: ["le", "du", "un", "de"], a: 0, why: "Dopo aimer: articolo determinativo, j'aime le chocolat." },
+            { t: "mcq", q: "«J'aime bien ce restaurant» significa…", opts: ["Questo ristorante mi piace abbastanza.", "Amo moltissimo questo ristorante.", "Questo ristorante non mi piace.", "Questo ristorante è molto buono."], a: 0, why: "J'aime bien è più debole di j'aime." },
+            { t: "mcq", q: "Qualcuno dice «J'adore Paris !». Anche tu. Rispondi:", opts: ["Moi aussi !", "Moi non plus !", "Moi pas !", "Moi même !"], a: 0, why: "Dopo una frase positiva: moi aussi." },
+            { t: "mcq", q: "Come si dice «una persona dolce»?", opts: ["une personne douce", "une personne sucrée", "une personne salée", "une personne délicieuse"], a: 0, why: "Sucré è solo per il cibo; per le persone: doux / douce." },
+            { t: "listen", say: "Moi, je n'aime pas le roquefort : il est trop fort et trop salé.", q: "Perché a Léa non piace il roquefort?", opts: ["È troppo forte e troppo salato.", "È troppo dolce e troppo caro.", "È troppo morbido e troppo vecchio.", "Non l'ha mai assaggiato."], a: 0, why: "Trop fort, trop salé." },
+            { t: "listen", say: "C'est exactement le goût de mon enfance. Bravo, Gigi, j'adore ta tarte.", q: "Cosa dice Françoise?", opts: ["È il sapore della sua infanzia e adora la torta.", "La torta è troppo dolce per lei.", "Preferisce la torta di sua madre.", "Vuole la ricetta della torta."], a: 0, why: "Le goût = il sapore; j'adore = adoro." },
+            { t: "type", q: "Completa: «Je ___ le thé le matin.» (preferisco)", a: ["préfère", "prefere", "préfere"], why: "Je préfère, con la è aperta." },
+            { t: "type", q: "Completa: «La tarte aux ___ de Zizì est parfaite.» (mele)", a: ["pommes"], why: "Pomme = mela, come il pomo di Adamo." },
+            { t: "type", say: "Tu veux goûter ma tarte aux pommes ?", q: "Ascolta e completa: «Tu veux ___ ma tarte aux pommes ?» (assaggiare)", a: ["goûter", "gouter"], why: "Goûter = assaggiare." },
+            { t: "order", q: "Riordina: «Non mi piace il metrò la mattina.»", words: ["Je", "n'aime", "pas", "le", "métro", "le", "matin."], why: "Ne… pas intorno al verbo, poi l'articolo." },
+            { t: "match", q: "Abbina", pairs: [["sucré", "dolce"], ["salé", "salato"], ["trop", "troppo"], ["moi non plus", "neanch'io"]] },
+            { t: "mcq", q: "In Francia il formaggio si mangia di solito…", opts: ["dopo il piatto principale e prima del dolce", "all'inizio del pasto, come antipasto", "solo a colazione", "dopo il dolce, con il caffè"], a: 0, why: "Plat principal → fromage → dessert." }
+          ]
+        }
+      ]
+    },
     { n: 4, arr: "4e", name: "En ville", it: "In città", level: "A1", soon: "I luoghi · Chiedere la strada · Aller e venir · Preposizioni" },
     { n: 5, arr: "5e", name: "Le temps", it: "Il tempo", level: "A1", soon: "L'ora · Giorni e mesi · La routine · Il meteo" },
     { n: 6, arr: "6e", name: "Voyager", it: "Viaggiare", level: "A2", soon: "Stazione e biglietti · Hotel · Futuro prossimo · Imprevisti" },

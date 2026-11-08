@@ -186,6 +186,20 @@ input.answer:focus{border-color:var(--plaque);outline:none}
 .linkish{border:0;background:transparent;color:var(--muted);text-decoration:underline;padding:4px;font-size:.9rem}
 .you{background:var(--lamp-soft);border-radius:var(--r);padding:12px 14px}
 .you p{font-weight:700}
+.recap{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px;display:flex;flex-direction:column;gap:12px}
+.recap-head{display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+.recap-head h3{margin:0}
+.recap .can{margin:0;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:6px}
+.recap .can li{padding-left:28px;position:relative}
+.recap .can li::before{content:"✓";position:absolute;left:0;top:0;width:20px;height:20px;border-radius:50%;background:var(--frame);color:#fff;font-size:12px;font-weight:700;display:grid;place-items:center}
+.recap .trap{margin:0;padding:10px 12px;border-left:4px solid var(--frame);background:var(--paper);border-radius:6px}
+.wordchips{display:flex;flex-wrap:wrap;gap:6px}
+.wchip{display:inline-flex;flex-direction:column;align-items:flex-start;gap:0;text-align:left}
+.wchip small{color:var(--muted);font-size:12px;font-weight:400}
+.recap-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.recap-stats div{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:12px;display:flex;flex-direction:column;align-items:flex-start}
+.recap-stats strong{font-family:var(--f-plaque);font-size:28px;line-height:1}
+.recap-stats span{color:var(--muted);font-size:13px}
 .mine{background:var(--card);border:2px solid var(--frame);border-radius:var(--r);padding:16px;display:flex;flex-direction:column;gap:10px}
 .mine .exfr{font-weight:700;font-size:1.15rem}
 .photo{margin:0;display:flex;flex-direction:column;gap:8px}
@@ -227,6 +241,7 @@ input.answer:focus{border-color:var(--plaque);outline:none}
 
 <script src="content.js" charset="utf-8"></script>
 <script src="art.js" charset="utf-8"></script>
+<script src="recaps.js" charset="utf-8"></script>
 <script>
 /* ================= UTILITÀ ================= */
 const $ = (sel, el=document) => el.querySelector(sel);
@@ -428,6 +443,7 @@ function render(){
   else if(state.view === "lesson") main.append(LessonView());
   else if(state.view === "exam") main.append(ExamView());
   else if(state.view === "review") main.append(ReviewView());
+  else if(state.view === "recap") main.append(ModuleRecapView());
   paintSync();
 }
 
@@ -517,12 +533,13 @@ function ModuleCard(m){
   const allPassed = passed === m.lessons.length;
   card.append(h("div", { class:"row" },
     h("button", { class:"btn lamp", disabled: !allPassed || null, onclick:()=>go("exam",{examModule:m.n}) }, exam?.passed ? `Esame superato · ${exam.best}%` : "Esame di modulo (15 domande)"),
-    !allPassed ? h("span",{class:"muted"}, "Si sblocca superando tutte le lezioni.") : null));
+    h("button", { class:"btn ghost", onclick:()=>go("recap",{examModule:m.n}) }, "Riepilogo del modulo"),
+    !allPassed ? h("span",{class:"muted"}, "L'esame si sblocca superando tutte le lezioni.") : null));
   return card;
 }
 
 /* ================= LEZIONE ================= */
-const STEPS = ["Episodio","Parole-gancio","Il trucco","Pratica","Test"];
+const STEPS = ["Episodio","Parole-gancio","Il trucco","Pratica","Test","Riepilogo"];
 function LessonView(){
   const l = LESSONS.find(x=>x.id===state.lessonId);
   const box = h("div", { class:"stack" });
@@ -536,7 +553,7 @@ function LessonView(){
   box.append(steps);
   const body = h("div",{class:"stack"});
   box.append(body);
-  [Episode, Words, Tip, Practice, Test][state.step](l, body);
+  [Episode, Words, Tip, Practice, Test, Recap][state.step](l, body);
   return box;
 }
 function nextStepBtn(label){ return h("div",{class:"row"}, h("button",{class:"btn", onclick:()=>{ state.step++; render(); window.scrollTo({top:0}); }}, label, " →")); }
@@ -663,6 +680,7 @@ function Test(l, body){
       const ls = l.module.lessons, idx = ls.findIndex(x=>x.id===l.id), nxt = ls[idx+1];
       showResult(body, { pct, pass, res, title:`Test: ${l.title}`,
         actions: [
+          pass ? h("button",{class:"btn ghost", onclick:()=>{ state.step=5; render(); window.scrollTo({top:0}); }}, "Cosa hai imparato") : null,
           pass && nxt ? h("button",{class:"btn", onclick:()=>go("lesson",{lessonId:nxt.id, step:0})}, `Prossimo episodio: ${nxt.title} →`) : null,
           pass && !nxt ? h("button",{class:"btn lamp", onclick:()=>go("exam",{examModule:l.module.n})}, "Vai all'esame di modulo →") : null,
           !pass ? h("button",{class:"btn", onclick:()=>{ state.step=1; render(); }}, "Ripassa le parole-gancio") : null,
@@ -671,6 +689,57 @@ function Test(l, body){
         ]});
     }});
   }
+}
+
+/* ================= RIEPILOGO ================= */
+function recapBlock(l, compact){
+  const r = (typeof RECAPS !== "undefined" && RECAPS[l.id]) || null;
+  const box = h("section",{class:"recap"});
+  if(compact) box.append(h("div",{class:"recap-head"}, plaque(l.module.arr, l.street, "sm"), h("h3",{}, l.title)));
+  if(r){
+    box.append(h("div",{class:"eyebrow"}, "Ora sai"),
+      h("ul",{class:"can"}, r.can.map(c => h("li",{}, c))));
+    box.append(h("div",{class:"eyebrow"}, "Frasi da ricordare"));
+    const ph = h("div",{class:"ex-list"});
+    r.phrases.forEach(x => ph.append(h("div",{class:"ex"}, playBtn(x.fr), h("div",{}, h("strong",{lang:"fr"}, x.fr), h("div",{class:"muted"}, x.it)))));
+    box.append(ph);
+    box.append(h("p",{class:"trap"}, h("b",{}, "Occhio alla trappola: "), r.trap));
+  }
+  box.append(h("div",{class:"eyebrow"}, `Le parole (${l.words.length})`));
+  box.append(h("div",{class:"wordchips"}, l.words.map(w => h("button",{class:"tok wchip", lang:"fr", title:w.it, onclick:()=>Voice.say(w.fr)}, h("span",{}, w.fr), h("small",{}, w.it)))));
+  return box;
+}
+function Recap(l, body){
+  const rec = lessonRec(l.id);
+  body.append(h("p",{class:"story"}, rec.passed ? `Ecco cosa hai imparato in questa lezione, ${NAME()}. Tocca le frasi e le parole per riascoltarle.` : `Ecco cosa imparerai in questa lezione, ${NAME()}. Puoi usare questo riepilogo anche per ripassare prima del test.`));
+  body.append(recapBlock(l, false));
+  const ls = l.module.lessons, idx = ls.findIndex(x=>x.id===l.id), nxt = ls[idx+1];
+  body.append(h("div",{class:"row"},
+    !rec.passed ? h("button",{class:"btn", onclick:()=>{ state.step=4; render(); window.scrollTo({top:0}); }}, "Vai al test →") : null,
+    rec.passed && nxt && isUnlocked(LESSONS.find(x=>x.id===nxt.id)) ? h("button",{class:"btn", onclick:()=>go("lesson",{lessonId:nxt.id, step:0})}, `Prossimo episodio: ${nxt.title} →`) : null,
+    rec.passed && !nxt ? h("button",{class:"btn lamp", onclick:()=>go("exam",{examModule:l.module.n})}, "Vai all'esame di modulo →") : null,
+    h("button",{class:"btn ghost", onclick:()=>go("recap",{examModule:l.module.n})}, "Riepilogo del modulo"),
+    h("button",{class:"btn ghost", onclick:()=>go("home")}, "Mappa")));
+}
+function ModuleRecapView(){
+  const m = moduleByN(state.examModule || 1);
+  const ls = m.lessons.map(l0 => LESSONS.find(x=>x.id===l0.id));
+  const box = h("div",{class:"stack"});
+  box.append(h("div",{class:"lesson-top"}, h("button",{class:"btn ghost", onclick:()=>go("home")}, "← Mappa"), plaque(m.arr, "Récapitulatif", "sm")));
+  box.append(h("h2",{}, `Riepilogo del ${m.n}° arrondissement: ${m.name}`));
+  const done = ls.filter(l=>isPassed(l.id)).length;
+  box.append(h("p",{class:"story"}, done === ls.length ? `Hai completato tutte e ${ls.length} le lezioni, ${NAME()}: ecco tutto quello che sai fare ora. È il ripasso perfetto prima dell'esame.` : `Hai completato ${done} lezioni su ${ls.length}, ${NAME()}. Qui trovi tutto quello che il modulo insegna: usalo per ripassare o per vedere cosa ti aspetta.`));
+  const total = ls.reduce((s,l)=>s+l.words.length, 0);
+  box.append(h("div",{class:"recap-stats"},
+    h("div",{}, h("strong",{}, ls.length), h("span",{}, "lezioni")),
+    h("div",{}, h("strong",{}, total), h("span",{}, "parole-gancio")),
+    h("div",{}, h("strong",{}, ls.reduce((s,l)=>s+l.test.length,0)), h("span",{}, "domande di test"))));
+  ls.forEach(l => box.append(recapBlock(l, true)));
+  const ex = Store.data.exams[m.n];
+  box.append(h("div",{class:"row"},
+    h("button",{class:"btn lamp", disabled: done < ls.length || null, onclick:()=>go("exam",{examModule:m.n})}, ex?.passed ? `Rifai l'esame (miglior risultato ${ex.best}%)` : "Esame di modulo"),
+    h("button",{class:"btn ghost", onclick:()=>go("home")}, "Mappa")));
+  return box;
 }
 
 function showResult(body, { pct, pass, res, title, actions }){
